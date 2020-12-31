@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Social Gothic Demi-Bold';
+    src: url('../fonts/SocialGothicDemiBold.otf');
+}
+
+body {
+    margin: 0;
+}
+
+#root {
+    width: 100vw;
+    height: 100vh;
+}
+
+.carousel-status {
+    display: none;
+}
+
+.section {
+    width: 100vw;
+    height: 100vh;
+}
+
+.section img {
+    /*width: 100vw;
+    height: 100vh;*/
+    overflow: hidden;
+}
+
+.slide-selectors button {
+    background: transparent;
+    border: none;
+    position: relative;
+    bottom: 1.3em;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 300;
+    /*font-family: 'Social Gothic Demi-Bold', sans-serif;*/
+}
+
+.slide-selectors button:hover {
+    cursor: pointer;
+}
+
+.slide-selectors button:focus {
+    border: none;
+    outline: none;
+}
+
+.control-arrow {
+    display: none;
+}
+
+.control-dots {
+    display: none;
+}
+
+.thumbs-wrapper {
+    display: none;
+}
