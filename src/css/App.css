@@ -3,6 +3,11 @@
     src: url('../fonts/SocialGothicDemiBold.otf');
 }
 
+@font-face {
+    font-family: 'Cormonant Garamond Medium';
+    src: url('../fonts/CormorantGaramond-Medium.ttf');
+}
+
 body {
     margin: 0;
 }
@@ -57,4 +62,39 @@ body {
 
 .thumbs-wrapper {
     display: none;
+}
+
+.section-2-icon {
+    width: 6.5em !important;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 52%;
+}
+
+.section-2-heading {
+    font-family: 'Social Gothic Demi-Bold', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    position: relative;
+    letter-spacing: 0.7px;
+    font-size: 1.7em;
+    margin-top: 0.6em;
+}
+
+.section-2-heading:after {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    top: 59px;
+    left: 34%;
+    height: 2px;
+    width: 33%;
+}
+
+.section-2-text {
+    color: #fff;
+    font-family: 'Cormonant Garamond Medium';
+    font-size: 1.2em;
+    margin: 13% 9%;
+    letter-spacing: 0.35px;
 }
