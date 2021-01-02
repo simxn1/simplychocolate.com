@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: 'Cormonant Garamond Light';
+    src: url('../fonts/CormorantGaramond-Light.ttf');
+}
+
+@font-face {
     font-family: 'Cormonant Garamond Medium';
     src: url('../fonts/CormorantGaramond-Medium.ttf');
 }
@@ -24,6 +29,9 @@ body {
 .section {
     width: 100vw;
     height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .section img {
@@ -40,7 +48,6 @@ body {
     color: #fff;
     font-size: 1.2em;
     font-weight: 300;
-    /*font-family: 'Social Gothic Demi-Bold', sans-serif;*/
 }
 
 .slide-selectors button:hover {
@@ -53,10 +60,14 @@ body {
 }
 
 .control-arrow {
-    display: none;
+    /*display: none;*/
 }
 
-.control-dots {
+/*.control-dots {
+    display: none;
+}*/
+
+#carousel-container > .carousel-1 > .carousel > .control-dots {
     display: none;
 }
 
@@ -97,4 +108,81 @@ body {
     font-size: 1.2em;
     margin: 13% 9%;
     letter-spacing: 0.35px;
+}
+
+.add-to-cart {
+    position: relative;
+    top: 63%;
+    color: #fff;
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: 8px 11px;
+}
+
+.add-to-cart:hover {
+    border: 3px solid #fff;
+    transition: 0.25s all ease-in-out;
+    cursor: pointer;
+}
+
+.add-to-cart button {
+    background-color: transparent;
+    border: none;
+    font-family: 'Social Gothic Demi-Bold', sans-serif;
+    color: #fff;
+    cursor: pointer;
+}
+
+.add-to-cart button:focus {
+    border: none;
+    outline: none;
+}
+
+.quantity {
+    font-family: 'Social Gothic Demi-Bold';
+    text-transform: uppercase;
+    width: 3em;
+    height: 1.5em;
+    text-align: center;
+    border: none;
+    background: transparent;
+    color: #fff;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.quantity:hover {
+    cursor: pointer;
+}
+
+.quantity:focus {
+    outline: none;
+    border: none;
+}
+
+.product-desc {
+    color: #fff;
+    text-align: left;
+    font-family: 'Cormonant Garamond Light';
+    position: relative;
+    top: 61.5%;
+    margin-left: 13%;
+    font-size: 1.25em;
+    letter-spacing: 0.45px;
+}
+
+.product-icons {
+    width: 60% !important;
+    height: auto;
+    position: relative;
+    top: 58%;
+    left: -18.5%;
+}
+
+.product-icons[src="/img/mobile-five-icons.png"] {
+    left: -16.5%;
 }
