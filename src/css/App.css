@@ -114,7 +114,7 @@ body {
     position: relative;
     top: 63%;
     color: #fff;
-    display: inline-block;
+    display: block;
     border: 2px solid #fff;
     padding: 8px 11px;
 }
