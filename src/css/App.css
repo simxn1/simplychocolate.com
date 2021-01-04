@@ -135,7 +135,7 @@ body {
 
 .add-to-cart {
     color: #fff;
-    display: inline-block;
+    display: block;
     border: 2px solid #fff;
     padding: 0.5em 0.6875em;
 }
@@ -263,3 +263,4 @@ body {
     }
 
 }
+
