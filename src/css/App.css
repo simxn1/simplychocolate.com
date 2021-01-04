@@ -32,6 +32,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    position: relative;
 }
 
 .section img {
@@ -110,13 +111,33 @@ body {
     letter-spacing: 0.35px;
 }
 
-.add-to-cart {
+.next-section-link {
+    text-transform: uppercase;
+    font-family: 'Social Gothic Demi-Bold';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.55em;
+}
+
+.next-section-logo {
+    position: relative;
+    width: 38% !important;
+    top: 4%;
+}
+
+.add-to-cart-container {
+    display: block;
     position: relative;
     top: 63%;
+}
+
+.add-to-cart {
     color: #fff;
     display: inline-block;
     border: 2px solid #fff;
-    padding: 8px 11px;
+    padding: 0.5em 0.6875em;
 }
 
 .add-to-cart:hover {
@@ -131,6 +152,12 @@ body {
     font-family: 'Social Gothic Demi-Bold', sans-serif;
     color: #fff;
     cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
 }
 
 .add-to-cart button:focus {
@@ -167,10 +194,10 @@ body {
 .product-desc {
     color: #fff;
     text-align: left;
-    font-family: 'Cormonant Garamond Light';
+    font-family: 'Cormonant Garamond Medium';
     position: relative;
-    top: 61.5%;
-    margin-left: 13%;
+    top: 62%;
+    left: 12%;
     font-size: 1.25em;
     letter-spacing: 0.45px;
 }
@@ -179,10 +206,60 @@ body {
     width: 60% !important;
     height: auto;
     position: relative;
-    top: 58%;
-    left: -18.5%;
+    display: block !important;
+    top: 59%;
+    margin: 0;
+    left: 1%;
 }
 
 .product-icons[src="/img/mobile-five-icons.png"] {
-    left: -16.5%;
+    left: 3%;
+}
+
+@media (max-height: 750px) {
+
+    .add-to-cart-container {
+        top: 64%;
+    }
+
+    .add-to-cart {
+        font-size: .65em;
+        padding-bottom: 0.8em;
+    }
+
+    .product-desc {
+        font-size: 1.15em;
+        letter-spacing: 0.9px;
+        top: 63%;
+    }
+
+    .product-icons {
+        top: 59%;
+    }
+
+}
+
+@media (max-height: 670px) {
+
+    .add-to-cart-container {
+        top: 65%;
+    }
+
+    .add-to-cart {
+        font-size: .5em;
+        padding-bottom: 0.9em;
+    }
+
+    .product-desc {
+        font-size: 1.1em;
+        letter-spacing: 0.9px;
+        top: 64%;
+    }
+
+    .product-icons {
+        top: 59.75%;
+        left: 2%;
+        width: 54% !important;
+    }
+
 }
