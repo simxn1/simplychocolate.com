@@ -26,6 +26,16 @@ body {
     display: none;
 }
 
+.control-dots .dot:nth-child(1),
+.control-dots .dot:nth-child(2),
+.control-dots .dot:nth-child(3), 
+.control-dots .dot:nth-child(4), 
+.control-dots .dot:nth-child(5), 
+.control-dots .dot:nth-child(6),
+.control-dots .dot:nth-child(14) {
+    display: none;
+}
+
 .section {
     width: 100vw;
     height: 100vh;
@@ -61,14 +71,6 @@ body {
 }
 
 .control-arrow {
-    /*display: none;*/
-}
-
-/*.control-dots {
-    display: none;
-}*/
-
-#carousel-container > .carousel-1 > .carousel > .control-dots {
     display: none;
 }
 
@@ -127,6 +129,24 @@ body {
     top: 4%;
 }
 
+.carousel .control-dots .dot {
+    opacity: .2;
+    box-shadow: none;
+    background: transparent;
+    width: 2.5em;
+    height: 2.5em;
+    margin: 0 -0.55em;
+    border: 1px solid #fff;
+}
+
+.carousel .control-dots .dot:hover {
+    opacity: 1;
+}
+
+.dot.selected {
+    opacity: 1;
+}
+
 .add-to-cart-container {
     display: block;
     position: relative;
@@ -135,14 +155,16 @@ body {
 
 .add-to-cart {
     color: #fff;
-    display: inline-block;
+    display: flex;
     border: 2px solid #fff;
-    padding: 0.5em 0.6875em;
+    align-items: center;
+    justify-content: center;
+    width: 26%;
+    height: 2.5em;
+    margin: 0 auto;
 }
 
 .add-to-cart:hover {
-    border: 3px solid #fff;
-    transition: 0.25s all ease-in-out;
     cursor: pointer;
 }
 
@@ -222,11 +244,6 @@ body {
         top: 64%;
     }
 
-    .add-to-cart {
-        font-size: .65em;
-        padding-bottom: 0.8em;
-    }
-
     .product-desc {
         font-size: 1.15em;
         letter-spacing: 0.9px;
@@ -243,11 +260,6 @@ body {
 
     .add-to-cart-container {
         top: 65%;
-    }
-
-    .add-to-cart {
-        font-size: .5em;
-        padding-bottom: 0.9em;
     }
 
     .product-desc {
