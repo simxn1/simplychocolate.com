@@ -66,7 +66,7 @@ body {
 
 .slide:nth-child(1) .section .slide-selectors {
     position: relative;
-    bottom: -69%;
+    top: 69%;
 }
 
 .slide:nth-child(2) .section .slide-selectors {
@@ -112,7 +112,7 @@ body {
     position: relative;
     line-height: 1.1em;
     font-size: 3.1em;
-    bottom: -64%;
+    top: 64%;
     left: 8%;
 }
 
@@ -354,6 +354,14 @@ body {
 
 @media (max-height: 750px) {
 
+    .first-heading {
+        top: 60%;
+    }
+    
+    .slide:nth-child(1) .section .slide-selectors {
+        top: 64.5%;
+    }
+
     .second-heading {
         top: 4%;
         left: 13%;
@@ -392,6 +400,18 @@ body {
 
 }
 
+@media (max-height: 710px) {
+
+    .first-heading {
+        top: 57.5%;
+    }
+
+    .slide:nth-child(1) .section .slide-selectors {
+        top: 61%;
+    }
+
+}
+
 @media (max-height: 700px) {
 
     .company-desc {
@@ -406,6 +426,14 @@ body {
 }
 
 @media (max-height: 670px) {
+
+    .first-heading {
+        top: 55%;
+    }
+
+    .slide:nth-child(1) .section .slide-selectors {
+        top: 58.5%;
+    }
 
     .add-to-cart-container {
         top: 65%;
@@ -434,6 +462,18 @@ body {
 
 }
 
+@media (max-height: 630px) {
+    
+    .first-heading {
+        top: 52.5%;
+    }
+
+    .slide:nth-child(1) .section .slide-selectors {
+        top: 57.5%;
+    }
+
+}
+
 @media (max-height: 610px) {
 
     .second-heading {
@@ -458,6 +498,19 @@ body {
 
     .slide:nth-child(2) .section .slide-selectors button {
         font-size: 1.5em;
+    }
+
+}
+
+@media (max-height: 600px) {
+
+    .first-heading {
+        top: 54.5%;
+        font-size: 2.75em;
+    }
+
+    .slide:nth-child(1) .section .slide-selectors button {
+        font-size: 1.8em;
     }
 
 }

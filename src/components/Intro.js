@@ -20,7 +20,7 @@ const Intro = (props) => {
 
     return (
         <Carousel autoPlay={false} selectedItem={currentSlide} className="intro">
-            <div style={{ backgroundImage: `url("img/mobile-1.jpg")` }} className="section">
+            <div style={{ backgroundImage: `url("img/mobile-1.jpg")`, backgroundPosition: `bottom` }} className="section">
                 <h1 className="heading first-heading">yes<br />you can<br />buy love</h1>
                 <div className="slide-selectors">
                     <button onClick={prevSlide}><i class="fas fa-chevron-left"></i></button>
