@@ -14,7 +14,8 @@ const Product = (props) => {
     }
 
     return (
-        <div style={{ backgroundImage: `url("img/mobile-${props.name.replace(" ", "")}.png")` }} className="section">
+        <div className="section">
+            <img src={`img/mobile-${props.name.replace(" ", "")}.png`} className="product-bg" />
             <h1 style={{ color: props.color }} className="product-heading">
                 {props.name.split(" ")[0]}<br />
                 {props.name.split(" ")[1]}

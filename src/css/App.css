@@ -209,14 +209,25 @@ body {
     height: 2.5em;
     margin: 0 -0.55em;
     border: 1px solid #fff;
+    outline: none;
+
 }
 
 .carousel .control-dots .dot:hover {
     opacity: 1;
 }
 
+.carousel .control-dots .dot:focus {
+    outline: none;
+}
+
 .dot.selected {
     opacity: 1;
+}
+
+.product-bg {
+    position: absolute;
+    left: 0;
 }
 
 .product-heading {
