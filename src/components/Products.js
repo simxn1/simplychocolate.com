@@ -201,7 +201,7 @@ const Products = (props) => {
         <Carousel autoPlay={false} className="products">
 
             {
-                products.map(product =>
+                products.map( product =>
                     <Product
                         name={product.name}
                         icons={product.icons}

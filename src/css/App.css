@@ -71,7 +71,7 @@ body {
 
 .slide:nth-child(2) .section .slide-selectors {
     position: relative;
-    top: 5%;
+    top: 14%;
 }
 
 .slide-selectors button {
@@ -125,13 +125,14 @@ body {
 
 .logo-first {
     width: 35% !important;
-    position: relative;
-    top: 3.8%;
-    left: -22%;
+    position: absolute;
+    top: 12%;
+    left: 11%;
 }
 
 .company-desc {
-    margin-top: 17%;
+    position: relative;
+    top: 12%;
     font-size: 1.075em;
 }
 
@@ -154,7 +155,8 @@ body {
     width: 6.5em !important;
     height: auto;
     margin: 0 auto;
-    margin-top: 52%;
+    top: 24%;
+    position: relative;
 }
 
 .section-2-heading {
@@ -164,7 +166,7 @@ body {
     position: relative;
     letter-spacing: 0.7px;
     font-size: 1.7em;
-    margin-top: 0.6em;
+    top: 23%;
 }
 
 .section-2-heading:after {
@@ -181,8 +183,10 @@ body {
     color: #fff;
     font-family: 'Cormonant Garamond Medium';
     font-size: 1.2em;
-    margin: 13% 9%;
+    margin: 0% 9%;
     letter-spacing: 0.35px;
+    position: relative;
+    top: 26%;
 }
 
 .next-section-link {
@@ -225,7 +229,7 @@ body {
     opacity: 1;
 }
 
-.product-bg {
+.slide-bg {
     position: absolute;
     left: 0;
 }
