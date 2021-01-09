@@ -9,7 +9,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-let dotsList = document.querySelector('.control-dots')
+/*let dotsList = document.querySelector('.control-dots')
 let dots = dotsList.children
 let dotSelected
 let isOneOfProductsSelected
@@ -42,4 +42,4 @@ setInterval(() => {
     dotsList.style.display = 'none'
   }
 
-}, 1);
+}, 1);*/

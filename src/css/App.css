@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: 'Social Gothic Bold';
+    src: url('../fonts/SocialGothicBold.otf');
+}
+
+@font-face {
     font-family: 'Cormonant Garamond Light';
     src: url('../fonts/CormorantGaramond-Light.ttf');
 }
@@ -26,13 +31,21 @@ body {
     display: none;
 }
 
-.control-dots .dot:nth-child(1),
+/*.control-dots .dot:nth-child(1),
 .control-dots .dot:nth-child(2),
 .control-dots .dot:nth-child(3), 
 .control-dots .dot:nth-child(4), 
 .control-dots .dot:nth-child(5), 
 .control-dots .dot:nth-child(6),
 .control-dots .dot:nth-child(14) {
+    display: none;
+}*/
+
+.intro .carousel .control-dots {
+    display: none;
+}
+
+.about .carousel .control-dots {
     display: none;
 }
 
@@ -51,14 +64,22 @@ body {
     overflow: hidden;
 }
 
+.slide:nth-child(1) .section .slide-selectors {
+    position: relative;
+    bottom: -69%;
+}
+
+.slide:nth-child(2) .section .slide-selectors {
+    position: relative;
+    top: 5%;
+}
+
 .slide-selectors button {
     background: transparent;
     border: none;
-    position: relative;
-    bottom: 1.3em;
     color: #fff;
-    font-size: 1.2em;
     font-weight: 300;
+    font-size: 2em;
 }
 
 .slide-selectors button:hover {
@@ -76,6 +97,57 @@ body {
 
 .thumbs-wrapper {
     display: none;
+}
+
+.heading {
+    color: #fff;
+    margin: 0;
+    font-family: 'Social Gothic Demi-Bold', sans-serif;
+    text-transform: uppercase;
+    text-align: left;
+
+}
+
+.first-heading {
+    position: relative;
+    line-height: 1.1em;
+    font-size: 3.1em;
+    bottom: -64%;
+    left: 8%;
+}
+
+.second-heading {
+    position: relative;
+    top: 4%;
+    left: 13%;
+    font-size: 3em;
+}
+
+.logo-first {
+    width: 35% !important;
+    position: relative;
+    top: 3.8%;
+    left: -22%;
+}
+
+.company-desc {
+    margin-top: 17%;
+    font-size: 1.075em;
+}
+
+.company-desc-p {
+    margin-top: 20%;
+    font-size: 1.1em;
+    letter-spacing: 0.25px;
+}
+
+.company-desc-p {
+    color: #fff;
+    font-family: 'Cormonant Garamond Light';
+    margin: 0 auto;
+    width: 32ch;
+    text-align: left;
+    font-size: 1.05em;
 }
 
 .section-2-icon {
@@ -147,13 +219,22 @@ body {
     opacity: 1;
 }
 
-.add-to-cart-container {
-    display: block;
-    position: relative;
-    top: 63%;
+.product-heading {
+    margin: 0;
+    font-family: 'Social Gothic Bold';
+    text-transform: uppercase;
+    text-align: left;
+    position: absolute;
+    top: 24%;
+    left: 9.5%;
+    font-size: 4em;
+    line-height: 1.1em;
 }
 
 .add-to-cart {
+    display: block;
+    position: relative;
+    top: 63%;
     color: #fff;
     display: flex;
     border: 2px solid #fff;
@@ -185,6 +266,23 @@ body {
 .add-to-cart button:focus {
     border: none;
     outline: none;
+}
+
+.cart {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 66%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #fff;
+    opacity: 0.85;
+}
+
+.display-block {
+    display: block !important;
 }
 
 .quantity {
