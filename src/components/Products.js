@@ -198,7 +198,7 @@ const Products = (props) => {
     ];
 
     return (
-        <Carousel autoPlay={false} className="products">
+        <Carousel autoPlay={false} className="products component">
 
             {
                 products.map( product =>

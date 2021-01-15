@@ -39,7 +39,7 @@ const About = () => {
     ]
 
     return (
-        <Carousel autoPlay={false} className="about">
+        <Carousel autoPlay={false} className="about component">
 
             {
                 pages.map(page => 

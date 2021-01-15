@@ -5,7 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 const Cart = () => {
 
     return (
-        <Carousel>
+        <Carousel className="component">
             
         </Carousel>
     )

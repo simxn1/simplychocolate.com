@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './css/App.css';
 import Intro from "./components/Intro";
@@ -134,11 +134,10 @@ const App = () => {
 
 
   return (
-    <div>
+    <div className="components-container">
       <Intro />
       <About />
       <Products />
-      <Cart />
     </div>
   )
 }

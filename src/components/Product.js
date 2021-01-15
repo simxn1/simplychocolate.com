@@ -2,27 +2,27 @@ import React, { useState } from 'react';
 
 const Product = (props) => {
 
-    const [overlayDisplay, setOverlayDisplay] = React.useState("none")
+    const [cartDisplay, setCartDisplay] = React.useState("none")
 
     const openCart = () => {
-        setOverlayDisplay("block")
+        setCartDisplay("block")
     }
 
     const closeCart = () => {
-        setOverlayDisplay("none")
+        setCartDisplay("none")
     }
 
     return (
-        <div className="section">
-            <img src={`img/mobile-${props.name.replace(" ", "")}.png`} className="slide-bg" />
+        <div onClick={cartDisplay == "block" ? closeCart : undefined} style={{ backgroundColor: props.color }} className="section">
+            <img src={`img/mobile-${props.name.replace(" ", "")}.png`} className="slide-bg product-bg" />
             <h1 style={{ color: props.color }} className="product-heading">
                 {props.name.split(" ")[0]}<br />
                 {props.name.split(" ")[1]}
             </h1>
             <div onClick={openCart} className="add-to-cart">
-                <button><i class="fas fa-shopping-cart"></i></button>
+                <button style={{ color: props.color }}>Chcem túto tyčinku</button>
             </div>
-            <div onClick={closeCart} style={{ display: `${overlayDisplay}` }} className="cart">
+            <div style={{ display: `${cartDisplay}` }} className="cart">
                 <h2 style={{ fontFamily: "Social Gothic Demi-Bold", textTransform: "uppercase" }}>máš chuť na čokolásku?</h2>
             </div>
             <p className="product-desc">

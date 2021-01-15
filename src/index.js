@@ -9,6 +9,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+
 /*let dotsList = document.querySelector('.control-dots')
 let dots = dotsList.children
 let dotSelected

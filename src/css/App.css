@@ -20,6 +20,7 @@
 
 body {
     margin: 0;
+    overflow: hidden;
 }
 
 #root {
@@ -41,6 +42,18 @@ body {
     display: none;
 }*/
 
+.components-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.component {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    height: 100vh;
+}
+
 .intro .carousel .control-dots {
     display: none;
 }
@@ -61,7 +74,7 @@ body {
 .section img {
     /*width: 100vw;
     height: 100vh;*/
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .slide:nth-child(1) .section .slide-selectors {
@@ -235,13 +248,17 @@ body {
     left: 0;
 }
 
+.product-bg {
+    height: 100%;
+}
+
 .product-heading {
     margin: 0;
     font-family: 'Social Gothic Bold';
     text-transform: uppercase;
     text-align: left;
     position: absolute;
-    top: 24%;
+    top: 22%;
     left: 9.5%;
     font-size: 4em;
     line-height: 1.1em;
@@ -256,9 +273,10 @@ body {
     border: 2px solid #fff;
     align-items: center;
     justify-content: center;
-    width: 26%;
+    width: 42%;
     height: 2.5em;
     margin: 0 auto;
+    background-color: #fff;
 }
 
 .add-to-cart:hover {
@@ -269,7 +287,8 @@ body {
     background-color: transparent;
     border: none;
     font-family: 'Social Gothic Demi-Bold', sans-serif;
-    color: #fff;
+    font-size: 1em;
+    text-transform: uppercase;
     cursor: pointer;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -288,7 +307,7 @@ body {
     position: absolute;
     display: none;
     width: 100%;
-    height: 66%;
+    height: 68%;
     bottom: 0;
     right: 0;
     left: 0;
@@ -332,24 +351,36 @@ body {
     text-align: left;
     font-family: 'Cormonant Garamond Medium';
     position: relative;
-    top: 62%;
+    top: 63%;
     left: 12%;
     font-size: 1.25em;
     letter-spacing: 0.45px;
 }
 
 .product-icons {
-    width: 60% !important;
+    width: 61% !important;
     height: auto;
     position: relative;
     display: block !important;
-    top: 59%;
+    top: 59.5%;
     margin: 0;
     left: 1%;
 }
 
+.control-dots {
+    bottom: 2% !important;
+}
+
 .product-icons[src="/img/mobile-five-icons.png"] {
     left: 3%;
+}
+
+@media (max-height: 800px) {
+
+    .product-bg {
+        height: 99.7%;
+    }
+
 }
 
 @media (max-height: 750px) {
@@ -384,18 +415,25 @@ body {
         top: 12.5%;
     }
         
-    .add-to-cart-container {
-        top: 64%;
+    .add-to-cart {
+        top: 62%;
+        width: 41%;
+        height: 2.3em;
+    }
+
+    .add-to-cart button {
+        font-size: 0.9em;
     }
 
     .product-desc {
-        font-size: 1.15em;
-        letter-spacing: 0.9px;
-        top: 63%;
+        font-size: 1.1em;
+        letter-spacing: 0.75px;
+        top: 61%;
     }
 
     .product-icons {
-        top: 59%;
+        top: 57.6%;
+        width: 58% !important;
     }
 
 }
@@ -425,6 +463,25 @@ body {
 
 }
 
+@media (max-height: 690px) {
+
+    .product-heading {
+        font-size: 3.7em;
+        line-height: 1.05em;
+    }
+
+    .carousel .control-dots .dot {
+        width: 2em;
+        height: 2em;
+        margin: 0 -0.45em;
+    }
+
+    .control-dots {
+        bottom: 1% !important;
+    }
+
+}
+
 @media (max-height: 670px) {
 
     .first-heading {
@@ -442,11 +499,9 @@ body {
     .product-desc {
         font-size: 1.1em;
         letter-spacing: 0.9px;
-        top: 64%;
     }
 
     .product-icons {
-        top: 59.75%;
         left: 2%;
         width: 54% !important;
     }
@@ -470,6 +525,14 @@ body {
 
     .slide:nth-child(1) .section .slide-selectors {
         top: 57.5%;
+    }
+
+}
+
+@media (max-height: 620px) {
+
+    .product-heading {
+        font-size: 3.4em;
     }
 
 }
@@ -513,12 +576,54 @@ body {
         font-size: 1.8em;
     }
 
+    .add-to-cart {
+        width: 42%;
+    }
+
+    .add-to-cart button {
+        font-size: 0.8em;
+    }
+
+    .product-desc {
+        font-size: 1em;
+    }
+
+    .product-icons {
+        width: 53% !important;
+    }
+
+    .carousel .control-dots {
+        bottom: 1.5% !important;
+    }
+
+    .carousel .control-dots .dot {
+        width: 1.7em;
+        height: 1.7em;
+        margin: 0 -0.37em;
+    }
+
 }
 
 @media (max-height: 590px) {
 
     .logo-first {
         top: 10.75%;
+    }
+
+}
+
+@media (max-height: 580px) {
+
+    .carousel .control-dots {
+        bottom: 0% !important;
+    }
+
+}
+
+@media (max-width: 345px) {
+
+    .add-to-cart {
+        width: 45%;
     }
 
 }
