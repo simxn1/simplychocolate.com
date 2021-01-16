@@ -264,7 +264,7 @@ body {
     line-height: 1.1em;
 }
 
-.add-to-cart {
+.open-cart {
     display: block;
     position: relative;
     top: 63%;
@@ -279,11 +279,11 @@ body {
     background-color: #fff;
 }
 
-.add-to-cart:hover {
+.open-cart:hover {
     cursor: pointer;
 }
 
-.add-to-cart button {
+.open-cart button {
     background-color: transparent;
     border: none;
     font-family: 'Social Gothic Demi-Bold', sans-serif;
@@ -298,7 +298,7 @@ body {
     user-select: none;
 }
 
-.add-to-cart button:focus {
+.open-cart button:focus {
     border: none;
     outline: none;
 }
@@ -307,13 +307,69 @@ body {
     position: absolute;
     display: none;
     width: 100%;
-    height: 68%;
+    height: 70%;
     bottom: 0;
     right: 0;
     left: 0;
     z-index: 10;
     background-color: #fff;
-    opacity: 0.85;
+    opacity: 0.95;
+}
+
+.cart h2 {
+    font-family: 'Social Gothic Demi-Bold';
+    text-transform: uppercase;
+}
+
+.cart h3 {
+    font-family: 'Cormonant Garamond Medium';
+    margin-top: -3%;
+}
+
+.box-sizes {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    text-align: center;
+    margin-top: -1%;
+    margin-bottom: 7.5%;
+}
+
+.box-sizes li button {
+    background: transparent;
+    border: 0;
+    font-size: 1.2em;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.box-sizes li button strong {
+    font-family: 'Social Gothic Bold';
+}
+
+.cart > button:focus {
+    outline: none;
+    cursor: pointer;
+}
+
+.cart > button:first-of-type {
+    margin-bottom: 5%;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Social Gothic Demi-Bold';
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.7em 1em;
+    border-radius: 0.8em;
+    font-size: 0.95em;
+}
+
+.cart > button:nth-of-type(2) {
+    font-family: 'Social Gothic Demi-Bold';
+    background: none;
+    border: 0;
+    text-transform: uppercase;
+    text-decoration: underline;
 }
 
 .display-block {
@@ -415,13 +471,13 @@ body {
         top: 12.5%;
     }
         
-    .add-to-cart {
+    .open-cart {
         top: 62%;
         width: 41%;
         height: 2.3em;
     }
 
-    .add-to-cart button {
+    .open-cart button {
         font-size: 0.9em;
     }
 
@@ -492,7 +548,7 @@ body {
         top: 58.5%;
     }
 
-    .add-to-cart-container {
+    .open-cart-container {
         top: 65%;
     }
 
@@ -576,11 +632,11 @@ body {
         font-size: 1.8em;
     }
 
-    .add-to-cart {
+    .open-cart {
         width: 42%;
     }
 
-    .add-to-cart button {
+    .open-cart button {
         font-size: 0.8em;
     }
 
@@ -622,7 +678,7 @@ body {
 
 @media (max-width: 345px) {
 
-    .add-to-cart {
+    .open-cart {
         width: 45%;
     }
 
