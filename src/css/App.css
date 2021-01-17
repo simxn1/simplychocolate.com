@@ -44,7 +44,7 @@ body {
     display: none;
 }
 
-.components-container {
+.mobile-components-container {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
@@ -307,7 +307,7 @@ body {
     position: absolute;
     display: none;
     width: 100%;
-    height: 75%;
+    height: 80%;
     bottom: 0;
     right: 0;
     left: 0;

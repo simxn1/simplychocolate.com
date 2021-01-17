@@ -1,11 +1,13 @@
 import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './css/App.css';
-import Intro from "./components/Intro";
-import About from "./components/About";
-import Products from "./components/Products";
-import Contact from './components/Contact';
-import { MobileView } from 'react-device-detect';
+import Intro from "./componentsMobile/Intro";
+import About from "./componentsMobile/About";
+import Products from "./componentsMobile/Products";
+import Contact from './componentsMobile/Contact';
+import { MobileView, BrowserView } from 'react-device-detect';
+import { Carousel } from 'react-responsive-carousel';
+import IntroDesktop from './componentsDesktop/IntroDesktop';
 
 const App = () => {
 
@@ -134,14 +136,12 @@ const App = () => {
   }
 
   return (
-    <MobileView>
-      <div className="components-container">
-        <Intro />
-        <About />
-        <Products />
-        <Contact />
-      </div>
-    </MobileView>
+        <div className="mobile-components-container">
+          <Intro />
+          <About />
+          <Products />
+          <Contact />
+        </div>
   )
 }
 
