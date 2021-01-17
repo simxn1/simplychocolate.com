@@ -464,7 +464,7 @@ body {
     grid-row: 3 / 6;
     font-family: 'Cormonant Garamond Bold', serif;
     font-size: 1em;
-    width: 104.5%;
+    width: 82vw;
     border: 0;
     opacity: 0.6;
     border-radius: 0 !important;
@@ -496,7 +496,7 @@ body {
 }
 
 .contact form input {
-    width: 110%;
+    width: 38vw;
     padding: 0.7em 0.8em;
     font-family: 'Cormonant Garamond Bold', serif;
     font-size: 1em;
