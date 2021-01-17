@@ -492,7 +492,7 @@ body {
 }
 
 .contact form input {
-    width: 9em;
+    width: 110%;
     padding: 0.7em 0.8em;
     font-family: 'Cormonant Garamond Bold', serif;
     font-size: 1em;
@@ -536,18 +536,18 @@ body {
 
 @media (max-height: 750px) {
 
-    .first-heading {
-        top: 60%;
+    .intro-first-heading {
+        top: 61%;
     }
     
-    .slide:nth-child(1) .section .slide-selectors {
-        top: 64.5%;
-    }
-
-    .second-heading {
+    .intro-second-heading {
         top: 4%;
         left: 13%;
         font-size: 2.2em;
+    }
+
+    .slide:nth-child(1) .section .slide-selectors {
+        top: 65%;
     }
 
     .logo-first {
@@ -591,12 +591,12 @@ body {
 
 @media (max-height: 710px) {
 
-    .first-heading {
+    .intro-first-heading {
         top: 57.5%;
     }
 
     .slide:nth-child(1) .section .slide-selectors {
-        top: 61%;
+        top: 62%;
     }
 
 }
@@ -610,6 +610,26 @@ body {
 
     .slide:nth-child(2) .section .slide-selectors button {
         font-size: 1.6em;
+    }
+
+    .contact-heading-first {
+        top: 6%;
+        font-size: 2.2em;
+    }
+
+    .contact-heading-second {
+        top: 9%;
+        left: 18%;
+        font-size: 1.3em;
+    }
+
+    .contact form {
+        font-size: 0.9em;
+        top: 17%;
+    }
+
+    .contact form textarea {
+        width: 100%;
     }
 
 }
@@ -635,12 +655,12 @@ body {
 
 @media (max-height: 670px) {
 
-    .first-heading {
+    .intro-first-heading {
         top: 55%;
     }
 
     .slide:nth-child(1) .section .slide-selectors {
-        top: 58.5%;
+        top: 60%;
     }
 
     .open-cart-container {
@@ -670,12 +690,12 @@ body {
 
 @media (max-height: 630px) {
     
-    .first-heading {
+    .intro-first-heading {
         top: 52.5%;
     }
 
     .slide:nth-child(1) .section .slide-selectors {
-        top: 57.5%;
+        top: 58%;
     }
 
 }
@@ -686,11 +706,33 @@ body {
         font-size: 3.4em;
     }
 
+    .contact-heading-first {
+        top: 6%;
+        font-size: 2em;
+    }
+
+    .contact-heading-second {
+        top: 9%;
+        left: 18%;
+        font-size: 1.1em;
+    }
+
+    .contact form {
+        font-size: 0.8em;
+        top: 17%;
+        left: 13%;
+        column-gap: 3%;
+    }
+
+    .contact form textarea {
+        width: 95%;
+    }
+
 }
 
 @media (max-height: 610px) {
 
-    .second-heading {
+    .intro-second-heading {
         top: 4%;
         left: 13%;
         font-size: 1.85em;
@@ -718,13 +760,9 @@ body {
 
 @media (max-height: 600px) {
 
-    .first-heading {
+    .intro-first-heading {
         top: 54.5%;
         font-size: 2.75em;
-    }
-
-    .slide:nth-child(1) .section .slide-selectors button {
-        font-size: 1.8em;
     }
 
     .open-cart {
