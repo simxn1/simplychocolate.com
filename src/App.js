@@ -1,10 +1,11 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './css/App.css';
 import Intro from "./components/Intro";
 import About from "./components/About";
 import Products from "./components/Products";
 import Contact from './components/Contact';
+import { MobileView } from 'react-device-detect';
 
 const App = () => {
 
@@ -133,12 +134,14 @@ const App = () => {
   }
 
   return (
-    <div className="components-container">
-      <Intro />
-      <About />
-      <Products />
-      <Contact />
-    </div>
+    <MobileView>
+      <div className="components-container">
+        <Intro />
+        <About />
+        <Products />
+        <Contact />
+      </div>
+    </MobileView>
   )
 }
 
