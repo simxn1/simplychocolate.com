@@ -1,8 +1,10 @@
 import React from 'react';
+import { Carousel } from 'react-responsive-carousel';
 
 const Product = (props) => {
 
     const [cartDisplay, setCartDisplay] = React.useState("none");
+    const [cartContent, setCartContent] = React.useState([props.name, "unselected"]);
 
     const openCart = () => {
         setCartDisplay("block");
@@ -13,17 +15,19 @@ const Product = (props) => {
         setCartDisplay("none");
     }
 
+    const setQuantity = (event) => {
+        setCartContent([props.name, event.target.children.item(0).textContent.trim()])
+    }
+
     return (
         <div style={{ backgroundColor: props.color }} className="section">
             <img 
                 src={`img/mobile-${props.name.replace(" ", "")}.png`} 
                 className="slide-bg product-bg"
-                onClick={cartDisplay == "block" ? closeCart : undefined} 
             />
             <h1 
                 style={{ color: props.color }} 
                 className="product-heading"
-                onClick={cartDisplay == "block" ? closeCart : undefined}
             >
                 {props.name.split(" ")[0]}<br />
                 {props.name.split(" ")[1]}
@@ -31,7 +35,12 @@ const Product = (props) => {
             <div onClick={openCart} className="open-cart">
                 <button style={{ color: props.color }}>Chcem túto tyčinku</button>
             </div>
-            <div style={{ display: cartDisplay }} className="cart">
+            <div style={{ display: cartDisplay }} className="cart"> 
+                <i 
+                    class="fas fa-times" 
+                    onClick={cartDisplay == "block" ? closeCart : undefined}
+                >
+                </i>
                 <h2>
                     máš chuť na čokolásku?
                 </h2>
@@ -42,12 +51,15 @@ const Product = (props) => {
                     veľkosť
                 </h2>
                 <ul className="box-sizes">
-                    <li><button><strong>S </strong>- 6ks</button></li>
-                    <li><button><strong>M </strong>- 12ks</button></li>
-                    <li><button><strong>L </strong>- 20ks</button></li>
-                    <li><button><strong>XL </strong>- 30ks</button></li>
+                    <li><button onClick={setQuantity}><strong>S </strong>- 6ks</button></li>
+                    <li><button onClick={setQuantity}><strong>M </strong>- 12ks</button></li>
+                    <li><button onClick={setQuantity}><strong>L </strong>- 20ks</button></li>
+                    <li><button onClick={setQuantity}><strong>XL </strong>- 30ks</button></li>
                 </ul>
-                <button>chcem túto príchuť</button><br />
+                <button 
+                    onClick={() => console.log(cartContent)}
+                >
+                chcem túto príchuť</button><br />
                 <button>namixujem si vlastný box</button>
             </div>
             <p className="product-desc">
