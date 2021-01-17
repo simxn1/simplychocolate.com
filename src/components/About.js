@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import AboutPage from './AboutPage';
@@ -39,7 +39,7 @@ const About = () => {
     ]
 
     return (
-        <Carousel autoPlay={false} className="about component">
+        <Carousel autoPlay={true} interval={5000} infiniteLoop className="about component">
 
             {
                 pages.map(page => 

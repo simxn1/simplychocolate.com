@@ -2,14 +2,15 @@ import React from 'react';
 
 const Product = (props) => {
 
-    const [cartDisplay, setCartDisplay] = React.useState("none")
+    const [cartDisplay, setCartDisplay] = React.useState("none");
 
     const openCart = () => {
-        setCartDisplay("block")
+        setCartDisplay("block");
+        props.onOpenCart();
     }
 
     const closeCart = () => {
-        setCartDisplay("none")
+        setCartDisplay("none");
     }
 
     return (
@@ -30,7 +31,7 @@ const Product = (props) => {
             <div onClick={openCart} className="open-cart">
                 <button style={{ color: props.color }}>Chcem túto tyčinku</button>
             </div>
-            <div style={{ display: `${cartDisplay}` }} className="cart">
+            <div style={{ display: cartDisplay }} className="cart">
                 <h2>
                     máš chuť na čokolásku?
                 </h2>
@@ -56,7 +57,7 @@ const Product = (props) => {
             </p>
             <img className="product-icons" src={`/img/mobile-${props.icons}-icons.png`} />
         </div>
-    )
+    );
 
 }
 

@@ -129,7 +129,6 @@ const Products = (props) => {
         console.log(productsQuantity);
     }
 
-
     const products = [
 
         {
@@ -197,8 +196,14 @@ const Products = (props) => {
 
     ];
 
+    const [autoPlay, setAutoPlay] = React.useState(true);
+
+    const turnOffAutoPlay = () => {
+        setAutoPlay(false);
+    }
+
     return (
-        <Carousel autoPlay={false} className="products component">
+        <Carousel autoPlay={autoPlay} interval={5000} infiniteLoop className="products component">
 
             {
                 products.map( product =>
@@ -209,6 +214,7 @@ const Products = (props) => {
                         textSecond={product.textSecond}
                         textThird={product.textThird}
                         color={product.color}
+                        onOpenCart={turnOffAutoPlay}
                     />
                 )
             }

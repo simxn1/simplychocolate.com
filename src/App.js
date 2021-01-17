@@ -1,10 +1,10 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './css/App.css';
 import Intro from "./components/Intro";
 import About from "./components/About";
 import Products from "./components/Products";
-import Cart from './components/Cart';
+import Contact from './components/Contact';
 
 const App = () => {
 
@@ -132,12 +132,12 @@ const App = () => {
     console.log(productsQuantity);
   }
 
-
   return (
     <div className="components-container">
       <Intro />
       <About />
       <Products />
+      <Contact />
     </div>
   )
 }
