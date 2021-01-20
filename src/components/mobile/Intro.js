@@ -20,7 +20,7 @@ const Intro = (props) => {
 
     return (
         <Carousel autoPlay={false} selectedItem={currentSlide} className="intro component">
-            <div style={{ backgroundImage: `url("img/mobile-1.jpg")`, backgroundPosition: `bottom` }} className="section">
+            <div style={{ backgroundImage: `url("img/mobile/mobile-1.jpg")`, backgroundPosition: `bottom` }} className="section">
                 <h1 className="heading intro-first-heading">yes<br />you can<br />buy love</h1>
                 <div className="slide-selectors">
                     <button onClick={prevSlide}><i class="fas fa-chevron-left"></i></button>
@@ -29,7 +29,7 @@ const Intro = (props) => {
             </div>
             <div style={{ backgroundColor: `#000` }} className="section">
                 <h1 className="heading intro-second-heading">o nás</h1>
-                <img className="logo-first" src="/img/logowithoutbreak.png"></img>
+                <img className="logo-first" src="/img/mobile/logowithoutbreak.png"></img>
                 <div className="company-desc">
                     <p className="company-desc-p">
                         Spoločnosť Simply Chocolate verí,

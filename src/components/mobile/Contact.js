@@ -32,18 +32,18 @@ const Contact = () => {
     return (
         <Carousel className="contact component">
             <div onClick={hideSent} className="section">
-                <img src="/img/contact.png" className="slide-bg" />
+                <img src="/img/mobile/contact.png" className="slide-bg" />
                 <h1 className="heading contact-heading-first">máš <br />otázku?</h1>
                 <h2 className="heading contact-heading-second">
                     neváhaj nás<br />
                     kontaktovať
                 </h2>
                 <form onSubmit={sendEmail}>
-                    <input type="text" name="name" placeholder="Meno" />
-                    <input type="email" name="email" placeholder="Email" />
-                    <input type="text" name="phone" placeholder="Telefónne číslo" />
-                    <input type="text" name="subject" placeholder="Predmet" />
-                    <textarea name="message" placeholder="Správa"></textarea>
+                    <input type="text" name="name" placeholder="Meno" required />
+                    <input type="email" name="email" placeholder="Email" required />
+                    <input type="text" name="phone" placeholder="Telefónne číslo" required />
+                    <input type="text" name="subject" placeholder="Predmet" required />
+                    <textarea name="message" placeholder="Správa" required></textarea>
                     <button type="submit">Odoslať</button>
                 </form>
                 <div style={{ display: sentDisplay }} className="sent">

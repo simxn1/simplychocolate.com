@@ -70,11 +70,15 @@ body {
 
 .section {
     width: 100vw;
-    height: 100vh;
+    max-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
+}
+
+.slide {
+    background-color: red;
 }
 
 .slide:nth-child(1) .section .slide-selectors {
@@ -480,7 +484,7 @@ body {
     grid-row: 3 / 6;
     font-family: 'Cormonant Garamond Bold', serif;
     font-size: 1em;
-    width: 84vw;
+    width: 88vw;
     border: 0;
     opacity: 0.6;
     border-radius: 0 !important;
@@ -556,7 +560,7 @@ body {
     transform: translate(-50%, -50%);
     background-color: #fff;
     width: 51vw;
-    height: 25vh;
+    height: 30vh;
     padding-top: 16%;
     font-family: 'Social Gothic Bold';
     font-size: 1.5em;
