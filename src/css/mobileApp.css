@@ -70,7 +70,7 @@ body {
 
 .section {
     width: 100vw;
-    max-height: 100vh;
+    height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

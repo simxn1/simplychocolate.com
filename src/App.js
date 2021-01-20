@@ -1,5 +1,6 @@
 import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import './css/mobileApp.css';
 import Intro from "./components/mobile/Intro";
 import About from "./components/mobile/About";
 import Products from "./components/mobile/Products";
