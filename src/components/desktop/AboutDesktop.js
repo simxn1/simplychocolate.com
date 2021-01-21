@@ -1,6 +1,7 @@
 import React from 'react';
-import ReactCompareImage from 'react-compare-image';
 import AboutPageDesktop from './AboutPageDesktop';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
 
 const AboutDesktop = () => {
 
@@ -37,7 +38,7 @@ const AboutDesktop = () => {
     ];
 
     return (
-        <>
+        <Carousel className="section" autoPlay={true} interval={5000} infiniteLoop>
             {
                 pages.map((page) =>
                     <AboutPageDesktop
@@ -48,7 +49,7 @@ const AboutDesktop = () => {
                     />
                 )
             }
-        </>
+        </Carousel>
     )
 
 }
