@@ -4,11 +4,11 @@ const AboutPageDesktop = (props) => {
 
 
     return (
-        <div className="section" style={{ background: `url('/img/desktop/desktop-${props.bg}.jpg')` }}>
-            <div className="about-page-content">
-                <img className="about-icon" src={`/img/mobile/${props.icon}.png`} />
-                <h2 className="about-heading">{props.heading}</h2>
-                <p className="about-desc">{props.desc}</p>
+        <div className="desktop-section" style={{ background: `url('/img/desktop/desktop-${props.bg}.jpg')` }}>
+            <div className="desktop-about-page-content">
+                <img className="desktop-about-icon" src={`/img/mobile/${props.icon}.png`} />
+                <h2 className="desktop-about-heading desktop-heading">{props.heading}</h2>
+                <p className="desktop-about-desc">{props.desc}</p>
             </div>
         </div>
     )

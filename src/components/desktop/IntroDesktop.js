@@ -5,38 +5,38 @@ const IntroDesktop = () => {
 
 
     return (
-        <div className="section">
+        <div className="desktop-section">
             <ReactCompareImage
                 leftImage="/img/desktop/desktop-1.jpg"
                 leftImageLabel={
-                    (<h1 className="intro-first-heading">yes<br />you can<br />buy love</h1>)
+                    (<h1 className="desktop-intro-first-heading desktop-heading">yes<br />you can<br />buy love</h1>)
                 }
                 rightImage="/img/desktop/desktop-1-2.jpg"
                 rightImageLabel={
                     (
                         <>
-                            <div className="left-section">
-                                <h1 className="intro-hidden-heading">
+                            <div className="desktop-left-section">
+                                <h1 className="desktop-intro-hidden-heading desktop-heading">
                                     použité<br />
                                     výlučne<br />
                                     prírodné<br />
                                     suroviny
                                 </h1>
-                                <div className="icons">
+                                <div className="desktop-icons">
                                     <img src="/img/desktop/cocoahorizons.png"></img>
                                     <img src="/img/desktop/earth.png"></img>
                                     <img src="/img/desktop/noartificials.png"></img>
                                 </div>
-                                <div className="icons-labels">
+                                <div className="desktop-icons-labels">
                                     <strong>we<br />care!</strong>
                                     <strong>all<br />natural</strong>
                                     <strong>no<br />artificials</strong>
                                 </div>
                             </div>    
-                            <div className="right-section">
-                                <h1 className="intro-second-heading">o nás</h1>
-                                <img src="/img/desktop/logo.png" className="logo"></img>
-                                <div className="intro-company-desc">
+                            <div className="desktop-right-section">
+                                <h1 className="desktop-intro-second-heading desktop-heading">o nás</h1>
+                                <img src="/img/desktop/logo.png" className="desktop-logo"></img>
+                                <div className="desktop-intro-company-desc">
                                     <p>
                                         Spoločnosť Simply Chocolate verí, že pravá
                                         čokoládová láska vyžaduje nádych niečoho

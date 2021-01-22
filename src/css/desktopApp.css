@@ -42,14 +42,14 @@ body {
     height: 100vh;
 }
 
-.section {
+.desktop-section {
     scroll-snap-align: start;
     scroll-snap-stop: always;
     width: 100vw;
     height: 100vh;
 }
 
-.section img {
+.desktop-section img {
     width: 100vw;
     height: 100vh;
 }
@@ -66,15 +66,22 @@ div[data-testid="container"] div:nth-of-type(1) {
 /* image label styles */
 div[data-testid="container"] div:nth-of-type(2) div {
     background-color: transparent !important;
-    top: 68% !important;
     opacity: 1 !important;
 }
 
-.intro-first-heading {
-    background-color: transparent !important;
-    color: white;
-    font-family: "Social Gothic Bold";
+.desktop-section > div[data-testid="container"] div:nth-of-type(2) div {
+    top: 68% !important;
+}
+
+.desktop-heading {
+    color: #fff;
     text-transform: uppercase;
+    text-align: left;
+}
+
+.desktop-intro-first-heading {
+    background-color: transparent !important;
+    font-family: "Social Gothic Bold";
     font-size: 5em;
     line-height: 1.1em;
 }
@@ -85,86 +92,83 @@ div[data-testid="container"] div:nth-of-type(3) div {
     background-color: transparent !important;
 }
 
-.right-section {
+.desktop-right-section {
     text-align: left;
     position: relative;
     right: 17em !important;
     top: -6em !important;
 }
 
-.intro-second-heading {
+.desktop-intro-second-heading {
     font-size: 5em;
-    text-transform: uppercase;
-    text-align: left;
     font-family: 'Social Gothic Bold', sans-serif;
     margin-bottom: 0;
     left: 0;
 }
 
-.logo {
+.desktop-logo {
     width: 50% !important;
     height: 5% !important;
     margin-left: -2%;
 }
 
-.intro-company-desc {
+.desktop-intro-company-desc {
     font-family: 'Cormonant Garamond Medium';
     font-size: 1.4em;
     width: 38ch;
 }
 
-.left-section {
+.desktop-left-section {
     position: absolute;
     top: 30%;
     right: 318%;
 }
 
-.intro-hidden-heading {
-    text-transform: uppercase;
+.desktop-intro-hidden-heading {
     font-family: 'Social Gothic Bold';
     font-size: 2.8em;
     line-height: 1.3em;
 }
 
-.icons {
+.desktop-icons {
     display: flex;
 }
 
-.icons img {
+.desktop-icons img {
     width: 39%;
     height: 5%;
     margin-left: 7%;
 }
 
-.icons img:first-child {
+.desktop-icons img:first-child {
     margin-left: 0;
 }
 
-.icons-labels {
+.desktop-icons-labels {
     display: flex;
     margin-top: 2%;
     letter-spacing: 0.4px;
 }
 
-.icons-labels strong {
+.desktop-icons-labels strong {
     text-align: center;
     font-family: 'Social Gothic Demi-Bold', sans-serif;
     text-transform: uppercase;
 }
 
-.icons-labels strong:first-child {
+.desktop-icons-labels strong:first-child {
     margin-left: 8.5%;
 }
 
-.icons-labels strong:nth-child(2) {
+.desktop-icons-labels strong:nth-child(2) {
     margin-left: 19%;
 }
 
-.icons-labels strong:nth-child(3) {
+.desktop-icons-labels strong:nth-child(3) {
     margin-left: 9%;
 }
 
-.about-page-content {
+.desktop-about-page-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -172,22 +176,20 @@ div[data-testid="container"] div:nth-of-type(3) div {
     top: 22%;
 }
 
-.about-icon {
+.desktop-about-icon {
     width: 8% !important;
     height: 8% !important;
 }
 
-.about-heading {
-    text-transform: uppercase;
+.desktop-about-heading {
     font-family: 'Social Gothic Bold', sans-serif;
-    color: #fff;
     text-align: center;
     font-size: 3em;
     margin-top: 1%;
     margin-bottom: 1.5%;
 }
 
-.about-heading::after {
+.desktop-about-heading::after {
     content: "";
     background-color: #fff;
     position: relative;
@@ -198,13 +200,63 @@ div[data-testid="container"] div:nth-of-type(3) div {
     width: 3.4em;
 }
 
-.about-desc {
+.desktop-about-desc {
     color: #fff;
     font-family: 'Cormonant Garamond Medium', serif;
     font-size: 1.6em;
     width: 32ch;
     text-align: center;
     margin: 0;
+}
+
+.desktop-product-shown-section {
+    position: relative;
+    bottom: 17.8vh;
+}
+
+.desktop-product-shown-heading {
+    font-family: 'Social Gothic Demi-Bold', sans-serif;
+    font-size: 6.9em;
+    line-height: 1.15em;
+    margin-bottom: 0.4em;
+}
+
+.desktop-product-shown-desc {
+    text-align: left;
+    font-family: 'Cormonant Garamond Medium', serif;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    margin-left: 0.2em;
+}
+
+.desktop-product-icons {
+    width: 21em !important;
+    height: auto !important;
+    position: relative;
+    top: 25vh;
+    left: 1vh;
+}
+
+.desktop-product-hidden-section {
+    position: relative;
+    bottom: 21.8vh;
+    right: 425%;
+}
+
+.desktop-product-hidden-heading {
+    text-transform: uppercase;
+    font-family: 'Social Gothic Demi-Bold', sans-serif;
+    font-size: 6.9em;
+    line-height: 1.15em;
+}
+
+.desktop-product-hidden-desc {
+    color: #000;
+    position: relative;
+    top: 26vh;
+    width: 21ch;
+    font-size: 1.7em;
+    font-family: 'Cormonant Garamond Medium', serif;
 }
 
 
