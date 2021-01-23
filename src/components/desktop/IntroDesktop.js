@@ -15,7 +15,7 @@ const IntroDesktop = () => {
                 rightImageLabel={
                     (
                         <>
-                            <div className="desktop-left-section">
+                            <div className="desktop-intro-left-section">
                                 <h1 className="desktop-intro-hidden-heading desktop-heading">
                                     použité<br />
                                     výlučne<br />
@@ -33,7 +33,7 @@ const IntroDesktop = () => {
                                     <strong>no<br />artificials</strong>
                                 </div>
                             </div>    
-                            <div className="desktop-right-section">
+                            <div className="desktop-intro-right-section">
                                 <h1 className="desktop-intro-second-heading desktop-heading">o nás</h1>
                                 <img src="/img/desktop/logo.png" className="desktop-logo"></img>
                                 <div className="desktop-intro-company-desc">

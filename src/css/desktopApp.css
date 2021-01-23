@@ -131,12 +131,12 @@ div[data-testid="container"] div:nth-of-type(3) div {
     background-color: transparent !important;
 }
 
-.desktop-right-section {
+.desktop-intro-right-section {
     text-align: left;
     position: relative;
-    right: 17em !important;
-    top: -4em !important;
-    font-size: 1.2em;
+    right: 9vw !important;
+    top: -3vh !important;
+    font-size: 1.1em;
 }
 
 .desktop-intro-second-heading {
@@ -158,10 +158,10 @@ div[data-testid="container"] div:nth-of-type(3) div {
     width: 38ch;
 }
 
-.desktop-left-section {
+.desktop-intro-left-section {
     position: absolute;
-    top: 30%;
-    right: 318%;
+    top: 26vh;
+    right: 76vw;
 }
 
 .desktop-intro-hidden-heading {
@@ -287,7 +287,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
 .desktop-product-hidden-section .desktop-open-cart {
     border: 0;
-    top: 14vh;
+    top: 16vh;
     color: #fff;
 }
 
@@ -296,13 +296,13 @@ div[data-testid="container"] div:nth-of-type(3) div {
     height: auto !important;
     position: relative;
     top: 25vh;
-    left: -23vh;
+    left: -13vw;
 }
 
 .desktop-product-hidden-section {
     position: relative;
-    bottom: 16vh;
-    right: 75vw;
+    bottom: 17.4vh;
+    right: 71.2vw;
 }
 
 .desktop-product-hidden-heading {
@@ -317,17 +317,17 @@ div[data-testid="container"] div:nth-of-type(3) div {
     position: relative;
     top: 26vh;
     width: 21ch;
-    font-size: 2em;
+    font-size: 1.75em;
     font-family: 'Cormonant Garamond Medium', serif;
 }
 
 .desktop-cart {
     position: absolute;
     background: #fff;
-    width: 85vh;
+    width: 41vw;
     height: 69vh;
     top: 13vh;
-    left: 60vh;
+    left: 30vw;
 }
 
 .desktop-cart i {
