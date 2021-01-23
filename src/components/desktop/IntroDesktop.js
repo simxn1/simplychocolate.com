@@ -70,8 +70,8 @@ const IntroDesktop = () => {
                 handle={<div
                     style={{ color: "white", position: "relative", top: "12em", fontSize: "1.75em" }}
                 >
-                    <i style={{ position: "absolute", right: "0.5em" }} class="fas fa-chevron-left"></i>
-                    <i style={{ position: "absolute", left: "0.5em" }} class="fas fa-chevron-right"></i>
+                    <i style={{ position: "absolute", right: "0.5em" }} className="fas fa-chevron-left intro-left-arrow"></i>
+                    <i style={{ position: "absolute", left: "0.5em" }} className="fas fa-chevron-right intro-right-arrow"></i>
                 </div>}
                 sliderLineWidth={4}
             />

@@ -23,6 +23,32 @@
     src: url('../fonts/CormorantGaramond-Bold.ttf');
 }
 
+@keyframes intro-right-arrow {
+    
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(10px, 0);
+    }
+
+}
+
+@keyframes intro-left-arrow {
+    
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-10px, 0);
+    }
+
+}
+
 *,
 *:after,
 *:before{
@@ -47,6 +73,8 @@ body {
     scroll-snap-stop: always;
     width: 100vw;
     height: 100vh;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
 }
 
 .desktop-section img {
@@ -54,13 +82,14 @@ body {
     height: 100vh;
 }
 
+.desktop-section .control-dots .dot {
+    width: 3em;
+    height: 3em;
+}
+
 div[data-testid="container"] {
     width: 100vw !important;
     height: 100vh !important;
-}
-
-div[data-testid="container"] div:nth-of-type(1) {
-    cursor: move !important;
 }
 
 /* image label styles */
@@ -71,6 +100,16 @@ div[data-testid="container"] div:nth-of-type(2) div {
 
 .desktop-section > div[data-testid="container"] div:nth-of-type(2) div {
     top: 68% !important;
+}
+
+
+
+.intro-right-arrow {
+    animation: intro-right-arrow 1s ease-in-out infinite;
+}
+
+.intro-left-arrow {
+    animation: intro-left-arrow 1s ease-in-out infinite;
 }
 
 .desktop-heading {
@@ -96,7 +135,8 @@ div[data-testid="container"] div:nth-of-type(3) div {
     text-align: left;
     position: relative;
     right: 17em !important;
-    top: -6em !important;
+    top: -4em !important;
+    font-size: 1.2em;
 }
 
 .desktop-intro-second-heading {
@@ -203,7 +243,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
 .desktop-about-desc {
     color: #fff;
     font-family: 'Cormonant Garamond Medium', serif;
-    font-size: 1.6em;
+    font-size: 1.8em;
     width: 32ch;
     text-align: center;
     margin: 0;
@@ -211,7 +251,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
 .desktop-product-shown-section {
     position: relative;
-    bottom: 17.8vh;
+    bottom: 17vh;
 }
 
 .desktop-product-shown-heading {
@@ -224,9 +264,31 @@ div[data-testid="container"] div:nth-of-type(3) div {
 .desktop-product-shown-desc {
     text-align: left;
     font-family: 'Cormonant Garamond Medium', serif;
-    font-size: 1.5em;
+    font-size: 1.8em;
     letter-spacing: 1px;
     margin-left: 0.2em;
+}
+
+.desktop-open-cart {
+    outline: none;
+    text-transform: uppercase;
+    font-family: 'Social Gothic Demi-Bold';
+    padding: 0.5em 1em;
+    font-size: 1.5em;  
+    position: relative;
+    cursor: pointer;
+}
+
+.desktop-product-shown-section .desktop-open-cart {
+    background: #fff;
+    border: 0;
+    top: 5vh;
+}
+
+.desktop-product-hidden-section .desktop-open-cart {
+    border: 0;
+    top: 14vh;
+    color: #fff;
 }
 
 .desktop-product-icons {
@@ -234,13 +296,13 @@ div[data-testid="container"] div:nth-of-type(3) div {
     height: auto !important;
     position: relative;
     top: 25vh;
-    left: 1vh;
+    left: -23vh;
 }
 
 .desktop-product-hidden-section {
     position: relative;
-    bottom: 21.8vh;
-    right: 425%;
+    bottom: 16vh;
+    right: 75vw;
 }
 
 .desktop-product-hidden-heading {
@@ -255,11 +317,98 @@ div[data-testid="container"] div:nth-of-type(3) div {
     position: relative;
     top: 26vh;
     width: 21ch;
-    font-size: 1.7em;
+    font-size: 2em;
     font-family: 'Cormonant Garamond Medium', serif;
 }
 
+.desktop-cart {
+    position: absolute;
+    background: #fff;
+    width: 85vh;
+    height: 69vh;
+    top: 13vh;
+    left: 60vh;
+}
 
+.desktop-cart i {
+    position: relative;
+    left: 36vh;
+    top: 4vh;
+    font-size: 3em;
+    cursor: pointer;
+}
 
+.desktop-cart h2:first-of-type {
+    font-family: 'Social Gothic Bold';
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-size: 3em;
+}
+
+.desktop-cart h3 {
+    font-family: 'Cormonant Garamond Medium';
+    font-size: 1.7em;
+}
+
+.desktop-cart h2:nth-of-type(2) {
+    font-family: 'Social Gothic Bold';
+    text-transform: uppercase;
+    font-size: 2.1em;
+    margin-top: 6%;
+}
+
+.desktop-box-sizes {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    text-align: center;
+    margin-bottom: 6%;
+}
+
+.desktop-box-sizes li button {
+    background: transparent;
+    border: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.6em;
+}
+
+.desktop-box-sizes li button:focus {
+    outline: none;
+    border: 4px solid #000;
+    border-radius: 5px;
+}
+
+.desktop-box-sizes li button strong {
+    font-family: 'Social Gothic Bold';
+}
+
+.desktop-cart > button:focus {
+    outline: none;
+    cursor: pointer;
+}
+
+.desktop-cart > button:first-of-type {
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Social Gothic Demi-Bold';
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.7em 1em;
+    border-radius: 0.8em;
+    font-size: 1.25em;
+    cursor: pointer;
+}
+
+.desktop-cart > button:nth-of-type(2) {
+    font-family: 'Social Gothic Demi-Bold';
+    background: none;
+    border: 0;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 1em;
+    margin-top: 4%;
+    cursor: pointer;
+}
 
 
