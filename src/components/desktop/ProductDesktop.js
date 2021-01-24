@@ -4,9 +4,11 @@ import ReactCompareImage from 'react-compare-image';
 const ProductDesktop = (props) => {
 
     const [cartDisplay, setCartDisplay] = React.useState('none');
-    const [cartContent, setCartContent] = React.useState();
+    const [cartContent, setCartContent] = React.useState(["grainy billy", "unselected"]);
 
-    const toggleCartDisplay = () => {
+    const toggleCartDisplay = (event) => {
+        event.preventDefault();
+
         if (cartDisplay == "block") {
             setCartDisplay("none");
             console.log(cartDisplay);
@@ -16,6 +18,11 @@ const ProductDesktop = (props) => {
             console.log(cartDisplay);
         }
     }
+
+    const setQuantity = (event) => {
+        setCartContent(["grainy billy", event.target.children.item(0).textContent.trim()])
+    }
+
 
     return (
         <div style={{ position: `relative` }}>
@@ -33,18 +40,18 @@ const ProductDesktop = (props) => {
                                 brusnice<br />
                                 prémiová čokoláda
                             </p>
-                            <button 
-                                style={{ color: `rgb(170, 38, 52)` }} 
-                                className="desktop-open-cart"
-                                onClick={() => console.log('hello')}
-                            >
-                                chcem túto tyčinku
-                            </button>
                             <img 
                                 src="/img/desktop/four-icons.png" 
                                 className="desktop-product-icons"
                             >
                             </img>
+                            <button 
+                                onClick={toggleCartDisplay}
+                                style={{ color: `rgb(170, 38, 52)` }} 
+                                className="desktop-open-cart"
+                            >
+                                chcem túto tyčinku
+                            </button>
                         </div>
                     )
                 }
@@ -52,13 +59,17 @@ const ProductDesktop = (props) => {
                 rightImageLabel={
                     (
                         <div className="desktop-product-hidden-section">
-                            <h1 
+                            <h1
                                 style={{ color: `#aa2634` }} 
                                 className="desktop-product-hidden-heading"
                             >
                                 grainy<br />
                                 billy<br />
                             </h1>
+                            <p className="desktop-product-hidden-desc">
+                                Grainy Billy je najlahodnejšia kokosová tyčinka, ktorá ťa
+                                svojou chuťou a ľahkosťou nenechá prestať.
+                            </p>
                             <button 
                                 onClick={toggleCartDisplay}
                                 style={{ backgroundColor: `rgb(170, 38, 52)` }} 
@@ -66,10 +77,6 @@ const ProductDesktop = (props) => {
                             >
                                 chcem túto tyčinku
                             </button>
-                            <p className="desktop-product-hidden-desc">
-                                Grainy Billy je najlahodnejšia kokosová tyčinka, ktorá ťa
-                                svojou chuťou a ľahkosťou nenechá prestať.
-                            </p>
                         </div>
                     )
                 }
@@ -91,12 +98,12 @@ const ProductDesktop = (props) => {
                     veľkosť
                 </h2>
                 <ul className="desktop-box-sizes">
-                    <li><button><strong>S </strong>- 6ks</button></li>
-                    <li><button><strong>M </strong>- 12ks</button></li>
-                    <li><button><strong>L </strong>- 20ks</button></li>
-                    <li><button><strong>XL </strong>- 30ks</button></li>
+                    <li><button onClick={setQuantity}><strong>S </strong>- 6ks</button></li>
+                    <li><button onClick={setQuantity}><strong>M </strong>- 12ks</button></li>
+                    <li><button onClick={setQuantity}><strong>L </strong>- 20ks</button></li>
+                    <li><button onClick={setQuantity}><strong>XL </strong>- 30ks</button></li>
                 </ul>
-                <button>
+                <button onClick={() => console.log(cartContent)}>
                     chcem túto príchuť
                 </button><br />
                 <button>namixujem si vlastný box</button>

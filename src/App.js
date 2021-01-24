@@ -9,6 +9,7 @@ import { isBrowser, isMobile } from "react-device-detect";
 import IntroDesktop from "./components/desktop/IntroDesktop";
 import AboutDesktop from "./components/desktop/AboutDesktop";
 import ProductsDesktop from "./components/desktop/ProductsDesktop";
+import ContactDesktop from "./components/desktop/ContactDesktop";
 
 if (isBrowser) {
   import('./css/desktopApp.css')
@@ -35,6 +36,7 @@ const App = () => {
       <IntroDesktop />
       <AboutDesktop />
       <ProductsDesktop />
+      <ContactDesktop />
     </div>
   )
 
