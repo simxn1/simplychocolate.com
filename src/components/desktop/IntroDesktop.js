@@ -3,6 +3,9 @@ import ReactCompareImage from 'react-compare-image';
 
 const IntroDesktop = () => {
 
+    const success = () => {
+        console.log('success');
+    }
 
     return (
         <div className="desktop-section">
@@ -16,25 +19,25 @@ const IntroDesktop = () => {
                     (
                         <>
                             <div className="desktop-intro-left-section">
-                                <h1 className="desktop-intro-hidden-heading desktop-heading">
+                                <h1 onClick={success} className="desktop-intro-hidden-heading desktop-heading">
                                     použité<br />
                                     výlučne<br />
                                     prírodné<br />
                                     suroviny
                                 </h1>
-                                <div className="desktop-icons">
+                                <div className="desktop-intro-icons">
                                     <img src="/img/desktop/cocoahorizons.png"></img>
                                     <img src="/img/desktop/earth.png"></img>
                                     <img src="/img/desktop/noartificials.png"></img>
                                 </div>
-                                <div className="desktop-icons-labels">
+                                <div className="desktop-intro-icons-labels">
                                     <strong>we<br />care!</strong>
                                     <strong>all<br />natural</strong>
                                     <strong>no<br />artificials</strong>
                                 </div>
                             </div>    
                             <div className="desktop-intro-right-section">
-                                <h1 className="desktop-intro-second-heading desktop-heading">o nás</h1>
+                                <h1 onClick={success} className="desktop-intro-second-heading desktop-heading">o nás</h1>
                                 <img src="/img/desktop/logo.png" className="desktop-logo"></img>
                                 <div className="desktop-intro-company-desc">
                                     <p>

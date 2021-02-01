@@ -87,6 +87,10 @@ body {
     height: 3em;
 }
 
+.desktop-components-container > .desktop-section:nth-child(3) .carousel .control-dots .dot {
+    border: 1px solid #000;
+}
+
 div[data-testid="container"] {
     width: 100vw !important;
     height: 100vh !important;
@@ -147,8 +151,8 @@ div[data-testid="container"] div:nth-of-type(3) div {
 }
 
 .desktop-logo {
-    width: 50% !important;
-    height: 5% !important;
+    width: 12.7em !important;
+    height: 2.2em !important;
     margin-left: -2%;
 }
 
@@ -170,41 +174,41 @@ div[data-testid="container"] div:nth-of-type(3) div {
     line-height: 1.3em;
 }
 
-.desktop-icons {
+.desktop-intro-icons {
     display: flex;
 }
 
-.desktop-icons img {
+.desktop-intro-icons img {
     width: 39%;
     height: 5%;
     margin-left: 7%;
 }
 
-.desktop-icons img:first-child {
+.desktop-intro-icons img:first-child {
     margin-left: 0;
 }
 
-.desktop-icons-labels {
+.desktop-intro-icons-labels {
     display: flex;
     margin-top: 2%;
     letter-spacing: 0.4px;
 }
 
-.desktop-icons-labels strong {
+.desktop-intro-icons-labels strong {
     text-align: center;
     font-family: 'Social Gothic Demi-Bold', sans-serif;
     text-transform: uppercase;
 }
 
-.desktop-icons-labels strong:first-child {
+.desktop-intro-icons-labels strong:first-child {
     margin-left: 8.5%;
 }
 
-.desktop-icons-labels strong:nth-child(2) {
+.desktop-intro-icons-labels strong:nth-child(2) {
     margin-left: 19%;
 }
 
-.desktop-icons-labels strong:nth-child(3) {
+.desktop-intro-icons-labels strong:nth-child(3) {
     margin-left: 9%;
 }
 
@@ -258,7 +262,15 @@ div[data-testid="container"] div:nth-of-type(3) div {
     font-family: 'Social Gothic Demi-Bold', sans-serif;
     font-size: 6.9em;
     line-height: 1.15em;
-    margin-bottom: 0.4em;
+    margin-bottom: 0.05em;
+}
+
+.desktop-price {
+    font-family: 'Social Gothic Demi-Bold';
+    position: absolute;
+    font-size: 1.5em;
+    left: 0.25em;
+    display: inline-block;
 }
 
 .desktop-product-shown-desc {
@@ -267,34 +279,27 @@ div[data-testid="container"] div:nth-of-type(3) div {
     font-size: 1.8em;
     letter-spacing: 1px;
     margin-left: 0.2em;
+    margin-top: 2em;
 }
 
 .desktop-open-cart {
     outline: none;
+    border: 0;
     text-transform: uppercase;
     font-family: 'Social Gothic Demi-Bold';
-    padding: 0.5em 1em;
-    font-size: 1.5em;  
+    padding: 0.5em 0.5em;
+    font-size: 1.5em;
     position: relative;
     cursor: pointer;
-}
-
-.desktop-product-shown-section .desktop-open-cart {
-    background: #fff;
-    border: 0;
-    top: 20vh;
-    left: 19.5vw;
-}
-
-.desktop-product-hidden-section .desktop-open-cart {
-    border: 0;
-    top: 8.5vh;
-    left: 37vw;
-    color: #fff;
+    position: absolute;
+    z-index: 2;
+    left: 44vw;
+    top: 70vh;
+    background-color: #fff;
 }
 
 .desktop-product-icons {
-    width: 21em !important;
+    width: auto !important;
     height: auto !important;
     position: relative;
     top: 25vh;
@@ -302,7 +307,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
 .desktop-product-hidden-section {
     position: relative;
-    bottom: 17.4vh;
+    bottom: 18.9vh;
     right: 71.2vw;
 }
 
@@ -313,10 +318,14 @@ div[data-testid="container"] div:nth-of-type(3) div {
     line-height: 1.15em;
 }
 
+.desktop-product-hidden-section .desktop-price {
+    top: 11em;
+}
+
 .desktop-product-hidden-desc {
     color: #000;
     position: relative;
-    top: 26vh;
+    top: 31vh;
     width: 21ch;
     font-size: 1.75em;
     font-family: 'Cormonant Garamond Medium', serif;
@@ -329,11 +338,12 @@ div[data-testid="container"] div:nth-of-type(3) div {
     height: 75vh;
     top: 13vh;
     left: 30vw;
+    z-index: 3;
 }
 
 .desktop-cart i {
     position: relative;
-    left: 36vh;
+    left: 30vh;
     top: 4vh;
     font-size: 3em;
     cursor: pointer;
@@ -363,7 +373,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
     padding-left: 0;
     margin-left: 0;
     text-align: center;
-    margin-bottom: 6%;
+    margin-bottom: 2%;
 }
 
 .desktop-box-sizes li button {
@@ -399,6 +409,9 @@ div[data-testid="container"] div:nth-of-type(3) div {
     border-radius: 0.8em;
     font-size: 1.25em;
     cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-top: 4%;
 }
 
 .desktop-cart > button:nth-of-type(2) {
@@ -408,7 +421,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
     text-transform: uppercase;
     text-decoration: underline;
     font-size: 1em;
-    margin-top: 4%;
+    margin-top: 1%;
     cursor: pointer;
 }
 
@@ -537,4 +550,486 @@ div[data-testid="container"] div:nth-of-type(3) div {
     font-size: 2em;
     padding-top: 12vh;
     margin: 0;
+}
+
+@media (max-width: 1700px), (max-height: 800px) {
+
+    .desktop-intro-right-section {
+        font-size: 0.95em;
+    }
+
+}
+
+@media (max-width: 1650px), (max-height: 850px) {
+
+    .desktop-product-shown-section {
+        font-size: 0.8em;
+    }
+
+    .desktop-product-hidden-section {
+        font-size: 0.9em;
+        right: 69vw;
+    }
+
+    .desktop-open-cart {
+        font-size: 1.35em;
+    }
+
+    .desktop-product-icons[src="/img/desktop/three-icons.png"] {
+        width: 17.5em !important;
+        height: 12.5em !important;
+    }
+
+    .desktop-product-icons[src="/img/desktop/four-icons.png"] {
+        width: 21em !important;
+        height: 12em !important;
+    }
+
+    .desktop-product-icons[src="/img/desktop/five-icons.png"] {
+        width: 27em !important;
+        height: 13em !important;
+    }
+}
+
+@media (max-width: 1600px) {
+
+    .desktop-cart {
+        font-size: 0.85em;
+        height: 65vh;
+    }
+
+}
+
+@media (max-width: 1530px) {
+
+    .desktop-open-cart {
+        font-size: 1.1em;
+    }
+
+}
+
+@media (max-width: 1500px) {
+    .desktop-cart {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 1500px), (max-height: 870px) {
+
+    .desktop-contact-main-heading {
+        font-size: 5em;
+    }
+
+    .desktop-contact-secondary-heading {
+        font-size: 3em;
+    }
+
+    .desktop-contact form {
+        font-size: 0.85em;
+        top: -10vh;
+        left: 33vw;
+    }
+
+    .desktop-contact form input {
+        font-size: 1.45em;
+    }
+
+    .desktop-contact form textarea {
+        font-size: 1.45em;
+    }
+
+    .desktop-contact button[type="submit"] {
+        font-size: 1.6em;
+    }
+
+}
+
+@media (max-height: 850px) {
+
+    .desktop-sent {
+        padding-top: 8vh;
+    }
+
+}
+
+@media (max-width: 1430px), (max-height: 650px) {
+
+    .desktop-product-hidden-section {
+        font-size: 0.8em;
+        right: 71vw;
+    }
+
+}
+
+@media (max-width: 1400px), (max-height: 750px) {
+
+    .desktop-intro-first-heading {
+        font-size: 4.2em;
+    }    
+    
+    .desktop-intro-right-section {
+        font-size: 0.85em;
+        right: 5vw !important;
+    }
+
+    .desktop-intro-left-section {
+        font-size: 0.8em;
+    }
+
+}
+
+@media (max-width: 1330px) {
+
+    .desktop-product-shown-section {
+        font-size: 0.7em;
+        left: -2vw;
+    }   
+
+    .desktop-product-hidden-section {
+        font-size: 0.7em;
+        right: 70vw;
+    }
+
+}
+
+@media (max-width: 1250px) {
+
+    .desktop-contact form {
+        left: 40vw;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    .desktop-intro-right-section {
+        right: 2.5vw !important;
+    }
+
+    .desktop-cart {
+        font-size: 0.6em;
+        height: 60vh;
+        top: 18vh;
+    }
+
+    .desktop-cart i {
+        left: 25vh;
+    }
+
+}
+
+@media (max-width: 1150px), (max-height: 600px) {
+
+    .desktop-product-shown-section {
+        font-size: 0.6em;
+    }
+
+    .desktop-product-hidden-section {
+        font-size: 0.6em;
+    }
+
+    .desktop-open-cart {
+        font-size: 1em;
+    }
+
+}
+
+@media (max-width: 1100px), (max-height: 650px) {
+
+    .desktop-intro-first-heading {
+        font-size: 3.5em;
+    }
+
+    .desktop-intro-right-section {
+        font-size: 0.75em;
+    }
+
+    .desktop-intro-left-section {
+        font-size: 0.7em;
+    }
+
+}
+
+@media (max-width: 1050px), (max-height: 750px) {
+
+    .desktop-contact-main-heading {
+        font-size: 4em;
+    }
+
+    .desktop-contact-secondary-heading {
+        font-size: 2em;
+    }
+
+    .desktop-contact form {
+        left: 38vw;
+        font-size: 0.7em;
+        top: -2vh;
+    }
+
+    .desktop-contact form input {
+        font-size: 1.25em;
+    }
+
+    .desktop-contact form textarea {
+        font-size: 1.25em;
+    }
+
+    .desktop-contact button[type="submit"] {
+        font-size: 1.3em;
+    }
+
+}
+
+@media (max-width: 1000px), (max-height: 750px) {
+
+    .desktop-about-page-content {
+        font-size: 0.75em;
+    }
+
+    .desktop-section .control-dots .dot {
+        width: 2.5em;
+        height: 2.5em;
+    }
+
+}
+
+@media (max-width: 1000px), (max-height: 500px) {
+
+    .desktop-product-shown-section {
+        font-size: 0.45em;
+    }
+
+    .desktop-product-hidden-section {
+        font-size: 0.5em;
+        right: 71vw;
+    }
+
+    .desktop-open-cart {
+        font-size: 0.8em;
+    }
+
+}
+
+@media (max-width: 950px), (max-height: 590px) {
+
+    .desktop-intro-first-heading {
+        font-size: 3em;
+    }
+    
+    .desktop-intro-right-section {
+        font-size: 0.65em;
+        right: 2vw !important;
+    }
+
+    .desktop-intro-left-section {
+        font-size: 0.6em;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .desktop-product-hidden-section {
+        font-size: 0.45em;
+    }
+
+    .desktop-product-shown-section {
+        left: -3.5vw;
+    }
+
+}
+
+@media (max-width: 900px), (max-height: 650px) {
+
+    .desktop-cart {
+        font-size: 0.5em;
+    }
+
+    .desktop-cart i {
+        left: 23vh;
+    }
+
+}
+
+@media (max-width: 850px), (max-height: 600px) {
+
+    .desktop-contact-main-heading {
+        font-size: 3em;
+    }
+
+    .desktop-contact-secondary-heading {
+        font-size: 1.5em;
+    }
+
+    .desktop-contact form {
+        left: 36vw;
+        font-size: 0.6em;
+        top: 5vh;
+    }
+
+    .desktop-contact form input {
+        font-size: 1.1em;
+    }
+
+    .desktop-contact form textarea {
+        font-size: 1.1em;
+    }
+
+}
+
+@media (max-width: 850px), (max-height: 500px) {
+
+    .desktop-intro-first-heading {
+        font-size: 2.5em;
+    }
+    
+    .desktop-section > div[data-testid="container"] div:nth-of-type(2) div i {
+        font-size: 0.75em;
+    }
+
+    .desktop-intro-right-section {
+        font-size: 0.55em;
+        right: 4vw !important;
+    }
+
+    .desktop-intro-left-section {
+        font-size: 0.5em;
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    .desktop-product-hidden-section {
+        font-size: 0.4em;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .desktop-sent {
+        font-size: 1.5em;
+    }
+
+}
+
+@media (max-height: 500px) {
+
+    .desktop-contact form {
+        top: -1vh;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .desktop-product-shown-section {
+        font-size: 0.4em;
+        left: -5vw;
+    }
+    
+    .desktop-product-hidden-section {
+        right: 69vw;
+    }
+
+}
+
+@media (max-width: 750px), (max-height: 600px) {
+
+    .desktop-cart {
+        font-size: 0.35em;
+        height: 48vh;
+        top: 28vh;
+    }
+
+    .desktop-cart i {
+        left: 21vh;
+    }
+
+}
+
+@media (max-width: 745px), (max-height: 415px) {
+
+    .desktop-intro-right-section {
+        font-size: 0.45em;
+        right: 4vw !important;
+    }
+
+    .desktop-logo {
+        width: 15.5em !important;
+        height: 2.7em !important;
+        margin-left: -4%;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .desktop-product-hidden-section {
+        font-size: 0.35em;
+        right: 71vw;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .desktop-product-shown-section {
+        font-size: 0.35em;
+    }
+    
+    .desktop-product-hidden-section {
+        font-size: 0.3em;
+    }
+
+}
+
+@media (max-width: 650px), (max-height: 500px) {
+
+    .desktop-cart {
+        font-size: 0.25em;
+        height: 41vh;
+        width: 38vw;
+        top: 28vh;
+        left: 32vw;
+    }
+
+    .desktop-cart i {
+        left: 18vh;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .desktop-contact-main-heading {
+        font-size: 2em;
+    }
+
+    .desktop-contact-secondary-heading {
+        font-size: 1.25em;
+    }
+
+    .desktop-contact form {
+        width: 50vw;
+        grid-column-gap: 0;
+    }
+
+    .desktop-contact form input {
+        width: 16vw;
+    }
+
+    .desktop-contact form textarea {
+        width: 36vw;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .desktop-sent {
+        font-size: 1.1em;
+    }
+
 }

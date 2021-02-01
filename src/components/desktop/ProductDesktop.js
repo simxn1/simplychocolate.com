@@ -4,79 +4,77 @@ import ReactCompareImage from 'react-compare-image';
 const ProductDesktop = (props) => {
 
     const [cartDisplay, setCartDisplay] = React.useState('none');
-    const [cartContent, setCartContent] = React.useState(["grainy billy", "unselected"]);
+    const [cartContent, setCartContent] = React.useState([props.name, "unselected"]);
+    const [hintDisplay, setHintDisplay] = React.useState("none");
 
     const toggleCartDisplay = (event) => {
         event.preventDefault();
 
         if (cartDisplay == "block") {
             setCartDisplay("none");
-            console.log(cartDisplay);
+            setHintDisplay("none");
         }
         else {
             setCartDisplay("block");
-            console.log(cartDisplay);
+            setHintDisplay("none");
         }
     }
 
     const setQuantity = (event) => {
-        setCartContent(["grainy billy", event.target.children.item(0).textContent.trim()])
+        setCartContent([props.name, event.target.children.item(0).textContent.trim()]);
+    }
+
+    const handleBuyClick = () => {
+        if (cartContent[1] === "unselected") {
+            setHintDisplay("inline");
+        }
+        else {
+            console.log(cartContent);
+        }
     }
 
 
     return (
         <div style={{ position: `relative` }}>
+            <button onClick={toggleCartDisplay} style={{ color: props.color }} className="desktop-open-cart">chcem túto tyčinku!</button>
             <ReactCompareImage
-                leftImage="/img/desktop/grainybilly1.jpg"
+                leftImage={`/img/desktop/${props.name.replace(/ /g, '')}.png`}
                 leftImageLabel={
                     (
-                        <div className="desktop-product-shown-section">
+                        <div onClick={toggleCartDisplay} className="desktop-product-shown-section">
                             <h1 className="desktop-product-shown-heading desktop-heading">
-                                grainy<br />
-                                billy<br />
+                                {props.name.split(" ")[0]}<br />
+                                {props.name.split(" ")[1]}<br />
                             </h1>
+                            <strong className="desktop-price">2,29 €</strong>
                             <p className="desktop-product-shown-desc">
-                                kokos<br />
-                                brusnice<br />
-                                prémiová čokoláda
+                                {props.textFirst}<br />
+                                {props.textSecond}<br />
+                                {props.textThird}
                             </p>
-                            <img 
-                                src="/img/desktop/four-icons.png" 
+                            <img
+                                src={`/img/desktop/${props.icons}-icons.png`}
                                 className="desktop-product-icons"
                             >
                             </img>
-                            <button 
-                                onClick={toggleCartDisplay}
-                                style={{ color: `rgb(170, 38, 52)` }} 
-                                className="desktop-open-cart"
-                            >
-                                chcem túto tyčinku
-                            </button>
                         </div>
                     )
                 }
-                rightImage="/img/desktop/grainybilly2.jpg"
+                rightImage={`/img/desktop/${props.name.replace(/ /g, '')}-white.png`}
                 rightImageLabel={
                     (
                         <div className="desktop-product-hidden-section">
                             <h1
-                                style={{ color: `#aa2634` }} 
+                                style={{ color: props.color }}
                                 className="desktop-product-hidden-heading"
                             >
-                                grainy<br />
-                                billy<br />
+                                {props.name.split(" ")[0]}<br />
+                                {props.name.split(" ")[1]}<br />
                             </h1>
+                            <strong style={{ color: props.color }} className="desktop-price">2,29 €</strong>
                             <p className="desktop-product-hidden-desc">
-                                Grainy Billy je najlahodnejšia kokosová tyčinka, ktorá ťa
-                                svojou chuťou a ľahkosťou nenechá prestať.
+                                {props.desc}
                             </p>
-                            <button 
-                                onClick={toggleCartDisplay}
-                                style={{ backgroundColor: `rgb(170, 38, 52)` }} 
-                                className="desktop-open-cart"
-                            >
-                                chcem túto tyčinku
-                            </button>
                         </div>
                     )
                 }
@@ -103,7 +101,17 @@ const ProductDesktop = (props) => {
                     <li><button onClick={setQuantity}><strong>L </strong>- 20ks</button></li>
                     <li><button onClick={setQuantity}><strong>XL </strong>- 30ks</button></li>
                 </ul>
-                <button onClick={() => console.log(cartContent)}>
+                <span
+                    style={{
+                        display: hintDisplay,
+                        color: `red`,
+                        fontFamily: `Social Gothic Demi-Bold`,
+                        textTransform: `uppercase`
+                    }}
+                >
+                    vyber si veľkosť.
+                </span>
+                <button style={{ color: `#fff` }} onClick={handleBuyClick}>
                     chcem túto príchuť
                 </button><br />
                 <button>namixujem si vlastný box</button>

@@ -12,7 +12,7 @@ const ProductsDesktop = () => {
             textFirst: "kokos",
             textSecond: "brusnice",
             textThird: "prémiová čokoláda",
-            descSecond: "Grainy Billy je najlahodnejšia kokosová tyčinka, ktorá ťa svojou chuťou a ľahkosťou nenechá prestať.",
+            desc: "Grainy Billy je najlahodnejšia kokosová tyčinka, ktorá ťa svojou chuťou a ľahkosťou nenechá prestať.",
             color: "#a82737"
         },
 
@@ -22,7 +22,7 @@ const ProductsDesktop = () => {
             textFirst: "tekutý karamel",
             textSecond: "prémiová tmavá čokoláda",
             textThird: "",
-            descSecond: "Creamy Carol je najlahodnejšia karamelová tyčinka, ktorú vďaka poriadnej dávke karamelu neodložíš.",
+            desc: "Creamy Carol je najlahodnejšia karamelová tyčinka, ktorú vďaka poriadnej dávke karamelu neodložíš.",
             color: "#572698"
         },
 
@@ -32,7 +32,7 @@ const ProductsDesktop = () => {
             textFirst: "chrumkavý karamel",
             textSecond: "morská soľ",
             textThird: "prémiová mliečna čokoláda",
-            descSecond: "Crispy Carrie nie je žiadna poledancerka! Je to jednoducho jedinečná tyčinka z mliečnej čokolády so slaným karamelom.",
+            desc: "Crispy Carrie nie je žiadna poledancerka! Je to jednoducho jedinečná tyčinka z mliečnej čokolády so slaným karamelom.",
             color: "#b4531a"
         },
 
@@ -42,7 +42,7 @@ const ProductsDesktop = () => {
             textFirst: "ovos, špalda a arašidy",
             textSecond: "karamel",
             textThird: "prémiová tmavá čokoláda",
-            descSecond: "Grainy Sue je vynikajúca muesli tyčinka, ktorá ťa ráno nakopne na celý deň.",
+            desc: "Grainy Sue je vynikajúca muesli tyčinka, ktorá ťa ráno nakopne na celý deň.",
             color: "#d19c2a"
         },
 
@@ -52,7 +52,7 @@ const ProductsDesktop = () => {
             textFirst: "proteínová tyčinka",
             textSecond: "ríbezle",
             textThird: "prémiová tmavá čokoláda",
-            descSecond: "Fit fiona je pravá športovkyňa, ktorá ťa vďaka svojej skvelej chuti a proteínom nenechá len tak ležať pri telke.",
+            desc: "Fit fiona je pravá športovkyňa, ktorá ťa vďaka svojej skvelej chuti a proteínom nenechá len tak ležať pri telke.",
             color: "#bd79b8"
         },
 
@@ -62,7 +62,7 @@ const ProductsDesktop = () => {
             textFirst: "proteínová tyčinka",
             textSecond: "karamel, arašidy",
             textThird: "prémiová tmavá čokoláda",
-            descSecond: "Rich Arnold je proteínová tyčinka, ktorá je nabitá chuťami. Táto tyčinka ťa nenechá o hlade.",
+            desc: "Rich Arnold je proteínová tyčinka, ktorá je nabitá chuťami. Táto tyčinka ťa nenechá o hlade.",
             color: "#eccd5c"
         },
 
@@ -72,15 +72,29 @@ const ProductsDesktop = () => {
             textFirst: "proteínová tyčinka",
             textSecond: "acai, kokos a passion fruit",
             textThird: "prémiová tmavá čokoláda",
-            descSecond: "Speedy Tom jeproteinová tyčinka, ktorá obsahuje kombináciu surovín, ktoré Ti dodajú energiu na celý deň.",
+            desc: "Speedy Tom je proteinová tyčinka, ktorá obsahuje kombináciu surovín, ktoré Ti dodajú energiu na celý deň.",
             color: "#82babd"
         }
 
     ];
 
     return (
-        <Carousel className="desktop-section" autoPlay={true} interval={5000} infiniteLoop>
-            <ProductDesktop />
+        <Carousel className="desktop-section" autoPlay={false} interval={5000} infiniteLoop>
+            {
+                products.map((product) =>
+
+                    <ProductDesktop
+                        name={product.name}
+                        icons={product.icons}
+                        desc={product.desc}
+                        textFirst={product.textFirst}
+                        textSecond={product.textSecond}
+                        textThird={product.textThird}
+                        desc={product.desc}
+                        color={product.color}
+                    />
+                )
+            }
         </Carousel>
     )
 
@@ -90,10 +104,14 @@ const ProductsDesktop = () => {
 products.map((product) =>
 
     <ProductDesktop
-        bg={page.bg}
-        icon={page.icon}
-        heading={page.heading}
-        desc={page.desc}
+        name={product.name}
+        icons={product.icons}
+        desc={product.desc}
+        textFirst={product.textFirst}
+        textSecond={product.textSecond}
+        textThird={product.textThird}
+        desc={product.desc}
+        color={product.color}
     />
 )
 */

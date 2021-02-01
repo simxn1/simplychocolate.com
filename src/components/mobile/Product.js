@@ -4,6 +4,7 @@ const Product = (props) => {
 
     const [cartDisplay, setCartDisplay] = React.useState("none");
     const [cartContent, setCartContent] = React.useState([props.name, "unselected"]);
+    const [hintDisplay, setHintDisplay] = React.useState("none");
 
     const openCart = () => {
         setCartDisplay("block");
@@ -18,6 +19,19 @@ const Product = (props) => {
         setCartContent([props.name, event.target.children.item(0).textContent.trim()])
     }
 
+    const handleThisAromaBuy = () => {
+        if (cartContent[1] === "unselected") {
+            setHintDisplay("block");
+        }
+        else {
+            console.log(cartContent);
+        }
+    }
+
+    const handleMixAromaBuy = () => {
+        console.log(cartContent);
+    }
+ 
     return (
         <div style={{ backgroundColor: props.color }} className="section">
             <img 
@@ -31,6 +45,7 @@ const Product = (props) => {
                 {props.name.split(" ")[0]}<br />
                 {props.name.split(" ")[1]}
             </h1>
+            <strong style={{ color: props.color }} className="price">2,29€</strong>
             <div onClick={openCart} className="open-cart">
                 <button style={{ color: props.color }}>Chcem túto tyčinku</button>
             </div>
@@ -50,15 +65,25 @@ const Product = (props) => {
                     veľkosť
                 </h2>
                 <ul className="box-sizes">
-                    <li><button onClick={setQuantity}><strong>S </strong>- 6ks</button></li>
-                    <li><button onClick={setQuantity}><strong>M </strong>- 12ks</button></li>
-                    <li><button onClick={setQuantity}><strong>L </strong>- 20ks</button></li>
-                    <li><button onClick={setQuantity}><strong>XL </strong>- 30ks</button></li>
+                    <li><button onClick={setQuantity}>6ks - <strong>S</strong> - 13,50€</button></li>
+                    <li><button onClick={setQuantity}>12ks - <strong>M</strong> - 24,50€</button></li>
+                    <li><button onClick={setQuantity}>24ks - <strong>L</strong> - 47,50€</button></li>
+                    <li><button onClick={setQuantity}>30ks - <strong>XL</strong> - 56,60€</button></li>
                 </ul>
-                <button onClick={() => console.log(cartContent)}>
+                <span 
+                    style={{ 
+                            display: hintDisplay,
+                            color: `red`, 
+                            fontFamily: `Social Gothic Demi-Bold`, 
+                            textTransform: `uppercase` 
+                        }}
+                >
+                    vyber si veľkosť.
+                </span>
+                <button onClick={handleThisAromaBuy}>
                     chcem túto príchuť
                 </button><br />
-                <button>namixujem si vlastný box</button>
+                <button onClick={handleMixAromaBuy}>namixujem si vlastný box</button>
             </div>
             <p className="product-desc">
                 {props.textFirst}<br />

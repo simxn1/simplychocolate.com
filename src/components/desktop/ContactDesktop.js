@@ -48,7 +48,7 @@ const ContactDesktop = () => {
                     <button type="submit">Odoslať</button>
             </form>
             <div style={{ display: sentDisplay }} className="desktop-sent">
-                    správa odoslaná!<br />
+                    správa<br />odoslaná!<br />
                     <i class="fas fa-check"></i>
             </div>
         </div>
