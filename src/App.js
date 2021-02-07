@@ -28,6 +28,7 @@ const App = () => {
       <Route path="/mixed-box" component={MixedBox} />
       <Route path="/buyer-info" component={BuyerInformation} />
       <Route path="/final-check" component={FinalCheck} />
+      <Route path="/shipping-and-payment-method" component={ShippingAndPaymentMethod} />
     </>
   )
   else return (
