@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'Open Sans Bold';
+    src: url("../fonts/OpenSans-Bold.ttf");
+}
+
+.body {
+    overflow-x: hidden;
+}
+
+.mixed-box {
+    margin-top: 6vh;
+    overflow-y: scroll;
+}
+
+.mixed-box h1 {
+    text-align: center;
+    font-family: 'League Spartan Bold';
+    font-size: 2.5em;
+}
+
+.mixed-box h2 {
+    font-family: 'Open Sans Bold', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -0.025em;
+    margin-top: 4vh;
+}
+
+.select-box-size {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding-left: 0;
+}
+
+.select-box-size li button {
+    background-color: #ffffff;
+    color: #000;
+    font-family: 'Open Sans Bold';
+    border-radius: 0;
+    border: 3px solid #000;
+    font-size: 1.75em;
+    margin-right: 1em;
+    width: 2.5em;
+    height: 2.5em;
+    cursor: pointer;
+}
+
+.select-box-size li:last-child button {
+    margin-right: 0;
+}
+
+.select-box-size li button:focus {
+    border-radius: 0;
+}
+
+.select-box-size li .active {
+    background-color: #000000;
+    color: #fff;
+    border-radius: none;
+    cursor: default;
+}
+
+.select-box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.select-box-content li {
+    font-family: 'Open Sans Bold', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    width: 40vh;
+    font-size: 1.35em;
+    margin-bottom: 0.4em;
+}
+
+.bar-quantity input {
+    border: 0;
+    outline: none;
+    width: 1.5em;
+    text-align: center;
+    font-size: 1em;
+    margin: 0 0.4em;
+}
+
+.bar-quantity button {
+    outline: none;
+    outline: none;
+    border: 0;
+    background-color: transparent;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.mixed-box h3 {
+    font-size: 1.2em;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.mixed-box h3 strong {
+    font-family: 'Open Sans Bold', sans-serif;
+    width: 1.5em;
+    display: inline-block;
+}
+
+.mixed-box h4 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    width: 40vh;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+.mixed-box .continue {
+    margin: 4vh auto;
+    display: block;
+    color: #fff;
+    border: 3px solid #000;
+    background-color: #000;
+    font-family: 'Open Sans Bold';
+    font-size: 1em;
+    padding: 1.5em;
+    border-radius: 2.2em;
+    transition: all .15s ease-in-out;
+}
+
+.mixed-box .continue:hover {
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.mixed-box .continue:focus {
+    outline: none;
+}
+
+@media (max-width: 500px), (max-height: 950px) {
+    
+    .mixed-box {
+        font-size: 0.9em;
+    }
+
+    .mixed-box .continue {
+        margin-bottom: 9vh;
+    }
+
+}
+
+@media (max-width: 460px), (max-height: 850px) {
+    
+    .mixed-box {
+        font-size: 0.8em;
+    }
+
+}
+
+@media (max-width: 410px), (max-height: 750px) {
+    
+    .mixed-box {
+        font-size: 0.7em;
+    }
+
+}
+
+@media (max-width: 360px), (max-height: 700px) {
+    
+    .mixed-box {
+        font-size: 0.6em;
+    }
+
+}
+
+@media (max-width: 320px), (max-height: 600px) {
+    
+    .mixed-box {
+        font-size: 0.5em;
+    }
+
+}

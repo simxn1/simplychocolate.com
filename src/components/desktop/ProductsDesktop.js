@@ -79,7 +79,7 @@ const ProductsDesktop = () => {
     ];
 
     return (
-        <Carousel className="desktop-section" autoPlay={false} interval={5000} infiniteLoop>
+        <Carousel className="desktop-section" autoPlay={false} interval={10000} infiniteLoop>
             {
                 products.map((product) =>
 

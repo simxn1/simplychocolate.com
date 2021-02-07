@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'League Spartan Bold';
+    src: url('../fonts/LeagueSpartan-Bold.otf');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+.shipping-and-payment-method h1:first-child {
+    font-family: 'League Spartan Bold', sans-serif;
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.shipping-and-payment-method h1 strong {
+    display: inline-block;
+    margin-left: 6vw;
+}
+
+.shipping-and-payment-method span {
+    display: block;
+    text-align: center;
+    font-family: 'League Spartan Bold';
+}
+
+.shipping-and-payment-method .discount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'League Spartan Bold';
+    margin-top: 7vh;
+}    
+
+.shipping-and-payment-method .discount h2 {
+    margin-right: 5vw;
+}
+
+.shipping-and-payment-method .discount input {
+    border: 4px solid #000;
+    font-size: 2em;
+    width: 6em;
+    font-family: 'League Spartan Bold';
+    padding-top: 0.25em;
+    text-transform: uppercase;
+}
+
+.shipping-and-payment-method .discount button {
+    border: 0;
+    background-color: #000;
+    width: 4.25em;
+    height: 4.25em;
+    display: inline-block;
+    border-radius: 0;
+    margin-left: 1vh;
+}
+
+.shipping-and-payment-method .discount button:hover {
+    cursor: pointer;
+}
+
+.shipping-and-payment-method .discount button i {
+    font-size: 2.5em;
+    color: #fff;
+}
+
+.shipping-and-payment-method .payment-method, .shipping-and-payment-method .shipping-method {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3vh;
+}
+
+.shipping-and-payment-method .payment-method h2, .shipping-and-payment-method .shipping-method h2 {
+    font-family: 'League Spartan Bold', sans-serif;
+    width: 31.5vw;
+}
+
+.shipping-and-payment-method .payment-method div, .shipping-and-payment-method .shipping-method div {
+    display: flex;
+    align-items: center;
+    width: 31.5vw;
+    height: 5vh;
+    justify-content: space-between;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.shipping-and-payment-method .payment-method div p, .shipping-and-payment-method .shipping-method div p {
+    font-size: 1.35em;
+}
+
+.shipping-and-payment-method .payment-method div label, .shipping-and-payment-method .shipping-method div label {
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.shipping-and-payment-method .payment-method div label input, .shipping-and-payment-method .shipping-method div label input {
+    margin-right: 1em;    
+}

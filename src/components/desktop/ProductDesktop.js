@@ -1,10 +1,21 @@
 import React from 'react';
 import ReactCompareImage from 'react-compare-image';
+import { useHistory } from 'react-router-dom';
 
 const ProductDesktop = (props) => {
 
+    let history = useHistory();
+
     const [cartDisplay, setCartDisplay] = React.useState('none');
-    const [cartContent, setCartContent] = React.useState([props.name, "unselected"]);
+    const [boxContent, setBoxContent] = React.useState([{
+        grainyBilly: 0,
+        creamyCarol: 0,
+        crispyCarrie: 0,
+        grainySue: 0,
+        fitFiona: 0,
+        richArnold: 0,
+        speedyTom: 0
+    }, 'unselected']);
     const [hintDisplay, setHintDisplay] = React.useState("none");
 
     const toggleCartDisplay = (event) => {
@@ -20,17 +31,59 @@ const ProductDesktop = (props) => {
         }
     }
 
-    const setQuantity = (event) => {
-        setCartContent([props.name, event.target.children.item(0).textContent.trim()]);
+    const productNameToObjectKey = (name) => {
+        let firstName = name.split(" ")[0];
+        let secondName = name.split(" ")[1];
+        let secondNameCapitalized = secondName.charAt(0).toUpperCase() + secondName.slice(1);
+        let objectKey = firstName + secondNameCapitalized;
+
+        return objectKey
     }
 
-    const handleBuyClick = () => {
-        if (cartContent[1] === "unselected") {
+    const setNewBoxContent = (productsCount) => {
+        let newBoxContent = boxContent;
+        newBoxContent[0][productNameToObjectKey(props.name)] = productsCount;
+        newBoxContent[1] = productsCount;
+
+        return newBoxContent;
+    }
+
+    const setQuantity = (event) => {
+        let boxSizeSelected = event.target.children.item(0).textContent.trim();
+
+        switch (boxSizeSelected) {
+            case "S":
+                setBoxContent(setNewBoxContent(6));
+                break;
+            case "M":
+                setBoxContent(setNewBoxContent(12));
+                break;
+            case "L":
+                setBoxContent(setNewBoxContent(24));
+                break;
+            case "XL":
+                setBoxContent(setNewBoxContent(30));
+                break;
+        }
+    }
+
+    const handleThisFlavour = () => {
+        if (boxContent[1] === "unselected") {
             setHintDisplay("inline");
         }
         else {
-            console.log(cartContent);
+            history.push({
+                pathname: '/buyer-info',
+                boxContent: boxContent[0],
+                totalBoxQuantity: boxContent[1]
+            });
         }
+    }
+
+    const handleMixOwn = () => {
+        history.push({
+            pathname: '/mixed-box'
+        })
     }
 
 
@@ -111,10 +164,11 @@ const ProductDesktop = (props) => {
                 >
                     vyber si veľkosť.
                 </span>
-                <button style={{ color: `#fff` }} onClick={handleBuyClick}>
+                <button style={{ color: `#fff` }} onClick={handleThisFlavour}>
                     chcem túto príchuť
-                </button><br />
-                <button>namixujem si vlastný box</button>
+                </button>
+                <br />
+                <button onClick={handleMixOwn}>namixujem si vlastný box</button>
             </div>
         </div>
     )
