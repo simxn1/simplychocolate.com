@@ -2,7 +2,7 @@ const PRODUCTION_MODE = process.env.NODE_ENV === "production";
 
 let SERVER = "http://localhost:9000";
 if (PRODUCTION_MODE) {
-    SERVER = "";
+    SERVER = "back";
     console.log("production");
 }
 else {
