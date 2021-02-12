@@ -3,8 +3,97 @@
     src: url('../fonts/LeagueSpartan-Bold.otf');
 }
 
-.buyer-info-check h1 {
+.check-buyer-info h1 {
     font-family: 'League Spartan Bold';
     text-align: center;
     margin-top: 7vh;
+    margin-bottom: 0;
+}
+
+.check-buyer-info h3 {
+    margin-top: 0.5em;
+    text-align: center;
+    font-family: 'League Spartan Bold';
+    font-size: 1.1em;
+}
+
+.check-buyer-info .billing-information {
+    display: flex;
+    justify-content: center;
+}
+
+.check-buyer-info .billing-information ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 6vh;
+    font-size: 1.5em;
+    font-family: 'League Spartan Bold';
+}
+
+.check-buyer-info .billing-information ul li {
+    padding-top: 0.1em;
+}
+
+.check-buyer-info .billing-information form {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    margin-top: 6vh;
+}
+
+.check-buyer-info .billing-information form input {
+    border: 0;
+    outline: none;
+    font-family: 'League Spartan Bold';
+    font-size: 1.5em;
+    text-align: right;
+}
+
+.check-buyer-info label {
+    font-family: 'League Spartan Bold';
+    margin-top: 3vh;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.check-buyer-info label input {
+    margin-right: 1em;
+}
+
+.check-buyer-info .different-address-delivery form {
+    display: flex;
+    flex-direction: column;
+    width: 14vw;
+    margin: 0 auto;
+    margin-top: 3vh;
+}
+
+.check-buyer-info .different-address-delivery form input {
+    font-family: 'Open Sans';
+    font-size: 1.1em;
+    padding: 0.4em;
+    border: 2px solid #c3c3c3;
+    border-radius: 0.3em;
+    margin-top: 0.6em;
+}
+
+.confirm {
+    border: 0;
+    border-radius: 1.5em;
+    font-family: 'League Spartan Bold';
+    font-size: 1.6em;
+    color: #fff;
+    background-color: #000;
+    padding: 1em 1.4em;
+    display: inline;
+    margin: 0 auto;
+}
+
+.confirm:hover {
+    cursor: pointer;
+}
+
+.confirm:focus {
+    outline: none;
 }

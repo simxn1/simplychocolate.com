@@ -48,6 +48,7 @@ body {
     padding: 0.4em;
     border: 2px solid #c3c3c3;
     border-radius: 0.3em;
+    -webkit-appearance: none;
 }
 
 .buyer-info form input:focus {

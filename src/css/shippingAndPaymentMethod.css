@@ -69,18 +69,20 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 31.5vw;
+    margin: 0 auto;
     margin-top: 3vh;
 }
 
 .shipping-and-payment-method .payment-method h2, .shipping-and-payment-method .shipping-method h2 {
     font-family: 'League Spartan Bold', sans-serif;
-    width: 31.5vw;
+    width: 100%;
 }
 
 .shipping-and-payment-method .payment-method div, .shipping-and-payment-method .shipping-method div {
     display: flex;
     align-items: center;
-    width: 31.5vw;
+    width: 100%;
     height: 5vh;
     justify-content: space-between;
     font-family: 'Open Sans', sans-serif;
@@ -97,4 +99,142 @@
 
 .shipping-and-payment-method .payment-method div label input, .shipping-and-payment-method .shipping-method div label input {
     margin-right: 1em;    
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+.shipping-and-payment-method div .confirm {
+    margin-top: 5vh;
+    margin-bottom: 8vh;
+}
+
+.shipping-and-payment-method .shipping-method .depo-integration {
+    width: 100%;
+    height: 64vh;
+    margin-top: 5vh;
+}
+
+@media (max-width: 1500px) {
+
+    .shipping-and-payment-method .payment-method, .shipping-and-payment-method .shipping-method {
+        width: 36.5vw;
+    }
+
+}
+
+@media (max-width: 1300px) {
+
+    .shipping-and-payment-method .payment-method, .shipping-and-payment-method .shipping-method {
+        width: 44vw;
+    }
+
+}
+
+
+@media (max-width: 1050px) {
+
+    .shipping-and-payment-method .payment-method, .shipping-and-payment-method .shipping-method {
+        width: 54vw;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .shipping-and-payment-method {
+        font-size: 0.85em;
+    }
+
+    .shipping-and-payment-method .discount button {
+        width: 3.8em;
+        height: 3.8em;
+    }
+    
+    .shipping-and-payment-method .payment-method, .shipping-and-payment-method .shipping-method {
+        width: 61vw;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .shipping-and-payment-method {
+        font-size: 0.75em;
+    }
+
+    .shipping-and-payment-method .discount button {
+        width: 3.5em;
+        height: 3.5em;
+    }
+
+    .shipping-and-payment-method .discount button i {
+        font-size: 2em;
+    }
+
+    .shipping-and-payment-method .payment-method, .shipping-and-payment-method .shipping-method {
+        width: 71vw;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .shipping-and-payment-method {
+        font-size: 0.65em;
+    }
+
+    .shipping-and-payment-method .discount button {
+        width: 3em;
+        height: 3em;
+    }
+
+    .shipping-and-payment-method .discount button i {
+        font-size: 1.8em;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .shipping-and-payment-method {
+        font-size: 0.55em;
+    }
+
+    .shipping-and-payment-method .discount button {
+        width: 2.6em;
+        height: 2.6em;
+    }
+
+    .shipping-and-payment-method .discount button i {
+        font-size: 1.5em;
+    }
+
+    .shipping-and-payment-method .payment-method, .shipping-and-payment-method .shipping-method {
+        width: 74vw;
+    }
+
+}
+
+@media (max-width: 350px) {
+
+    .shipping-and-payment-method {
+        font-size: 0.45em;
+    }
+
+    .shipping-and-payment-method .discount button {
+        width: 2.3em;
+        height: 2.3em;
+    }
+
+    .shipping-and-payment-method .discount button i {
+        font-size: 1.3em;
+    }
+
+    .shipping-and-payment-method .payment-method, .shipping-and-payment-method .shipping-method {
+        width: 74vw;
+    }
+
 }

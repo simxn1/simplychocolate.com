@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Redirect, Route } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./css/mobileApp.css";
 import "./css/desktopApp.css";
@@ -7,7 +7,7 @@ import "./css/buyerInfo.css";
 import "./css/mixedBox.css";
 import "./css/finalCheck.css";
 import "./css/shippingAndPaymentMethod.css";
-import "./css/checkBuyerInfo.css"
+import "./css/checkBuyerInfo.css";
 import { isMobile } from "react-device-detect";
 import Desktop from "./components/Desktop";
 import Mobile from "./components/Mobile";
@@ -29,6 +29,9 @@ const App = () => {
       <Route path="/buyer-info" component={BuyerInformation} />
       <Route path="/final-check" component={FinalCheck} />
       <Route path="/shipping-and-payment-method" component={ShippingAndPaymentMethod} />
+      <Route path="*">
+        <Redirect to="/" />
+      </Route>
     </>
   )
   else return (
@@ -39,6 +42,9 @@ const App = () => {
       <Route path="/final-check" component={FinalCheck} />
       <Route path="/shipping-and-payment-method" component={ShippingAndPaymentMethod} />
       <Route path="/buyer-info-check" component={CheckBuyerInformation} />
+      <Route path="*">
+        <Redirect to="/" />
+      </Route>
     </>
   )
 
