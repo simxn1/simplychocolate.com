@@ -87,7 +87,7 @@ body {
     height: 3em;
 }
 
-.desktop-components-container > .desktop-section:nth-child(3) .carousel .control-dots .dot {
+.desktop-components-container > .desktop-section:nth-child(4) .carousel .control-dots .dot {
     border: 1px solid #000;
 }
 
@@ -102,11 +102,9 @@ div[data-testid="container"] div:nth-of-type(2) div {
     opacity: 1 !important;
 }
 
-.desktop-section > div[data-testid="container"] div:nth-of-type(2) div {
+.desktop-section > div[data-testid="container"] div:nth-of-type(2) div:not(.desktop-intro-main, .desktop-intro-icons, .desktop-intro-shown) {
     top: 68% !important;
 }
-
-
 
 .intro-right-arrow {
     animation: intro-right-arrow 1s ease-in-out infinite;
@@ -117,16 +115,28 @@ div[data-testid="container"] div:nth-of-type(2) div {
 }
 
 .desktop-heading {
-    color: #fff;
     text-transform: uppercase;
     text-align: left;
+    color: #fff;
+}
+
+.desktop-intro-main {
+    position: relative;
+    left: 1.6vw;
+    bottom: 4.75vh;
 }
 
 .desktop-intro-first-heading {
     background-color: transparent !important;
     font-family: "Social Gothic Bold";
-    font-size: 5em;
+    font-size: 5.5em;
     line-height: 1.1em;
+    position: relative;
+    bottom: 35vh;
+}
+
+.styles_typicalWrapper__1_Uvh {
+    margin-top: 0;
 }
 
 div[data-testid="container"] div:nth-of-type(3) div {
@@ -135,81 +145,73 @@ div[data-testid="container"] div:nth-of-type(3) div {
     background-color: transparent !important;
 }
 
-.desktop-intro-right-section {
+.desktop-intro-hidden-section {
     text-align: left;
     position: relative;
-    right: 9vw !important;
-    top: -3vh !important;
-    font-size: 1.1em;
+    right: 47vw;
+    top: -5vh;
+    color: #000;
 }
 
-.desktop-intro-second-heading {
+.desktop-intro-hidden-heading {
     font-size: 5em;
     font-family: 'Social Gothic Bold', sans-serif;
     margin-bottom: 0;
     left: 0;
+    color: #000;
 }
 
 .desktop-logo {
-    width: 12.7em !important;
-    height: 2.2em !important;
-    margin-left: -2%;
+    width: 15.7em !important;
+    height: 2.72em !important;
+    margin-left: -3%;
 }
 
 .desktop-intro-company-desc {
     font-family: 'Cormonant Garamond Medium';
     font-size: 1.4em;
-    width: 38ch;
-}
-
-.desktop-intro-left-section {
-    position: absolute;
-    top: 26vh;
-    right: 76vw;
+    width: 58ch;
+    margin-bottom: 12vh;
 }
 
 .desktop-intro-hidden-heading {
     font-family: 'Social Gothic Bold';
-    font-size: 2.8em;
-    line-height: 1.3em;
 }
 
 .desktop-intro-icons {
-    display: flex;
+    width: 50% !important;
+    height: 25% !important;
 }
 
-.desktop-intro-icons img {
-    width: 39%;
-    height: 5%;
-    margin-left: 7%;
+.desktop-intro-hidden-section .desktop-intro-icons {
+    position: relative;
+    top: 7.5vh;
+    left: 1vw;
 }
 
-.desktop-intro-icons img:first-child {
-    margin-left: 0;
+.desktop-intro-second-content {
+    position: relative;
+    top: 14%;
+    left: 63%;
+    font-size: 1.4em;
+    margin: 0;
 }
 
-.desktop-intro-icons-labels {
-    display: flex;
-    margin-top: 2%;
-    letter-spacing: 0.4px;
+.desktop-intro-second {
+    margin-top: -2.8em;
 }
 
-.desktop-intro-icons-labels strong {
-    text-align: center;
-    font-family: 'Social Gothic Demi-Bold', sans-serif;
-    text-transform: uppercase;
+.desktop-intro-second-content h1 {
+    font-family: 'Social Gothic Bold';
+    font-size: 3em;
+    line-height: 1.1em;
+    margin-bottom: 0;
 }
 
-.desktop-intro-icons-labels strong:first-child {
-    margin-left: 8.5%;
-}
-
-.desktop-intro-icons-labels strong:nth-child(2) {
-    margin-left: 19%;
-}
-
-.desktop-intro-icons-labels strong:nth-child(3) {
-    margin-left: 9%;
+.desktop-intro-second-content h2 {
+    font-family: 'Cormonant Garamond Bold';
+    text-transform: none;
+    margin-top: 0.5%;
 }
 
 .desktop-about-page-content {
@@ -296,6 +298,11 @@ div[data-testid="container"] div:nth-of-type(3) div {
     left: 44vw;
     top: 70vh;
     background-color: #fff;
+    transition: 0.2s all ease-in-out;
+}
+
+.desktop-open-cart:hover {
+    transform: scale(1.075);
 }
 
 .desktop-product-icons {
@@ -347,6 +354,11 @@ div[data-testid="container"] div:nth-of-type(3) div {
     top: 4vh;
     font-size: 3em;
     cursor: pointer;
+    transition: 0.2s all ease-in-out;
+}
+
+.desktop-cart i:hover {
+    transform: scale(1.2);
 }
 
 .desktop-cart h2:first-of-type {
@@ -400,7 +412,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
 }
 
 .desktop-cart > button:first-of-type {
-    border: none;
+    border: 3px solid #000;
     background-color: #000;
     color: #fff;
     font-family: 'Social Gothic Demi-Bold';
@@ -413,6 +425,12 @@ div[data-testid="container"] div:nth-of-type(3) div {
     display: block;
     margin: 0 auto;
     margin-top: 4%;
+    transition: 0.2s all ease-in-out;
+}
+
+.desktop-cart > button:first-of-type:hover {
+    color: #000 !important;
+    background-color: #fff;
 }
 
 .desktop-cart > button:nth-of-type(2) {
@@ -424,6 +442,11 @@ div[data-testid="container"] div:nth-of-type(3) div {
     font-size: 1em;
     margin-top: 1%;
     cursor: pointer;
+    transition: 0.2s all ease-in-out;
+}
+
+.desktop-cart > button:nth-of-type(2):hover {
+    transform: scale(1.075);
 }
 
 .desktop-contact-main-heading {
@@ -491,6 +514,11 @@ div[data-testid="container"] div:nth-of-type(3) div {
     border-radius: 0 !important;
     -webkit-appearance: none;
     cursor: pointer;
+    transition: 0.2s all ease-in-out;
+}
+
+.desktop-contact form button:hover {
+    transform: scale(1.05);
 }
 
 .desktop-contact form button:focus {
@@ -553,12 +581,36 @@ div[data-testid="container"] div:nth-of-type(3) div {
     margin: 0;
 }
 
-@media (max-width: 1700px), (max-height: 800px) {
+@media (max-width: 1850px) {
 
-    .desktop-intro-right-section {
-        font-size: 0.95em;
+    .desktop-intro-hidden-section  {
+        right: 44.5vw;
     }
+    
+}
 
+@media (max-width: 1780px) {
+
+    .desktop-intro-hidden-section  {
+        right: 41vw;
+    }
+    
+}
+
+@media (max-width: 1740px) {
+
+    .desktop-intro-hidden-section  {
+        right: 39vw;
+    }
+    
+}
+
+@media (max-width: 1675px) {
+
+    .desktop-intro-hidden-section  {
+        right: 36.5vw;
+    }
+    
 }
 
 @media (max-width: 1650px), (max-height: 850px) {
@@ -596,7 +648,11 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
     .desktop-cart {
         font-size: 0.85em;
-        height: 65vh;
+        height: 70vh;
+    }
+
+    .desktop-intro-hidden-section  {
+        right: 34.5vw;
     }
 
 }
@@ -615,7 +671,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
     }
 }
 
-@media (max-width: 1500px), (max-height: 870px) {
+@media (max-width: 1700px), (max-height: 1000px) {
 
     .desktop-contact-main-heading {
         font-size: 5em;
@@ -645,10 +701,52 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
 }
 
+@media (max-height: 900px) {
+
+    .desktop-intro-shown .desktop-intro-icons {
+        position: relative;
+        bottom: 2vh;
+    }
+
+    .desktop-intro-hidden-section .desktop-intro-icons {
+        top: 5.5vh;
+    }
+
+}
+
 @media (max-height: 850px) {
 
+    .desktop-intro-hidden-section .desktop-intro-icons {
+        top: 6.5vh;
+    }
+    
     .desktop-sent {
         padding-top: 8vh;
+    }
+
+}
+
+@media (max-height: 750px) {
+
+    .desktop-intro-hidden-section .desktop-intro-icons {
+        top: 5vh;
+    }
+
+}
+
+@media (max-width: 1450px) {
+
+    .desktop-intro-hidden-section {
+        right: 32vw;
+    }
+    
+    .desktop-intro-hidden-text {
+        font-size: 0.9em;
+    }
+
+    .desktop-intro-shown .desktop-intro-icons {
+        position: relative;
+        bottom: 1.5em;
     }
 
 }
@@ -667,20 +765,50 @@ div[data-testid="container"] div:nth-of-type(3) div {
     .desktop-intro-first-heading {
         font-size: 4.2em;
     }    
-    
-    .desktop-intro-right-section {
-        font-size: 0.85em;
-        right: 5vw !important;
-    }
 
     .desktop-intro-left-section {
         font-size: 0.8em;
     }
 
+    .desktop-intro-shown .desktop-intro-icons {
+        top: 1.75em;
+    }
+
 }
 
-@media (max-width: 1330px) {
+@media (max-width: 1375px) {
 
+    .desktop-intro-hidden-section {
+        right: 30vw;
+    }
+
+}
+
+@media (max-width: 1330px), (max-height: 820px) {
+
+    .desktop-intro-shown .desktop-intro-icons {
+        top: -0.75em;
+    }
+    
+    .desktop-intro-icons {
+        width: 42% !important;
+        height: 21% !important;
+    }
+
+    .desktop-intro-hidden-section {
+        right: 28.5vw;
+    }
+    
+    .desktop-intro-hidden-text {
+        font-size: 0.8em;
+    }
+
+    .desktop-logo {
+        width: 11.4em !important;
+        height: 2em !important;
+        margin-left: 0;
+    }
+    
     .desktop-product-shown-section {
         font-size: 0.7em;
         left: -2vw;
@@ -693,10 +821,26 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
 }
 
+@media (max-width: 1275px) {
+
+    .desktop-intro-hidden-section {
+        right: 24.5vw;
+    }
+
+}
+
 @media (max-width: 1250px) {
 
     .desktop-contact form {
         left: 40vw;
+    }
+
+}
+
+@media (max-width: 1225px) {
+
+    .desktop-intro-hidden-section {
+        right: 21.75vw;
     }
 
 }
@@ -709,12 +853,20 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
     .desktop-cart {
         font-size: 0.6em;
-        height: 60vh;
+        height: 65vh;
         top: 18vh;
     }
 
     .desktop-cart i {
         left: 25vh;
+    }
+
+}
+
+@media (max-width: 1175px) {
+
+    .desktop-intro-hidden-section {
+        right: 19.5vw;
     }
 
 }
@@ -735,18 +887,27 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
 }
 
-@media (max-width: 1100px), (max-height: 650px) {
+@media (max-width: 1125px) {
 
-    .desktop-intro-first-heading {
-        font-size: 3.5em;
+    .desktop-intro-company-desc {
+        width: 50ch;
+    }
+    
+    .desktop-intro-hidden-section {
+        right: 14.5vw;
+        top: 1vh;
     }
 
-    .desktop-intro-right-section {
-        font-size: 0.75em;
+    .desktop-intro-hidden-section .desktop-intro-icons {
+        top: -4vh;
     }
 
-    .desktop-intro-left-section {
-        font-size: 0.7em;
+}
+
+@media (max-width: 1075px) {
+
+    .desktop-intro-hidden-section {
+        right: 12vw;
     }
 
 }
@@ -781,6 +942,30 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
 }
 
+@media (max-width: 1025px) {
+
+    .desktop-intro-hidden-section {
+        right: 7.5vw;
+    }
+
+    .desktop-intro-company-desc {
+        width: 45ch;
+    }
+
+    .desktop-intro-hidden-section .desktop-intro-icons {
+        top: -8vh;
+    }
+
+    .desktop-intro-second {
+        margin-top: -2em;
+    }
+
+    .desktop-intro-second-content {
+        font-size: 1em;
+    }
+
+}
+
 @media (max-width: 1000px), (max-height: 750px) {
 
     .desktop-about-page-content {
@@ -790,6 +975,31 @@ div[data-testid="container"] div:nth-of-type(3) div {
     .desktop-section .control-dots .dot {
         width: 2.5em;
         height: 2.5em;
+    }
+
+}
+
+@media (max-width: 1000px), (max-height: 700px) {
+
+    .desktop-intro-icons {
+        width: 36% !important;
+        height: 18% !important;
+    }
+
+    .desktop-intro-shown .desktop-intro-icons {
+        top: -2.4em;
+    }
+
+    .desktop-intro-hidden-section {
+        right: 5vw;
+    }
+
+    .desktop-intro-hidden-text {
+        font-size: 0.7em;
+    }
+
+    .desktop-intro-hidden-section .desktop-intro-icons {
+        top: -5vh;
     }
 
 }
@@ -816,14 +1026,18 @@ div[data-testid="container"] div:nth-of-type(3) div {
     .desktop-intro-first-heading {
         font-size: 3em;
     }
-    
-    .desktop-intro-right-section {
-        font-size: 0.65em;
-        right: 2vw !important;
+
+    .desktop-intro-shown .desktop-intro-icons {
+        top: -0.25em;
     }
 
-    .desktop-intro-left-section {
-        font-size: 0.6em;
+    .desktop-intro-hidden-section {
+        right: 0vw;
+        top: -1vh;
+    }
+
+    .desktop-intro-hidden-text {
+        font-size: 0.65em;
     }
 
 }
@@ -836,6 +1050,19 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
     .desktop-product-shown-section {
         left: -3.5vw;
+    }
+
+}
+
+@media (max-width: 900px), (max-height: 550px) {
+
+    .desktop-intro-hidden-section {
+        right: -3vw;
+        top: 2vh;
+    }
+    
+    .desktop-intro-hidden-text {
+        font-size: 0.55em;
     }
 
 }
@@ -888,15 +1115,6 @@ div[data-testid="container"] div:nth-of-type(3) div {
         font-size: 0.75em;
     }
 
-    .desktop-intro-right-section {
-        font-size: 0.55em;
-        right: 4vw !important;
-    }
-
-    .desktop-intro-left-section {
-        font-size: 0.5em;
-    }
-
 }
 
 @media (max-width: 850px) {
@@ -940,7 +1158,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
     .desktop-cart {
         font-size: 0.35em;
-        height: 48vh;
+        height: 53vh;
         top: 28vh;
     }
 
@@ -951,11 +1169,6 @@ div[data-testid="container"] div:nth-of-type(3) div {
 }
 
 @media (max-width: 745px), (max-height: 415px) {
-
-    .desktop-intro-right-section {
-        font-size: 0.45em;
-        right: 4vw !important;
-    }
 
     .desktop-logo {
         width: 15.5em !important;
@@ -990,7 +1203,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
     .desktop-cart {
         font-size: 0.25em;
-        height: 41vh;
+        height: 46vh;
         width: 38vw;
         top: 28vh;
         left: 32vw;

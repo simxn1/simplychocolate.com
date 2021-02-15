@@ -50,6 +50,14 @@ const FinalCheck = () => {
         })
     }
 
+    const handleBack = () => {
+        history.push({
+            pathname: "/buyer-info",
+            boxContent: boxContent,
+            totalBoxQuantity: totalBoxQuantity,
+        })
+    }
+
     if (location.boxContent && location.totalBoxQuantity) return (
         <div className="final-check">
             <h1>Lásku si za peniaze nekúpiš,<br />čokoládu ÁNO!</h1>
@@ -64,7 +72,24 @@ const FinalCheck = () => {
                 <li><img src="/img/mutual/speedytom-bar.png" />Speedy Tom <strong>{boxContent.speedyTom}</strong></li>
                 <li>Celkom: <strong>{price}&nbsp;€</strong></li>
             </ul>
+            <div style={{ 
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
+            }}>
+            <a 
+            onClick={handleBack}
+            style={{
+                fontFamily: 'Open Sans',
+                textDecoration: 'underline',
+                marginRight: '4em',
+                cursor: 'pointer',
+                fontSize: '1.05em'
+            }}>
+                Späť
+            </a>
             <button onClick={handleContinue} className="continue">Pokračovať</button>
+            </div>
         </div>
     )
     else return (

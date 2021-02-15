@@ -16,7 +16,7 @@ const About = () => {
         },
 
         {
-            bg: "people",
+            bg: "seeds",
             icon: "earth",
             heading: "all natural",
             desc: "Pokiaľ ide o naše ingrediencie, sme veľmi vyberaví. Využívame iba to najlepšie, čo príroda ponúka."
@@ -30,8 +30,22 @@ const About = () => {
         },
 
         {
-            bg: "chocolates",
+            bg: "running",
+            icon: "protein",
+            heading: "gluten free",
+            desc: "Myslíme na všetkých milovníkov čokolády, a preto je väčšina z našich tyčiniek vhodná aj pre ľudí s alergiou na lepok."
+        },
+
+        {
+            bg: "bars",
             icon: "glutenfree",
+            heading: "gluten free",
+            desc: "Myslíme na všetkých milovníkov čokolády, a preto je väčšina z našich tyčiniek vhodná aj pre ľudí s alergiou na lepok."
+        },
+
+        {
+            bg: "solarpanel",
+            icon: "sun",
             heading: "gluten free",
             desc: "Myslíme na všetkých milovníkov čokolády, a preto je väčšina z našich tyčiniek vhodná aj pre ľudí s alergiou na lepok."
         }

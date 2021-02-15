@@ -86,9 +86,23 @@ body {
     top: 69%;
 }
 
-.slide:nth-child(2) .section .slide-selectors {
+.slide:nth-child(2) .section .slide-selectors, 
+.slide:nth-child(4) .section .slide-selectors,
+.slide:nth-child(5) .section .slide-selectors {
+    position: absolute;
+    top: 87.5vh;
+    right: 45vw;
+}
+
+.slide:nth-child(3) .section .slide-selectors {
     position: relative;
-    top: 14%;
+    top: 9%;
+}
+
+.slide:nth-child(3) .section .slide-selectors button i {
+    position: relative;
+    top: 9%;
+    color: #000;
 }
 
 .slide-selectors button {
@@ -138,34 +152,52 @@ body {
     top: 4%;
     left: 13%;
     font-size: 3em;
+    color: #000;
 }
 
 .logo-first {
     width: 35% !important;
     position: absolute;
-    top: 12%;
-    left: 11%;
+    top: 2%;
+    left: 8%;
+}
+
+.slide:nth-child(3) .section .logo-first {
+    width: 40% !important;
+    top: 1%;
+    left: -20%;
+    margin-top: 8%;
+    position: relative;
 }
 
 .company-desc {
     position: relative;
-    top: 12%;
+    top: 4%;
     font-size: 1.075em;
 }
 
 .company-desc-p {
-    margin-top: 20%;
+    font-family: 'Cormonant Garamond Medium';
+    margin: 0 auto;
+    width: 80%;
+    text-align: left;
     font-size: 1.1em;
-    letter-spacing: 0.25px;
 }
 
-.company-desc-p {
+img[src="/img/mobile/icons-black.png"] {
+    width: 52% !important;
+    position: relative;
+    top: 7%;
+}
+
+.vertical-heading {
+    position: absolute;
+    margin: 0;
     color: #fff;
-    font-family: 'Cormonant Garamond Light';
-    margin: 0 auto;
-    width: 32ch;
-    text-align: left;
-    font-size: 1.05em;
+    font-family: 'Cormonant Garamond Bold';
+    transform: rotate(270deg);
+    right: -13%;
+    bottom: 22%;
 }
 
 .section-2-icon {
@@ -581,6 +613,10 @@ body {
 
 @media (max-height: 800px) {
 
+    .company-desc {
+        font-size: 0.95em;
+    }
+
     .product-bg {
         height: 99.7%;
     }
@@ -610,22 +646,6 @@ body {
     .slide:nth-child(1) .section .slide-selectors {
         top: 65%;
     }
-
-    .logo-first {
-        width: 29% !important;
-        top: 10.5%;
-        left: 11%;
-    }
-
-    .company-desc {
-        top: 10%;
-        left: -3%;
-        font-size: 1em;
-    }
-
-    .slide:nth-child(2) .section .slide-selectors {
-        top: 12.5%;
-    }
         
     .open-cart {
         top: 62%;
@@ -652,6 +672,10 @@ body {
 
 @media (max-height: 725px) {
 
+    .company-desc {
+        font-size: 0.885em;
+    }
+
     .price {
         top: 41%;
     }
@@ -672,15 +696,18 @@ body {
 
 @media (max-height: 700px) {
 
-    .company-desc {
-        font-size: 0.92em;
-        left: -6%;
-    }
-
-    .slide:nth-child(2) .section .slide-selectors button {
+    .slide:nth-child(2) .section .slide-selectors button, 
+    .slide:nth-child(4) .section .slide-selectors button, 
+    .slide:nth-child(5) .section .slide-selectors button {
         font-size: 1.6em;
     }
 
+    .slide:nth-child(2) .section .slide-selectors, 
+    .slide:nth-child(4) .section .slide-selectors, 
+    .slide:nth-child(5) .section .slide-selectors {
+        top: 83.5vh;
+    }
+    
     .contact-heading-first {
         top: 6%;
         font-size: 2.2em;
@@ -750,6 +777,10 @@ body {
 
 @media (max-height: 660px) {
     
+    .company-desc-p {
+        font-size: 1em;
+    }
+
     .logo-first {
         width: 27% !important;
         top: 11%;
@@ -811,20 +842,6 @@ body {
         top: 10%;
     }
 
-    .company-desc {
-        font-size: 0.85em;
-        left: -8%;
-        top: 9%;
-    }
-
-    .slide:nth-child(2) .section .slide-selectors {
-        top: 12%;
-    }
-
-    .slide:nth-child(2) .section .slide-selectors button {
-        font-size: 1.5em;
-    }
-
 }
 
 @media (max-height: 600px) {
@@ -832,6 +849,10 @@ body {
     .intro-first-heading {
         top: 54.5%;
         font-size: 2.75em;
+    }
+
+    .company-desc-p {
+        font-size: 0.9em;
     }
 
     .open-cart {
@@ -878,10 +899,35 @@ body {
 
 }
 
+@media (max-width: 360px) {
+
+    .vertical-heading {
+        right: -12%;
+        font-size: 1.35em;
+    }
+
+}
+
 @media (max-width: 345px) {
 
     .open-cart {
         width: 45%;
+    }
+
+}
+
+@media (max-width: 340px) {
+
+    .vertical-heading {
+        right: -13%;
+    }
+
+}
+
+@media (max-width: 340px) {
+
+    .vertical-heading {
+        right: -15%;
     }
 
 }

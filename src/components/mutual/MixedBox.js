@@ -312,6 +312,7 @@ const BuyerInformationForm = (props) => {
             <h2>tyčinky v boxe</h2>
             <ul className="select-box-content">
                 <li>
+                    <img src="/img/mutual/grainybilly-bar.png"></img>
                     Grainy Billy
                     <div className="bar-quantity">
                         <button onClick={grainyBillyRemove}>-</button>
@@ -320,6 +321,7 @@ const BuyerInformationForm = (props) => {
                     </div>
                 </li>
                 <li>
+                    <img src="/img/mutual/creamycarol-bar.png"></img>
                     Creamy Carol
                     <div className="bar-quantity">
                         <button onClick={creamyCarolRemove}>-</button>
@@ -328,6 +330,7 @@ const BuyerInformationForm = (props) => {
                     </div>
                 </li>
                 <li>
+                    <img src="/img/mutual/crispycarrie-bar.png"></img>
                     Crispy Carrie
                     <div className="bar-quantity">
                         <button onClick={crispyCarrieRemove}>-</button>
@@ -336,6 +339,7 @@ const BuyerInformationForm = (props) => {
                     </div>
                 </li>
                 <li>
+                    <img src="/img/mutual/grainysue-bar.png"></img>
                     Grainy Sue
                     <div className="bar-quantity">
                         <button onClick={grainySueRemove}>-</button>
@@ -344,6 +348,7 @@ const BuyerInformationForm = (props) => {
                     </div>
                 </li>
                 <li>
+                    <img src="/img/mutual/fitfiona-bar.png"></img>
                     Fit Fiona
                     <div className="bar-quantity">
                         <button onClick={fitFionaRemove}>-</button>
@@ -352,6 +357,7 @@ const BuyerInformationForm = (props) => {
                     </div>
                 </li>
                 <li>
+                    <img src="/img/mutual/richarnold-bar.png"></img>
                     Rich Arnold
                     <div className="bar-quantity">
                         <button onClick={richArnoldRemove}>-</button>
@@ -360,6 +366,7 @@ const BuyerInformationForm = (props) => {
                     </div>
                 </li>
                 <li>
+                    <img src="/img/mutual/speedytom-bar.png"></img>
                     Speedy Tom
                     <div className="bar-quantity">
                         <button onClick={speedyTomRemove}>-</button>

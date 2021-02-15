@@ -73,9 +73,14 @@
     font-family: 'Open Sans Bold', sans-serif;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 40vh;
     font-size: 1.35em;
     margin-bottom: 0.4em;
+}
+
+.select-box-content li img {
+    width: 5vw;
 }
 
 .bar-quantity input {
@@ -142,6 +147,14 @@
     outline: none;
 }
 
+@media (max-width: 1100px) {
+
+    .select-box-content li img {
+        width: 9vw;
+    }
+
+}
+
 @media (max-width: 500px), (max-height: 950px) {
     
     .mixed-box {
@@ -150,6 +163,10 @@
 
     .mixed-box .continue {
         margin-bottom: 9vh;
+    }
+
+    .select-box-content li img {
+        width: 14vw;
     }
 
 }

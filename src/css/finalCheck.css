@@ -54,7 +54,8 @@
 }
 
 .final-check .continue {
-    margin: 4vh auto;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
     display: block;
     color: #fff;
     border: 3px solid #000;

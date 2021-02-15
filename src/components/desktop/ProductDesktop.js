@@ -89,7 +89,9 @@ const ProductDesktop = (props) => {
 
     return (
         <div style={{ position: `relative` }}>
-            <button onClick={toggleCartDisplay} style={{ color: props.color }} className="desktop-open-cart">chcem túto tyčinku!</button>
+            <button onClick={toggleCartDisplay} style={{ color: props.color }} className="desktop-open-cart">
+                chcem túto tyčinku!
+            </button>
             <ReactCompareImage
                 leftImage={`/img/desktop/${props.name.replace(/ /g, '')}.png`}
                 leftImageLabel={
@@ -149,10 +151,10 @@ const ProductDesktop = (props) => {
                     veľkosť
                 </h2>
                 <ul className="desktop-box-sizes">
-                    <li><button onClick={setQuantity}><strong>S </strong>- 6ks</button></li>
-                    <li><button onClick={setQuantity}><strong>M </strong>- 12ks</button></li>
-                    <li><button onClick={setQuantity}><strong>L </strong>- 20ks</button></li>
-                    <li><button onClick={setQuantity}><strong>XL </strong>- 30ks</button></li>
+                    <li><button style={{ cursor: 'pointer' }} onClick={setQuantity}><strong>S </strong>- 6ks</button></li>
+                    <li><button style={{ cursor: 'pointer' }} onClick={setQuantity}><strong>M </strong>- 12ks</button></li>
+                    <li><button style={{ cursor: 'pointer' }} onClick={setQuantity}><strong>L </strong>- 20ks</button></li>
+                    <li><button style={{ cursor: 'pointer' }} onClick={setQuantity}><strong>XL </strong>- 30ks</button></li>
                 </ul>
                 <span
                     style={{

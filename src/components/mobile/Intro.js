@@ -7,7 +7,7 @@ const Intro = (props) => {
     const [currentSlide, setCurrentSlide] = React.useState(0)
 
     const nextSlide = () => {
-        if (currentSlide < 1) {
+        if (currentSlide < 4) {
             setCurrentSlide(currentSlide + 1)
         }
     }
@@ -19,56 +19,110 @@ const Intro = (props) => {
     }
 
     return (
-        <Carousel autoPlay={false} selectedItem={currentSlide} className="intro component">
-            <div style={{ backgroundImage: `url("img/mobile/mobile-1.jpg")`, backgroundPosition: `bottom` }} className="section">
-                <h1 className="heading intro-first-heading">yes<br />you can<br />buy love</h1>
-                <div className="slide-selectors">
-                    <button onClick={prevSlide}><i class="fas fa-chevron-left"></i></button>
-                    <button onClick={nextSlide}><i class="fas fa-chevron-right"></i></button>
+        <>
+            <Carousel autoPlay={false} selectedItem={currentSlide} className="intro component">
+                <div style={{ backgroundImage: `url("img/mobile/intro-first.png")`, backgroundPosition: `bottom` }} className="section">
+                    <img className="logo-first" src="/img/mobile/logowithoutbreak.png"></img>
+                    <h1 className="heading intro-first-heading">yes<br />you can<br />buy love</h1>
+                    <div className="slide-selectors">
+                        <button onClick={prevSlide}><i class="fas fa-chevron-left"></i></button>
+                        <button onClick={nextSlide}><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div style={{ backgroundImage: `url("img/mobile/intro-second.png")` }} className="section">
+                    <div className="slide-selectors">
+                        <button onClick={prevSlide}><i class="fas fa-chevron-left"></i></button>
+                        <button onClick={nextSlide}><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div style={{ backgroundColor: '#fff' }} className="section">
+                    <h1 className="heading intro-second-heading">o nás</h1>
+                    <img className="logo-first" src="/img/mobile/logoblackwithoutbreak.png"></img>
+                    <div className="company-desc">
+                        <p className="company-desc-p">
+                            Spoločnosť Simply Chocolate verí,
+                            že pravá čokoládová láska vyžaduje
+                            nádych niečoho nového a zmysel
+                            pre humor.
+                    </p>
+                        <br />
+                        <p className="company-desc-p">
+                            Kakao na čokoládu pochádza z Afriky.
+                            Simply Chocolate je súčasťou
+                            neziskovej organizácie Cocoa
+                            Horizons, ktorá sa snaží zabezpečiť,
+                            aby kakaovým farmárom, ich
+                            rodinám a miestnym komunitám
+                            obklopujúcim kakaové polia
+                            prospievali
+                            a mali príležitosť zlepšovať svoj
+                            život.
+                            Rovnako ako zabezpečenie toho,
+                            aby súčasťou výroby nebola žiadna
+                            nelegálna detská práca.
+                    </p>
+                        <br />
+                        <p className="company-desc-p">
+                            Spoločnosť má vlastný systém
+                            solárnych panelov, vďaka ktorému je
+                            100% energeticky sebestačná. Keď
+                            svieti slnko, umožňuje spoločnosti
+                            vyrábať čokoládu s nulovými
+                            emisiami CO2.
+                    </p>
+                    </div>
+                    <img src="/img/mobile/icons-black.png"></img>
+                    <div className="slide-selectors">
+                        <button onClick={prevSlide}><i class="fas fa-chevron-left"></i></button>
+                        <button onClick={nextSlide}><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div style={{ backgroundImage: `url("img/mobile/intro-forth.jpg")` }} className="section">
+                    <div className="slide-selectors">
+                        <button onClick={prevSlide}><i class="fas fa-chevron-left"></i></button>
+                        <button onClick={nextSlide}><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div style={{ backgroundImage: `url("img/mobile/intro-fifth.png")` }} className="section">
+                    <h2 className="vertical-heading">Simply Chocolate</h2>
+                    <div className="slide-selectors">
+                        <button onClick={prevSlide}><i class="fas fa-chevron-left"></i></button>
+                        <button onClick={nextSlide}><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </Carousel>
+            <div className="component" style={{ marginTop: '-8%' }}>
+                <div className="section" style={{ backgroundImage: 'url("/img/mobile/intro-sixth.png")' }}>
+                    <div
+                        style={{ 
+                            position: 'relative',
+                            top: '53%',
+                            left: '13%',
+                            fontSize: '1.3em'
+                        }}
+                    >
+                        <h1 style={{
+                            color: "#fff",
+                            textTransform: 'uppercase',
+                            fontFamily: 'Social Gothic Bold',
+                            lineHeight: '1.2em',
+                            marginBottom: '0'
+                        }}>
+                            viac<br />ako<br />čokoláda
+                    </h1>
+                        <h3
+                            style={{
+                                fontFamily: 'Cormonant Garamond Medium',
+                                color: '#fff',
+                                marginTop: '2%'
+                            }}
+                        >
+                            It's Simply Chocolate.
+                        </h3>
+                    </div>
                 </div>
             </div>
-            <div style={{ backgroundColor: `#000` }} className="section">
-                <h1 className="heading intro-second-heading">o nás</h1>
-                <img className="logo-first" src="/img/mobile/logowithoutbreak.png"></img>
-                <div className="company-desc">
-                    <p className="company-desc-p">
-                        Spoločnosť Simply Chocolate verí,
-                        že pravá čokoládová láska vyžaduje
-                        nádych niečoho nového a zmysel
-                        pre humor.
-                    </p>
-                    <br />
-                    <p className="company-desc-p">
-                        Kakao na čokoládu pochádza z Afriky.
-                        Simply Chocolate je súčasťou
-                        neziskovej organizácie Cocoa
-                        Horizons, ktorá sa snaží zabezpečiť,
-                        aby kakaovým farmárom, ich
-                        rodinám a miestnym komunitám
-                        obklopujúcim kakaové polia
-                        prospievali
-                        a mali príležitosť zlepšovať svoj
-                        život.
-                        Rovnako ako zabezpečenie toho,
-                        aby súčasťou výroby nebola žiadna
-                        nelegálna detská práca.
-                    </p>
-                    <br />
-                    <p className="company-desc-p">
-                        Spoločnosť má vlastný systém
-                        solárnych panelov, vďaka ktorému je
-                        100% energeticky sebestačná. Keď
-                        svieti slnko, umožňuje spoločnosti
-                        vyrábať čokoládu s nulovými
-                        emisiami CO2.
-                    </p>
-                </div>
-                <div className="slide-selectors">
-                    <button onClick={prevSlide}><i class="fas fa-chevron-left"></i></button>
-                    <button onClick={nextSlide}><i class="fas fa-chevron-right"></i></button>
-                </div>
-            </div>
-        </Carousel>
+        </>
     )
 
 }
