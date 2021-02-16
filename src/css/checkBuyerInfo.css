@@ -79,7 +79,7 @@
 }
 
 .confirm {
-    border: 0;
+    border: 5px solid #000;
     border-radius: 1.5em;
     font-family: 'League Spartan Bold';
     font-size: 1.6em;
@@ -88,10 +88,13 @@
     padding: 1em 1.4em;
     display: inline;
     margin: 0 auto;
+    transition: 0.2s all ease-in-out;
 }
 
 .confirm:hover {
     cursor: pointer;
+    background-color: #fff;
+    color: #000000;
 }
 
 .confirm:focus {

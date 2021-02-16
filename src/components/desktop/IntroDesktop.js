@@ -8,26 +8,41 @@ const IntroDesktop = () => {
 
     return (
         <>
-            <div className="desktop-section">
+            <div className="desktop-section" style={{ position: "relative" }}>
+                <i
+                    class="fas fa-arrow-down"
+                    style={{
+                        position: 'absolute',
+                        color: '#fff',
+                        bottom: '2%',
+                        left: '50%',
+                        transform: 'translate(-50%, 0)',
+                        zIndex: '2',
+                        fontSize: '1.24em',
+                    }}
+                >
+                </i>
                 <ReactCompareImage
                     leftImage="/img/desktop/intro-left-image.jpg"
                     leftImageLabel={
                         (
-                            <div className="desktop-intro-shown">
-                                <h1 
-                                    className="desktop-intro-first-heading desktop-heading"
-                                    style={{ marginBottom: '0' }}
-                                >
-                                    yes<br />you can
+                            <>
+                                <div className="desktop-intro-shown">
+                                    <h1
+                                        className="desktop-intro-first-heading desktop-heading"
+                                        style={{ marginBottom: '0' }}
+                                    >
+                                        yes<br />you can
                                 </h1>
-                                <Typical 
-                                    steps={['', 1400, 'BUY LOVE', 1200]}
-                                    loop={Infinity}
-                                    wrapper="h1"
-                                    className="desktop-intro-first-heading desktop-heading"
-                                />
-                                <img className="desktop-intro-icons" src="/img/desktop/icons-white.png"></img>
-                            </div>
+                                    <Typical
+                                        steps={['', 1400, 'BUY LOVE', 1200]}
+                                        loop={Infinity}
+                                        wrapper="h1"
+                                        className="desktop-intro-first-heading desktop-heading"
+                                    />
+                                    <img className="desktop-intro-icons" src="/img/desktop/icons-white.png"></img>
+                                </div>
+                            </>
                         )
                     }
                     rightImage="/img/desktop/intro-right-image.jpg"

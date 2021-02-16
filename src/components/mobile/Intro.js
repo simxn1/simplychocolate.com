@@ -29,7 +29,10 @@ const Intro = (props) => {
                         <button onClick={nextSlide}><i class="fas fa-chevron-right"></i></button>
                     </div>
                 </div>
-                <div style={{ backgroundImage: `url("img/mobile/intro-second.png")` }} className="section">
+                <div style={{ 
+                    backgroundImage: `url("img/mobile/intro-second.png")`,
+                    backgroundPosition: 'bottom center'
+                }} className="section">
                     <div className="slide-selectors">
                         <button onClick={prevSlide}><i class="fas fa-chevron-left"></i></button>
                         <button onClick={nextSlide}><i class="fas fa-chevron-right"></i></button>

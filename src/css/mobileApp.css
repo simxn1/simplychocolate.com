@@ -145,7 +145,7 @@ body {
 .intro-first-heading {
     position: relative;
     line-height: 1.1em;
-    font-size: 3.1em;
+    font-size: 2.5em;
     top: 64%;
     left: 8%;
 }
@@ -794,6 +794,10 @@ img[src="/img/mobile/icons-black.png"] {
         top: 11%;
     }
 
+    img[src="/img/mobile/icons-black.png"] {
+        margin-top: 12.5%;
+    }
+
 }
 
 @media (max-height: 630px) {
@@ -861,6 +865,10 @@ img[src="/img/mobile/icons-black.png"] {
 
     .company-desc-p {
         font-size: 0.9em;
+    }
+
+    img[src="/img/mobile/icons-black.png"] {
+        margin-top: 15%;
     }
 
     .open-cart {
