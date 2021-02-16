@@ -709,6 +709,10 @@ img[src="/img/mobile/icons-black.png"] {
     .slide:nth-child(5) .section .slide-selectors {
         top: 83.5vh;
     }
+
+    img[src="/img/mobile/icons-black.png"] {
+        margin-top: 10%;
+    }
     
     .contact-heading-first {
         top: 6%;
