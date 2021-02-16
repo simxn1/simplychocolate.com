@@ -21,7 +21,7 @@ const IntroDesktop = () => {
                                     yes<br />you can
                                 </h1>
                                 <Typical 
-                                    steps={['', 1000, 'BUY LOVE', 1000]}
+                                    steps={['', 1400, 'BUY LOVE', 1200]}
                                     loop={Infinity}
                                     wrapper="h1"
                                     className="desktop-intro-first-heading desktop-heading"
@@ -80,7 +80,7 @@ const IntroDesktop = () => {
                     sliderLineWidth={4}
                 />
             </div>
-            <div className="desktop-section desktop-intro-second" style={{ background: `url('/img/desktop/intro-third.png')` }}>
+            <div className="desktop-section" style={{ background: `url('/img/desktop/intro-third.png')` }}>
                 <div className="desktop-intro-second-content">
                     <h1 className="desktop-heading">
                         viac<br />ako<br />čokoláda

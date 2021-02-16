@@ -48,12 +48,14 @@ body {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 .component {
     scroll-snap-align: start;
     scroll-snap-stop: always;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 .intro .carousel .control-dots {
@@ -89,9 +91,8 @@ body {
 .slide:nth-child(2) .section .slide-selectors, 
 .slide:nth-child(4) .section .slide-selectors,
 .slide:nth-child(5) .section .slide-selectors {
-    position: absolute;
+    position: relative;
     top: 87.5vh;
-    right: 45vw;
 }
 
 .slide:nth-child(3) .section .slide-selectors {
@@ -188,6 +189,7 @@ img[src="/img/mobile/icons-black.png"] {
     width: 52% !important;
     position: relative;
     top: 7%;
+    margin-top: 5%;
 }
 
 .vertical-heading {
@@ -197,7 +199,7 @@ img[src="/img/mobile/icons-black.png"] {
     font-family: 'Cormonant Garamond Bold';
     transform: rotate(270deg);
     right: -13%;
-    bottom: 22%;
+    bottom: 30%;
 }
 
 .section-2-icon {

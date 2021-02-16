@@ -91,7 +91,7 @@ const Intro = (props) => {
                     </div>
                 </div>
             </Carousel>
-            <div className="component" style={{ marginTop: '-8%' }}>
+            <div className="component" style={{ overflowY: 'hidden' }}>
                 <div className="section" style={{ backgroundImage: 'url("/img/mobile/intro-sixth.png")' }}>
                     <div
                         style={{ 
