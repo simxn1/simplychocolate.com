@@ -77,6 +77,8 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .slide {
