@@ -83,11 +83,14 @@ const Product = (props) => {
     }
  
     return (
-        <div style={{ backgroundColor: props.color }} className="section">
-            <img 
-                src={`img/mobile/mobile-${props.name.replace(" ", "")}.png`} 
-                className="slide-bg product-bg"
-            />
+        <div 
+            style={{ 
+                background: `url(img/mobile/${props.name.replace(" ", "")}-bg.jpg) no-repeat`,
+                backgroundPosition: '50% 32.5%',
+                backgroundSize: 'cover'
+            }}
+            className="section"
+        >
             <h1 
                 style={{ color: props.color }} 
                 className="product-heading"
@@ -96,6 +99,8 @@ const Product = (props) => {
                 {props.name.split(" ")[1]}
             </h1>
             <strong style={{ color: props.color }} className="price">2,29€</strong>
+            <img src={`/img/mobile/${props.name.replace(" ", "")}-bar.png`} className="product">
+            </img>
             <div onClick={openCart} className="open-cart">
                 <button style={{ color: props.color }}>Chcem túto tyčinku</button>
             </div>

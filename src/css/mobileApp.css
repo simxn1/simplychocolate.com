@@ -71,7 +71,6 @@ body {
 }
 
 .section {
-    width: 100vw;
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -94,7 +93,7 @@ body {
 .slide:nth-child(4) .section .slide-selectors,
 .slide:nth-child(5) .section .slide-selectors {
     position: relative;
-    top: 87.5vh;
+    top: 84.5vh;
 }
 
 .slide:nth-child(3) .section .slide-selectors {
@@ -298,7 +297,7 @@ img[src="/img/mobile/icons-black.png"] {
     text-transform: uppercase;
     text-align: left;
     position: absolute;
-    top: 21%;
+    top: 18%;
     left: 9.5%;
     font-size: 4em;
     line-height: 1.1em;
@@ -307,22 +306,27 @@ img[src="/img/mobile/icons-black.png"] {
 .price {
     position: absolute;
     left: 10.5%;
-    top: 39%;
+    top: 36.5%;
     display: block;
     font-family: 'Social Gothic Demi-Bold';
 }
 
+.product {
+    width: 106vw !important;
+    position: relative;
+    top: 36.5vh;
+}
 
 .open-cart {
     display: block;
     position: relative;
-    top: 63%;
+    top: 33%;
     color: #fff;
     display: flex;
     border: 2px solid #fff;
     align-items: center;
     justify-content: center;
-    width: 42%;
+    width: 48%;
     height: 2.5em;
     margin: 0 auto;
     background-color: #fff;
@@ -441,38 +445,12 @@ img[src="/img/mobile/icons-black.png"] {
     display: block !important;
 }
 
-.quantity {
-    font-family: 'Social Gothic Demi-Bold';
-    text-transform: uppercase;
-    width: 3em;
-    height: 1.5em;
-    text-align: center;
-    border: none;
-    background: transparent;
-    color: #fff;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none;
-}
-
-.quantity:hover {
-    cursor: pointer;
-}
-
-.quantity:focus {
-    outline: none;
-    border: none;
-}
-
 .product-desc {
     color: #fff;
     text-align: left;
     font-family: 'Cormonant Garamond Medium';
     position: relative;
-    top: 63%;
+    top: 32%;
     left: 12%;
     font-size: 1.25em;
     letter-spacing: 0.45px;
@@ -483,13 +461,13 @@ img[src="/img/mobile/icons-black.png"] {
     height: auto;
     position: relative;
     display: block !important;
-    top: 59.5%;
+    top: 29%;
     margin: 0;
     left: 1%;
 }
 
 .control-dots {
-    bottom: 2% !important;
+    bottom: 3.5% !important;
 }
 
 .product-icons[src="/img/mobile-five-icons.png"] {
@@ -621,16 +599,30 @@ img[src="/img/mobile/icons-black.png"] {
         font-size: 0.95em;
     }
 
-    .product-bg {
-        height: 99.7%;
-    }
-
 }
 
-@media (max-height: 770px) {
+@media (max-height: 760px) {
+
+    .product-heading {
+        top: 15.5%;
+    }
 
     .price {
-        top: 40%;
+        top: 35%;
+    }
+
+    .open-cart {
+        top: 31%;
+    }
+
+    .product-desc {
+        font-size: 1.1em;
+        top: 32%;
+    }
+
+    .product-icons {
+        width: 56% !important;
+        top: 29%;
     }
 
 }
@@ -650,26 +642,9 @@ img[src="/img/mobile/icons-black.png"] {
     .slide:nth-child(1) .section .slide-selectors {
         top: 65%;
     }
-        
-    .open-cart {
-        top: 62%;
-        width: 41%;
-        height: 2.3em;
-    }
 
     .open-cart button {
         font-size: 0.9em;
-    }
-
-    .product-desc {
-        font-size: 1.1em;
-        letter-spacing: 0.75px;
-        top: 61%;
-    }
-
-    .product-icons {
-        top: 57.6%;
-        width: 58% !important;
     }
 
 }
@@ -680,8 +655,25 @@ img[src="/img/mobile/icons-black.png"] {
         font-size: 0.885em;
     }
 
+}
+
+@media (max-height: 720px) {
+
+    .product-heading {
+        font-size: 3.2em;
+        top: 12.5%;
+    }
+
     .price {
-        top: 41%;
+        top: 32.5%;
+    }
+
+    .product-desc {
+        top: 31%;
+    }
+
+    .product-icons {
+        top: 28%;
     }
 
 }
@@ -709,7 +701,7 @@ img[src="/img/mobile/icons-black.png"] {
     .slide:nth-child(2) .section .slide-selectors, 
     .slide:nth-child(4) .section .slide-selectors, 
     .slide:nth-child(5) .section .slide-selectors {
-        top: 83.5vh;
+        top: 80.5vh;
     }
 
     img[src="/img/mobile/icons-black.png"] {
@@ -741,8 +733,27 @@ img[src="/img/mobile/icons-black.png"] {
 @media (max-height: 690px) {
 
     .product-heading {
-        font-size: 3.7em;
-        line-height: 1.05em;
+        top: 14%;
+    }
+
+    .product {
+        width: 110vw !important;
+    }
+
+    .open-cart {
+        width: 39%;
+    }
+
+    .open-cart button {
+        font-size: 0.8em;
+    }
+
+    .product-desc {
+        top: 29.5%;
+    }
+
+    .product-icons {
+        top: 26%;
     }
 
     .carousel .control-dots .dot {
@@ -759,6 +770,22 @@ img[src="/img/mobile/icons-black.png"] {
 
 @media (max-height: 670px) {
 
+    .product {
+        top: 35vh;
+    }
+
+    .open-cart {
+        top: 29%;
+    }
+
+    .product-desc {
+        top: 28%;
+    }
+
+    .product-icons {
+        top: 24.5%;
+    }
+
     .intro-first-heading {
         top: 55%;
     }
@@ -774,11 +801,6 @@ img[src="/img/mobile/icons-black.png"] {
     .product-desc {
         font-size: 1.1em;
         letter-spacing: 0.9px;
-    }
-
-    .product-icons {
-        left: 2%;
-        width: 54% !important;
     }
 
 }
@@ -800,6 +822,32 @@ img[src="/img/mobile/icons-black.png"] {
 
 }
 
+@media (max-height: 650px) {
+
+    .open-cart {
+        width: 33%;
+    }
+
+    .open-cart button {
+        font-size: 0.7em;
+    }
+
+    .product-desc {
+        font-size: 0.9em;
+    }
+
+    .product-icons {
+        top: 25%;
+        left: 3.5%;
+        width: 50% !important;
+    }
+
+    .control-dots {
+        bottom: 3% !important;
+    }
+
+}
+
 @media (max-height: 630px) {
     
     .intro-first-heading {
@@ -813,10 +861,6 @@ img[src="/img/mobile/icons-black.png"] {
 }
 
 @media (max-height: 620px) {
-
-    .product-heading {
-        font-size: 3.4em;
-    }
 
     .contact-heading-first {
         top: 6%;
@@ -843,6 +887,10 @@ img[src="/img/mobile/icons-black.png"] {
 }
 
 @media (max-height: 610px) {
+
+    .price {
+        top: 34.5%;
+    }
 
     .intro-second-heading {
         top: 4%;
@@ -879,13 +927,6 @@ img[src="/img/mobile/icons-black.png"] {
         font-size: 0.8em;
     }
 
-    .product-desc {
-        font-size: 1em;
-    }
-
-    .product-icons {
-        width: 53% !important;
-    }
 
     .carousel .control-dots {
         bottom: 1.5% !important;
@@ -924,14 +965,6 @@ img[src="/img/mobile/icons-black.png"] {
 
 }
 
-@media (max-width: 345px) {
-
-    .open-cart {
-        width: 45%;
-    }
-
-}
-
 @media (max-width: 340px) {
 
     .vertical-heading {
@@ -944,6 +977,22 @@ img[src="/img/mobile/icons-black.png"] {
 
     .vertical-heading {
         right: -15%;
+    }
+
+}
+
+@media (max-width: 310px) {
+
+    .vertical-heading {
+        right: -17.5%;
+    }
+
+}
+
+@media (max-width: 280px) {
+
+    .vertical-heading {
+        right: -19.5%;
     }
 
 }
