@@ -92,7 +92,7 @@ body {
     background-repeat: no-repeat !important;
 }
 
-.desktop-section img {
+.desktop-section > img {
     width: 100vw;
     height: 100vh;
 }
@@ -102,7 +102,7 @@ body {
     height: 3em;
 }
 
-.desktop-components-container > .desktop-section:nth-child(4) .carousel .control-dots .dot {
+.desktop-components-container div:nth-child(4) > .desktop-section .carousel .control-dots .dot {
     border: 1px solid #000;
 }
 
@@ -682,9 +682,15 @@ div[data-testid="container"] div:nth-of-type(3) div {
 }
 
 @media (max-width: 1500px) {
+    
+    .burger {
+        font-size: 0.6em;
+    }
+
     .desktop-cart {
         font-size: 0.7em;
     }
+
 }
 
 @media (max-width: 1700px), (max-height: 1000px) {
@@ -983,6 +989,10 @@ div[data-testid="container"] div:nth-of-type(3) div {
 }
 
 @media (max-width: 1000px), (max-height: 750px) {
+
+    .burger {
+        font-size: 0.45em;
+    }
 
     .desktop-about-page-content {
         font-size: 0.75em;

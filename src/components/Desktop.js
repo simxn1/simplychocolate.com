@@ -11,9 +11,15 @@ const Desktop = () => {
     return (
         <div className="desktop-components-container">
             <IntroDesktop />
-            <AboutDesktop />
+            <div id="about">
+                <AboutDesktop />
+            </div>
+            <div id="products">
             <ProductsDesktop />
-            <ContactDesktop />
+            </div>
+            <div id="contact">
+                <ContactDesktop />
+            </div>
         </div>
     )
 }

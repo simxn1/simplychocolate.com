@@ -285,6 +285,7 @@ img[src="/img/mobile/icons-black.png"] {
 .slide-bg {
     position: absolute;
     left: 0;
+    height: 100vh;
 }
 
 .product-bg {

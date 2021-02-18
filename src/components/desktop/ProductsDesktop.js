@@ -100,22 +100,4 @@ const ProductsDesktop = () => {
 
 }
 
-/*
-products.map((product) =>
-
-    <ProductDesktop
-        name={product.name}
-        icons={product.icons}
-        desc={product.desc}
-        textFirst={product.textFirst}
-        textSecond={product.textSecond}
-        textThird={product.textThird}
-        desc={product.desc}
-        color={product.color}
-    />
-)
-*/
-
-
-
 export default ProductsDesktop

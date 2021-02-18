@@ -1,14 +1,39 @@
 import React from 'react';
 import ReactCompareImage from 'react-compare-image';
 import Typical from 'react-typical';
+import Burger from '@animated-burgers/burger-squeeze'
+import Menu from '../mutual/Menu';
 
 const IntroDesktop = () => {
 
+    const [burgerState, setBurgerState] = React.useState(false);
 
+    const toggleBurger = () => {
+        if (burgerState) {
+            setBurgerState(false);
+        }
+        else {
+            setBurgerState(true);
+        }
+    }
 
     return (
         <>
             <div className="desktop-section" style={{ position: "relative" }}>
+                <Burger 
+                    isOpen={burgerState}
+                    onClick={toggleBurger}
+                    style={{ 
+                        position: 'absolute', 
+                        zIndex: '2',
+                        margin: '3em'
+                    }}
+                />
+                <Menu 
+                    display={ burgerState ? 'block' : 'none' }
+                    burgerState={burgerState}
+                    toggleBurger={toggleBurger}
+                />
                 <i
                     class="fas fa-arrow-down"
                     style={{

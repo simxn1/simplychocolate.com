@@ -1,10 +1,13 @@
 import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
+import Burger from '@animated-burgers/burger-squeeze';
+import Menu from '../mutual/Menu';
 
 const Intro = (props) => {
 
     const [currentSlide, setCurrentSlide] = React.useState(0)
+    const [burgerState, setBurgerState] = React.useState(false);
 
     const nextSlide = () => {
         if (currentSlide < 4) {
@@ -18,11 +21,30 @@ const Intro = (props) => {
         }
     }
 
+    const toggleBurger = () => {
+        if (burgerState) {
+            setBurgerState(false);
+        }
+        else {
+            setBurgerState(true);
+        }
+    }
+
     return (
         <>
+            <Menu
+                display={ burgerState ? 'block' : 'none' }
+                burgerState={burgerState}
+                toggleBurger={toggleBurger}
+            />
             <Carousel autoPlay={false} selectedItem={currentSlide} className="intro component">
                 <div style={{ backgroundImage: `url("img/mobile/intro-first.png")`, backgroundPosition: `bottom` }} className="section">
-                    <img className="logo-first" src="/img/mobile/logowithoutbreak.png"></img>
+                    <Burger 
+                        onClick={toggleBurger}
+                        style={{
+                            margin: '3em'
+                        }}
+                    />
                     <h1 className="heading intro-first-heading">yes<br />you can<br />buy love</h1>
                     <div className="slide-selectors">
                         <button onClick={prevSlide}><i class="fas fa-chevron-left"></i></button>

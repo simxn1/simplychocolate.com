@@ -12,8 +12,12 @@ const Mobile = () => {
         <div className="mobile-components-container">
             <Intro />
             <About />
-            <Products />
-            <Contact />
+            <div id="products">
+                <Products />
+            </div>
+            <div id="contact">
+                <Contact />
+            </div>
         </div>
     )
 }
