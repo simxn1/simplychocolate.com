@@ -1,12 +1,12 @@
 import React from 'react';
 import Burger from '@animated-burgers/burger-squeeze'
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 
 
 const Menu = (props) => {
 
-
+    let history = useHistory();
 
     return (
         <div 
@@ -33,8 +33,16 @@ const Menu = (props) => {
                 <li><a onClick={props.toggleBurger} href="#contact">Simply kontakt</a></li>
             </ul>
             <div className="legal">
-                <Link to="/zasady-ochrany-osobnych-udajov" target="_blank">Zásady ochrany osobných údajov</Link>
-                <Link to="/obchodne-podmienky" target="_blank">Všeobecné obchodné podmienky</Link>
+                <a 
+                    onClick={() => { history.push({ pathname: "/zasady-ochrany-osobnych-udajov" }) }} 
+                >
+                    Zásady ochrany osobných údajov
+                </a>
+                <a 
+                    onClick={() => { history.push({ pathname: "/obchodne-podmienky" }) }}
+                >
+                    Všeobecné obchodné podmienky
+                </a>
             </div>
         </div>
     )
