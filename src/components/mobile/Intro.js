@@ -109,7 +109,7 @@ const Intro = (props) => {
                     </div>
                 </div>
                 <div style={{ backgroundImage: `url("img/mobile/intro-fifth.png")` }} className="section">
-                    <h2 className="vertical-heading">Simply Chocolate</h2>
+                    <img className="logo-vertical" src="img/mobile/logo-vertical.png"></img>
                     <div className="slide-selectors">
                         <button onClick={prevSlide}><i class="fas fa-chevron-left"></i></button>
                         <button onClick={nextSlide}><i class="fas fa-chevron-right"></i></button>
