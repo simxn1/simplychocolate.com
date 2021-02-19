@@ -89,7 +89,7 @@ const Product = (props) => {
                 backgroundPosition: '50% 32.5%',
                 backgroundSize: 'cover'
             }}
-            className="section"
+            className="section product-section"
         >
             <h1 
                 style={{ color: props.color }} 

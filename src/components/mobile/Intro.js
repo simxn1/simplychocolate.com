@@ -52,7 +52,7 @@ const Intro = (props) => {
                     </div>
                 </div>
                 <div style={{ 
-                    backgroundImage: `url("img/mobile/intro-second.png")`,
+                    backgroundImage: `url("img/mobile/intro-second.jpg")`,
                     backgroundPosition: 'bottom center'
                 }} className="section">
                     <div className="slide-selectors">
