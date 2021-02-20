@@ -91,7 +91,7 @@ body {
     position: absolute;
     top: 80vh;
     left: 50%;
-    transform: translateX(-32%);
+    transform: translateX(-45%);
 }
 
 .slide:nth-child(3) .section .slide-selectors {
@@ -192,7 +192,7 @@ img[src="/img/mobile/icons-black.png"] {
 }
 
 .logo-vertical {
-    height: 24.5%;
+    height: 28.5%;
     width: 9% !important;
     position: absolute;
     top: 57%;
