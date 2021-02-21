@@ -121,7 +121,7 @@ const Intro = (props) => {
                     <div
                         style={{ 
                             position: 'relative',
-                            top: '53%',
+                            top: '47%',
                             left: '13%',
                             fontSize: '1.3em'
                         }}

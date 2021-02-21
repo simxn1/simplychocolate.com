@@ -694,7 +694,7 @@ img[src="/img/mobile/icons-black.png"] {
     }
 
     img[src="/img/mobile/icons-black.png"] {
-        margin-top: 10%;
+        bottom: 21%;
     }
     
     .contact-heading-first {
@@ -803,7 +803,11 @@ img[src="/img/mobile/icons-black.png"] {
     }
 
     img[src="/img/mobile/icons-black.png"] {
-        margin-top: 13%;
+        bottom: 19.5%;
+    }
+
+    .slide:nth-child(3) .section .slide-selectors {
+        bottom: 11%;
     }
 
 }
@@ -893,7 +897,7 @@ img[src="/img/mobile/icons-black.png"] {
     }
 
     img[src="/img/mobile/icons-black.png"] {
-        margin-top: 16.5%;
+        bottom: 18%;
     }
 
     .open-cart {

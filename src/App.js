@@ -26,7 +26,7 @@ const App = () => {
 
 
 
-  /*if (isMobile)*/ return (
+  if (isMobile) return (
     <>
       <Route exact path="/" component={Mobile} />
       <Route path="/mixed-box" component={MixedBox} />
@@ -37,7 +37,7 @@ const App = () => {
       <Route path="/zasady-ochrany-osobnych-udajov" component={ZasadyOchranyOsobnychUdajov} />
     </>
   )
-  /*else return (
+  else return (
     <>
       <Route exact path="/" component={Desktop} />
       <Route path="/mixed-box" component={MixedBox} />
@@ -48,7 +48,7 @@ const App = () => {
       <Route path="/obchodne-podmienky" component={ObchodnePodmienky} />
       <Route path="/zasady-ochrany-osobnych-udajov" component={ZasadyOchranyOsobnychUdajov} />
     </>
-  )*/
+  )
 
 }
 

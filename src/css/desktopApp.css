@@ -1040,10 +1040,6 @@ div[data-testid="container"] div:nth-of-type(3) div {
         top: -2.4em;
     }
 
-    .desktop-intro-hidden-section {
-        right: 5vw;
-    }
-
     .desktop-intro-hidden-text {
         font-size: 0.7em;
     }
@@ -1055,6 +1051,10 @@ div[data-testid="container"] div:nth-of-type(3) div {
 }
 
 @media (max-width: 1000px), (max-height: 500px) {
+
+    .desktop-intro-hidden-section {
+        right: 5vw;
+    }
 
     .desktop-product-shown-section {
         font-size: 0.45em;
