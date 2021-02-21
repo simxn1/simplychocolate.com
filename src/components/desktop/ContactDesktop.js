@@ -68,10 +68,8 @@ const ContactDesktop = () => {
                 style={{ 
                     color: "#fff", 
                     fontFamily: "Open Sans", 
-                    margin: "0 6rem",
                     position: "absolute",
                     textAlign: "center",
-                    bottom: "1rem",
                     left: "50%",
                     transform: "translateX(-50%)"
                 }}
