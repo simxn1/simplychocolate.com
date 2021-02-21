@@ -85,7 +85,7 @@ const Product = (props) => {
         <div 
             style={{ 
                 background: `url(img/mobile/${props.name.replace(" ", "")}-bg.jpg) no-repeat`,
-                backgroundPosition: '50% 32.5%',
+                backgroundPosition: '50% 40%',
                 backgroundSize: 'cover'
             }}
             className="section product-section"

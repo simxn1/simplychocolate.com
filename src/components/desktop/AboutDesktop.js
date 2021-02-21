@@ -52,7 +52,7 @@ const AboutDesktop = () => {
     ];
 
     return (
-        <Carousel className="desktop-section" autoPlay={true} interval={5000} infiniteLoop>
+        <Carousel className="desktop-section" autoPlay={false} interval={5000} infiniteLoop>
             {
                 pages.map((page) =>
                     <AboutPageDesktop

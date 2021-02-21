@@ -187,7 +187,7 @@ body {
 img[src="/img/mobile/icons-black.png"] {
     width: 52% !important;
     position: relative;
-    top: 7%;
+    top: 10%;
     margin-top: 5%;
 }
 
@@ -801,7 +801,7 @@ img[src="/img/mobile/icons-black.png"] {
     }
 
     img[src="/img/mobile/icons-black.png"] {
-        margin-top: 12.5%;
+        margin-top: 13%;
     }
 
 }
@@ -891,7 +891,7 @@ img[src="/img/mobile/icons-black.png"] {
     }
 
     img[src="/img/mobile/icons-black.png"] {
-        margin-top: 15%;
+        margin-top: 16.5%;
     }
 
     .open-cart {
@@ -943,7 +943,7 @@ img[src="/img/mobile/icons-black.png"] {
 @media (max-height: 550px) {
 
     .product-section {
-        background-position: 50% 39.5% !important;
+        background-position: 50% 44% !important;
     }
 
     .product-heading {
