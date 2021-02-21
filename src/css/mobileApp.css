@@ -715,6 +715,10 @@ img[src="/img/mobile/icons-black.png"] {
         width: 100%;
     }
 
+    .contact-legal {
+        font-size: 0.25rem;
+    }
+
 }
 
 @media (max-height: 690px) {
@@ -824,10 +828,6 @@ img[src="/img/mobile/icons-black.png"] {
 
     .control-dots {
         bottom: 3% !important;
-    }
-
-    .contact-legal {
-        font-size: 0.325rem;
     }
 
 }
