@@ -53,6 +53,7 @@ const Contact = () => {
                     fontFamily: "Open Sans", 
                     textAlign: "center",
                     position: "absolute",
+                    bottom: "0.1rem",
                     margin: "0 0.75rem"
                 }}
             >
