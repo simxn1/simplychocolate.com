@@ -49,7 +49,7 @@ const ProductDesktop = (props) => {
     }
 
     const setQuantity = (event) => {
-        let boxSizeSelected = event.target.children.item(0).textContent.trim();
+        let boxSizeSelected = event.target.children.item(0) ? event.target.children.item(0).textContent.trim() : event.target.textContent.trim();
 
         switch (boxSizeSelected) {
             case "S":
@@ -151,10 +151,18 @@ const ProductDesktop = (props) => {
                     veľkosť
                 </h2>
                 <ul className="desktop-box-sizes">
-                    <li><button style={{ cursor: 'pointer' }} onClick={setQuantity}><strong>S </strong>- 6ks</button></li>
-                    <li><button style={{ cursor: 'pointer' }} onClick={setQuantity}><strong>M </strong>- 12ks</button></li>
-                    <li><button style={{ cursor: 'pointer' }} onClick={setQuantity}><strong>L </strong>- 20ks</button></li>
-                    <li><button style={{ cursor: 'pointer' }} onClick={setQuantity}><strong>XL </strong>- 30ks</button></li>
+                    <li>
+                        <button style={{ cursor: 'pointer' }} onClick={setQuantity}><div><strong>S </strong></div>- 6ks</button>
+                    </li>
+                    <li>
+                        <button style={{ cursor: 'pointer' }} onClick={setQuantity}><div><strong>M </strong></div>- 12ks</button>
+                    </li>
+                    <li>
+                        <button style={{ cursor: 'pointer' }} onClick={setQuantity}><div><strong>L </strong></div>- 20ks</button>
+                    </li>
+                    <li>
+                        <button style={{ cursor: 'pointer' }} onClick={setQuantity}><div><strong>XL </strong></div>- 30ks</button>
+                    </li>
                 </ul>
                 <span
                     style={{

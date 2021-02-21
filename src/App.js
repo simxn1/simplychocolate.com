@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "@animated-burgers/burger-squeeze/dist/styles.css";
 import "./css/mobileApp.css";

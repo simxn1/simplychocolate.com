@@ -31,8 +31,8 @@ const AboutDesktop = () => {
         {
             bg: "running",
             icon: "protein",
-            heading: "gluten free",
-            desc: "Myslíme na všetkých milovníkov čokolády, a preto je väčšina z našich tyčiniek vhodná aj pre ľudí s alergiou na lepok."
+            heading: "high on protein",
+            desc: "Naše proteínové tyčinky nie sú suché a ani bez chuti. Stavili sme na kvalitu, ale nezabudli sme ponechať aj vynikajúcu chuť čokolády a starostlivo vybraných surovín."
         },
 
         {
@@ -45,8 +45,8 @@ const AboutDesktop = () => {
         {
             bg: "solarpanel",
             icon: "sun",
-            heading: "gluten free",
-            desc: "Myslíme na všetkých milovníkov čokolády, a preto je väčšina z našich tyčiniek vhodná aj pre ľudí s alergiou na lepok."
+            heading: "solar",
+            desc: "Vďaka vlastnému systému solárnych panelov, sme 100% energeticky sebestační a čokoládu vyrábame s nulovými emisiami CO2."
         }
 
     ];

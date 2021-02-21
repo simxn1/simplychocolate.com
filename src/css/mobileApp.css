@@ -574,6 +574,10 @@ img[src="/img/mobile/icons-black.png"] {
     grid-row: 2 / 3;
 }
 
+.contact-legal {
+    font-size: 0.5rem;
+}
+
 .sent {
     position: absolute;
     top: 50%;
@@ -820,6 +824,10 @@ img[src="/img/mobile/icons-black.png"] {
 
     .control-dots {
         bottom: 3% !important;
+    }
+
+    .contact-legal {
+        font-size: 0.325rem;
     }
 
 }

@@ -44,8 +44,7 @@ const Product = (props) => {
     }
 
     const setQuantity = (event) => {
-        //setBoxContent([props.name, event.target.children.item(0).textContent.trim()])
-        let boxSizeSelected = event.target.children.item(0).textContent.trim();
+        let boxSizeSelected = event.target.children.item(0) ? event.target.children.item(0).textContent.trim() : event.target.textContent.trim();
 
         switch (boxSizeSelected) {
             case "S":
