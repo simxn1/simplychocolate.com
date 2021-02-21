@@ -68,10 +68,11 @@ const ContactDesktop = () => {
                 style={{ 
                     color: "#fff", 
                     fontFamily: "Open Sans", 
-                    textAlign: "center",
                     margin: "0 6rem",
                     position: "absolute",
-                    bottom: "1rem"
+                    bottom: "1rem",
+                    left: "50%",
+                    transform: "translateX(-50%)"
                 }}
             >
                 Odoslaním formuláru dávam spoločnosti P-REDOMA s.r.o., Banskobystrická 148/1 940 02 Nové Zámky, 
