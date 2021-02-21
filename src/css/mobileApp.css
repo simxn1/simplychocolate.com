@@ -95,8 +95,10 @@ body {
 }
 
 .slide:nth-child(3) .section .slide-selectors {
-    position: relative;
-    top: 9%;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .slide:nth-child(3) .section .slide-selectors button i {
@@ -185,10 +187,11 @@ body {
 }
 
 img[src="/img/mobile/icons-black.png"] {
-    width: 52% !important;
-    position: relative;
-    top: 10%;
-    margin-top: 5%;
+    width: 50% !important;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .logo-vertical {
@@ -605,7 +608,7 @@ img[src="/img/mobile/icons-black.png"] {
 @media (max-height: 760px) {
 
     .product-heading {
-        top: 15.5%;
+        top: 15%;
     }
 
     .price {
@@ -654,7 +657,6 @@ img[src="/img/mobile/icons-black.png"] {
 
     .product-heading {
         font-size: 3.2em;
-        top: 12.5%;
     }
 
     .price {
