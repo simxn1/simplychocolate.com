@@ -70,6 +70,7 @@ const ContactDesktop = () => {
                     fontFamily: "Open Sans", 
                     position: "absolute",
                     textAlign: "center",
+                    bottom: "0",
                     left: "50%",
                     transform: "translateX(-50%)"
                 }}
