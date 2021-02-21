@@ -96,7 +96,7 @@ body {
 
 .slide:nth-child(3) .section .slide-selectors {
     position: absolute;
-    bottom: 10%;
+    bottom: 12.5%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -189,7 +189,7 @@ body {
 img[src="/img/mobile/icons-black.png"] {
     width: 50% !important;
     position: absolute;
-    bottom: 20%;
+    bottom: 22.5%;
     left: 50%;
     transform: translateX(-50%);
 }
