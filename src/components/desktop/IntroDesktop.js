@@ -3,6 +3,7 @@ import ReactCompareImage from 'react-compare-image';
 import Typical from 'react-typical';
 import Burger from '@animated-burgers/burger-squeeze'
 import Menu from '../mutual/Menu';
+import Social from "../mutual/Social";
 
 const IntroDesktop = () => {
 
@@ -34,6 +35,7 @@ const IntroDesktop = () => {
                     burgerState={burgerState}
                     toggleBurger={toggleBurger}
                 />
+                <Social />
                 <i
                     class="fas fa-arrow-down"
                     style={{

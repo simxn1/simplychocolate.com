@@ -44,31 +44,12 @@ const Contact = () => {
                     <input type="text" name="phone" placeholder="Telefónne číslo" required />
                     <input type="text" name="subject" placeholder="Predmet" required />
                     <textarea name="message" placeholder="Správa" required></textarea>
+                    <label>
+                        <input type="checkbox" required />
+                        Súhlasím so&nbsp;<a href="/zasady-ochrany-osobnych-udajov" target="_blank">spracovaním osobných údajov</a>.
+                    </label>
                     <button type="submit">Odoslať</button>
                 </form>
-                <p
-                className="contact-legal"
-                style={{ 
-                    color: "#fff", 
-                    fontFamily: "Open Sans", 
-                    textAlign: "center",
-                    position: "absolute",
-                    bottom: "0.1rem",
-                    margin: "0 0.75rem"
-                }}
-            >
-                Odoslaním formuláru dávam spoločnosti P-REDOMA s.r.o., Banskobystrická 148/1 940 02 Nové Zámky, 
-                IČO: 51408741, súhlas na spracovanie a uchovávanie hore uvedených osobných údajov. 
-                Viac informácií v dokumente&nbsp;
-                <a 
-                    href="/zasady-ochrany-osobnych-udajov"
-                    style={{ 
-                        cursor: "pointer"
-                    }}
-                >   
-                    Zásady ochrany osobných údajov
-                </a>.
-            </p>
                 <div style={{ display: sentDisplay }} className="sent">
                     správa odoslaná!<br />
                     <i class="fas fa-check"></i>

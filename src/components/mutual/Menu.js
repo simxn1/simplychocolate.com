@@ -1,29 +1,33 @@
 import React from 'react';
-import Burger from '@animated-burgers/burger-squeeze'
+import Burger from '@animated-burgers/burger-squeeze';
+import Social from "../mutual/Social";
 import { useHistory } from 'react-router-dom';
-
+import { isMobile } from "react-device-detect";
 
 
 const Menu = (props) => {
 
     let history = useHistory();
 
+    console.log(isMobile);
+
     return (
-        <div 
-            className="menu" 
-            style={{ 
+        <div
+            className="menu"
+            style={{
                 display: props.display,
             }}
         >
-            <Burger 
-                    isOpen={props.burgerState}
-                    onClick={props.toggleBurger}
-                    style={{ 
-                        position: 'absolute', 
-                        zIndex: '2',
-                        margin: '3em'
-                    }}
-                />
+            <Burger
+                isOpen={props.burgerState}
+                onClick={props.toggleBurger}
+                style={{
+                    position: 'absolute',
+                    zIndex: '2',
+                    margin: '3em'
+                }}
+            />
+            <Social style={{ display: isMobile ? "flex" : "none" }}/>
             <div>
                 <img src="/img/desktop/logo.png"></img>
             </div>
@@ -33,12 +37,12 @@ const Menu = (props) => {
                 <li><a onClick={props.toggleBurger} href="#contact">Simply kontakt</a></li>
             </ul>
             <div className="legal">
-                <a 
-                    onClick={() => { history.push({ pathname: "/zasady-ochrany-osobnych-udajov" }) }} 
+                <a
+                    onClick={() => { history.push({ pathname: "/zasady-ochrany-osobnych-udajov" }) }}
                 >
                     Zásady ochrany osobných údajov
                 </a>
-                <a 
+                <a
                     onClick={() => { history.push({ pathname: "/obchodne-podmienky" }) }}
                 >
                     Všeobecné obchodné podmienky

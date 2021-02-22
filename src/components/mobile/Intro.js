@@ -32,26 +32,27 @@ const Intro = (props) => {
 
     return (
         <>
+            <Burger
+                onClick={toggleBurger}
+                style={{
+                    margin: "3em",
+                    zIndex: "3"
+                }}
+            />
             <Menu
-                display={ burgerState ? 'block' : 'none' }
+                display={burgerState ? 'block' : 'none'}
                 burgerState={burgerState}
                 toggleBurger={toggleBurger}
             />
             <Carousel autoPlay={false} selectedItem={currentSlide} className="intro component">
                 <div style={{ backgroundImage: `url("img/mobile/intro-first.png")`, backgroundPosition: `bottom` }} className="section">
-                    <Burger 
-                        onClick={toggleBurger}
-                        style={{
-                            margin: '3em'
-                        }}
-                    />
                     <h1 className="heading intro-first-heading">yes<br />you can<br />buy love</h1>
                     <div className="slide-selectors">
                         <button onClick={prevSlide}><i class="fas fa-chevron-left"></i></button>
                         <button onClick={nextSlide}><i class="fas fa-chevron-right"></i></button>
                     </div>
                 </div>
-                <div style={{ 
+                <div style={{
                     backgroundImage: `url("img/mobile/intro-second.jpg")`,
                     backgroundPosition: 'bottom center'
                 }} className="section">
@@ -119,7 +120,7 @@ const Intro = (props) => {
             <div className="component" style={{ overflowY: 'hidden' }}>
                 <div className="section" style={{ backgroundImage: 'url("/img/mobile/intro-sixth.png")' }}>
                     <div
-                        style={{ 
+                        style={{
                             position: 'relative',
                             top: '47%',
                             left: '13%',
