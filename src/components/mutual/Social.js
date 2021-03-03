@@ -7,10 +7,10 @@ const Social = () => {
 
     return (
         <div className="social">
-            <a href="https://instagram.com" target="_blank">
+            <a href="https://www.instagram.com/simplychocolate.sk/" target="_blank">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://facebook.com" target="_blank">
+            <a href="https://www.facebook.com/simplychocolate.sk" target="_blank">
                 <i class="fab fa-facebook-f"></i>
             </a>
             <a href="mailto:info@simplychocolate.sk" target="_blank">

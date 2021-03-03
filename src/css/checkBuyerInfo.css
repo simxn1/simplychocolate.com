@@ -100,3 +100,103 @@
 .confirm:focus {
     outline: none;
 }
+
+@media (max-width: 1500px) {
+
+    .check-buyer-info .different-address-delivery form {
+        width: 18vw;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    .check-buyer-info .billing-information form {
+        width: 25vw;
+    }
+
+    .check-buyer-info .different-address-delivery form {
+        width: 21vw;
+    }
+
+}
+
+@media (max-width: 1000px) {
+
+    .check-buyer-info .billing-information form {
+        width: 29vw;
+    }
+
+    .check-buyer-info .different-address-delivery form {
+        width: 24vw;
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    .check-buyer-info .billing-information form {
+        width: 35vw;
+    }
+
+    .check-buyer-info .different-address-delivery form {
+        width: 30vw;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .check-buyer-info .billing-information form {
+        width: 40vw;
+    }
+
+    .check-buyer-info .different-address-delivery form {
+        width: 35vw;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .check-buyer-info .billing-information form {
+        width: 45vw;
+    }
+
+    .check-buyer-info .different-address-delivery form {
+        width: 40vw;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .check-buyer-info {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .check-buyer-info {
+        font-size: 0.7rem;
+    }
+
+    .check-buyer-info .billing-information form {
+        width: 48vw;
+    }
+
+    .check-buyer-info .different-address-delivery form {
+        width: 46vw;
+    }
+
+}
+
+@media (max-height: 900px) {
+
+    .check-buyer-info .confirm {
+        margin-bottom: 10vh;
+    }
+
+}

@@ -1,7 +1,10 @@
 import React from "react";
 import emailjs from "emailjs-com"
+import { useHistory } from "react-router-dom";
 
 const ContactDesktop = () => {
+
+    const history = useHistory();
 
     const [sentDisplay, setSentDisplay] = React.useState('none');
 
@@ -63,7 +66,7 @@ const ContactDesktop = () => {
                 <textarea name="message" placeholder="Správa" required></textarea>
                 <label>
                     <input type="checkbox" required />
-                    Súhlasím so <a href="/zasady-ochrany-osobnych-udajov" target="_blank">spracovaním osobných údajov</a>.
+                    Súhlasím so <a onCLick={ () => { history.push({ pathname: "/zasady-ochrany-osobnych-udajov" }) } }>spracovaním osobných údajov</a>.
                 </label>
                 <button type="submit">Odoslať</button>
             </form>

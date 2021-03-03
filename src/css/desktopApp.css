@@ -502,6 +502,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
     left: 33vw;
     top: -18vh;
     margin: 0;
+    margin-bottom: 1vh;
     grid-column-gap: 0.5vw;
     grid-row-gap: 3vh;
 }
@@ -754,7 +755,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
     .desktop-contact form {
         font-size: 0.85em;
-        top: -10vh;
+        top: -14vh;
         left: 33vw;
     }
 
