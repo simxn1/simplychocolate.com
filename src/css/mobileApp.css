@@ -373,7 +373,7 @@ img[src="/img/mobile/icons-black.png"] {
     position: relative;
     left: 39%;
     display: inline-block;
-    margin-top: 30%;
+    margin-top: 25%;
     font-size: 1.5em;
     cursor: pointer;
 }
@@ -691,7 +691,7 @@ img[src="/img/mobile/icons-black.png"] {
 @media (max-height: 700px) {
 
     .intro-first-heading {
-        top: 38%;
+        top: 44%;
     }
 
     .slide:nth-child(1) .section .slide-selectors button,
@@ -856,7 +856,7 @@ img[src="/img/mobile/icons-black.png"] {
 @media (max-height: 640px) {
 
     .intro-first-heading {
-        top: 35%;
+        top: 38.5%;
     }
 
 }
