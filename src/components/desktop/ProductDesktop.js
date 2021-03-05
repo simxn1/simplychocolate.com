@@ -183,16 +183,28 @@ const ProductDesktop = (props) => {
         </div>
     )
     else return (
-        <div className="desktop-where-to-find-us">
+        <div 
+            className="desktop-where-to-find-us" 
+            style={{ 
+                backgroundImage: `url('/img/desktop/in-products-background.png')`,
+                backgroundSize: "cover",
+                position: "absolute",
+                width: "100vw",
+                height: "100vh"
+            }}
+        >
             <h1 className="desktop-heading">
                 šampióni<br />chutí
             </h1>
             <h2 className="desktop-heading">
                 kde<br /> nás<br /> nájdete?
             </h2>
-            <div className="logos">
+            <div className="desktop-logos">
                 <img src="/img/mutual/terno.png"></img>
                 <img src="/img/mutual/kraj.png"></img>
+            </div>
+            <div className="desktop-bars">
+                <img src="/img/mutual/bars.png"></img>
             </div>
         </div>
     )

@@ -104,6 +104,7 @@ body {
 
 .desktop-components-container div:nth-child(4) > .desktop-section .carousel .control-dots .dot {
     border: 1px solid #000;
+    display: none;
 }
 
 div[data-testid="container"] {
@@ -495,7 +496,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
     left: 17vw;
 }
 
-.desktop-where-to-find-us .logos {
+.desktop-where-to-find-us .desktop-logos {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -503,8 +504,15 @@ div[data-testid="container"] div:nth-of-type(3) div {
     left: 39vw;
 }
 
-.desktop-where-to-find-us .logos img {
+.desktop-where-to-find-us .desktop-logos img {
     width: 15%;
+}
+
+.desktop-where-to-find-us .desktop-bars {
+    width: 23%;
+    position: relative;
+    top: -53vh;
+    left: 64vw;
 }
 
 .desktop-contact-main-heading {
@@ -765,18 +773,6 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
 }
 
-@media (max-width: 1500px) {
-    
-    .burger {
-        font-size: 0.6em;
-    }
-
-    .desktop-cart {
-        font-size: 0.7em;
-    }
-
-}
-
 @media (max-width: 1700px), (max-height: 1000px) {
 
     .desktop-contact-main-heading {
@@ -836,6 +832,23 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
     .desktop-intro-hidden-section .desktop-intro-icons {
         top: 5vh;
+    }
+
+}
+
+@media (max-width: 1500px) {
+    
+    .burger {
+        font-size: 0.6em;
+    }
+
+    .desktop-cart {
+        font-size: 0.7em;
+    }
+
+    .desktop-where-to-find-us .desktop-bars {
+        width: 25%;
+        top: -60vh;
     }
 
 }
@@ -923,6 +936,22 @@ div[data-testid="container"] div:nth-of-type(3) div {
     .desktop-product-hidden-section {
         font-size: 0.7em;
         right: 70vw;
+    }
+
+}
+
+@media (max-width: 1325px) {
+
+    .desktop-where-to-find-us h1 {
+        font-size: 4em;
+    }
+
+    .desktop-where-to-find-us h2 {
+        font-size: 3em;
+    }
+
+    .desktop-where-to-find-us .desktop-bars {
+        top: -52vh;
     }
 
 }
@@ -1044,6 +1073,27 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
     .desktop-contact button[type="submit"] {
         font-size: 1.3em;
+    }
+
+}
+
+@media (max-width: 1050px) {
+
+    .desktop-where-to-find-us h1 {
+        font-size: 3.5em;
+    }
+
+    .desktop-where-to-find-us h2 {
+        font-size: 2em;
+    }
+
+    .desktop-where-to-find-us .desktop-logos {
+        top: 10vh;
+    }
+
+    .desktop-where-to-find-us .desktop-bars {
+        top: -48vh;
+        left: 62vw;
     }
 
 }
@@ -1260,6 +1310,18 @@ div[data-testid="container"] div:nth-of-type(3) div {
     
     .desktop-product-hidden-section {
         right: 69vw;
+    }
+
+    .desktop-where-to-find-us h1 {
+        font-size: 3em;
+    }
+
+    .desktop-where-to-find-us h2 {
+        font-size: 1.5em;
+    }
+
+    .desktop-where-to-find-us .desktop-bars {
+        top: -40vh;
     }
 
 }

@@ -474,6 +474,40 @@ img[src="/img/mobile/icons-black.png"] {
     left: 3%;
 }
 
+.where-to-find-us h1 {
+    position: relative;
+    top: 10%;
+    left: 15%;
+    line-height: 1.1em;
+    font-size: 3em;
+}
+
+.where-to-find-us .bars {
+    width: 70%;
+    position: relative;
+    top: 10%;
+    left: 8%;
+}
+
+.where-to-find-us h2 {
+    line-height: 1.1em;
+    position: relative;
+    top: 13%;
+    left: 15%;
+}
+
+.where-to-find-us .logos {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 45%;
+    top: 2%;
+}
+
+.where-to-find-us .logos img {
+    width: 40%;
+}
+
 .contact-heading-first {
     top: 7%;
     left: 17%;
@@ -618,6 +652,14 @@ img[src="/img/mobile/icons-black.png"] {
         font-size: 0.95em;
     }
 
+    .where-to-find-us h1 {
+        font-size: 2.5em;
+    }
+
+    .where-to-find-us .bars {
+        width: 60%;
+    }
+
 }
 
 @media (max-height: 760px) {
@@ -656,6 +698,18 @@ img[src="/img/mobile/icons-black.png"] {
 
     .open-cart button {
         font-size: 0.9em;
+    }
+
+}
+
+@media (max-height: 730px) {
+
+    .where-to-find-us h1 {
+        font-size: 2em;
+    }
+
+    .where-to-find-us .bars {
+        width: 50%;
     }
 
 }
@@ -729,7 +783,7 @@ img[src="/img/mobile/icons-black.png"] {
     }
 
     .contact form textarea {
-        width: 100%;
+        width: 80vw;
     }
 
     .contact-legal {
@@ -851,6 +905,14 @@ img[src="/img/mobile/icons-black.png"] {
         bottom: 3% !important;
     }
 
+    .where-to-find-us .logos {
+        left: 50%;
+    }
+    
+    .where-to-find-us .logos img {
+        width: 30%;
+    }
+
 }
 
 @media (max-height: 640px) {
@@ -883,7 +945,7 @@ img[src="/img/mobile/icons-black.png"] {
     }
 
     .contact form textarea {
-        width: 95%;
+        width: 79vw;
     }
 
 }

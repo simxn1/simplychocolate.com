@@ -27,7 +27,7 @@ const App = () => {
 
 
 
-  /*if (isMobile)*/ return (
+  if (isMobile) return (
     <Switch>
       <Route exact path="/" component={Mobile} />
       <Route path="/mixed-box" component={MixedBox} />
@@ -40,7 +40,7 @@ const App = () => {
       <Route component={Mobile} />
     </Switch>
   )
-  /*else return (
+  else return (
     <Switch>
       <Route exact path="/" component={Desktop} />
       <Route path="/mixed-box" component={MixedBox} />
@@ -52,7 +52,7 @@ const App = () => {
       <Route path="/zasady-ochrany-osobnych-udajov" component={ZasadyOchranyOsobnychUdajov} />
       <Route component={Desktop} />
     </Switch>
-  )*/
+  )
 
 }
 

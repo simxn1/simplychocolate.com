@@ -17,12 +17,7 @@ const Products = (props) => {
         },
 
         {
-            name: "creamy carol",
-            icons: "four",
-            textFirst: "tekutý karamel",
-            textSecond: "prémiová tmavá čokoláda",
-            textThird: "",
-            color: "#572698"
+            title: "where to find us"
         },
 
         {
