@@ -10,6 +10,7 @@ else {
 }
 
 const CHECK_SELECTED_PLACE = `${SERVER}/check-selected-place`;
+const CHECKOUT = `${SERVER}/checkout`;
 
 
-export default CHECK_SELECTED_PLACE;
+export { CHECK_SELECTED_PLACE, CHECKOUT };

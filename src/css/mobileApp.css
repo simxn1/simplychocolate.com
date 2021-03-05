@@ -45,7 +45,7 @@ body {
 }
 
 .mobile-components-container {
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     overflow-y: scroll;
     height: 100vh;
     overflow-x: hidden;

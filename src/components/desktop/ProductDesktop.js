@@ -87,7 +87,7 @@ const ProductDesktop = (props) => {
     }
 
 
-    return (
+    if (props.name) return (
         <div style={{ position: `relative` }}>
             <button onClick={toggleCartDisplay} style={{ color: props.color }} className="desktop-open-cart">
                 chcem túto tyčinku!
@@ -179,6 +179,20 @@ const ProductDesktop = (props) => {
                 </button>
                 <br />
                 <button onClick={handleMixOwn}>namixujem si vlastný box</button>
+            </div>
+        </div>
+    )
+    else return (
+        <div className="desktop-where-to-find-us">
+            <h1 className="desktop-heading">
+                šampióni<br />chutí
+            </h1>
+            <h2 className="desktop-heading">
+                kde<br /> nás<br /> nájdete?
+            </h2>
+            <div className="logos">
+                <img src="/img/mutual/terno.png"></img>
+                <img src="/img/mutual/kraj.png"></img>
             </div>
         </div>
     )

@@ -2,8 +2,7 @@ import React from 'react';
 import { Redirect, useHistory, useLocation } from 'react-router-dom';
 import 'whatwg-fetch';
 
-import CHECK_SELECTED_PLACE from '../../config/endpoints';
-
+import { CHECK_SELECTED_PLACE } from '../../config/endpoints';
 const URL = CHECK_SELECTED_PLACE;
 
 const ShippingAndPaymentMethod = () => {
@@ -136,12 +135,11 @@ const ShippingAndPaymentMethod = () => {
         now += now + Math.floor(Math.random() * 10);
         // format
         orderId = [now.slice(0, 4), now.slice(4, 10), now.slice(10, 14)].join('-');
-        console.log(process.env.NODE_ENV);
         return orderId;
     }
 
     let placeSelected;
-    const selectedPlaceDeliveryPoint = async () => {
+    const selectedPlaceForDeliveryPoint = async () => {
         if (shippingMethod === "deliveryPoint") {
             const response = await window.fetch(URL, {
                 method: "POST",
@@ -162,13 +160,14 @@ const ShippingAndPaymentMethod = () => {
             }
         }
         else {
+            placeSelected = "unnecessary";
             return true
         }
     }
 
     const handleContinue = async () => {
         if (paymentMethod && shippingMethod) {
-            const isPlaceSelected = await selectedPlaceDeliveryPoint();
+            const isPlaceSelected = await selectedPlaceForDeliveryPoint();
 
             if (isPlaceSelected) {
                 history.push({
@@ -207,13 +206,13 @@ const ShippingAndPaymentMethod = () => {
                     </label>
                         <p>+ 0,00 €</p>
                     </div>
-                    <div>
+                    {/*<div>
                         <label>
                             <input onClick={handleSetPayment} value="cash" name="payment-method" type="radio" />
                         Dobierka
                     </label>
                         <p>+ 1,00 €</p>
-                    </div>
+                    </div>*/}
                 </div>
                 <div className="shipping-method">
                     <h2>Ako chces box doručiť?</h2>

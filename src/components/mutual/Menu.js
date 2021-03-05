@@ -9,8 +9,6 @@ const Menu = (props) => {
 
     let history = useHistory();
 
-    console.log(isMobile);
-
     return (
         <div
             className="menu"

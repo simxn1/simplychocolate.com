@@ -473,6 +473,40 @@ div[data-testid="container"] div:nth-of-type(3) div {
     transform: scale(1.075);
 }
 
+.desktop-where-to-find-us {
+    background-color: #000;
+}
+
+.desktop-where-to-find-us h1 {
+    font-family: "Social Gothic Demi-Bold";
+    font-size: 5em;
+    line-height: 1.1em;
+    position: relative;
+    top: 10vh;
+    left: 17vw;
+}
+
+.desktop-where-to-find-us h2 {
+    font-family: 'Social Gothic Demi-Bold';
+    line-height: 1.2em;
+    font-size: 3.5em;
+    position: relative;
+    top: 30vh;
+    left: 17vw;
+}
+
+.desktop-where-to-find-us .logos {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 5vh;
+    left: 39vw;
+}
+
+.desktop-where-to-find-us .logos img {
+    width: 15%;
+}
+
 .desktop-contact-main-heading {
     margin: 0;
     font-family: 'Social Gothic Bold';

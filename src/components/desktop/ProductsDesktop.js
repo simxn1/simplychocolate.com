@@ -17,13 +17,7 @@ const ProductsDesktop = () => {
         },
 
         {
-            name: "creamy carol",
-            icons: "four",
-            textFirst: "tekutý karamel",
-            textSecond: "prémiová tmavá čokoláda",
-            textThird: "",
-            desc: "Creamy Carol je najlahodnejšia karamelová tyčinka, ktorú vďaka poriadnej dávke karamelu neodložíš.",
-            color: "#572698"
+            title: "šampióni chutí"
         },
 
         {

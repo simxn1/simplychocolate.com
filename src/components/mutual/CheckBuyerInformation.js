@@ -2,6 +2,8 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Redirect, useHistory, useLocation } from 'react-router-dom';
 
+import { CHECKOUT } from "../../config/endpoints";
+const URL = CHECKOUT;
 
 const CheckBuyerInformation = () => {
 
@@ -52,7 +54,16 @@ const CheckBuyerInformation = () => {
             newBillingInformation[event.target.name] = event.target.value;
        
             return newBillingInformation;
-        });;
+        });
+    }
+
+    const changeDeliveryInformation = (event) => {
+        setDeliveryInformation(() => {
+            let newDeliveryInformation = deliveryInformation;
+            newDeliveryInformation[event.target.name] = event.target.value;
+
+            return newDeliveryInformation;
+        });
     }
 
     const handleCheckboxChange = (event) => {
@@ -66,7 +77,7 @@ const CheckBuyerInformation = () => {
         }
     }
 
-    const handleConfirmCheckout = () => {
+    const handleConfirmCheckout = async () => {
         if (deliveryFirstNameInput.current.value.length == 0 ||
             deliveryLastNameInput.current.value.length == 0 ||
             deliveryAddressInput.current.value.length == 0 ||
@@ -97,7 +108,7 @@ const CheckBuyerInformation = () => {
             })
         }
         
-        console.log(
+        /*console.log(
             location.afterDiscount,
             location.boxContent,
             location.totalBoxQuantity,
@@ -106,7 +117,25 @@ const CheckBuyerInformation = () => {
             deliveryInformation,
             location.paymentMethod,
             location.shippingMethod
-        );
+        );*/
+        
+        const gopayResponse = await window.fetch(URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                boxContent: location.boxContent,
+                totalBoxQuantity: location.totalBoxQuantity,
+                price: parseFloat(location.price.replace(/,/g, "")),
+                billingInfo: billingInformation,
+                deliveryInfo: deliveryInformation,
+                paymentMethod: location.paymentMethod,
+                shippingMethod: location.shippingMethod,
+                orderNumber: location.orderId
+            })
+        });
+
+        const gopayResponseJson = await gopayResponse.json();
+        window.location.href = gopayResponseJson.gw_url;
     }
 
     if (location.buyerInformation && location.boxContent && location.totalBoxQuantity) 
@@ -137,11 +166,11 @@ const CheckBuyerInformation = () => {
             <label><input onChange={handleCheckboxChange} type="checkbox" />Na doručenie použiť odlišnú adresu</label>
             <div style={{ display: secondFormDisplay }} className="different-address-delivery">
                 <form>
-                    <input ref={deliveryFirstNameInput} type="text" placeholder="Meno" name="deliverToFirstName"></input>
-                    <input ref={deliveryLastNameInput} type="text" placeholder="Priezvisko" name="deliverToLastName"></input>
-                    <input ref={deliveryAddressInput} type="text" placeholder="Adresa" name="deliverToAddress"></input>
-                    <input ref={deliveryCityInput} type="text" placeholder="Mesto" name="deliverToCity"></input>
-                    <input ref={deliveryZipCodeInput} type="text" placeholder="PSČ" name="deliverToZipCode"></input>
+                    <input onChange={changeDeliveryInformation} ref={deliveryFirstNameInput} type="text" placeholder="Meno" name="deliverToFirstName"></input>
+                    <input onChange={changeDeliveryInformation} ref={deliveryLastNameInput} type="text" placeholder="Priezvisko" name="deliverToLastName"></input>
+                    <input onChange={changeDeliveryInformation} ref={deliveryAddressInput} type="text" placeholder="Adresa" name="deliverToAddress"></input>
+                    <input onChange={changeDeliveryInformation} ref={deliveryCityInput} type="text" placeholder="Mesto" name="deliverToCity"></input>
+                    <input onChange={changeDeliveryInformation} ref={deliveryZipCodeInput} type="text" placeholder="PSČ" name="deliverToZipCode"></input>
                 </form>
             </div>
             <div className="flex">
