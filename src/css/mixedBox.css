@@ -155,7 +155,7 @@
 
 }
 
-@media (max-width: 500px), (max-height: 950px) {
+@media (max-width: 500px) {
     
     .mixed-box {
         font-size: 0.9em;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "@animated-burgers/burger-squeeze/dist/styles.css";
 import "./css/mobileApp.css";
@@ -28,7 +28,7 @@ const App = () => {
 
 
   if (isMobile) return (
-    <>
+    <Switch>
       <Route exact path="/" component={Mobile} />
       <Route path="/mixed-box" component={MixedBox} />
       <Route path="/buyer-info" component={BuyerInformation} />
@@ -37,10 +37,11 @@ const App = () => {
       <Route path="/buyer-info-check" component={CheckBuyerInformation} />
       <Route path="/obchodne-podmienky" component={ObchodnePodmienky} />
       <Route path="/zasady-ochrany-osobnych-udajov" component={ZasadyOchranyOsobnychUdajov} />
-    </>
+      <Route component={Mobile} />
+    </Switch>
   )
   else return (
-    <>
+    <Switch>
       <Route exact path="/" component={Desktop} />
       <Route path="/mixed-box" component={MixedBox} />
       <Route path="/buyer-info" component={BuyerInformation} />
@@ -49,7 +50,8 @@ const App = () => {
       <Route path="/buyer-info-check" component={CheckBuyerInformation} />
       <Route path="/obchodne-podmienky" component={ObchodnePodmienky} />
       <Route path="/zasady-ochrany-osobnych-udajov" component={ZasadyOchranyOsobnychUdajov} />
-    </>
+      <Route component={Desktop} />
+    </Switch>
   )
 
 }
