@@ -130,6 +130,7 @@ const CheckBuyerInformation = () => {
                 deliveryInfo: deliveryInformation,
                 paymentMethod: location.paymentMethod,
                 shippingMethod: location.shippingMethod,
+                afterDiscount: location.afterDiscount,
                 orderNumber: location.orderId
             })
         });

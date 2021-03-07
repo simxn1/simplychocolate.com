@@ -11,6 +11,7 @@ import "./css/mixedBox.css";
 import "./css/finalCheck.css";
 import "./css/shippingAndPaymentMethod.css";
 import "./css/checkBuyerInfo.css";
+import "./css/afterPayment.css";
 import { isMobile } from "react-device-detect";
 import Desktop from "./components/Desktop";
 import Mobile from "./components/Mobile";
@@ -21,6 +22,7 @@ import MixedBox from "./components/mutual/MixedBox";
 import FinalCheck from "./components/mutual/FinalCheck";
 import ShippingAndPaymentMethod from "./components/mutual/ShippingAndPaymentMethod";
 import CheckBuyerInformation from "./components/mutual/CheckBuyerInformation";
+import AfterPayment from "./components/mutual/AfterPayment";
 
 
 const App = () => {
@@ -37,7 +39,7 @@ const App = () => {
       <Route path="/buyer-info-check" component={CheckBuyerInformation} />
       <Route path="/obchodne-podmienky" component={ObchodnePodmienky} />
       <Route path="/zasady-ochrany-osobnych-udajov" component={ZasadyOchranyOsobnychUdajov} />
-      <Route component={Mobile} />
+      <Route path="paid" component={Mobile} />
     </Switch>
   )
   else return (
@@ -50,7 +52,7 @@ const App = () => {
       <Route path="/buyer-info-check" component={CheckBuyerInformation} />
       <Route path="/obchodne-podmienky" component={ObchodnePodmienky} />
       <Route path="/zasady-ochrany-osobnych-udajov" component={ZasadyOchranyOsobnychUdajov} />
-      <Route component={Desktop} />
+      <Route path="/paid" component={AfterPayment} />
     </Switch>
   )
 

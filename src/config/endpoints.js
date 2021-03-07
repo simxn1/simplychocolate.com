@@ -11,6 +11,7 @@ else {
 
 const CHECK_SELECTED_PLACE = `${SERVER}/check-selected-place`;
 const CHECKOUT = `${SERVER}/checkout`;
+const ORDER = `${SERVER}/order`
 
 
-export { CHECK_SELECTED_PLACE, CHECKOUT };
+export { CHECK_SELECTED_PLACE, CHECKOUT, ORDER };

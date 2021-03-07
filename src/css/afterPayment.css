@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'League Spartan Bold';
+    src: url('../fonts/LeagueSpartan-Bold.otf');
+}
+
+@font-face {
+    font-family: 'Social Gothic Demi-Bold';
+    src: url('../fonts/SocialGothicDemiBold.otf');
+}
+
+.after-payment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3%;
+}
+
+.after-payment h1, h2 {
+    font-family: "League Spartan Bold";
+    text-align: center;
+}
+
+.after-payment h2 {
+    font-size: 1.25em;
+}
+
+.after-payment a {
+    display: block;
+    font-family: "Social Gothic Demi-Bold";
+    text-transform: uppercase;
+    font-size: 2.5em;
+    margin-top: 10%;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+    text-align: center;
+}
+
+.after-payment a:hover {
+    transform: scale(0.9);
+    opacity: 0.55;
+}
+
+@media (max-height: 950px) {
+
+    .after-payment {
+        margin-top: 10%;
+    }
+    
+}
+
+@media (max-height: 850px) {
+
+    .after-payment {
+        margin-top: 20%;
+    }
+    
+}
+
+@media (max-width: 400px) {
+
+    .after-payment {
+        font-size: 0.85em;
+    }
+    
+}
