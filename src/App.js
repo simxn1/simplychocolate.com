@@ -39,7 +39,7 @@ const App = () => {
       <Route path="/buyer-info-check" component={CheckBuyerInformation} />
       <Route path="/obchodne-podmienky" component={ObchodnePodmienky} />
       <Route path="/zasady-ochrany-osobnych-udajov" component={ZasadyOchranyOsobnychUdajov} />
-      <Route path="paid" component={Mobile} />
+      <Route path="/paid" component={Mobile} />
     </Switch>
   )
   else return (
