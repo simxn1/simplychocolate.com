@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const BuyerInformationForm = (props) => {
 
@@ -301,6 +301,9 @@ const BuyerInformationForm = (props) => {
 
     return (
         <div className="mixed-box">
+            <Link to="/#products" className="back">
+                <i class="fas fa-long-arrow-alt-left"></i>
+            </Link>
             <h1>Mám chuť na<br />na poriadnu čokoládu!</h1>
             <h2>veľkosť boxu</h2>
             <ul className="select-box-size">

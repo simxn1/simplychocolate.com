@@ -10,6 +10,19 @@
 .mixed-box {
     margin-top: 6vh;
     overflow-y: scroll;
+    position: relative;
+}
+
+.mixed-box .back {
+    position: absolute;
+    font-size: 2em;
+    top: 2%;
+    left: 7%;
+    cursor: pointer;
+}
+
+.mixed-box .back i {
+    color: #000;
 }
 
 .mixed-box h1 {
@@ -199,6 +212,14 @@
     
     .mixed-box {
         font-size: 0.5em;
+    }
+
+}
+
+@media (max-height: 900px) {
+
+    .mixed-box .back {
+        top: 0%;
     }
 
 }
