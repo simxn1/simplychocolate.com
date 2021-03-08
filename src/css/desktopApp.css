@@ -98,13 +98,12 @@ body {
 }
 
 .desktop-section .control-dots .dot {
-    width: 3em;
-    height: 3em;
+    width: 1em;
+    height: 1em;
 }
 
 .desktop-components-container div:nth-child(4) > .desktop-section .carousel .control-dots .dot {
-    border: 1px solid #000;
-    display: none;
+    background-color: #fff;
 }
 
 div[data-testid="container"] {
@@ -513,6 +512,10 @@ div[data-testid="container"] div:nth-of-type(3) div {
     position: relative;
     top: -53vh;
     left: 64vw;
+}
+
+.desktop-where-to-find-us .desktop-bars img {
+    max-width: 100%;
 }
 
 .desktop-contact-main-heading {
@@ -1133,8 +1136,8 @@ div[data-testid="container"] div:nth-of-type(3) div {
     }
 
     .desktop-section .control-dots .dot {
-        width: 2.5em;
-        height: 2.5em;
+        width: 0.75em;
+        height: 0.75em;
     }
 
 }

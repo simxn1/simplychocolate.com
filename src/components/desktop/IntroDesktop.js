@@ -21,17 +21,17 @@ const IntroDesktop = () => {
     return (
         <>
             <div className="desktop-section" style={{ position: "relative" }}>
-                <Burger 
+                <Burger
                     isOpen={burgerState}
                     onClick={toggleBurger}
-                    style={{ 
-                        position: 'absolute', 
+                    style={{
+                        position: 'absolute',
                         zIndex: '2',
                         margin: '3em'
                     }}
                 />
-                <Menu 
-                    display={ burgerState ? 'block' : 'none' }
+                <Menu
+                    display={burgerState ? 'block' : 'none'}
                     burgerState={burgerState}
                     toggleBurger={toggleBurger}
                 />
@@ -122,12 +122,29 @@ const IntroDesktop = () => {
                     sliderLineWidth={4}
                 />
             </div>
-            <div className="desktop-section" style={{ background: `url('/img/desktop/intro-third.png')` }}>
-                <div className="desktop-intro-second-content">
+            <div className="desktop-section" style={{ backgroundImage: `url('/img/desktop/in-products-background.png')`, backgroundSize: 'cover' }}>
+                <div
+                    className="desktop-where-to-find-us"
+                    style={{
+                        backgroundColor: "transparent",
+                        position: "relative",
+                        width: "100vw",
+                        height: "100vh"
+                    }}
+                >
                     <h1 className="desktop-heading">
-                        viac<br />ako<br />čokoláda
+                        šampióni<br />chutí
                     </h1>
-                    <h2 className="desktop-heading">It's Simply Chocolate.</h2>
+                    <h2 className="desktop-heading">
+                        kde<br /> nás<br /> nájdete?
+                    </h2>
+                    <div className="desktop-logos">
+                        <img src="/img/mutual/terno.png"></img>
+                        <img src="/img/mutual/kraj.png"></img>
+                    </div>
+                    <div className="desktop-bars">
+                        <img src="/img/mutual/bars.png"></img>
+                    </div>
                 </div>
             </div>
         </>

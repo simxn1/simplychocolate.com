@@ -17,10 +17,6 @@ const ProductsDesktop = () => {
         },
 
         {
-            title: "šampióni chutí"
-        },
-
-        {
             name: "crispy carrie",
             icons: "four",
             textFirst: "chrumkavý karamel",

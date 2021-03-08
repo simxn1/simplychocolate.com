@@ -64,7 +64,7 @@ const FinalCheck = () => {
             <h2>Už skoro u teba doma...</h2>
             <ul className="products-to-purchase">
                 <li><img src="/img/mutual/grainybilly-bar.png" />Grainy Billy <strong>{boxContent.grainyBilly}</strong></li>
-                <li><img src="/img/mutual/creamycarol-bar.png" />Creamy Carol <strong>{boxContent.creamyCarol}</strong></li>
+                {/*<li><img src="/img/mutual/creamycarol-bar.png" />Creamy Carol <strong>{boxContent.creamyCarol}</strong></li>*/}
                 <li><img src="/img/mutual/crispycarrie-bar.png" />Crispy Carrie <strong>{boxContent.crispyCarrie}</strong></li>
                 <li><img src="/img/mutual/grainysue-bar.png" />Grainy Sue <strong>{boxContent.grainySue}</strong></li>
                 <li><img src="/img/mutual/fitfiona-bar.png" />Fit Fiona<strong>{boxContent.fitFiona}</strong></li>

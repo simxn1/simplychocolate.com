@@ -145,7 +145,7 @@ body {
     position: relative;
     line-height: 1.1em;
     font-size: 2.5em;
-    top: 50%;
+    top: 55%;
     left: 8%;
 }
 
@@ -260,13 +260,11 @@ img[src="/img/mobile/icons-black.png"] {
 .carousel .control-dots .dot {
     opacity: .2;
     box-shadow: none;
-    background: transparent;
-    width: 2.5em;
-    height: 2.5em;
-    margin: 0 -0.55em;
-    border: 1px solid #fff;
+    background: #fff;
+    width: 1em;
+    height: 1em;
+    margin: 0 0.2em;
     outline: none;
-
 }
 
 .carousel .control-dots .dot:hover {
@@ -431,6 +429,7 @@ img[src="/img/mobile/icons-black.png"] {
     padding: 0.7em 1em;
     border-radius: 0.8em;
     font-size: 0.95em;
+    text-decoration: underline;
 }
 
 .cart > button:nth-of-type(2) {
@@ -487,6 +486,10 @@ img[src="/img/mobile/icons-black.png"] {
     position: relative;
     top: 10%;
     left: 8%;
+}
+
+.where-to-find-us .bars img {
+    max-width: 100%;
 }
 
 .where-to-find-us h2 {
@@ -745,7 +748,7 @@ img[src="/img/mobile/icons-black.png"] {
 @media (max-height: 700px) {
 
     .intro-first-heading {
-        top: 44%;
+        top: 48%;
     }
 
     .slide:nth-child(1) .section .slide-selectors button,
@@ -918,7 +921,7 @@ img[src="/img/mobile/icons-black.png"] {
 @media (max-height: 640px) {
 
     .intro-first-heading {
-        top: 38.5%;
+        top: 41%;
     }
 
 }

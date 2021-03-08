@@ -118,33 +118,28 @@ const Intro = (props) => {
                 </div>
             </Carousel>
             <div className="component" style={{ overflowY: 'hidden' }}>
-                <div className="section" style={{ backgroundImage: 'url("/img/mobile/intro-sixth.png")' }}>
+                <div className="section" style={{ backgroundImage: 'url("/img/mobile/in-products-background.png")' }}>
                     <div
                         style={{
-                            position: 'relative',
-                            top: '47%',
-                            left: '13%',
-                            fontSize: '1.3em'
+                            background: "transparent",
+                            width: "100vw",
+                            height: "100vh"
                         }}
+                        className="where-to-find-us"
                     >
-                        <h1 style={{
-                            color: "#fff",
-                            textTransform: 'uppercase',
-                            fontFamily: 'Social Gothic Bold',
-                            lineHeight: '1.2em',
-                            marginBottom: '0'
-                        }}>
-                            viac<br />ako<br />čokoláda
-                    </h1>
-                        <h3
-                            style={{
-                                fontFamily: 'Cormonant Garamond Medium',
-                                color: '#fff',
-                                marginTop: '2%'
-                            }}
-                        >
-                            It's Simply Chocolate.
-                        </h3>
+                        <h1 className="heading">
+                            šampióni<br />chutí
+            </h1>
+                        <div className="bars">
+                            <img src="/img/mutual/bars.png"></img>
+                        </div>
+                        <h2 className="heading">
+                            kde<br />nás<br />nájdete?
+            </h2>
+                        <div className="logos">
+                            <img src="/img/mutual/terno.png"></img>
+                            <img src="/img/mutual/kraj.png"></img>
+                        </div>
                     </div>
                 </div>
             </div>

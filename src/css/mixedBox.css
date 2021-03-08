@@ -46,6 +46,12 @@
     padding-left: 0;
 }
 
+.select-box-size li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .select-box-size li button {
     background-color: #ffffff;
     color: #000;

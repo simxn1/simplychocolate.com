@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import Product from './Product';
@@ -14,10 +14,6 @@ const Products = (props) => {
             textSecond: "brusnice",
             textThird: "prémiová čokoláda",
             color: "#a82737"
-        },
-
-        {
-            title: "where to find us"
         },
 
         {

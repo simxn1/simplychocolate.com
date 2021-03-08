@@ -16,6 +16,18 @@ body {
     margin-top: 6vh;
 }
 
+.buyer-info .back {
+    position: absolute;
+    font-size: 2em;
+    top: 5%;
+    left: 7%;
+    cursor: pointer;
+
+}
+.buyer-info .back i {
+    color: #000;
+}
+
 .logo-checkout {
     width: 8em;
     margin: 0 auto;

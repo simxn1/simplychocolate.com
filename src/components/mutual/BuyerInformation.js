@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Redirect, useHistory, useLocation } from 'react-router-dom';
+import { Redirect, useHistory, useLocation, Link } from 'react-router-dom';
 
 
 const BuyerInformation = () => {
@@ -30,6 +30,9 @@ const BuyerInformation = () => {
     if (location.boxContent && location.totalBoxQuantity) 
     return (
         <div className="buyer-info">
+            <Link to="/mixed-box" className="back">
+                <i class="fas fa-long-arrow-alt-left"></i>
+            </Link>
             <img className="logo-checkout" src="/img/desktop/logo-black.png"></img>
             <h1>Čokoláda je odpoveď,<br />koho zaujíma aká je otázka?</h1>
             <h2>Priamo k tebe domov!</h2>

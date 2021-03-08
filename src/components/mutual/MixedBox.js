@@ -323,7 +323,7 @@ const BuyerInformationForm = (props) => {
                         <button onClick={grainyBillyAdd}>+</button>
                     </div>
                 </li>
-                <li>
+                {/*<li>
                     <img src="/img/mutual/creamycarol-bar.png"></img>
                     Creamy Carol
                     <div className="bar-quantity">
@@ -331,7 +331,7 @@ const BuyerInformationForm = (props) => {
                         <input value={boxContent.creamyCarol} type="text" readOnly />
                         <button onClick={creamyCarolAdd}>+</button>
                     </div>
-                </li>
+                </li>*/}
                 <li>
                     <img src="/img/mutual/crispycarrie-bar.png"></img>
                     Crispy Carrie
