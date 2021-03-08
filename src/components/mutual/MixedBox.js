@@ -8,7 +8,6 @@ const BuyerInformationForm = (props) => {
     const [boxSize, setBoxSize] = React.useState('unselected');
     const [boxContent, setBoxContent] = React.useState({
         grainyBilly: 0,
-        creamyCarol: 0,
         crispyCarrie: 0,
         grainySue: 0,
         fitFiona: 0,
@@ -177,7 +176,7 @@ const BuyerInformationForm = (props) => {
         }
     }
 
-    const creamyCarolAdd = () => {
+    /*const creamyCarolAdd = () => {
         setBoxContent({
             ...boxContent,
             creamyCarol: boxContent.creamyCarol += 1
@@ -185,9 +184,9 @@ const BuyerInformationForm = (props) => {
         
         boxQuantityIncrement(currentBoxQuantity);
         changeBoxInfoDisplay();
-    }
+    }*/
 
-    const creamyCarolRemove = (event) => {
+    /*const creamyCarolRemove = (event) => {
         if (boxContent.creamyCarol != 0) {
             setBoxContent({
                 ...boxContent,
@@ -199,7 +198,7 @@ const BuyerInformationForm = (props) => {
             boxQuantityDecrement(currentBoxQuantity);
             changeBoxInfoDisplay();
         }
-    }
+    }*/
 
     const grainySueAdd = () => {
         setBoxContent({

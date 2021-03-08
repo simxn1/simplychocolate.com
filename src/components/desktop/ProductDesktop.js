@@ -9,7 +9,6 @@ const ProductDesktop = (props) => {
     const [cartDisplay, setCartDisplay] = React.useState('none');
     const [boxContent, setBoxContent] = React.useState([{
         grainyBilly: 0,
-        creamyCarol: 0,
         crispyCarrie: 0,
         grainySue: 0,
         fitFiona: 0,

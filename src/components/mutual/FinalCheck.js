@@ -7,8 +7,7 @@ const FinalCheck = () => {
     let history = useHistory();
 
     const [boxContent, setBoxContent] = React.useState({
-        grainyBilly: 0,
-        creamyCarol: 0,
+        grainyBilly: 0, 
         crispyCarrie: 0,
         grainySue: 0,
         fitFiona: 0,
