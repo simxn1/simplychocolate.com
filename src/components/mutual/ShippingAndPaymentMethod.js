@@ -226,7 +226,7 @@ const ShippingAndPaymentMethod = () => {
                     <div>
                         <label>
                             <input onClick={handleSetShipping} value="pickUpAtStore" name="shipping-method" type="radio" />
-                        Osobný odber
+                        Osobný odber <small style={{ fontSize: "0.75em" }} >(Jarabinkova 2/C, 821 09 Bratislava)</small>
                     </label>
                         <p>+ 0,00 €</p>
                     </div>
