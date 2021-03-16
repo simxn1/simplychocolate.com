@@ -21,6 +21,7 @@ const AfterPayment = () => {
                     paymentId: paymentId
                 })
             })
+            console.log(response.json());
         }
 
     }, []);
