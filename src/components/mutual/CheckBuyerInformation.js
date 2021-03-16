@@ -2,16 +2,15 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Redirect, useHistory, useLocation } from 'react-router-dom';
 
-import { CHECKOUT } from "../../config/endpoints";
-const URL = CHECKOUT;
+import { CHECKOUT, CHECKOUT_CASH } from "../../config/endpoints";
+const URL_CHECKOUT = CHECKOUT;
+const URL_CHECKOUT_CASH = CHECKOUT_CASH;
 
 const CheckBuyerInformation = () => {
 
-
     let location = useLocation();
+    let history = useHistory();
 
-    //const [boxContent, setBoxContent] = React.useState();
-    //const [totalBoxQuantity, setTotalBoxQuantity] = React.useState();
     const [billingInformation, setBillingInformation] = React.useState(location.buyerInformation);
     const [deliveryInformation, setDeliveryInformation] = React.useState({
         firstName: "-",
@@ -45,7 +44,6 @@ const CheckBuyerInformation = () => {
         zipCodeInput.current.value = billingInformation.zipCode;
         phoneInput.current.value = billingInformation.phone;
         emailInput.current.value = billingInformation.email;
-        console.log(location);
     }, [])
 
     const changeBillingInformation = (event) => {
@@ -108,18 +106,7 @@ const CheckBuyerInformation = () => {
             })
         }
         
-        /*console.log(
-            location.afterDiscount,
-            location.boxContent,
-            location.totalBoxQuantity,
-            location.price,
-            billingInformation,
-            deliveryInformation,
-            location.paymentMethod,
-            location.shippingMethod
-        );*/
-        
-        const gopayResponse = await window.fetch(URL, {
+        const gopayResponse = await window.fetch(URL_CHECKOUT, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -138,6 +125,29 @@ const CheckBuyerInformation = () => {
         const gopayResponseJson = await gopayResponse.json();
         window.location.href = gopayResponseJson.gw_url;
     }
+
+    const handleConfirmCashCheckout = async () => {
+        const response = await fetch(URL_CHECKOUT_CASH, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                boxContent: location.boxContent,
+                totalBoxQuantity: location.totalBoxQuantity,
+                price: parseFloat(location.price.replace(/,/g, "")),
+                billingInfo: billingInformation,
+                deliveryInfo: deliveryInformation,
+                paymentMethod: location.paymentMethod,
+                shippingMethod: location.shippingMethod,
+                afterDiscount: location.afterDiscount,
+                orderNumber: location.orderId
+            })
+        });
+
+        const cashCheckoutResponse = await response.json();
+        history.push({
+            pathname: cashCheckoutResponse.url
+        });
+    };
 
     if (location.buyerInformation && location.boxContent && location.totalBoxQuantity) 
     return (
@@ -175,7 +185,11 @@ const CheckBuyerInformation = () => {
                 </form>
             </div>
             <div className="flex">
-                <button onClick={handleConfirmCheckout} style={{ marginTop: buttonMarginTop }} className="confirm">
+                <button 
+                    onClick={ location.paymentMethod === "cash" ? handleConfirmCashCheckout : handleConfirmCheckout } 
+                    style={{ marginTop: buttonMarginTop }} 
+                    className="confirm"
+                >
                     Objednať
                 </button>
             </div>

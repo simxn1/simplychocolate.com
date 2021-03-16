@@ -206,13 +206,13 @@ const ShippingAndPaymentMethod = () => {
                     </label>
                         <p>+ 0,00 €</p>
                     </div>
-                    {/*<div>
+                    <div>
                         <label>
                             <input onClick={handleSetPayment} value="cash" name="payment-method" type="radio" />
                         Dobierka
                     </label>
                         <p>+ 1,00 €</p>
-                    </div>*/}
+                    </div>
                 </div>
                 <div className="shipping-method">
                     <h2>Ako chces box doručiť?</h2>

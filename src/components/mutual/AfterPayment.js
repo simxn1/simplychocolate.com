@@ -7,20 +7,23 @@ const URL = ORDER;
 const AfterPayment = () => {
 
     const history = useHistory();
-    
+
     const urlParams = new URLSearchParams(window.location.search);
     const paymentId = urlParams.get("id")
-    
-    React.useEffect(async () => {
-        const response = await window.fetch(URL, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                paymentId: paymentId
-            })
-        })
-    }, [])
 
+    React.useEffect(async () => {
+
+        if (paymentId) {
+            const response = await window.fetch(URL, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    paymentId: paymentId
+                })
+            })
+        }
+
+    }, []);
 
     return (
         <div className="after-payment">
