@@ -403,10 +403,11 @@ img[src="/img/mobile/icons-black.png"] {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
-.box-sizes li button:focus {
-    outline: none;
+.box-sizes li button.active {
+    outline: 1px solid #000;
     border: 2px solid #000;
     border-radius: 5px;
+    background-color: transparent;
 }
 
 .box-sizes li button strong {

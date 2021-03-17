@@ -59,6 +59,13 @@ const Product = (props) => {
                 setBoxContent(setNewBoxContent(30));
                 break;
         }
+        
+        const boxSizes = event.target.parentElement.parentElement.children;
+        for (let item of boxSizes) {
+            item.children[0].classList.remove("active");
+        }
+
+        event.target.classList.add("active");
     }
 
     const handleThisFlavour = () => {
