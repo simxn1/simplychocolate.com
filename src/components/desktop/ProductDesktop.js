@@ -157,7 +157,7 @@ const ProductDesktop = (props) => {
                         <button style={{ cursor: 'pointer' }} onClick={setQuantity}><div><strong>M </strong></div>- 12ks</button>
                     </li>
                     <li>
-                        <button style={{ cursor: 'pointer' }} onClick={setQuantity}><div><strong>L </strong></div>- 20ks</button>
+                        <button style={{ cursor: 'pointer' }} onClick={setQuantity}><div><strong>L </strong></div>- 24ks</button>
                     </li>
                     <li>
                         <button style={{ cursor: 'pointer' }} onClick={setQuantity}><div><strong>XL </strong></div>- 30ks</button>
