@@ -178,7 +178,11 @@ body {
     }
 
     .buyer-info form {
-        width: 65vw;
+        width: 78vw;
+    }
+
+    .buyer-info form input {
+        padding: 0.6em;
     }
 
 }
@@ -189,20 +193,12 @@ body {
         font-size: 0.7em;
     }
 
-    .buyer-info form {
-        width: 70vw;
-    }
-
 }
 
 @media (max-width: 350px) {
 
     .buyer-info {
         font-size: 0.65em;
-    }
-
-    .buyer-info form {
-        width: 75vw;
     }
 
 }
