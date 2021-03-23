@@ -33,7 +33,7 @@ const ShippingAndPaymentMethod = () => {
         setBuyerInformation(location.buyerInformation);
     }, [])
 
-    const discountCodes = ['SIMPLY5', 'SIMPLY10'];
+    const discountCodes = ["BEA20", "NIKOLETA20", "NICOL20"];
 
     const formatToNumber = (string, typeOfString) => {
         if (typeOfString === 'price') {
@@ -215,7 +215,7 @@ const ShippingAndPaymentMethod = () => {
                     </div>
                 </div>
                 <div className="shipping-method">
-                    <h2>Ako chces box doručiť?</h2>
+                    <h2>Ako chceš box doručiť?</h2>
                     <div>
                         <label>
                             <input onClick={handleSetShipping} value="courier" name="shipping-method" type="radio" />
