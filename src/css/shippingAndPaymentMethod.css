@@ -39,6 +39,7 @@
 
 .shipping-and-payment-method .discount input {
     border: 4px solid #000;
+    border-radius: 0;
     font-size: 2em;
     width: 6em;
     font-family: 'League Spartan Bold';
@@ -205,6 +206,10 @@
 
     .shipping-and-payment-method {
         font-size: 0.6em;
+    }
+
+    .shipping-and-payment-method .discount input {
+        padding-top: 0;
     }
 
     .shipping-and-payment-method .discount button {
