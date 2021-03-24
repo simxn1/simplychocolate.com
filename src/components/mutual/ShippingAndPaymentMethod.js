@@ -56,8 +56,8 @@ const ShippingAndPaymentMethod = () => {
             let pricePercentAfterDiscount = 100 - discountPercent;
 
             setPrice(() => {
-                let priceAfterDiscount = formatToNumber(price, 'price') / 100 * pricePercentAfterDiscount;
-                return formatToPrice(priceAfterDiscount);
+                let priceAfterDiscount = (formatToNumber(price, 'price') - shippingMethodFee - paymentMethodFee) / 100 * pricePercentAfterDiscount;
+                return formatToPrice(priceAfterDiscount + shippingMethodFee + paymentMethodFee);
             });
 
             setAfterDiscount(true);
