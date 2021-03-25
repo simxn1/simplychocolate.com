@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
-import { ORDER } from "../../config/endpoints"
+import { ORDER } from "../../config/endpoints";
 const URL = ORDER;
 
 const AfterPayment = () => {
@@ -38,12 +38,10 @@ const AfterPayment = () => {
 
     let afterPaymentText;
     if (orderPaid == "yes") {
-        afterPaymentText = "Skontrolujte si prosím Váš email."
-        console.log(orderPaid, orderPaid.length);
+        afterPaymentText = "Skontrolujte si prosím Váš email.";
     }
     else if (orderPaid != "yes"){
-        afterPaymentText = "Uhraďte prosím platbu."
-        console.log(orderPaid, orderPaid.length);
+        afterPaymentText = "Uhraďte prosím platbu.";
     }
 
     return (

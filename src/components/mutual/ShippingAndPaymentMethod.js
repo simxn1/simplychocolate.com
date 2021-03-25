@@ -14,6 +14,7 @@ const ShippingAndPaymentMethod = () => {
     const [totalBoxQuantity, setTotalBoxQuantity] = React.useState();
     const [price, setPrice] = React.useState();
     const [buyerInformation, setBuyerInformation] = React.useState();
+    const [discountCodeName, setDiscountCodeName] = React.useState("-");
     const [afterDiscount, setAfterDiscount] = React.useState(false);
     const [afterDiscountDisplay, setAfterDiscountDisplay] = React.useState("none");
     const [wrongCodeDisplay, setWrongCodeDisplay] = React.useState("none");
@@ -50,6 +51,7 @@ const ShippingAndPaymentMethod = () => {
 
     const handleDiscount = () => {
         let discountCode = discountCodeInput.current.value.toUpperCase();
+        setDiscountCodeName(discountCode.replace(/[0-9]/g, ''));
 
         if (!afterDiscount && discountCodes.includes(discountCode)) {
             let discountPercent = formatToNumber(discountCode, 'discountCode');
@@ -112,17 +114,23 @@ const ShippingAndPaymentMethod = () => {
     const handleSetShipping = (event) => {
         let newShippingMethod = event.target.value;
 
-        if (newShippingMethod === "courier") {
-            setNewShippingMethodFee(3.50);
-            toggleDepoDisplay(newShippingMethod);
-        }
-        else if (newShippingMethod === "deliveryPoint") {
-            setNewShippingMethodFee(1.70);
-            toggleDepoDisplay(newShippingMethod);
-        }
-        else if (newShippingMethod === "pickUpAtStore") {
-            setNewShippingMethodFee(0.00);
-            toggleDepoDisplay(newShippingMethod);
+        switch (newShippingMethod) {
+            case "courier":
+                setNewShippingMethodFee(3.50);
+                toggleDepoDisplay(newShippingMethod);
+                break;
+            case "deliveryPoint":
+                setNewShippingMethodFee(1.70);
+                toggleDepoDisplay(newShippingMethod);
+                break;
+            case "pickUpAtStore":
+                setNewShippingMethodFee(0.00);
+                toggleDepoDisplay(newShippingMethod);
+                break;
+            case "czechRepublic":
+                setNewShippingMethodFee(4.00);
+                toggleDepoDisplay(newShippingMethod);
+                break;
         }
 
         setShippingMethod(newShippingMethod);
@@ -148,7 +156,6 @@ const ShippingAndPaymentMethod = () => {
             });
 
             placeSelected = await response.json();
-            console.log(placeSelected);
 
             if (placeSelected.is_selected === 1) {
                 setSelectDeliveryPointDisplay(() => "none");
@@ -180,7 +187,8 @@ const ShippingAndPaymentMethod = () => {
                     shippingMethod: shippingMethod,
                     afterDiscount: afterDiscount,
                     selectedPlace: placeSelected,
-                    orderId: orderId
+                    orderId: orderId,
+                    discountCode: discountCodeName
                 });
             }
         }
@@ -219,21 +227,28 @@ const ShippingAndPaymentMethod = () => {
                     <div>
                         <label>
                             <input onClick={handleSetShipping} value="courier" name="shipping-method" type="radio" />
-                        Kuriérom k tebe domov
+                        Kuriérom k tebe domov - Slovensko
                     </label>
                         <p>+ 3,50 €</p>
                     </div>
                     <div>
                         <label>
+                            <input onClick={handleSetShipping} value="czechRepublic" name="shipping-method" type="radio" />
+                            Doručenie do Českej republiky
+                    </label>
+                        <p>+ 4,00 €</p>
+                    </div>
+                    <div>
+                        <label>
                             <input onClick={handleSetShipping} value="pickUpAtStore" name="shipping-method" type="radio" />
-                        Osobný odber <small style={{ fontSize: "0.75em" }} >(Jarabinkova 2/C, 821 09 Bratislava)</small>
+                            Osobný odber <small style={{ fontSize: "0.75em" }} >(Jarabinkova 2/C, 821 09 Bratislava)</small>
                     </label>
                         <p>+ 0,00 €</p>
                     </div>
                     <div>
                         <label>
                             <input onClick={handleSetShipping} value="deliveryPoint" name="shipping-method" type="radio" />
-                        Odberné miesto
+                            Odberné miesto - Slovensko
                     </label>
                         <p>+ 1,70 €</p>
                     </div>
