@@ -134,7 +134,7 @@ const Intro = (props) => {
                             <img src="/img/mutual/bars.png"></img>
                         </div>
                         <h2 className="heading">
-                            kde<br />nás<br />nájdete?
+                            nájdete<br />nás
             </h2>
                         <div className="logos">
                             <img src="/img/mutual/terno.png"></img>

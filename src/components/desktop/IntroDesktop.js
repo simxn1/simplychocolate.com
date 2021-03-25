@@ -143,7 +143,9 @@ const IntroDesktop = () => {
                         <img src="/img/mutual/kraj.png"></img>
                     </div>
                     <div className="desktop-bars">
-                        <img src="/img/mutual/bars.png"></img>
+                        <img src="/img/desktop/bar-1.png"></img>
+                        <img src="/img/desktop/bar-2.png"></img>
+                        <img src="/img/desktop/bar-3.png"></img>
                     </div>
                 </div>
             </div>

@@ -479,28 +479,28 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
 .desktop-where-to-find-us h1 {
     font-family: "Social Gothic Demi-Bold";
-    font-size: 5em;
+    font-size: 6em;
     line-height: 1.1em;
     position: relative;
     top: 10vh;
-    left: 17vw;
+    left: 13vw;
 }
 
 .desktop-where-to-find-us h2 {
     font-family: 'Social Gothic Demi-Bold';
     line-height: 1.2em;
     font-size: 3.5em;
-    position: relative;
-    top: 30vh;
-    left: 17vw;
+    position: absolute;
+    top: 10%;
+    right: 14%;
 }
 
 .desktop-where-to-find-us .desktop-logos {
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 5vh;
-    left: 39vw;
+    top: 18%;
+    left: 72%;
 }
 
 .desktop-where-to-find-us .desktop-logos img {
@@ -508,14 +508,16 @@ div[data-testid="container"] div:nth-of-type(3) div {
 }
 
 .desktop-where-to-find-us .desktop-bars {
-    width: 23%;
-    position: relative;
-    top: -53vh;
-    left: 64vw;
+    display: flex;
+    position: absolute;
+    bottom: 0%;
+    left: 5%;
 }
 
 .desktop-where-to-find-us .desktop-bars img {
     max-width: 100%;
+    margin-left: -2%;
+    width: 30%;
 }
 
 .desktop-contact-main-heading {
@@ -700,6 +702,15 @@ div[data-testid="container"] div:nth-of-type(3) div {
     
 }
 
+@media (max-width: 1800px) {
+
+    .desktop-where-to-find-us .desktop-bars img {
+        width: 27%;
+        height: 19%;
+    }
+
+}
+
 @media (max-width: 1780px) {
 
     .desktop-intro-hidden-section  {
@@ -764,6 +775,10 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
     .desktop-intro-hidden-section  {
         right: 34.5vw;
+    }
+
+    .desktop-where-to-find-us .desktop-bars img {
+        width: 25%;
     }
 
 }
@@ -849,11 +864,6 @@ div[data-testid="container"] div:nth-of-type(3) div {
         font-size: 0.7em;
     }
 
-    .desktop-where-to-find-us .desktop-bars {
-        width: 25%;
-        top: -60vh;
-    }
-
 }
 
 @media (max-width: 1450px) {
@@ -874,6 +884,10 @@ div[data-testid="container"] div:nth-of-type(3) div {
 }
 
 @media (max-width: 1430px), (max-height: 650px) {
+
+    .desktop-where-to-find-us h1 {
+        font-size: 5.25em;
+    }
 
     .desktop-product-hidden-section {
         font-size: 0.8em;
@@ -945,17 +959,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
 @media (max-width: 1325px) {
 
-    .desktop-where-to-find-us h1 {
-        font-size: 4em;
-    }
-
-    .desktop-where-to-find-us h2 {
-        font-size: 3em;
-    }
-
-    .desktop-where-to-find-us .desktop-bars {
-        top: -52vh;
-    }
+    
 
 }
 
@@ -1082,22 +1086,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
 @media (max-width: 1050px) {
 
-    .desktop-where-to-find-us h1 {
-        font-size: 3.5em;
-    }
-
-    .desktop-where-to-find-us h2 {
-        font-size: 2em;
-    }
-
-    .desktop-where-to-find-us .desktop-logos {
-        top: 10vh;
-    }
-
-    .desktop-where-to-find-us .desktop-bars {
-        top: -48vh;
-        left: 62vw;
-    }
+    
 
 }
 
@@ -1315,17 +1304,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
         right: 69vw;
     }
 
-    .desktop-where-to-find-us h1 {
-        font-size: 3em;
-    }
-
-    .desktop-where-to-find-us h2 {
-        font-size: 1.5em;
-    }
-
-    .desktop-where-to-find-us .desktop-bars {
-        top: -40vh;
-    }
+    
 
 }
 

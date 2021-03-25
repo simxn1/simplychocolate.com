@@ -475,17 +475,17 @@ img[src="/img/mobile/icons-black.png"] {
 
 .where-to-find-us h1 {
     position: relative;
-    top: 10%;
-    left: 15%;
+    top: 5%;
+    left: 22%;
     line-height: 1.1em;
     font-size: 3em;
 }
 
 .where-to-find-us .bars {
-    width: 70%;
+    width: 87%;
     position: relative;
-    top: 10%;
-    left: 8%;
+    top: 4%;
+    left: 6%;
 }
 
 .where-to-find-us .bars img {
@@ -495,7 +495,7 @@ img[src="/img/mobile/icons-black.png"] {
 .where-to-find-us h2 {
     line-height: 1.1em;
     position: relative;
-    top: 13%;
+    top: 6%;
     left: 15%;
 }
 
@@ -504,7 +504,7 @@ img[src="/img/mobile/icons-black.png"] {
     flex-direction: column;
     position: relative;
     left: 45%;
-    top: 2%;
+    top: -4%;
 }
 
 .where-to-find-us .logos img {
@@ -655,12 +655,17 @@ img[src="/img/mobile/icons-black.png"] {
         font-size: 0.95em;
     }
 
+}
+
+@media (max-height: 780px) {
+
     .where-to-find-us h1 {
-        font-size: 2.5em;
+        font-size: 2em;
     }
 
     .where-to-find-us .bars {
-        width: 60%;
+        width: 82%;
+        left: 7%;
     }
 
 }
@@ -705,14 +710,14 @@ img[src="/img/mobile/icons-black.png"] {
 
 }
 
-@media (max-height: 730px) {
-
-    .where-to-find-us h1 {
-        font-size: 2em;
-    }
+@media (max-height: 705px) {
 
     .where-to-find-us .bars {
-        width: 50%;
+        width: 80%;
+    }
+
+    .where-to-find-us .logos, .where-to-find-us h2 {
+        font-size: 0.95em;
     }
 
 }
@@ -796,6 +801,11 @@ img[src="/img/mobile/icons-black.png"] {
 }
 
 @media (max-height: 690px) {
+
+    .where-to-find-us .bars {
+        width: 72%;
+        left: 10%;
+    }
 
     .product-heading {
         top: 16%;
@@ -908,13 +918,7 @@ img[src="/img/mobile/icons-black.png"] {
         bottom: 3% !important;
     }
 
-    .where-to-find-us .logos {
-        left: 50%;
-    }
     
-    .where-to-find-us .logos img {
-        width: 30%;
-    }
 
 }
 
