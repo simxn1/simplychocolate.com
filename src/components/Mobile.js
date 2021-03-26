@@ -3,6 +3,7 @@ import About from './mobile/About';
 import Contact from './mobile/Contact';
 import Intro from './mobile/Intro';
 import Products from './mobile/Products';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 const Mobile = () => {
 
@@ -18,6 +19,10 @@ const Mobile = () => {
             <div id="contact">
                 <Contact />
             </div>
+            <MessengerCustomerChat
+                pageId="106129341216627"
+                appId="277812317195737"
+            />
         </div>
     )
 }
