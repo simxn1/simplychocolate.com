@@ -3,6 +3,7 @@ import AboutDesktop from './desktop/AboutDesktop';
 import ContactDesktop from './desktop/ContactDesktop';
 import IntroDesktop from './desktop/IntroDesktop';
 import ProductsDesktop from './desktop/ProductsDesktop';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 const Desktop = () => {
 
@@ -20,6 +21,10 @@ const Desktop = () => {
             <div id="contact">
                 <ContactDesktop />
             </div>
+            <MessengerCustomerChat
+                pageId="106129341216627"
+                appId="277812317195737"
+            />
         </div>
     )
 }
