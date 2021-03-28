@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
+import Typical from 'react-typical';
 import emailjs from 'emailjs-com';
 
 const Contact = () => {
@@ -33,7 +34,13 @@ const Contact = () => {
         <Carousel className="contact component">
             <div onClick={hideSent} className="section">
                 <img src="/img/mobile/contact.png" className="slide-bg" />
-                <h1 className="heading contact-heading-first">máš <br />otázku?</h1>
+                <h1 className="heading contact-heading-first">máš</h1>
+                <Typical
+                        steps={['', 1400, 'OTÁZKU?', 1200]}
+                        loop={Infinity}
+                        wrapper="h1"
+                        className="contact-heading-first heading"
+                />
                 <h2 className="heading contact-heading-second">
                     neváhaj nás<br />
                     kontaktovať

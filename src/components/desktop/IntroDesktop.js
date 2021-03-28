@@ -133,7 +133,14 @@ const IntroDesktop = () => {
                     }}
                 >
                     <h1 className="desktop-heading">
-                        šampióni<br />chutí
+                        šampióni
+                        <br />
+                        <Typical
+                            steps={['', 1400, 'CHUTÍ', 1200]}
+                            loop={Infinity}
+                            wrapper="div"
+                            className="desktop-heading"
+                        />
                     </h1>
                     <h2 className="desktop-heading">
                         kde<br /> nás<br /> nájdete?

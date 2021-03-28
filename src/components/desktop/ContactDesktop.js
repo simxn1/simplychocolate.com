@@ -1,6 +1,7 @@
 import React from "react";
 import emailjs from "emailjs-com"
 import { useHistory } from "react-router-dom";
+import Typical from "react-typical";
 
 const ContactDesktop = () => {
 
@@ -37,7 +38,12 @@ const ContactDesktop = () => {
             onClick={hideSent}
         >
             <h1 className="desktop-heading desktop-contact-main-heading">
-                máš <br />otázku?
+                máš <br />
+                <Typical
+                    steps={['', 1400, "OTÁZKU?", 1200]}
+                    loop={Infinity}
+                    wrapper="div"
+                />
             </h1>
             <h2 className="desktop-heading desktop-contact-secondary-heading">
                 neváhaj nás <br />kontaktovať
@@ -66,7 +72,7 @@ const ContactDesktop = () => {
                 <textarea name="message" placeholder="Správa" required></textarea>
                 <label>
                     <input type="checkbox" required />
-                    Súhlasím so <a onCLick={ () => { history.push({ pathname: "/zasady-ochrany-osobnych-udajov" }) } }>spracovaním osobných údajov</a>.
+                    Súhlasím so <a onCLick={() => { history.push({ pathname: "/zasady-ochrany-osobnych-udajov" }) }}>spracovaním osobných údajov</a>.
                 </label>
                 <button type="submit">Odoslať</button>
             </form>

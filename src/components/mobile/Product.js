@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import Typical from "react-typical";
 
 const Product = (props) => {
 
@@ -59,7 +60,7 @@ const Product = (props) => {
                 setBoxContent(setNewBoxContent(30));
                 break;
         }
-        
+
         const boxSizes = event.target.parentElement.parentElement.children;
         for (let item of boxSizes) {
             item.children[0].classList.remove("active");
@@ -86,32 +87,40 @@ const Product = (props) => {
             pathname: '/mixed-box'
         })
     }
- 
+
     if (props.name) return (
-        <div 
-            style={{ 
+        <div
+            style={{
                 background: `url(img/mobile/${props.name.replace(" ", "")}-bg.jpg) no-repeat`,
                 backgroundPosition: '50% 40%',
                 backgroundSize: 'cover'
             }}
             className="section product-section"
         >
-            <h1 
-                style={{ color: props.color }} 
+            <h1
+                style={{ color: props.color }}
                 className="product-heading"
             >
-                {props.name.split(" ")[0]}<br />
-                {props.name.split(" ")[1]}
+                {props.name.split(" ")[0]}
+                <Typical
+                    steps={['', 1400, props.name.split(" ")[1], 1200]}
+                    loop={Infinity}
+                    wrapper="div"
+                />
             </h1>
             <strong style={{ color: props.color }} className="price">2,29€</strong>
-            <img src={`/img/mobile/${props.name.replace(" ", "")}-bar.png`} className="product">
+            <img 
+                src={`/img/mobile/${props.name.replace(" ", "")}-bar.png`} 
+                className="product"
+                data-aos="fade-right"
+            >
             </img>
             <div onClick={openCart} className="open-cart">
                 <button style={{ color: props.color }}>Chcem túto tyčinku</button>
             </div>
-            <div style={{ display: cartDisplay }} className="cart"> 
-                <i 
-                    class="fas fa-times" 
+            <div style={{ display: cartDisplay }} className="cart">
+                <i
+                    class="fas fa-times"
                     onClick={cartDisplay == "block" ? closeCart : undefined}
                 >
                 </i>
@@ -130,13 +139,13 @@ const Product = (props) => {
                     <li><button onClick={setQuantity}>24ks - <strong>L</strong> - 47,50€</button></li>
                     <li><button onClick={setQuantity}>30ks - <strong>XL</strong> - 56,60€</button></li>
                 </ul>
-                <span 
-                    style={{ 
-                            display: hintDisplay,
-                            color: `red`, 
-                            fontFamily: `Social Gothic Demi-Bold`, 
-                            textTransform: `uppercase` 
-                        }}
+                <span
+                    style={{
+                        display: hintDisplay,
+                        color: `red`,
+                        fontFamily: `Social Gothic Demi-Bold`,
+                        textTransform: `uppercase`
+                    }}
                 >
                     vyber si veľkosť boxu.
                 </span>
@@ -154,7 +163,7 @@ const Product = (props) => {
         </div>
     )
     else return (
-        <div 
+        <div
             style={{
                 backgroundImage: `url("/img/mobile/in-products-background.png")`,
                 backgroundSize: "cover",

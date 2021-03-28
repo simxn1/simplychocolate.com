@@ -2,6 +2,7 @@ import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import Burger from '@animated-burgers/burger-squeeze';
+import Typical from 'react-typical';
 import Menu from '../mutual/Menu';
 
 const Intro = (props) => {
@@ -46,7 +47,15 @@ const Intro = (props) => {
             />
             <Carousel autoPlay={false} selectedItem={currentSlide} className="intro component">
                 <div style={{ backgroundImage: `url("img/mobile/intro-first.png")`, backgroundPosition: `bottom` }} className="section">
-                    <h1 className="heading intro-first-heading">yes<br />you can<br />buy love</h1>
+                    <h1 className="heading intro-first-heading">
+                        yes<br />you can
+                    </h1>
+                    <Typical
+                        steps={['', 1400, 'BUY LOVE', 1200]}
+                        loop={Infinity}
+                        wrapper="h1"
+                        className="intro-first-heading heading"
+                    />
                     <div className="slide-selectors">
                         <button onClick={prevSlide}><i class="fas fa-chevron-left"></i></button>
                         <button onClick={nextSlide}><i class="fas fa-chevron-right"></i></button>
@@ -128,14 +137,20 @@ const Intro = (props) => {
                         className="where-to-find-us"
                     >
                         <h1 className="heading">
-                            šampióni<br />chutí
-            </h1>
+                            šampióni
+                        </h1>
+                        <Typical
+                            steps={['', 1400, 'CHUTÍ', 1200]}
+                            loop={Infinity}
+                            wrapper="h1"
+                            className="heading"
+                        />
                         <div className="bars">
                             <img src="/img/mutual/bars.png"></img>
                         </div>
                         <h2 className="heading">
                             nájdete<br />nás
-            </h2>
+                        </h2>
                         <div className="logos">
                             <img src="/img/mutual/terno.png"></img>
                             <img src="/img/mutual/kraj.png"></img>

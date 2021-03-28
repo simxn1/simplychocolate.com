@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactCompareImage from 'react-compare-image';
 import { useHistory } from 'react-router-dom';
+import Typical from "react-typical";
 
 const ProductDesktop = (props) => {
 
@@ -97,9 +98,14 @@ const ProductDesktop = (props) => {
                     (
                         <div onClick={toggleCartDisplay} className="desktop-product-shown-section">
                             <h1 className="desktop-product-shown-heading desktop-heading">
-                                {props.name.split(" ")[0]}<br />
-                                {props.name.split(" ")[1]}<br />
+                                {props.name.split(" ")[0]}
                             </h1>
+                            <Typical
+                                steps={['', 1400, props.name.split(" ")[1], 1200]}
+                                loop={Infinity}
+                                wrapper="h1"
+                                className="desktop-product-shown-heading desktop-heading"
+                            />
                             <strong className="desktop-price">2,29 €</strong>
                             <p className="desktop-product-shown-desc">
                                 {props.textFirst}<br />
