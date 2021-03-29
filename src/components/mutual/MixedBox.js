@@ -110,7 +110,7 @@ const BuyerInformationForm = (props) => {
                 setPrice('47,50');
                 break;
             case 'XL':
-                setPrice('56,60');
+                setPrice('56,50');
                 break;
         }
     }

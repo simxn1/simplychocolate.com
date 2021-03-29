@@ -34,7 +34,7 @@ const FinalCheck = () => {
                 setPrice("47,50");
                 break;
             case 30:
-                setPrice("56,60");
+                setPrice("56,50");
                 break;
         }
     }, [])

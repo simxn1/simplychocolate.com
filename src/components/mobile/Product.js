@@ -137,7 +137,7 @@ const Product = (props) => {
                     <li><button onClick={setQuantity}>6ks - <strong>S</strong> - 13,50€</button></li>
                     <li><button onClick={setQuantity}>12ks - <strong>M</strong> - 24,50€</button></li>
                     <li><button onClick={setQuantity}>24ks - <strong>L</strong> - 47,50€</button></li>
-                    <li><button onClick={setQuantity}>30ks - <strong>XL</strong> - 56,60€</button></li>
+                    <li><button onClick={setQuantity}>30ks - <strong>XL</strong> - 56,50€</button></li>
                 </ul>
                 <span
                     style={{
