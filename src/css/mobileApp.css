@@ -765,7 +765,7 @@ img[src="/img/mobile/icons-black.png"] {
 @media (max-height: 700px) {
 
     .intro-first-heading {
-        top: 48%;
+        top: 50%;
     }
 
     .slide:nth-child(1) .section .slide-selectors button,
@@ -779,7 +779,7 @@ img[src="/img/mobile/icons-black.png"] {
     .slide:nth-child(2) .section .slide-selectors, 
     .slide:nth-child(4) .section .slide-selectors, 
     .slide:nth-child(5) .section .slide-selectors {
-        top: 73vh;
+        top: 76vh;
     }
 
     img[src="/img/mobile/icons-black.png"] {
@@ -851,7 +851,7 @@ img[src="/img/mobile/icons-black.png"] {
     }
 
     .control-dots {
-        bottom: 1% !important;
+        bottom: -1% !important;
     }
 
 }
@@ -927,7 +927,7 @@ img[src="/img/mobile/icons-black.png"] {
     }
 
     .control-dots {
-        bottom: 3% !important;
+        bottom: 0% !important;
     }
 
     
@@ -937,12 +937,16 @@ img[src="/img/mobile/icons-black.png"] {
 @media (max-height: 640px) {
 
     .intro-first-heading {
-        top: 41%;
+        top: 46%;
     }
 
 }
 
 @media (max-height: 620px) {
+
+    .cart i {
+        margin-top: 20%;
+    }
 
     .contact-heading-first {
         top: 7%;
@@ -1007,7 +1011,7 @@ img[src="/img/mobile/icons-black.png"] {
 
 
     .carousel .control-dots {
-        bottom: 1.5% !important;
+        bottom: 0% !important;
     }
 
     .carousel .control-dots .dot {
@@ -1038,7 +1042,7 @@ img[src="/img/mobile/icons-black.png"] {
     }
 
     .carousel .control-dots {
-        bottom: 0% !important;
+        bottom: 1% !important;
     }
 
 }
@@ -1075,7 +1079,7 @@ img[src="/img/mobile/icons-black.png"] {
     }
 
     .control-dots {
-        bottom: 2% !important;
+        bottom: 1% !important;
     }
 
 }

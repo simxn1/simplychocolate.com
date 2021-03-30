@@ -208,10 +208,6 @@
         font-size: 0.6em;
     }
 
-    .shipping-and-payment-method .discount input {
-        padding-top: 0;
-    }
-
     .shipping-and-payment-method .discount button {
         width: 2.6em;
         height: 2.6em;
