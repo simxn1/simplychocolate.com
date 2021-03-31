@@ -176,30 +176,6 @@ const BuyerInformationForm = (props) => {
         }
     }
 
-    /*const creamyCarolAdd = () => {
-        setBoxContent({
-            ...boxContent,
-            creamyCarol: boxContent.creamyCarol += 1
-        })
-        
-        boxQuantityIncrement(currentBoxQuantity);
-        changeBoxInfoDisplay();
-    }*/
-
-    /*const creamyCarolRemove = (event) => {
-        if (boxContent.creamyCarol != 0) {
-            setBoxContent({
-                ...boxContent,
-                creamyCarol: boxContent.creamyCarol -= 1
-            })
-        }
-        
-        if (event.target.nextSibling.value != 0) {
-            boxQuantityDecrement(currentBoxQuantity);
-            changeBoxInfoDisplay();
-        }
-    }*/
-
     const grainySueAdd = () => {
         setBoxContent({
             ...boxContent,
