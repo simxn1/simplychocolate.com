@@ -308,14 +308,14 @@ img[src="/img/mobile/icons-black.png"] {
     text-align: left;
     position: absolute;
     top: 18%;
-    left: 9.5%;
+    left: 12%;
     font-size: 4em;
     line-height: 1.1em;
 }
 
 .price {
     position: absolute;
-    left: 10.5%;
+    left: 13%;
     top: 36.5%;
     display: block;
     font-family: 'Social Gothic Demi-Bold';
@@ -930,8 +930,6 @@ img[src="/img/mobile/icons-black.png"] {
         bottom: 0% !important;
     }
 
-    
-
 }
 
 @media (max-height: 640px) {
@@ -1080,35 +1078,5 @@ img[src="/img/mobile/icons-black.png"] {
     .control-dots {
         bottom: 1% !important;
     }
-
-}
-
-@media (max-width: 360px) {
-
-    
-
-}
-
-@media (max-width: 340px) {
-
-    
-
-}
-
-@media (max-width: 340px) {
-
-    
-
-}
-
-@media (max-width: 310px) {
-
-    
-
-}
-
-@media (max-width: 280px) {
-
-    
 
 }
