@@ -30,7 +30,7 @@ const BuyerInformation = () => {
     if (location.boxContent && location.totalBoxQuantity) 
     return (
         <div className="buyer-info">
-            <Link to="/mixed-box" className="back">
+            <Link to={location.from} className="back">
                 <i class="fas fa-long-arrow-alt-left"></i>
             </Link>
             <img className="logo-checkout" src="/img/desktop/logo-black.png"></img>

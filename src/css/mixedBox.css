@@ -50,6 +50,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .select-box-size li button {
@@ -63,6 +65,7 @@
     width: 2.5em;
     height: 2.5em;
     cursor: pointer;
+    padding: 0;
 }
 
 .select-box-size li:last-child button {

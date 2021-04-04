@@ -123,9 +123,24 @@ const BuyerInformationForm = (props) => {
             history.push({
                 pathname: '/buyer-info',
                 boxContent: boxContent,
-                totalBoxQuantity: totalBoxQuantity
+                totalBoxQuantity: totalBoxQuantity,
+                from: "/mixed-box"
             });
         }
+    }
+
+    const addProduct = (event) => {
+        const productName = event.target.parentNode.parentNode.innerText.replaceAll(/[^\w\s!?]/g, "").trim();
+        const objectKeyFromProductName = productName.replaceAll(" ", "").charAt(0).toLowerCase() + productName.replaceAll(" ", "").slice(1)
+        console.log(boxContent[objectKeyFromProductName]);
+
+        setBoxContent({
+            ...boxContent,
+            objectKeyFromProductName: boxContent[objectKeyFromProductName] += 1
+        });
+
+        boxQuantityIncrement(currentBoxQuantity);
+        changeBoxInfoDisplay();
     }
 
     const grainyBillyAdd = () => {

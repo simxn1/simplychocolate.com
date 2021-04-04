@@ -77,7 +77,8 @@ const Product = (props) => {
             history.push({
                 pathname: '/buyer-info',
                 boxContent: boxContent[0],
-                totalBoxQuantity: boxContent[1]
+                totalBoxQuantity: boxContent[1],
+                from: "/#products"
             });
         }
     }
