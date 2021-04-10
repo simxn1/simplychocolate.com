@@ -70,10 +70,10 @@ const Products = (props) => {
     }
 
     return (
-        <Carousel autoPlay={false} interval={5000} infiniteLoop className="products component">
+        <Carousel autoPlay={autoPlay} interval={5000} infiniteLoop className="products component">
 
             {
-                products.map( product =>
+                products.map(product =>
                     <Product
                         name={product.name}
                         icons={product.icons}
