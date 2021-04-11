@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect, useHistory, useLocation } from 'react-router-dom';
+import FinalCheckProduct from './FinalCheckProduct';
 
 const FinalCheck = () => {
 
@@ -62,13 +63,14 @@ const FinalCheck = () => {
             <h1>Lásku si za peniaze nekúpiš,<br />čokoládu ÁNO!</h1>
             <h2>Už skoro u teba doma...</h2>
             <ul className="products-to-purchase">
-                <li><img src="/img/mutual/grainybilly-bar.png" />Grainy Billy <strong>{boxContent.grainyBilly}</strong></li>
-                {/*<li><img src="/img/mutual/creamycarol-bar.png" />Creamy Carol <strong>{boxContent.creamyCarol}</strong></li>*/}
-                <li><img src="/img/mutual/crispycarrie-bar.png" />Crispy Carrie <strong>{boxContent.crispyCarrie}</strong></li>
-                <li><img src="/img/mutual/grainysue-bar.png" />Grainy Sue <strong>{boxContent.grainySue}</strong></li>
-                <li><img src="/img/mutual/fitfiona-bar.png" />Fit Fiona<strong>{boxContent.fitFiona}</strong></li>
-                <li><img src="/img/mutual/richarnold-bar.png" />Rich Arnold <strong>{boxContent.richArnold}</strong></li>
-                <li><img src="/img/mutual/speedytom-bar.png" />Speedy Tom <strong>{boxContent.speedyTom}</strong></li>
+                {
+                    Object.keys(boxContent).map((product) => 
+                        <FinalCheckProduct 
+                            name={product}
+                            quantity={boxContent[product]}
+                        />
+                    )
+                }
                 <li>Celkom: <strong>{price}&nbsp;€</strong></li>
             </ul>
             <div style={{ 
@@ -77,14 +79,15 @@ const FinalCheck = () => {
                 alignItems: 'center'
             }}>
             <a 
-            onClick={handleBack}
-            style={{
-                fontFamily: 'Open Sans',
-                textDecoration: 'underline',
-                marginRight: '4em',
-                cursor: 'pointer',
-                fontSize: '1.05em'
-            }}>
+                onClick={handleBack}
+                style={{
+                    fontFamily: 'Open Sans',
+                    textDecoration: 'underline',
+                    marginRight: '4em',
+                    cursor: 'pointer',
+                    fontSize: '1.05em'
+                }}
+            >
                 Späť
             </a>
             <button onClick={handleContinue} className="continue">Pokračovať</button>

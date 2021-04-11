@@ -1,5 +1,4 @@
 import React from 'react';
-import { useForm } from 'react-hook-form';
 import { Redirect, useHistory, useLocation } from 'react-router-dom';
 
 import { CHECKOUT, CHECKOUT_CASH } from "../../config/endpoints";
