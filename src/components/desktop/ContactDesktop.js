@@ -61,7 +61,7 @@ const ContactDesktop = () => {
                 ></img>
             </div>
             <div className="desktop-contact-methods">
-                <a href="tel:+421918596972">+421 918 596 972</a>
+                <a href="tel:+421904130824">+421 904 130 824</a>
                 <a href="mailto:info@simplychocolate.sk">info@simplychocolate.sk</a>
             </div>
             <form onSubmit={sendEmail}>
