@@ -46,10 +46,36 @@
       ></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
-    
-    <div id="root"></div>
+    <div>
+      <div id="root"></div>
+      <i class="fas fa-spinner loader"></i>
+    </div>
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
+    <style>
+      #root:not(:empty) + .loader {
+        display: none;
+      }
+
+      .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3em;
+        animation: loading 1.5s infinite linear;
+      }
+
+      @keyframes loading {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </body>
 </html>
 
