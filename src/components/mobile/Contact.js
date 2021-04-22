@@ -33,7 +33,7 @@ const Contact = () => {
     return (
         <Carousel className="contact component">
             <div onClick={hideSent} className="section">
-                <img src="/img/mobile/contact.png" className="slide-bg" />
+                <img src="/img/mobile/contact.webp" className="slide-bg" />
                 <h1 className="heading contact-heading-first">máš</h1>
                 <Typical
                         steps={['', 1400, 'OTÁZKU?', 1200]}

@@ -72,7 +72,7 @@ const Intro = (props) => {
                 </div>
                 <div style={{ backgroundColor: '#fff' }} className="section">
                     <h1 className="heading intro-second-heading">o nás</h1>
-                    <img className="logo-first" src="/img/mobile/logoblackwithoutbreak.png"></img>
+                    <img className="logo-first" src="/img/mobile/logoblackwithoutbreak.webp"></img>
                     <div className="company-desc">
                         <p className="company-desc-p">
                             Spoločnosť Simply Chocolate verí,
@@ -106,7 +106,7 @@ const Intro = (props) => {
                             emisiami CO2.
                     </p>
                     </div>
-                    <img src="/img/mobile/icons-black.png"></img>
+                    <img src="/img/mobile/icons-black.webp"></img>
                     <div className="slide-selectors">
                         <button onClick={prevSlide}><i class="fas fa-chevron-left"></i></button>
                         <button onClick={nextSlide}><i class="fas fa-chevron-right"></i></button>
@@ -119,7 +119,7 @@ const Intro = (props) => {
                     </div>
                 </div>
                 <div style={{ backgroundImage: `url("img/mobile/intro-fifth.webp")` }} className="section">
-                    <img className="logo-vertical" src="img/mobile/logo-vertical.png"></img>
+                    <img className="logo-vertical" src="img/mobile/logo-vertical.webp"></img>
                     <div className="slide-selectors">
                         <button onClick={prevSlide}><i class="fas fa-chevron-left"></i></button>
                         <button onClick={nextSlide}><i class="fas fa-chevron-right"></i></button>

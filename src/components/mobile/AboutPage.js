@@ -10,7 +10,7 @@ const AboutPage = (props) => {
             }} 
             className="section"
         >
-            <img className="section-2-icon" src={`/img/mobile/${props.icon}.png`} />
+            <img className="section-2-icon" src={`/img/mobile/${props.icon}.webp`} />
             <h2 className="section-2-heading">{props.heading}</h2>
             <p className="section-2-text">{props.desc}</p>
         </div>

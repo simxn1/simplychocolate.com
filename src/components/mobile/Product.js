@@ -111,7 +111,7 @@ const Product = (props) => {
             </h1>
             <strong style={{ color: props.color }} className="price">2,29€</strong>
             <img 
-                src={`/img/mobile/${props.name.replace(" ", "")}-bar.png`} 
+                src={`/img/mobile/${props.name.replace(" ", "")}-bar.webp`} 
                 className="product"
                 data-aos="fade-right"
             >
@@ -160,7 +160,7 @@ const Product = (props) => {
                 {props.textSecond}<br />
                 {props.textThird}
             </p>
-            <img className="product-icons" src={`/img/mobile/mobile-${props.icons}-icons.png`} />
+            <img className="product-icons" src={`/img/mobile/mobile-${props.icons}-icons.webp`} />
         </div>
     )
     else return (
