@@ -92,7 +92,7 @@ const Product = (props) => {
     if (props.name) return (
         <div
             style={{
-                background: `url(img/mobile/${props.name.replace(" ", "")}-bg.jpg) no-repeat`,
+                background: `url(img/mobile/${props.name.replace(" ", "")}-bg.webp) no-repeat`,
                 backgroundPosition: '50% 40%',
                 backgroundSize: 'cover'
             }}

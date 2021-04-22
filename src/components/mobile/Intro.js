@@ -46,7 +46,7 @@ const Intro = (props) => {
                 toggleBurger={toggleBurger}
             />
             <Carousel autoPlay={false} selectedItem={currentSlide} className="intro component">
-                <div style={{ backgroundImage: `url("img/mobile/intro-first.png")`, backgroundPosition: `bottom` }} className="section">
+                <div style={{ backgroundImage: `url("img/mobile/intro-first.webp")`, backgroundPosition: `bottom` }} className="section">
                     <h1 className="heading intro-first-heading">
                         yes<br />you can
                     </h1>
@@ -62,7 +62,7 @@ const Intro = (props) => {
                     </div>
                 </div>
                 <div style={{
-                    backgroundImage: `url("img/mobile/intro-second.jpg")`,
+                    backgroundImage: `url("img/mobile/intro-second.webp")`,
                     backgroundPosition: 'bottom center'
                 }} className="section">
                     <div className="slide-selectors">
@@ -112,13 +112,13 @@ const Intro = (props) => {
                         <button onClick={nextSlide}><i class="fas fa-chevron-right"></i></button>
                     </div>
                 </div>
-                <div style={{ backgroundImage: `url("img/mobile/intro-forth.jpg")` }} className="section">
+                <div style={{ backgroundImage: `url("img/mobile/intro-forth.webp")` }} className="section">
                     <div className="slide-selectors">
                         <button onClick={prevSlide}><i class="fas fa-chevron-left"></i></button>
                         <button onClick={nextSlide}><i class="fas fa-chevron-right"></i></button>
                     </div>
                 </div>
-                <div style={{ backgroundImage: `url("img/mobile/intro-fifth.png")` }} className="section">
+                <div style={{ backgroundImage: `url("img/mobile/intro-fifth.webp")` }} className="section">
                     <img className="logo-vertical" src="img/mobile/logo-vertical.png"></img>
                     <div className="slide-selectors">
                         <button onClick={prevSlide}><i class="fas fa-chevron-left"></i></button>
@@ -127,7 +127,7 @@ const Intro = (props) => {
                 </div>
             </Carousel>
             <div className="component" style={{ overflowY: 'hidden' }}>
-                <div className="section" style={{ backgroundImage: 'url("/img/mobile/in-products-background.png")' }}>
+                <div className="section" style={{ backgroundImage: 'url("/img/mobile/in-products-background.webp")' }}>
                     <div
                         style={{
                             background: "transparent",

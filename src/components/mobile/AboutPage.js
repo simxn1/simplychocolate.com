@@ -5,7 +5,7 @@ const AboutPage = (props) => {
     return (
         <div 
             style={{ 
-                background: `url(/img/mobile/mobile-${props.bg}.png) no-repeat`,
+                background: `url(/img/mobile/mobile-${props.bg}.webp) no-repeat`,
                 backgroundSize: "cover"
             }} 
             className="section"
