@@ -50,7 +50,7 @@ const ContactDesktop = () => {
             </h2>
             <div>
                 <img
-                    src="/img/mobile/logowithoutbreak.png"
+                    src="/img/mobile/logowithoutbreak.webp"
                     style={{
                         position: "absolute",
                         top: "4%",
