@@ -2,6 +2,8 @@ import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import Product from './Product';
+import { useLocation } from "react-router-dom";
+import { findProductIndexByUrlQuery } from "../desktop/ProductsDesktop";
 
 const Products = (props) => {
 
@@ -62,6 +64,9 @@ const Products = (props) => {
         },
 
     ];
+    
+    const location = useLocation();
+    const selectedProductIndex = findProductIndexByUrlQuery(location, products);
 
     const [autoPlay, setAutoPlay] = React.useState(true);
 
@@ -70,7 +75,7 @@ const Products = (props) => {
     }
 
     return (
-        <Carousel autoPlay={autoPlay} interval={5000} infiniteLoop className="products component">
+        <Carousel autoPlay={autoPlay} interval={5000} infiniteLoop selectedItem={selectedProductIndex} className="products component">
 
             {
                 products.map(product =>
