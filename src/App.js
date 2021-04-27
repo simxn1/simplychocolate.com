@@ -27,7 +27,7 @@ import AfterPayment from "./components/mutual/AfterPayment";
 
 const App = () => {
 
-  /*if (isMobile)*/ return (
+  if (isMobile) return (
     <Switch>
       <Route exact path="/" component={Mobile} />
       <Route path="/mixed-box" component={MixedBox} />
@@ -41,20 +41,20 @@ const App = () => {
       <Route component={Mobile} />
     </Switch>
   )
-  // else return (
-  //   <Switch>
-  //     <Route exact path="/" component={Desktop} />
-  //     <Route path="/mixed-box" component={MixedBox} />
-  //     <Route path="/buyer-info" component={BuyerInformation} />
-  //     <Route path="/final-check" component={FinalCheck} />
-  //     <Route path="/shipping-and-payment-method" component={ShippingAndPaymentMethod} />
-  //     <Route path="/buyer-info-check" component={CheckBuyerInformation} />
-  //     <Route path="/obchodne-podmienky" component={ObchodnePodmienky} />
-  //     <Route path="/zasady-ochrany-osobnych-udajov" component={ZasadyOchranyOsobnychUdajov} />
-  //     <Route path="/paid" component={AfterPayment} />
-  //     <Route component={Desktop} />
-  //   </Switch>
-  // )
+  else return (
+    <Switch>
+      <Route exact path="/" component={Desktop} />
+      <Route path="/mixed-box" component={MixedBox} />
+      <Route path="/buyer-info" component={BuyerInformation} />
+      <Route path="/final-check" component={FinalCheck} />
+      <Route path="/shipping-and-payment-method" component={ShippingAndPaymentMethod} />
+      <Route path="/buyer-info-check" component={CheckBuyerInformation} />
+      <Route path="/obchodne-podmienky" component={ObchodnePodmienky} />
+      <Route path="/zasady-ochrany-osobnych-udajov" component={ZasadyOchranyOsobnychUdajov} />
+      <Route path="/paid" component={AfterPayment} />
+      <Route component={Desktop} />
+    </Switch>
+  )
 
 }
 
