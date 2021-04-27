@@ -85,11 +85,12 @@ const Product = (props) => {
 
     const handleMixOwn = () => {
         history.push({
-            pathname: '/mixed-box'
+            pathname: '/mixed-box',
+            from: "/#products"
         })
     }
 
-    if (props.name) return (
+    return (
         <div
             style={{
                 background: `url(img/mobile/${props.name.replace(" ", "")}-bg.webp) no-repeat`,
@@ -161,31 +162,6 @@ const Product = (props) => {
                 {props.textThird}
             </p>
             <img className="product-icons" src={`/img/mobile/mobile-${props.icons}-icons.webp`} />
-        </div>
-    )
-    else return (
-        <div
-            style={{
-                backgroundImage: `url("/img/mobile/in-products-background.png")`,
-                backgroundSize: "cover",
-                width: "100vw",
-                height: "100vh"
-            }}
-            className="where-to-find-us"
-        >
-            <h1 className="heading">
-                šampióni<br />chutí
-            </h1>
-            <div className="bars">
-                <img src="/img/mutual/bars.png"></img>
-            </div>
-            <h2 className="heading">
-                kde<br />nás<br />nájdete?
-            </h2>
-            <div className="logos">
-                <img src="/img/mutual/terno.png"></img>
-                <img src="/img/mutual/kraj.png"></img>
-            </div>
         </div>
     )
 }

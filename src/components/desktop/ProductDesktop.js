@@ -83,7 +83,8 @@ const ProductDesktop = (props) => {
 
     const handleMixOwn = () => {
         history.push({
-            pathname: '/mixed-box'
+            pathname: '/mixed-box',
+            from: "/#products"
         })
     }
 

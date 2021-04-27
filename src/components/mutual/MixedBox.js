@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router-dom';
 import MixedBoxProduct from './MixedBoxProduct';
 import MixedBoxBoxSize from './MixedBoxBoxSize';
 
 const BuyerInformationForm = (props) => {
 
-    let history = useHistory();
+    const history = useHistory();
+    const location = useLocation();
 
     const [boxSize, setBoxSize] = React.useState('unselected');
     const [boxContent, setBoxContent] = React.useState([0, 0, 0, 0, 0, 0]);
@@ -136,11 +137,16 @@ const BuyerInformationForm = (props) => {
         showBoxInfo();
     }
 
+    const handleGoBack = () => {
+        const previousLocation = window.location.href.replace(location.pathname, location.from);
+        window.location.replace(previousLocation);
+    }
+
     return (
         <div className="mixed-box">
-            <Link to="/#products" className="back">
+            <span onClick={handleGoBack} className="back">
                 <i class="fas fa-long-arrow-alt-left"></i>
-            </Link>
+            </span>
             <h1>Mám chuť na<br />na poriadnu čokoládu!</h1>
             <h2>veľkosť boxu</h2>
             <ul className="select-box-size">

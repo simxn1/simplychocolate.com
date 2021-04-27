@@ -146,8 +146,9 @@ const IntroDesktop = () => {
                         kde<br /> nás<br /> nájdete?
                     </h2>
                     <div className="desktop-logos">
-                        <img src="/img/mutual/terno.png"></img>
-                        <img src="/img/mutual/kraj.png"></img>
+                        <img src="/img/mutual/terno.webp"></img>
+                        <img src="/img/mutual/kraj.webp"></img>
+                        <img src="/img/mutual/shell.webp" style={{ marginTop: "0.75%" }}></img>
                     </div>
                     <div className="desktop-bars">
                         <img src="/img/desktop/bar-1.png"></img>

@@ -508,19 +508,34 @@ img[src="/img/mobile/icons-black.webp"] {
     line-height: 1.1em;
     position: relative;
     top: 6%;
-    left: 15%;
+    left: 8%;
+}
+
+.where-to-find-us .logo {
+    position: relative;
+    left: 45%;
+    bottom: 5%;
 }
 
 .where-to-find-us .logos {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     position: relative;
-    left: 45%;
-    top: -4%;
+    left: 31%;
+    bottom: 5%;
+}
+
+.where-to-find-us .logos img:last-child {
+    margin-left: 3%;
+}
+
+.where-to-find-us .logo img {
+    width: 30%;
 }
 
 .where-to-find-us .logos img {
-    width: 40%;
+    width: 30%;
 }
 
 .contact-heading-first {
@@ -817,6 +832,10 @@ img[src="/img/mobile/icons-black.webp"] {
     .where-to-find-us .bars {
         width: 72%;
         left: 10%;
+    }
+
+    .where-to-find-us .logo, .where-to-find-us .logos {
+        bottom: 3%;
     }
 
     .product-heading {

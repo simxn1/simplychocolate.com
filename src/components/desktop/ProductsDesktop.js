@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 import ProductDesktop from "./ProductDesktop";
 import { Carousel } from "react-responsive-carousel";
+// import { useLocation } from "react-router-dom";
+
+// const findProductIndexByUrlQuery = (location, products, productsElement) => {
+//     const query = location.search.replace("?", "");
+//     if (query.length) {
+//         const productName = query.replace("-", " ");
+//         const foundProduct = products.find(product => product.name == productName);
+
+//         return products.indexOf(foundProduct) ? products.indexOf(foundProduct) : 0;
+//     }
+//     else return;
+// }
 
 const ProductsDesktop = () => {
 
@@ -68,8 +80,14 @@ const ProductsDesktop = () => {
 
     ];
 
+    // const location = useLocation();
+    // const productsElement = useRef();
+    // const selectedProductIndex = findProductIndexByUrlQuery(location, products, productsElement.current);
+
+    // productsElement.current.scrollIntoView();
+
     return (
-        <Carousel className="desktop-section" autoPlay={true} interval={7500} infiniteLoop>
+        <Carousel /*ref={productsElement}*/ className="desktop-section" autoPlay={true} interval={7500} infiniteLoop /*selectedItem={selectedProductIndex}*/>
             {
                 products.map((product) =>
 

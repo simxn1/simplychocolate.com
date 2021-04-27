@@ -34,7 +34,17 @@ const ShippingAndPaymentMethod = () => {
         setBuyerInformation(location.buyerInformation);
     }, [])
 
-    const discountCodes = ["BEA20", "NIKOLETA20", "NICOL20", "VELKANOC20", "SISA20"];
+    const discountCodes = [
+        "BEA20", 
+        "NIKOLETA20", 
+        "NICOL20",
+        "VELKANOC20",
+        "SISA20",
+        "LUCIA20",
+        "LASKYCAS20",
+        "BARBORA20",
+        "CHOCO20"
+    ];
 
     const formatToNumber = (string, typeOfString) => {
         if (typeOfString === 'price') {

@@ -27,12 +27,17 @@ const BuyerInformation = () => {
         })
     }
 
+    const handleGoBack = () => {
+        const previousLocation = window.location.href.replace(location.pathname, location.from);
+        window.location.replace(previousLocation);
+    }
+
     if (location.boxContent && location.totalBoxQuantity) 
     return (
         <div className="buyer-info">
-            <Link to={location.from} className="back">
+            <span onClick={handleGoBack} className="back">
                 <i class="fas fa-long-arrow-alt-left"></i>
-            </Link>
+            </span>
             <img className="logo-checkout" src="/img/desktop/logo-black.png"></img>
             <h1>Čokoláda je odpoveď,<br />koho zaujíma aká je otázka?</h1>
             <h2>Priamo k tebe domov!</h2>

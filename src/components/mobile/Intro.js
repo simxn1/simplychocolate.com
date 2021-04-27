@@ -151,9 +151,12 @@ const Intro = (props) => {
                         <h2 className="heading">
                             nájdete<br />nás
                         </h2>
+                        <div className="logo">
+                            <img src="/img/mutual/terno.webp"></img>
+                        </div>
                         <div className="logos">
-                            <img src="/img/mutual/terno.png"></img>
-                            <img src="/img/mutual/kraj.png"></img>
+                            <img src="/img/mutual/kraj.webp"></img>
+                            <img src="/img/mutual/shell.webp"></img>
                         </div>
                     </div>
                 </div>
