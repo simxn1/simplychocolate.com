@@ -4,7 +4,8 @@ import { Carousel } from "react-responsive-carousel";
 import { useLocation } from "react-router-dom";
 
 export const findProductIndexByUrlQuery = (location, products) => {
-    const query = location.search.replace("?", "");
+    const query = location.pathname.replace("/", "");
+    console.log(query);
     if (query.length) {
         if (location.hash === "#products") {
             const productName = query.replace("-", " ");
@@ -13,7 +14,7 @@ export const findProductIndexByUrlQuery = (location, products) => {
             return products.indexOf(foundProduct) ? products.indexOf(foundProduct) : 0;
         }
         else {
-            return window.location.replace(window.location.origin + "?" + query + "#products");
+            return window.location.replace(window.location.origin + "/" + query + "#products");
         }
     }
     else return;
@@ -87,6 +88,7 @@ const ProductsDesktop = () => {
 
     const location = useLocation();
     const selectedProductIndex = findProductIndexByUrlQuery(location, products);
+    console.log(location);
 
     return (
         <Carousel className="desktop-section" autoPlay={true} interval={7500} infiniteLoop selectedItem={selectedProductIndex}>
