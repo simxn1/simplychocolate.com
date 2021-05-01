@@ -4,6 +4,7 @@ import Contact from './mobile/Contact';
 import Intro from './mobile/Intro';
 import Products from './mobile/Products';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
+import ProductsSecond from './mutual/ProductsSecond';
 
 const Mobile = () => {
 
@@ -15,6 +16,9 @@ const Mobile = () => {
             <About />
             <div id="products">
                 <Products />
+            </div>
+            <div>
+                <ProductsSecond />
             </div>
             <div id="contact">
                 <Contact />
