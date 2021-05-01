@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
-import { ORDER } from "../../config/endpoints";
+import { ORDER } from "../../../config/endpoints";
 const URL = ORDER;
 
 const AfterPayment = () => {
@@ -26,11 +26,9 @@ const AfterPayment = () => {
             let orderState = await response.json();
 
             setOrderPaid(() => orderState);
-            console.log(orderPaid, typeof orderPaid);
         }
         else {
             setOrderPaid("yes");
-            console.log(orderPaid);
         }
         
 

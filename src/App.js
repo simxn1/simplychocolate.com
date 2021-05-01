@@ -17,12 +17,12 @@ import Desktop from "./components/Desktop";
 import Mobile from "./components/Mobile";
 import ObchodnePodmienky from "./components/mutual/ObchodnePodmienky";
 import ZasadyOchranyOsobnychUdajov from "./components/mutual/ZasadyOchranyOsobnychUdajov";
-import BuyerInformation from "./components/mutual/BuyerInformation";
+import BuyerInformation from "./components/mutual/checkout/BuyerInformation";
 import MixedBox from "./components/mutual/MixedBox";
-import FinalCheck from "./components/mutual/FinalCheck";
-import ShippingAndPaymentMethod from "./components/mutual/ShippingAndPaymentMethod";
-import CheckBuyerInformation from "./components/mutual/CheckBuyerInformation";
-import AfterPayment from "./components/mutual/AfterPayment";
+import FinalCheck from "./components/mutual/checkout/FinalCheck";
+import ShippingAndPaymentMethod from "./components/mutual/checkout/ShippingAndPaymentMethod";
+import CheckBuyerInformation from "./components/mutual/checkout/CheckBuyerInformation";
+import AfterPayment from "./components/mutual/checkout/AfterPayment";
 
 
 const App = () => {

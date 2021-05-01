@@ -4,6 +4,7 @@ import ContactDesktop from './desktop/ContactDesktop';
 import IntroDesktop from './desktop/IntroDesktop';
 import ProductsDesktop from './desktop/ProductsDesktop';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
+import ProductsSecond from './mutual/ProductsSecond';
 
 const Desktop = () => {
 
@@ -16,7 +17,10 @@ const Desktop = () => {
                 <AboutDesktop />
             </div>
             <div id="products">
-            <ProductsDesktop />
+                <ProductsDesktop />
+            </div>
+            <div>
+                <ProductsSecond />
             </div>
             <div id="contact">
                 <ContactDesktop />

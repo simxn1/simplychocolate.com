@@ -1,7 +1,7 @@
 import React from 'react';
 import { Redirect, useHistory, useLocation } from 'react-router-dom';
 
-import { CHECKOUT, CHECKOUT_CASH } from "../../config/endpoints";
+import { CHECKOUT, CHECKOUT_CASH } from "../../../config/endpoints";
 const URL_CHECKOUT = CHECKOUT;
 const URL_CHECKOUT_CASH = CHECKOUT_CASH;
 
@@ -132,6 +132,7 @@ const CheckBuyerInformation = () => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 boxContent: location.boxContent,
+                secondBoxContent: location.secondBoxContent,
                 totalBoxQuantity: location.totalBoxQuantity,
                 price: parseFloat(location.price.replace(/,/g, "")),
                 billingInfo: billingInformation,

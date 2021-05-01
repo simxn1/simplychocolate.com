@@ -22,7 +22,8 @@ const BuyerInformation = () => {
         history.push({
             pathname: "/final-check",
             boxContent: boxContent,
-            totalBoxQuantity: totalBoxQuantity,
+            secondBoxContent: location.secondBoxContent ? location.secondBoxContent : [0, 0],
+            totalBoxQuantity: totalBoxQuantity ? totalBoxQuantity : 0,
             buyerInformation: formData
         })
     }
@@ -32,7 +33,7 @@ const BuyerInformation = () => {
         window.location.replace(previousLocation);
     }
 
-    if (location.boxContent && location.totalBoxQuantity) 
+    if (location.boxContent && location.totalBoxQuantity || location.secondBoxContent) 
     return (
         <div className="buyer-info">
             <span onClick={handleGoBack} className="back">

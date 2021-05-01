@@ -23,6 +23,11 @@
     src: url('../fonts/CormorantGaramond-Bold.ttf');
 }
 
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Regular.ttf');
+}
+
 @keyframes intro-right-arrow {
     
     0%,
@@ -349,6 +354,89 @@ div[data-testid="container"] div:nth-of-type(3) div {
     top: 11em;
 }
 
+.desktop-open-product-nutrition:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.desktop-product-nutrition {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45vw;
+    height: 60vh;
+    background-color: rgba(240, 227, 228, 0.95);
+}
+
+.desktop-product-nutrition .weight {
+    text-align: right;
+    line-height: 1.1em;
+    font-family: "Open Sans";
+    position: absolute;
+    display: inline-block;
+    right: 11%;
+    top: 2%;
+}
+
+.desktop-product-nutrition strong {
+    font-family: "Social Gothic Bold";
+    text-transform: uppercase;
+}
+
+.desktop-product-nutrition .heading {
+    color: #000;
+    line-height: 1.1em;
+}
+
+.desktop-product-nutrition .description {
+    font-family: "Cormonant Garamond Bold";
+    position: relative;
+    top: 17%;
+    left: 8%;
+    width: 85%;
+}
+
+.desktop-product-nutrition .description p {
+    margin: 0;
+    text-align: left;
+    letter-spacing: 0.4px;
+}
+
+.desktop-product-nutrition i {
+    position: absolute;
+    right: 4%;
+    top: 4%;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.desktop-product-nutrition .nutrition-table {
+    position: relative;
+    top: 22%;
+    left: 8%;
+}
+
+.desktop-product-nutrition .nutrition-table table {
+    font-family: "Cormonant Garamond Bold";
+    font-size: 1.4em;
+    border-left: 3px solid #c7bab6;
+    padding-left: 1em;
+    position: absolute;
+    right: 25%;
+    top: 45%;
+    padding-left: 1em;
+}
+
+.desktop-product-nutrition .nutrition-table th, .desktop-product-nutrition .nutrition-table td {
+    text-align: left;
+}
+
+.desktop-product-nutrition .nutrition-table th {
+    padding-right: 2em;
+}
+
 .desktop-product-hidden-desc {
     color: #000;
     position: relative;
@@ -471,6 +559,167 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
 .desktop-cart > button:nth-of-type(2):hover {
     transform: scale(1.075);
+}
+
+.product-second .product-info {
+    position: relative;
+    top: 20vh;
+    left: 11vw;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.product-second .product-info h1 {
+    font-size: 4.5em;
+    line-height: 1.1em;
+    font-family: "Social Gothic Bold";
+}
+
+.product-second .product-info .price {
+    font-family: "Social Gothic Demi-Bold";
+}
+
+.product-second .product-info .description {
+    font-family: "Cormonant Garamond Bold";
+    font-size: 1.2em;
+    text-align: left;
+    width: 25ch;
+    margin: 6% 0;
+}
+
+.product-second img {
+    width: 33% !important;
+    height: auto;
+    position: relative;
+    top: -32%;
+    left: 17%;
+}
+
+.product-second > button {
+    position: absolute;
+    top: 82vh;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 0;
+    outline: 0;
+    font-family: 'Social Gothic Demi-Bold';
+    text-transform: uppercase;
+    font-size: 1.2em;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.product-second-cart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 52vw;
+    height: 59vh;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.product-second-cart h1 {
+    font-family: "Social Gothic Bold";
+    text-transform: uppercase;
+    margin-top: 2em;
+    margin-bottom: 0.2em;
+}
+
+.product-second-cart p {
+    font-family: "Cormonant Garamond Bold";
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+.product-second-cart .count {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 18%;
+    left: -8%;
+}
+
+.product-second-cart .product-pics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-second-cart .product-quantities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -5em;
+    right: 1em;
+    font-size: 1.2em;
+    font-family: "Open Sans";
+}
+
+.product-second-cart .product-quantities strong {
+    display: inline-block;
+    margin-bottom: 1em;
+}
+
+.product-second-cart .product-quantities > div {
+    margin-bottom: 3em;
+    background-color: #fff;
+}
+
+.product-second-cart .product-quantities button {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.product-second-cart .product-quantities span {
+    padding: 1em;
+}
+
+.product-second-cart > button {
+    display: block;
+    margin: 0 auto;
+}
+
+.product-second-cart > button:first-of-type {
+    border: 3px solid #000;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Social Gothic Demi-Bold';
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.7em 1em;
+    border-radius: 0.8em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+    margin-top: 2em;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.product-second-cart > button:last-of-type {
+    font-family: 'Social Gothic Demi-Bold';
+    background: none;
+    border: 0;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 0.9em;
+    margin-top: 2%;
+    cursor: pointer;
+}
+
+.product-second-cart i {
+    position: absolute;
+    font-size: 1.5em;
+    right: 1em;
+    top: 1em;
+    cursor: pointer;
 }
 
 .desktop-where-to-find-us {
@@ -832,6 +1081,15 @@ div[data-testid="container"] div:nth-of-type(3) div {
         top: 5.5vh;
     }
 
+    .desktop-product-nutrition {
+        font-size: 0.9em;
+    }
+
+    .product-second-cart {
+        height: 63vh;
+        font-size: 0.8em;
+    }
+
 }
 
 @media (max-height: 850px) {
@@ -842,6 +1100,14 @@ div[data-testid="container"] div:nth-of-type(3) div {
     
     .desktop-sent {
         padding-top: 8vh;
+    }
+
+}
+
+@media (max-height: 800px) {
+    
+    .desktop-product-nutrition {
+        font-size: 0.75em;
     }
 
 }
@@ -918,6 +1184,10 @@ div[data-testid="container"] div:nth-of-type(3) div {
         right: 30vw;
     }
 
+    .product-second-cart .count {
+        left: -9%;
+    }
+
 }
 
 @media (max-width: 1330px), (max-height: 820px) {
@@ -954,12 +1224,6 @@ div[data-testid="container"] div:nth-of-type(3) div {
         font-size: 0.7em;
         right: 70vw;
     }
-
-}
-
-@media (max-width: 1325px) {
-
-    
 
 }
 
@@ -1003,6 +1267,10 @@ div[data-testid="container"] div:nth-of-type(3) div {
         left: 25vh;
     }
 
+    .product-second {
+        font-size: 0.85em;
+    }
+
 }
 
 @media (max-width: 1175px) {
@@ -1025,6 +1293,10 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
     .desktop-open-cart {
         font-size: 1em;
+    }
+
+    .desktop-product-nutrition .nutrition-table table {
+        right: 20%;
     }
 
 }
@@ -1084,12 +1356,6 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
 }
 
-@media (max-width: 1050px) {
-
-    
-
-}
-
 @media (max-width: 1025px) {
 
     .desktop-intro-hidden-section {
@@ -1131,6 +1397,14 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
 }
 
+@media (max-height: 720px) {
+
+    .product-second-cart .count {
+        margin-bottom: 2.5em;
+    }
+
+}
+
 @media (max-width: 1000px), (max-height: 700px) {
 
     .desktop-intro-icons {
@@ -1148,6 +1422,22 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
     .desktop-intro-hidden-section .desktop-intro-icons {
         top: -5vh;
+    }
+
+}
+
+@media (max-width: 1000px) {
+
+    .product-second .product-info h1 {
+        font-size: 3.75em;
+    }
+
+}
+
+@media (max-height: 700px) {
+
+    .desktop-product-nutrition {
+        font-size: 0.6em;
     }
 
 }
@@ -1202,6 +1492,10 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
     .desktop-product-shown-section {
         left: -3.5vw;
+    }
+
+    .product-second-cart {
+        width: 60vw;
     }
 
 }
@@ -1283,12 +1577,32 @@ div[data-testid="container"] div:nth-of-type(3) div {
         font-size: 1.5em;
     }
 
+    .product-second {
+        font-size: 0.65em;
+    }
+    
+    .product-second-cart .count {
+        left: -17%;
+    }
+
+    .product-second-cart .product-quantities > div {
+        margin-bottom: 5em;
+    }
+
 }
 
 @media (max-height: 500px) {
 
     .desktop-contact form {
         top: -1vh;
+    }
+
+}
+
+@media (max-width: 765px) {
+
+    .product-second-cart {
+        width: 62vw;
     }
 
 }
@@ -1303,8 +1617,6 @@ div[data-testid="container"] div:nth-of-type(3) div {
     .desktop-product-hidden-section {
         right: 69vw;
     }
-
-    
 
 }
 
@@ -1339,6 +1651,10 @@ div[data-testid="container"] div:nth-of-type(3) div {
         right: 71vw;
     }
 
+    .product-second-cart {
+        width: 67vw;
+    }
+
 }
 
 @media (max-width: 650px) {
@@ -1357,6 +1673,23 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
     .desktop-contact-methods a {
         font-size: 0.8rem;
+    }
+
+    .product-second-cart {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .product-second-cart > h1 {
+        margin-top: 6em;
+    }
+
+    .product-second-cart .count {
+        top: 16%;
+    }
+
+    .product-second-cart > button:first-of-type {
+        margin-top: 9em;
     }
 
 }
@@ -1400,12 +1733,153 @@ div[data-testid="container"] div:nth-of-type(3) div {
         width: 36vw;
     }
 
+    .product-second {
+        font-size: 0.5em;
+    }
+
+    .product-second > img {
+        top: -22%;
+    }
+
 }
 
 @media (max-width: 550px) {
 
     .desktop-sent {
         font-size: 1.1em;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .product-second {
+        font-size: 0.8em;
+    }
+
+    .product-second > img {
+        display: none !important;
+    }
+
+    .product-second .product-info {
+        top: 10vh;
+        left: 15vw;
+        align-items: end;
+    }
+
+    .product-second > img {
+        width: 64% !important;
+        position: static;
+    }
+
+    .product-second > button {
+        top: 68vh;
+        font-size: 1.2em;
+    }
+
+    .product-second .product-info button {
+        margin-top: 34%;
+        left: 17% !important;
+    }
+
+    .product-second-cart .product-pics {
+        width: 69%;
+    }
+
+    .product-second-cart .product-pics img:first-of-type {
+        margin-bottom: 5em;
+    }
+
+    .product-second-cart > button:first-of-type {
+        margin-top: 5em;
+        margin-bottom: 2em;
+    }
+
+    .product-second-cart i {
+        font-size: 2.5em;
+        top: 1.5em;
+        right: 1.5em;
+    }
+
+}
+
+@media (min-width: 450px) {
+
+    .product-second .product-info img {
+        display: none !important;
+    }
+
+}
+
+/* 
+
+    mobile product-second
+
+ */
+
+@media (max-height: 780px) {
+
+    .product-second > button {
+        top: 75vh !important;
+        font-size: 1.1em !important;
+    }
+
+}
+
+@media (max-height: 760px) {
+
+    .product-second .product-info button {
+        margin-top: 30%;
+    }
+
+}
+
+@media (max-height: 730px) {
+
+    .product-second .product-info {
+        top: 7vh;
+        left: 17vw;
+    }
+
+    .product-second > button {
+        font-size: 1em !important;
+    }
+
+    .product-second .product-info button {
+        margin-top: 26%;
+    }
+
+}
+
+@media (max-height: 700px) {
+
+    .product-second button {
+        font-size: 0.9em !important;
+    }
+
+}
+
+@media (max-height: 635px) {
+
+    .product-second .product-info h1 {
+        font-size: 3em;
+    }
+
+    .product-second > button {
+        top: 76vh !important;
+    }
+
+}
+
+@media (max-height: 620px) {
+
+    .product-second-cart > button:first-of-type {
+        margin-top: 3em;
+        margin-bottom: 2em;
+    }
+
+    .product-second-cart h1 {
+        margin-top: 4.5em;
     }
 
 }

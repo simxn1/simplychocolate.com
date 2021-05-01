@@ -2,7 +2,7 @@ import React from 'react';
 import { Redirect, useHistory, useLocation } from 'react-router-dom';
 import 'whatwg-fetch';
 
-import { CHECK_SELECTED_PLACE } from '../../config/endpoints';
+import { CHECK_SELECTED_PLACE } from '../../../config/endpoints';
 const URL = CHECK_SELECTED_PLACE;
 
 const ShippingAndPaymentMethod = () => {
@@ -190,6 +190,7 @@ const ShippingAndPaymentMethod = () => {
                 history.push({
                     pathname: "/buyer-info-check",
                     boxContent: boxContent,
+                    secondBoxContent: location.secondBoxContent,
                     totalBoxQuantity: totalBoxQuantity,
                     price: price,
                     buyerInformation: buyerInformation,
@@ -204,7 +205,7 @@ const ShippingAndPaymentMethod = () => {
         }
     }
 
-    if (location.boxContent && location.totalBoxQuantity && location.price && location.buyerInformation)
+    if (location.price && location.buyerInformation)
         return (
             <div className="shipping-and-payment-method">
                 <h1>Táto čokoláda stojí za to <strong>{price}&nbsp;€</strong></h1>

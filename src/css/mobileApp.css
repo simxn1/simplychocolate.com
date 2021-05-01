@@ -313,7 +313,7 @@ img[src="/img/mobile/icons-black.webp"] {
     line-height: 1.1em;
 }
 
-.price {
+.product-section .price {
     position: absolute;
     left: 13%;
     top: 36.5%;
@@ -325,6 +325,75 @@ img[src="/img/mobile/icons-black.webp"] {
     width: 106vw !important;
     position: relative;
     top: 36.5vh;
+} 
+
+.product-nutrition {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(240, 227, 228, 0.95);
+}
+
+.product-nutrition .weight {
+    text-align: right;
+    line-height: 1.1em;
+    font-family: "Open Sans";
+    position: absolute;
+    display: inline-block;
+    right: 15%;
+    top: 2%;
+}
+
+.product-nutrition .weight strong {
+    font-family: "Social Gothic Bold";
+    text-transform: uppercase;
+}
+
+.product-nutrition i {
+    position: absolute;
+    right: 4%;
+    top: 4%;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.product-nutrition .heading {
+    color: #000;
+    line-height: 1.1em;
+}
+
+.product-nutrition .description {
+    position: relative;
+    top: 5em;
+    left: 8%;
+    width: 90%;
+}
+
+.product-nutrition .description p {
+    text-align: left;
+    font-family: "Cormonant Garamond Bold";
+}
+
+.product-nutrition .nutrition-table {
+    position: relative;
+    top: 5em;
+    left: 8%;
+}
+
+.product-nutrition .nutrition-table table {
+    font-family: "Cormonant Garamond Bold";
+    font-size: 1.15em;
+}
+
+.product-nutrition .nutrition-table th, .product-nutrition .nutrition-table td {
+    text-align: left;
+}
+
+.product-nutrition .nutrition-table th {
+    padding-right: 2em;
 }
 
 .open-cart {
@@ -703,7 +772,7 @@ img[src="/img/mobile/icons-black.webp"] {
         top: 15%;
     }
 
-    .price {
+    .product-section .price {
         top: 35%;
     }
 
@@ -735,6 +804,10 @@ img[src="/img/mobile/icons-black.webp"] {
         font-size: 0.9em;
     }
 
+    .product-nutrition {
+        font-size: 0.9em;
+    }
+
 }
 
 @media (max-height: 705px) {
@@ -763,7 +836,7 @@ img[src="/img/mobile/icons-black.webp"] {
         font-size: 3.2em;
     }
 
-    .price {
+    .product-section .price {
         top: 32.5%;
     }
 
@@ -902,6 +975,10 @@ img[src="/img/mobile/icons-black.webp"] {
         letter-spacing: 0.9px;
     }
 
+    .product-nutrition {
+        font-size: 0.85em;
+    }
+
 }
 
 @media (max-height: 660px) {
@@ -949,6 +1026,10 @@ img[src="/img/mobile/icons-black.webp"] {
         bottom: 0% !important;
     }
 
+    .product-nutrition {
+        font-size: 0.8em;
+    }
+
 }
 
 @media (max-height: 640px) {
@@ -992,7 +1073,7 @@ img[src="/img/mobile/icons-black.webp"] {
 
 @media (max-height: 610px) {
 
-    .price {
+    .product-section .price {
         top: 34.5%;
     }
 
@@ -1074,7 +1155,7 @@ img[src="/img/mobile/icons-black.webp"] {
         font-size: 3em;
     }
 
-    .price {
+    .product-section .price {
         top: 33.5%;
     }
 

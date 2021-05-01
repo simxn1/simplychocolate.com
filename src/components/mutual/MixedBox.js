@@ -112,7 +112,8 @@ const BuyerInformationForm = (props) => {
                     richArnold: boxContent[4],
                     speedyTom: boxContent[5],
                 },
-                totalBoxQuantity: totalBoxQuantity,
+                secondBoxContent: location.secondBoxContent ? location.secondBoxContent : [0, 0],
+                totalBoxQuantity: totalBoxQuantity ? totalBoxQuantity : 0,
                 from: "/mixed-box"
             });
         }
@@ -177,7 +178,7 @@ const BuyerInformationForm = (props) => {
                     {totalBoxQuantity - currentBoxQuantity}
                 </strong>
             </h3>
-            <h4 style={{ display: boxInfoDisplay }}>Celkom: <strong>{price}€</strong></h4>
+            {/* <h4 style={{ display: boxInfoDisplay }}>Celkom: <strong>{price}€</strong></h4> */}
             <span style={{
                 color: 'red',
                 display: reminderDisplay,

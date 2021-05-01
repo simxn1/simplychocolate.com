@@ -1,6 +1,9 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import Typical from "react-typical";
+import OpenProductNutrition from '../mutual/OpenProductNutrition';
+import Cart from "./Cart";
+import ProductNutrition from "./ProductNutrition";
 
 const Product = (props) => {
 
@@ -16,6 +19,7 @@ const Product = (props) => {
         speedyTom: 0
     }, "unselected"]);
     const [hintDisplay, setHintDisplay] = React.useState("none");
+    const [nutritionDisplay, setNutritionDisplay] = React.useState("none");
 
     const openCart = () => {
         setCartDisplay("block");
@@ -24,6 +28,15 @@ const Product = (props) => {
 
     const closeCart = () => {
         setCartDisplay("none");
+    }
+
+    const toggleNutritionDisplay = () => {
+        if (nutritionDisplay == "none") {
+            setNutritionDisplay("block");
+        }
+        else {
+            setNutritionDisplay("none");
+        }
     }
 
     const productNameToObjectKey = (name) => {
@@ -99,6 +112,12 @@ const Product = (props) => {
             }}
             className="section product-section"
         >
+            <OpenProductNutrition 
+                handleClick={toggleNutritionDisplay} 
+                top="35%" 
+                left="65%" 
+                fontSize="0.9em" 
+            />
             <h1
                 style={{ color: props.color }}
                 className="product-heading"
@@ -111,8 +130,8 @@ const Product = (props) => {
                 />
             </h1>
             <strong style={{ color: props.color }} className="price">2,29€</strong>
-            <img 
-                src={`/img/mobile/${props.name.replace(" ", "")}-bar.webp`} 
+            <img
+                src={`/img/mobile/${props.name.replace(" ", "")}-bar.webp`}
                 className="product"
                 data-aos="fade-right"
             >
@@ -120,48 +139,25 @@ const Product = (props) => {
             <div onClick={openCart} className="open-cart">
                 <button style={{ color: props.color }}>Chcem túto tyčinku</button>
             </div>
-            <div style={{ display: cartDisplay }} className="cart">
-                <i
-                    class="fas fa-times"
-                    onClick={cartDisplay == "block" ? closeCart : undefined}
-                >
-                </i>
-                <h2>
-                    máš chuť na čokolásku?
-                </h2>
-                <h3>
-                    objednaj si Simply Chocolate už dnes!
-                </h3>
-                <h2 style={{ marginTop: "7%" }}>
-                    veľkosť
-                </h2>
-                <ul className="box-sizes">
-                    <li><button onClick={setQuantity}>6ks - <strong>S</strong> - 13,50€</button></li>
-                    <li><button onClick={setQuantity}>12ks - <strong>M</strong> - 24,50€</button></li>
-                    <li><button onClick={setQuantity}>24ks - <strong>L</strong> - 47,50€</button></li>
-                    <li><button onClick={setQuantity}>30ks - <strong>XL</strong> - 56,50€</button></li>
-                </ul>
-                <span
-                    style={{
-                        display: hintDisplay,
-                        color: `red`,
-                        fontFamily: `Social Gothic Demi-Bold`,
-                        textTransform: `uppercase`
-                    }}
-                >
-                    vyber si veľkosť boxu.
-                </span>
-                <button onClick={handleThisFlavour}>
-                    chcem túto príchuť
-                </button><br />
-                <button onClick={handleMixOwn}>namixujem si vlastný box</button>
-            </div>
             <p className="product-desc">
                 {props.textFirst}<br />
                 {props.textSecond}<br />
                 {props.textThird}
             </p>
             <img className="product-icons" src={`/img/mobile/mobile-${props.icons}-icons.webp`} />
+            <Cart
+                cartDisplay={cartDisplay}
+                closeCart={closeCart}
+                hintDisplay={hintDisplay}
+                handleThisFlavour={handleThisFlavour}
+                handleMixOwn={handleMixOwn}
+            />
+            <ProductNutrition 
+                nutritionDisplay={nutritionDisplay}
+                toggleNutritionDisplay={toggleNutritionDisplay}
+                nutritionDesc={props.nutritionDesc}
+                nutrition={props.nutrition}
+            />
         </div>
     )
 }

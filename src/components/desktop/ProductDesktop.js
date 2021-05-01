@@ -2,6 +2,9 @@ import React from 'react';
 import ReactCompareImage from 'react-compare-image';
 import { useHistory } from 'react-router-dom';
 import Typical from "react-typical";
+import CartDesktop from './CartDesktop';
+import OpenProductNutrition from '../mutual/OpenProductNutrition';
+import ProductNutritionDesktop from './ProductNutritionDesktop';
 
 const ProductDesktop = (props) => {
 
@@ -17,6 +20,7 @@ const ProductDesktop = (props) => {
         speedyTom: 0
     }, 'unselected']);
     const [hintDisplay, setHintDisplay] = React.useState("none");
+    const [nutritionDisplay, setNutritionDisplay] = React.useState("none");
 
     const toggleCartDisplay = (event) => {
         event.preventDefault();
@@ -28,6 +32,17 @@ const ProductDesktop = (props) => {
         else {
             setCartDisplay("block");
             setHintDisplay("none");
+        }
+    }
+
+    const toggleNutritionDisplay = (event) => {
+        event.preventDefault();
+
+        if (nutritionDisplay == "block") {
+            return setNutritionDisplay("none");
+        }
+        else {
+            return setNutritionDisplay("block");
         }
     }
 
@@ -114,11 +129,11 @@ const ProductDesktop = (props) => {
                                 {props.textSecond}<br />
                                 {props.textThird}
                             </p>
-                            <img
+                            {/* <img
                                 src={`/img/desktop/${props.icons}-icons.png`}
                                 className="desktop-product-icons"
                             >
-                            </img>
+                            </img> */}
                         </div>
                     )
                 }
@@ -134,6 +149,12 @@ const ProductDesktop = (props) => {
                                 {props.name.split(" ")[1]}<br />
                             </h1>
                             <strong style={{ color: props.color }} className="desktop-price">2,29 €</strong>
+                            <OpenProductNutrition 
+                                handleClick={toggleNutritionDisplay} 
+                                top="5vh" 
+                                left="23vw" 
+                                fontSize="1.5em"
+                            />
                             <p className="desktop-product-hidden-desc">
                                 {props.desc}
                             </p>
@@ -142,51 +163,20 @@ const ProductDesktop = (props) => {
                 }
                 handle={<React.Fragment />}
             />
-            <div style={{ display: cartDisplay }} className="desktop-cart">
-                <i
-                    class="fas fa-times"
-                    onClick={toggleCartDisplay}
-                >
-                </i>
-                <h2>
-                    máš chuť na čokolásku?
-                </h2>
-                <h3>
-                    objednaj si Simply Chocolate už dnes!
-                </h3>
-                <h2>
-                    veľkosť
-                </h2>
-                <ul className="desktop-box-sizes">
-                    <li>
-                        <button style={{ cursor: 'pointer' }} onClick={setQuantity}><div><strong>S </strong></div>- 6ks</button>
-                    </li>
-                    <li>
-                        <button style={{ cursor: 'pointer' }} onClick={setQuantity}><div><strong>M </strong></div>- 12ks</button>
-                    </li>
-                    <li>
-                        <button style={{ cursor: 'pointer' }} onClick={setQuantity}><div><strong>L </strong></div>- 24ks</button>
-                    </li>
-                    <li>
-                        <button style={{ cursor: 'pointer' }} onClick={setQuantity}><div><strong>XL </strong></div>- 30ks</button>
-                    </li>
-                </ul>
-                <span
-                    style={{
-                        display: hintDisplay,
-                        color: `red`,
-                        fontFamily: `Social Gothic Demi-Bold`,
-                        textTransform: `uppercase`
-                    }}
-                >
-                    vyber si veľkosť.
-                </span>
-                <button style={{ color: `#fff` }} onClick={handleThisFlavour}>
-                    chcem túto príchuť
-                </button>
-                <br />
-                <button onClick={handleMixOwn}>namixujem si vlastný box</button>
-            </div>
+            <CartDesktop 
+                cartDisplay={cartDisplay} 
+                toggleCartDisplay={toggleCartDisplay} 
+                setQuantity={setQuantity}
+                hintDisplay={hintDisplay}
+                handleThisFlavour={handleThisFlavour}
+                handleMixOwn={handleMixOwn}
+            />
+            <ProductNutritionDesktop
+                nutritionDisplay={nutritionDisplay}
+                toggleNutritionDisplay={toggleNutritionDisplay}
+                nutrition={props.nutrition}
+                nutritionDesc={props.nutritionDesc}
+            />
         </div>
     )
 
