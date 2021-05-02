@@ -1825,7 +1825,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
 @media (max-height: 760px) {
 
     .product-second > button {
-        top: 42.5em;
+        top: 44em;
     }
 
     
@@ -1854,7 +1854,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
     }
 
     .product-second > button {
-        top: 45.5em;
+        top: 48em;
     }
 
 }
@@ -1866,7 +1866,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
     }
     
     .product-second > button {
-        top: 46em;
+        top: 49em;
     }
 
 }
@@ -1903,7 +1903,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
     }
 
     .product-second > button {
-        top: 34.5em;
+        top: 37em;
     }
 
     .product-second .product-info .description {
@@ -1916,9 +1916,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
     .product-second > button {
         font-size: 0.85em !important;
-        top: 37em;
+        top: 40em;
     }
-
-    
 
 }
