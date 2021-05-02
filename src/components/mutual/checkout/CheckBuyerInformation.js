@@ -151,7 +151,7 @@ const CheckBuyerInformation = () => {
         });
     };
 
-    if (location.buyerInformation && location.boxContent && location.totalBoxQuantity) 
+    if (location.buyerInformation && location.boxContent && location.totalBoxQuantity || location.secondBoxContent) 
     return (
         <div className="check-buyer-info">
             <h1>Máme správne údaje?</h1>

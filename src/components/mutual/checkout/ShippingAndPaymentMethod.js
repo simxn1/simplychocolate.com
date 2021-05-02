@@ -28,8 +28,8 @@ const ShippingAndPaymentMethod = () => {
     const discountCodeInput = React.useRef();
 
     React.useEffect(() => {
-        setBoxContent(location.boxContent);
-        setTotalBoxQuantity(location.totalBoxQuantity);
+        setBoxContent(location.boxContent ? location.boxContent : { grainyBilly: 0, crispyCarrie: 0, grainySue: 0, fitFiona: 0, richArnold: 0, speedyTom: 0 });
+        setTotalBoxQuantity(location.totalBoxQuantity ? location.totalBoxQuantity : 0);
         setPrice(location.price);
         setBuyerInformation(location.buyerInformation);
     }, [])

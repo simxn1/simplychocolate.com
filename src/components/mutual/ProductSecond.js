@@ -61,7 +61,7 @@ const ProductSecond = (props) => {
             history.push({
                 pathname: "/mixed-box",
                 secondBoxContent: secondBoxContent,
-                from: "#products"
+                from: "/#products"
             });
         }
     }
@@ -71,7 +71,7 @@ const ProductSecond = (props) => {
             history.push({
                 pathname: "/buyer-info",
                 secondBoxContent: secondBoxContent,
-                from: "#products"
+                from: "/#products"
             });
         }
     }
