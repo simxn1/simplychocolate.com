@@ -87,7 +87,7 @@ const ProductSecond = (props) => {
                     {props.price.slice(0, 2) + "," + props.price.slice(2) + " €"}
                 </h2>
                 <p className="description">
-                    {props.firstLine == "yes, you " ? 24 : 12} kusov zmiešaných čokoládových bonbónov rôznych chutí.
+                    {props.price == 2000 ? 24 : 12} kusov zmiešaných čokoládových bonbónov rôznych chutí.
                 </p>
                 <img src={`/img/mutual/${name.replaceAll(" ", "-")}.webp`}></img>
                 <OpenProductNutrition 

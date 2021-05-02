@@ -20,6 +20,7 @@ const OpenProductNutrition = (props) => {
                 outline: 0,
                 fontSize: props.fontSize,
                 padding: "1em 2.2em",
+                cursor: "pointer"
             }}
             onClick={props.handleClick}
         >

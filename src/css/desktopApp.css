@@ -107,6 +107,10 @@ body {
     height: 1em;
 }
 
+#products-second .control-dots .dot {
+    background-color: #444;
+}
+
 .desktop-components-container div:nth-child(4) > .desktop-section .carousel .control-dots .dot {
     background-color: #fff;
 }
@@ -1767,18 +1771,18 @@ div[data-testid="container"] div:nth-of-type(3) div {
         align-items: end;
     }
 
-    .product-second > img {
-        width: 64% !important;
+    .product-second .product-info img {
+        width: 70% !important;
         position: static;
     }
 
     .product-second > button {
-        top: 58vh;
+        top: 69vh;
         font-size: 1.2em;
     }
 
     .product-second .product-info button {
-        margin-top: 34%;
+        margin-top: 29%;
         left: 17% !important;
     }
 
@@ -1817,24 +1821,28 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
  */
 
-@media (max-height: 780px) {
+@media (max-height: 790px) {
 
     .product-second > button {
         font-size: 1.1em !important;
-        top: 63vh;
+        top: 71vh;
     }
 
 }
 
 @media (max-height: 760px) {
 
+    .product-second > button {
+        top: 73vh;
+    }
+
     .product-second .product-info button {
-        margin-top: 30%;
+        margin-top: 28%;
     }
 
 }
 
-@media (max-height: 730px) {
+@media (max-height: 740px) {
 
     .product-second .product-info {
         top: 7vh;
@@ -1846,7 +1854,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
     }
 
     .product-second .product-info button {
-        margin-top: 26%;
+        margin-top: 22%;
     }
 
 }
@@ -1857,12 +1865,44 @@ div[data-testid="container"] div:nth-of-type(3) div {
         font-size: 0.9em !important;
     }
 
+    .product-second > button {
+        top: 75.5vh;
+    }
+
+}
+
+@media (max-height: 680px) {
+
+    .product-second .product-info img {
+        width: 65% !important;
+    }
+    
+    .product-second > button {
+        top: 75vh;
+    }
+
+}
+
+@media (max-height: 665px) {
+
+    .product-second > button {
+        top: 76vh;
+    }
+
 }
 
 @media (max-height: 635px) {
 
     .product-second .product-info h1 {
         font-size: 3em;
+    }
+
+    .product-second > button {
+        top: 77.5vh;
+    }
+
+    .product-second .product-info button {
+        font-size: 0.8em;
     }
 
 }
@@ -1876,6 +1916,18 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
     .product-second-cart h1 {
         margin-top: 4.5em;
+    }
+
+}
+
+@media (max-height: 600px) {
+
+    .product-second .product-info {
+        font-size: 0.9em;
+    }
+
+    .product-second > button {
+        top: 74vh;
     }
 
 }

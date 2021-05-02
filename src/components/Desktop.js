@@ -19,7 +19,7 @@ const Desktop = () => {
             <div id="products">
                 <ProductsDesktop />
             </div>
-            <div>
+            <div id="products-second">
                 <ProductsSecond />
             </div>
             <div id="contact">

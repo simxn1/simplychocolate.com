@@ -17,7 +17,7 @@ const Mobile = () => {
             <div id="products">
                 <Products />
             </div>
-            <div>
+            <div id="products-second">
                 <ProductsSecond />
             </div>
             <div id="contact">
