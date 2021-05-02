@@ -122,7 +122,7 @@ const IntroDesktop = () => {
                     sliderLineWidth={4}
                 />
             </div>
-            <div className="desktop-section" style={{ backgroundImage: `url('/img/desktop/in-products-background.png')`, backgroundSize: 'cover' }}>
+            <div className="desktop-section" style={{ backgroundImage: `url('/img/desktop/in-products-background.webp')`, backgroundSize: 'cover' }}>
                 <div
                     className="desktop-where-to-find-us"
                     style={{
