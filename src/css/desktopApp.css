@@ -1783,7 +1783,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
     .product-second .product-info button {
         margin-top: 29%;
-        left: 17% !important;
+        left: 19.5% !important;
     }
 
     .product-second-cart .product-pics {
@@ -1869,15 +1869,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
     }
     
     .product-second > button {
-        top: 72.5vh;
-    }
-
-}
-
-@media (max-height: 665px) {
-
-    .product-second > button {
-        top: 76vh;
+        top: 70.5vh;
     }
 
 }
@@ -1886,10 +1878,6 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
     .product-second .product-info h1 {
         font-size: 3em;
-    }
-
-    .product-second > button {
-        top: 77.5vh;
     }
 
     .product-second .product-info button {
@@ -1934,7 +1922,6 @@ div[data-testid="container"] div:nth-of-type(3) div {
 @media (max-height: 560px) {
 
     .product-second > button {
-        top: 75vh;
         font-size: 0.8em !important;
     }
 
