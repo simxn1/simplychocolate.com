@@ -1931,3 +1931,16 @@ div[data-testid="container"] div:nth-of-type(3) div {
     }
 
 }
+
+@media (max-height: 560px) {
+
+    .product-second > button {
+        top: 75vh;
+        font-size: 0.8em !important;
+    }
+
+    .product-second .product-info button {
+        margin-top: 19%;
+    }
+
+}
