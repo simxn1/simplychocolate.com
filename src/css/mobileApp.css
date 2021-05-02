@@ -753,6 +753,14 @@ img[src="/img/mobile/icons-black.webp"] {
 
 }
 
+@media (max-width: 450px) {
+
+    #products-second .control-dots {
+        display: none;
+    } 
+
+}
+
 @media (max-height: 780px) {
 
     .where-to-find-us h1 {

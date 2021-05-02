@@ -1927,7 +1927,15 @@ div[data-testid="container"] div:nth-of-type(3) div {
     }
 
     .product-second > button {
-        top: 74vh;
+        top: 71vh;
+    }
+
+    .product-second .product-info button {
+        left: 20% !important;
+    }
+
+    .product-second .product-info .description {
+        margin: 2% 0;
     }
 
 }
