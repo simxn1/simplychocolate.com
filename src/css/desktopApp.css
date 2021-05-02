@@ -1782,8 +1782,9 @@ div[data-testid="container"] div:nth-of-type(3) div {
     }
 
     .product-second .product-info button {
-        margin-top: 29%;
-        left: 19.5% !important;
+        position: absolute !important;
+        left: 14em !important;
+        bottom: 16em;
     }
 
     .product-second-cart .product-pics {
@@ -1827,9 +1828,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
         top: 42.5em;
     }
 
-    .product-second .product-info button {
-        margin-top: 28%;
-    }
+    
 
 }
 
@@ -1844,9 +1843,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
         font-size: 1em !important;
     }
 
-    .product-second .product-info button {
-        margin-top: 20%;
-    }
+    
 
 }
 
@@ -1909,10 +1906,6 @@ div[data-testid="container"] div:nth-of-type(3) div {
         top: 34.5em;
     }
 
-    .product-second .product-info button {
-        left: 20% !important;
-    }
-
     .product-second .product-info .description {
         margin: 2% 0;
     }
@@ -1926,8 +1919,6 @@ div[data-testid="container"] div:nth-of-type(3) div {
         top: 37em;
     }
 
-    .product-second .product-info button {
-        margin-top: 19%;
-    }
+    
 
 }
