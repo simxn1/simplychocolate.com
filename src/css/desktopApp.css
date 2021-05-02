@@ -1777,7 +1777,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
     }
 
     .product-second > button {
-        top: 69vh;
+        top: 36.5em;
         font-size: 1.2em;
     }
 
@@ -1824,7 +1824,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
 @media (max-height: 760px) {
 
     .product-second > button {
-        top: 73vh;
+        top: 42.5em;
     }
 
     .product-second .product-info button {
@@ -1857,7 +1857,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
     }
 
     .product-second > button {
-        top: 75.5vh;
+        top: 44.5em;
     }
 
 }
@@ -1869,7 +1869,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
     }
     
     .product-second > button {
-        top: 70.5vh;
+        top: 43.5em;
     }
 
 }
@@ -1906,7 +1906,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
     }
 
     .product-second > button {
-        top: 71vh;
+        top: 34.5em;
     }
 
     .product-second .product-info button {
@@ -1922,7 +1922,8 @@ div[data-testid="container"] div:nth-of-type(3) div {
 @media (max-height: 560px) {
 
     .product-second > button {
-        font-size: 0.8em !important;
+        font-size: 0.85em !important;
+        top: 37em;
     }
 
     .product-second .product-info button {
