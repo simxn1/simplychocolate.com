@@ -97,7 +97,7 @@ const ProductSecond = (props) => {
                 />
             </div>
             <img src={`/img/mutual/${name.replaceAll(" ", "-")}.webp`}></img>
-            <button onClick={toggleCartDisplay} style={{ color: props.priceColor, backgroundColor: props.color }}>
+            <button onClick={toggleCartDisplay} style={{ color: "#fff", backgroundColor: props.color }}>
                 chcem bonboniéru!
             </button>
             {

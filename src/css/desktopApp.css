@@ -1821,15 +1821,6 @@ div[data-testid="container"] div:nth-of-type(3) div {
 
  */
 
-@media (max-height: 790px) {
-
-    .product-second > button {
-        font-size: 1.1em !important;
-        top: 71vh;
-    }
-
-}
-
 @media (max-height: 760px) {
 
     .product-second > button {
@@ -1854,7 +1845,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
     }
 
     .product-second .product-info button {
-        margin-top: 22%;
+        margin-top: 20%;
     }
 
 }
@@ -1878,7 +1869,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
     }
     
     .product-second > button {
-        top: 75vh;
+        top: 72.5vh;
     }
 
 }
