@@ -151,6 +151,7 @@ const Product = (props) => {
                 hintDisplay={hintDisplay}
                 handleThisFlavour={handleThisFlavour}
                 handleMixOwn={handleMixOwn}
+                setQuantity={setQuantity}
             />
             <ProductNutrition 
                 nutritionDisplay={nutritionDisplay}
