@@ -129,11 +129,11 @@ const ProductDesktop = (props) => {
                                 {props.textSecond}<br />
                                 {props.textThird}
                             </p>
-                            {/* <img
+                            <img
                                 src={`/img/desktop/${props.icons}-icons.png`}
                                 className="desktop-product-icons"
                             >
-                            </img> */}
+                            </img>
                         </div>
                     )
                 }

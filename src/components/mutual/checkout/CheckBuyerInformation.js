@@ -63,7 +63,7 @@ const CheckBuyerInformation = () => {
         });
     }
 
-    const handleCheckboxChange = (event) => {
+    const handleCheckboxChange = () => {
         if (secondFormDisplay === "none") {
             setSecondFormDisplay("block");
             setButtonMarginTop("4vh");
