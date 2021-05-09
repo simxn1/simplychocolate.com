@@ -37,9 +37,7 @@ const ShippingAndPaymentMethod = () => {
     const discountCodes = [
         "BEA20", 
         "NIKOLETA20", 
-        "NICOL20",
         "VELKANOC20",
-        "SISA20",
         "LUCIA20",
         "LASKYCAS20",
         "BARBORA20",
