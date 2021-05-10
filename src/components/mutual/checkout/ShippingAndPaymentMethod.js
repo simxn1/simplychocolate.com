@@ -41,7 +41,10 @@ const ShippingAndPaymentMethod = () => {
         "LUCIA20",
         "LASKYCAS20",
         "BARBORA20",
-        "CHOCO20"
+        "CHOCO20",
+        "SIMONA20",
+        "IVANA20",
+        "JANA20"
     ];
 
     const formatToNumber = (string, typeOfString) => {
