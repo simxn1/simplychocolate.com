@@ -110,6 +110,7 @@ const CheckBuyerInformation = () => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 boxContent: location.boxContent,
+                secondBoxContent: location.secondBoxContent,
                 totalBoxQuantity: location.totalBoxQuantity,
                 price: parseFloat(location.price.replace(/,/g, "")),
                 billingInfo: billingInformation,
