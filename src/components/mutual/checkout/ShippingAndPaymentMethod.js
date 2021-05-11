@@ -2,8 +2,8 @@ import React from 'react';
 import { Redirect, useHistory, useLocation } from 'react-router-dom';
 import 'whatwg-fetch';
 
-import { CHECK_SELECTED_PLACE } from '../../../config/endpoints';
-const URL = CHECK_SELECTED_PLACE;
+import { CHECK_SELECTED_PLACE, DISCOUNT_CODES } from '../../../config/endpoints';
+
 
 const ShippingAndPaymentMethod = () => {
 
@@ -27,25 +27,21 @@ const ShippingAndPaymentMethod = () => {
 
     const discountCodeInput = React.useRef();
 
-    React.useEffect(() => {
+    let discountCodes = [];
+    React.useEffect(async () => {
         setBoxContent(location.boxContent ? location.boxContent : { grainyBilly: 0, crispyCarrie: 0, grainySue: 0, fitFiona: 0, richArnold: 0, speedyTom: 0 });
         setTotalBoxQuantity(location.totalBoxQuantity ? location.totalBoxQuantity : 0);
         setPrice(location.price);
         setBuyerInformation(location.buyerInformation);
+
+        const response = await window.fetch(DISCOUNT_CODES);
+        const fetchedDiscountCodes = await response.json();
+        
+        for (const discCode of fetchedDiscountCodes) {
+            discountCodes.push(discCode.name);
+        }
     }, [])
 
-    const discountCodes = [
-        "BEA20", 
-        "NIKOLETA20", 
-        "VELKANOC20",
-        "LUCIA20",
-        "LASKYCAS20",
-        "BARBORA20",
-        "CHOCO20",
-        "SIMONA20",
-        "IVANA20",
-        "JANA20"
-    ];
 
     const formatToNumber = (string, typeOfString) => {
         if (typeOfString === 'price') {
@@ -160,7 +156,7 @@ const ShippingAndPaymentMethod = () => {
     let placeSelected;
     const selectedPlaceForDeliveryPoint = async () => {
         if (shippingMethod === "deliveryPoint") {
-            const response = await window.fetch(URL, {
+            const response = await window.fetch(CHECK_SELECTED_PLACE, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ orderId: orderId })
