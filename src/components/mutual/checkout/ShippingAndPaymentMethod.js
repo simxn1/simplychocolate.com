@@ -27,19 +27,11 @@ const ShippingAndPaymentMethod = () => {
 
     const discountCodeInput = React.useRef();
 
-    let discountCodes = [];
     React.useEffect(async () => {
         setBoxContent(location.boxContent ? location.boxContent : { grainyBilly: 0, crispyCarrie: 0, grainySue: 0, fitFiona: 0, richArnold: 0, speedyTom: 0 });
         setTotalBoxQuantity(location.totalBoxQuantity ? location.totalBoxQuantity : 0);
         setPrice(location.price);
         setBuyerInformation(location.buyerInformation);
-
-        const response = await window.fetch(DISCOUNT_CODES);
-        const fetchedDiscountCodes = await response.json();
-        
-        for (const discCode of fetchedDiscountCodes) {
-            discountCodes.push(discCode.name);
-        }
     }, [])
 
 
@@ -56,9 +48,17 @@ const ShippingAndPaymentMethod = () => {
         return number.toFixed(2).toString().replace(/\./g, ",");
     }
 
-    const handleDiscount = () => {
+    const handleDiscount = async () => {
         let discountCode = discountCodeInput.current.value.toUpperCase();
         setDiscountCodeName(discountCode.replace(/[0-9]/g, ''));
+
+        const response = await window.fetch(DISCOUNT_CODES);
+        const fetchedDiscountCodes = await response.json();
+        
+        let discountCodes = [];
+        for (const discCode of fetchedDiscountCodes) {
+            discountCodes.push(discCode.name);
+        }
 
         if (!afterDiscount && discountCodes.includes(discountCode)) {
             let discountPercent = formatToNumber(discountCode, 'discountCode');
