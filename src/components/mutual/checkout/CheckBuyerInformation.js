@@ -119,7 +119,8 @@ const CheckBuyerInformation = () => {
                 shippingMethod: location.shippingMethod,
                 afterDiscount: location.afterDiscount,
                 orderNumber: location.orderId,
-                discountCode: location.discountCode
+                discountCode: location.discountCode,
+                placeSelectedID: location.placeSelectedID
             })
         });
 
@@ -142,7 +143,8 @@ const CheckBuyerInformation = () => {
                 shippingMethod: location.shippingMethod,
                 afterDiscount: location.afterDiscount,
                 orderNumber: location.orderId,
-                discountCode: location.discountCode
+                discountCode: location.discountCode,
+                placeSelectedID: location.placeSelectedID
             })
         });
 
