@@ -30,8 +30,7 @@ const BuyerInformation = () => {
     }
 
     const handleGoBack = () => {
-        const previousLocation = window.location.href.replace(location.pathname, location.from);
-        window.location.replace(previousLocation);
+        history.goBack();
     }
 
     if (location.boxContent && location.totalBoxQuantity || location.secondBoxContent) 

@@ -3,10 +3,10 @@ import React from 'react';
 const CartDesktop = (props) => {
 
     const boxSizes = [
-        { size: "S", productCount: "6" },
-        { size: "M", productCount: "12" },
-        { size: "L", productCount: "24" },
-        { size: "XL", productCount: "30" },
+        { size: "S", productCount: "6", price: "13,50" },
+        { size: "M", productCount: "12", price: "24,50" },
+        { size: "L", productCount: "24", price: "47,50" },
+        { size: "XL", productCount: "30", price: "56,50" },
     ]
 
     return (
@@ -30,7 +30,7 @@ const CartDesktop = (props) => {
                     boxSizes.map(boxSize => 
                         <li>
                             <button style={{ cursor: 'pointer' }} onClick={props.setQuantity}>
-                                <div><strong>{boxSize.size} </strong></div>- {boxSize.productCount}ks
+                                <div><strong>{boxSize.size} </strong></div>- {boxSize.productCount}ks - {boxSize.price}€
                             </button>
                         </li>
                     )

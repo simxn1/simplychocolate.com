@@ -139,8 +139,7 @@ const BuyerInformationForm = (props) => {
     }
 
     const handleGoBack = () => {
-        const previousLocation = window.location.href.replace(location.pathname, location.from);
-        window.location.replace(previousLocation);
+        history.goBack();
     }
 
     return (

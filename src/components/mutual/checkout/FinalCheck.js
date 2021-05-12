@@ -20,7 +20,7 @@ const FinalCheck = () => {
     const [buyerInformation, setBuyerInformation] = React.useState({});
 
     let secondBoxProducts = [];
-    if (location.secondBoxContent[0] || location.secondBoxContent[1]) {
+    if (location.secondBoxContent && (location.secondBoxContent[0] || location.secondBoxContent[1])) {
         secondBoxProducts = [
             { name: "yesYouCanBuyLove", quantity: location.secondBoxContent[0] },
             { name: "insteadOfFlowers", quantity: location.secondBoxContent[1] }
@@ -66,11 +66,8 @@ const FinalCheck = () => {
     }
 
     const handleBack = () => {
-        history.push({
-            pathname: "/buyer-info",
-            boxContent: boxContent,
-            totalBoxQuantity: totalBoxQuantity,
-        })
+        history.push({ boxContent: boxContent, totalBoxQuantity: totalBoxQuantity });
+        history.goBack();
     }
 
     if (location.boxContent && location.totalBoxQuantity || location.secondBoxContent) return (

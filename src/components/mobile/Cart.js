@@ -29,7 +29,9 @@ const Cart = (props) => {
                 {
                     boxSizes.map(boxSize => 
                         <li>
-                            <button onClick={props.setQuantity}>{boxSize.productCount}ks - <strong>{boxSize.size}</strong> - {boxSize.price}€</button>
+                            <button onClick={props.setQuantity}>
+                                {boxSize.productCount}ks - <strong>{boxSize.size}</strong> - {boxSize.price}€
+                            </button>
                         </li>
                     )
                 }

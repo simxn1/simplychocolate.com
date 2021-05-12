@@ -505,7 +505,7 @@ div[data-testid="container"] div:nth-of-type(3) div {
     border: 0;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 1.6em;
-    width: 6em;
+    width: 10em;
 }
 
 .desktop-box-sizes li button:focus {
