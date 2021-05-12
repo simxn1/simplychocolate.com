@@ -153,7 +153,7 @@ const ShippingAndPaymentMethod = () => {
         return orderId;
     }
 
-    let placeSelected;
+    let placeSelectedID;
     const selectedPlaceForDeliveryPoint = async () => {
         if (shippingMethod === "deliveryPoint") {
             const response = await window.fetch(CHECK_SELECTED_PLACE, {
@@ -162,10 +162,12 @@ const ShippingAndPaymentMethod = () => {
                 body: JSON.stringify({ orderId: orderId })
             });
 
-            placeSelected = await response.json();
+            const placeSelected = await response.json();
 
             if (placeSelected.is_selected === 1) {
                 setSelectDeliveryPointDisplay(() => "none");
+                placeSelectedID = placeSelected.id;
+
                 return true
             }
             else {
@@ -174,7 +176,7 @@ const ShippingAndPaymentMethod = () => {
             }
         }
         else {
-            placeSelected = "unnecessary";
+            placeSelectedID = false;
             return true
         }
     }
@@ -194,9 +196,9 @@ const ShippingAndPaymentMethod = () => {
                     paymentMethod: paymentMethod,
                     shippingMethod: shippingMethod,
                     afterDiscount: afterDiscount,
-                    selectedPlace: placeSelected,
                     orderId: orderId,
-                    discountCode: discountCodeName
+                    discountCode: discountCodeName,
+                    placeSelectedID: placeSelectedID
                 });
             }
         }

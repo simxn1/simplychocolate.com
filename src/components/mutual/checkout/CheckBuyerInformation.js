@@ -152,6 +152,21 @@ const CheckBuyerInformation = () => {
         });
     };
 
+    const differentDeliveryElement = location.shippingMethod === "courier" ? 
+    <>
+        <label><input onChange={handleCheckboxChange} type="checkbox" />Na doručenie použiť odlišnú adresu</label>
+        <div style={{ display: secondFormDisplay }} className="different-address-delivery">
+            <form>
+                <input onChange={changeDeliveryInformation} ref={deliveryFirstNameInput} type="text" placeholder="Meno" name="deliverToFirstName"></input>
+                <input onChange={changeDeliveryInformation} ref={deliveryLastNameInput} type="text" placeholder="Priezvisko" name="deliverToLastName"></input>
+                <input onChange={changeDeliveryInformation} ref={deliveryAddressInput} type="text" placeholder="Adresa" name="deliverToAddress"></input>
+                <input onChange={changeDeliveryInformation} ref={deliveryCityInput} type="text" placeholder="Mesto" name="deliverToCity"></input>
+                <input onChange={changeDeliveryInformation} ref={deliveryZipCodeInput} type="text" placeholder="PSČ" name="deliverToZipCode"></input>
+            </form>
+        </div>
+    </>
+    : null;
+
     if (location.buyerInformation && location.boxContent && location.totalBoxQuantity || location.secondBoxContent) 
     return (
         <div className="check-buyer-info">
@@ -177,16 +192,7 @@ const CheckBuyerInformation = () => {
                     <input onChange={changeBillingInformation} type="email" name="email" ref={emailInput} />
                 </form>
             </div>
-            <label><input onChange={handleCheckboxChange} type="checkbox" />Na doručenie použiť odlišnú adresu</label>
-            <div style={{ display: secondFormDisplay }} className="different-address-delivery">
-                <form>
-                    <input onChange={changeDeliveryInformation} ref={deliveryFirstNameInput} type="text" placeholder="Meno" name="deliverToFirstName"></input>
-                    <input onChange={changeDeliveryInformation} ref={deliveryLastNameInput} type="text" placeholder="Priezvisko" name="deliverToLastName"></input>
-                    <input onChange={changeDeliveryInformation} ref={deliveryAddressInput} type="text" placeholder="Adresa" name="deliverToAddress"></input>
-                    <input onChange={changeDeliveryInformation} ref={deliveryCityInput} type="text" placeholder="Mesto" name="deliverToCity"></input>
-                    <input onChange={changeDeliveryInformation} ref={deliveryZipCodeInput} type="text" placeholder="PSČ" name="deliverToZipCode"></input>
-                </form>
-            </div>
+            {differentDeliveryElement && differentDeliveryElement}
             <div className="flex">
                 <button 
                     onClick={ location.paymentMethod === "cash" ? handleConfirmCashCheckout : handleConfirmCheckout } 

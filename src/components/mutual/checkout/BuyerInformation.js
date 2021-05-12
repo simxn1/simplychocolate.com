@@ -24,7 +24,8 @@ const BuyerInformation = () => {
             boxContent: boxContent,
             secondBoxContent: location.secondBoxContent ? location.secondBoxContent : [0, 0],
             totalBoxQuantity: totalBoxQuantity ? totalBoxQuantity : 0,
-            buyerInformation: formData
+            buyerInformation: formData,
+            placeSelectedID: location.placeSelectedID
         })
     }
 

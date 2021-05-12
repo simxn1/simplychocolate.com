@@ -16,11 +16,11 @@ const Desktop = () => {
             <div id="about">
                 <AboutDesktop />
             </div>
-            <div id="products">
-                <ProductsDesktop />
-            </div>
             <div id="products-second">
                 <ProductsSecond />
+            </div>
+            <div id="products">
+                <ProductsDesktop />
             </div>
             <div id="contact">
                 <ContactDesktop />
