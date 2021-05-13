@@ -17,6 +17,9 @@ const BuyerInformationForm = (props) => {
     const [price, setPrice] = React.useState('0');
     const [reminderDisplay, setReminderDisplay] = React.useState('none');
 
+    const boxSizesList = React.useRef();
+    const preselectedBoxSize = location.boxSize;
+
     const products = [
         "Grainy Billy",
         "Crispy Carrie",
@@ -33,18 +36,34 @@ const BuyerInformationForm = (props) => {
         "XL"
     ];
 
-    const toggleBoxSize = (event) => {
-        const listItems = event.target.parentNode.parentNode.children;
-        for (const listItem of listItems) {
-            let thisButton = listItem.children.item(0);
+    React.useEffect(() => {
+        if (preselectedBoxSize) {
+            const thisBoxSizeIndex = boxSizes.indexOf(preselectedBoxSize);
+            const boxSizesElements = boxSizesList.current.children;
 
-            if (thisButton.classList.contains('active')) {
-                thisButton.classList.remove('active');
+            changeTotalBoxQuantityAndPrice(preselectedBoxSize);
+            setBoxSizeBtnColor(boxSizesElements, boxSizesElements.item(thisBoxSizeIndex).children.item(0));
+            showBoxInfo();
+        }
+    }, [])
+
+    const setBoxSizeBtnColor = (boxSizesBtns, newBoxSizeBtn) => {
+        for (const boxSizeBtn of boxSizesBtns) {
+            let thisButtonElement = boxSizeBtn.children.item(0);
+
+            if (thisButtonElement.classList.contains('active')) {
+                thisButtonElement.classList.remove('active');
             }
         }
-        event.target.classList.add('active');
+        newBoxSizeBtn.classList.add('active');
+    }
 
-        const boxSizeClicked = event.target.textContent;
+    const toggleBoxSize = (event) => {
+        const boxSizesElements = event.target.parentNode.parentNode.children;
+        const boxSizeButton = event.target;
+        setBoxSizeBtnColor(boxSizesElements, boxSizeButton);
+
+        const boxSizeClicked = boxSizeButton.textContent;
         setBoxSize(boxSizeClicked);
         changeTotalBoxQuantityAndPrice(boxSizeClicked);
         showBoxInfo();
@@ -77,7 +96,7 @@ const BuyerInformationForm = (props) => {
     }
 
     const showBoxInfo = () => {
-        if (boxSize !== "unselected") {
+        if (boxSize !== "unselected" || preselectedBoxSize) {
             setBoxInfoDisplay('block');
         }
     }
@@ -149,7 +168,7 @@ const BuyerInformationForm = (props) => {
             </span>
             <h1>Mám chuť na<br />na poriadnu čokoládu!</h1>
             <h2>veľkosť boxu</h2>
-            <ul className="select-box-size">
+            <ul ref={boxSizesList} className="select-box-size">
                 {
                     boxSizes.map(boxSize => 
                         <MixedBoxBoxSize 
@@ -177,7 +196,7 @@ const BuyerInformationForm = (props) => {
                     {totalBoxQuantity - currentBoxQuantity}
                 </strong>
             </h3>
-            {/* <h4 style={{ display: boxInfoDisplay }}>Celkom: <strong>{price}€</strong></h4> */}
+            <h4 style={{ display: boxInfoDisplay }}>Cena za box: <strong>{price}€</strong></h4>
             <span style={{
                 color: 'red',
                 display: reminderDisplay,

@@ -46,11 +46,11 @@ const CartDesktop = (props) => {
             >
                 vyber si veľkosť.
                 </span>
-            <button style={{ color: `#fff` }} onClick={props.handleThisFlavour}>
-                chcem túto príchuť
-                </button>
+            <button style={{ color: `#fff` }} onClick={props.handleMixOwn}>
+                namixujem si vlastný box    
+            </button>
             <br />
-            <button onClick={props.handleMixOwn}>namixujem si vlastný box</button>
+            <button onClick={props.handleThisFlavour}>chcem túto príchuť</button>
         </div>
     )
 

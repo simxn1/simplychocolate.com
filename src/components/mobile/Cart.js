@@ -46,10 +46,12 @@ const Cart = (props) => {
             >
                 vyber si veľkosť boxu.
                 </span>
+            <button onClick={props.handleMixOwn}>
+                namixujem si vlastný box
+            </button><br />
             <button onClick={props.handleThisFlavour}>
                 chcem túto príchuť
-                </button><br />
-            <button onClick={props.handleMixOwn}>namixujem si vlastný box</button>
+            </button>
         </div>
     )
 

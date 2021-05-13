@@ -19,6 +19,7 @@ const ProductDesktop = (props) => {
         richArnold: 0,
         speedyTom: 0
     }, 'unselected']);
+    const [boxSize, setBoxSize] = React.useState("unset");
     const [hintDisplay, setHintDisplay] = React.useState("none");
     const [nutritionDisplay, setNutritionDisplay] = React.useState("none");
 
@@ -68,15 +69,19 @@ const ProductDesktop = (props) => {
 
         switch (boxSizeSelected) {
             case "S":
+                setBoxSize("S");
                 setBoxContent(setNewBoxContent(6));
                 break;
             case "M":
+                setBoxSize("M");
                 setBoxContent(setNewBoxContent(12));
                 break;
             case "L":
+                setBoxSize("L");
                 setBoxContent(setNewBoxContent(24));
                 break;
             case "XL":
+                setBoxSize("XL");
                 setBoxContent(setNewBoxContent(30));
                 break;
         }
@@ -99,7 +104,8 @@ const ProductDesktop = (props) => {
     const handleMixOwn = () => {
         history.push({
             pathname: '/mixed-box',
-            from: "/#products"
+            boxSize: boxSize,
+            from: "/#products",
         })
     }
 
