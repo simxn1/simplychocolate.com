@@ -69,7 +69,7 @@ const ProductSecond = (props) => {
     const handleCheckout = () => {
         if (secondBoxContent[0] || secondBoxContent[1]) {
             history.push({
-                pathname: "/buyer-info",
+                pathname: "/cart-check",
                 secondBoxContent: secondBoxContent,
                 from: "/#products"
             });

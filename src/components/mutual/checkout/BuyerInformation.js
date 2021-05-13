@@ -20,12 +20,12 @@ const BuyerInformation = () => {
 
     const validateAndContinue = (formData) => {
         history.push({
-            pathname: "/final-check",
+            pathname: "/shipping-and-payment-method",
             boxContent: boxContent,
             secondBoxContent: location.secondBoxContent ? location.secondBoxContent : [0, 0],
             totalBoxQuantity: totalBoxQuantity ? totalBoxQuantity : 0,
             buyerInformation: formData,
-            placeSelectedID: location.placeSelectedID
+            price: location.price
         })
     }
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Redirect, useHistory, useLocation } from 'react-router-dom';
-import FinalCheckProduct from './FinalCheckProduct';
+import CartCheckProduct from './CartCheckProduct';
 
-const FinalCheck = () => {
+const CartCheck = () => {
 
     let location = useLocation();
     let history = useHistory();
@@ -17,7 +17,6 @@ const FinalCheck = () => {
     });
     const [totalBoxQuantity, setTotalBoxQuantity] = React.useState(0);
     const [price, setPrice] = React.useState();
-    const [buyerInformation, setBuyerInformation] = React.useState({});
 
     let secondBoxProducts = [];
     if (location.secondBoxContent && (location.secondBoxContent[0] || location.secondBoxContent[1])) {
@@ -30,7 +29,6 @@ const FinalCheck = () => {
     React.useEffect(() => {
         setBoxContent(location.boxContent ? location.boxContent : boxContent);
         setTotalBoxQuantity(location.totalBoxQuantity ? location.totalBoxQuantity : totalBoxQuantity);
-        setBuyerInformation(location.buyerInformation);
 
         let totalPrice = 0;
         switch (location.totalBoxQuantity) {
@@ -48,20 +46,21 @@ const FinalCheck = () => {
                 break;
         }
 
-        totalPrice += location.secondBoxContent[0] * 20.00;
-        totalPrice += location.secondBoxContent[1] * 12.00;
+        if (location.secondBoxContent) {
+            totalPrice += location.secondBoxContent[0] * 20.00;
+            totalPrice += location.secondBoxContent[1] * 12.00;
+        }
 
         setPrice(totalPrice.toFixed(2).toString().replace(".", ","));
     }, [])
 
     const handleContinue = () => {
         history.push({
-            pathname: "/shipping-and-payment-method",
+            pathname: "/buyer-info",
             boxContent: boxContent,
             secondBoxContent: location.secondBoxContent,
             totalBoxQuantity: totalBoxQuantity,
             price: price,
-            buyerInformation: buyerInformation
         })
     }
 
@@ -71,24 +70,28 @@ const FinalCheck = () => {
     }
 
     if (location.boxContent && location.totalBoxQuantity || location.secondBoxContent) return (
-        <div className="final-check">
+        <div className="cart-check">
             <h1>Lásku si za peniaze nekúpiš,<br />čokoládu ÁNO!</h1>
             <h2>Už skoro u teba doma...</h2>
             <ul className="products-to-purchase">
                 {
                     Object.keys(boxContent).map((product) =>
-                        <FinalCheckProduct
+                        boxContent[product] ? 
+                        <CartCheckProduct
                             name={product}
                             quantity={boxContent[product]}
                         />
+                        : null
                     )
                 }
                 {
                     secondBoxProducts.map((product) =>
-                        <FinalCheckProduct
+                        product.quantity ?
+                        <CartCheckProduct
                             name={product.name}
                             quantity={product.quantity}
                         />
+                        : null
                     )
                 }
                 <li>Celkom: <strong>{price}&nbsp;€</strong></li>
@@ -119,4 +122,4 @@ const FinalCheck = () => {
     )
 }
 
-export default FinalCheck
+export default CartCheck

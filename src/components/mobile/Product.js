@@ -93,7 +93,7 @@ const Product = (props) => {
         }
         else {
             history.push({
-                pathname: '/buyer-info',
+                pathname: '/cart-check',
                 boxContent: boxContent[0],
                 totalBoxQuantity: boxContent[1],
                 from: "/#products"

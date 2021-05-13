@@ -122,7 +122,7 @@ const BuyerInformationForm = (props) => {
         }
         else {
             history.push({
-                pathname: '/buyer-info',
+                pathname: '/cart-check',
                 boxContent: {
                     grainyBilly: boxContent[0],
                     crispyCarrie: boxContent[1],
@@ -158,7 +158,7 @@ const BuyerInformationForm = (props) => {
     }
 
     const handleGoBack = () => {
-        history.goBack();
+        window.location.replace("/grainy-billy");
     }
 
     return (

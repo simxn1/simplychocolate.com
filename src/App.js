@@ -8,7 +8,7 @@ import "./css/menu.css";
 import "./css/social.css";
 import "./css/buyerInfo.css";
 import "./css/mixedBox.css";
-import "./css/finalCheck.css";
+import "./css/cartCheck.css";
 import "./css/shippingAndPaymentMethod.css";
 import "./css/checkBuyerInfo.css";
 import "./css/afterPayment.css";
@@ -19,7 +19,7 @@ import ObchodnePodmienky from "./components/mutual/ObchodnePodmienky";
 import ZasadyOchranyOsobnychUdajov from "./components/mutual/ZasadyOchranyOsobnychUdajov";
 import BuyerInformation from "./components/mutual/checkout/BuyerInformation";
 import MixedBox from "./components/mutual/MixedBox";
-import FinalCheck from "./components/mutual/checkout/FinalCheck";
+import CartCheck from "./components/mutual/checkout/CartCheck";
 import ShippingAndPaymentMethod from "./components/mutual/checkout/ShippingAndPaymentMethod";
 import CheckBuyerInformation from "./components/mutual/checkout/CheckBuyerInformation";
 import AfterPayment from "./components/mutual/checkout/AfterPayment";
@@ -31,8 +31,8 @@ const App = () => {
     <Switch>
       <Route exact path="/" component={Mobile} />
       <Route path="/mixed-box" component={MixedBox} />
+      <Route path="/cart-check" component={CartCheck} />
       <Route path="/buyer-info" component={BuyerInformation} />
-      <Route path="/final-check" component={FinalCheck} />
       <Route path="/shipping-and-payment-method" component={ShippingAndPaymentMethod} />
       <Route path="/buyer-info-check" component={CheckBuyerInformation} />
       <Route path="/obchodne-podmienky" component={ObchodnePodmienky} />
@@ -44,9 +44,9 @@ const App = () => {
   else return (
     <Switch>
       <Route exact path="/" component={Desktop} />
-      <Route path="/mixed-box" component={MixedBox} />
-      <Route path="/buyer-info" component={BuyerInformation} /> 
-      <Route path="/final-check" component={FinalCheck} />
+      <Route path="/mixed-box" component={MixedBox} /> 
+      <Route path="/cart-check" component={CartCheck} />
+      <Route path="/buyer-info" component={BuyerInformation} />
       <Route path="/shipping-and-payment-method" component={ShippingAndPaymentMethod} />
       <Route path="/buyer-info-check" component={CheckBuyerInformation} />
       <Route path="/obchodne-podmienky" component={ObchodnePodmienky} />

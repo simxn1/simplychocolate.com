@@ -284,9 +284,9 @@ const ShippingAndPaymentMethod = () => {
                 </div>
             </div>
         )
-    else return (
-        <Redirect to="/" />
-    )
+    // else return (
+    //     <Redirect to="/" />
+    // )
 
 }
 
