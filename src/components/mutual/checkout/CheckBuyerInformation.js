@@ -10,6 +10,15 @@ const CheckBuyerInformation = (props) => {
     let location = useLocation();
     let history = useHistory();
 
+    const boxQuantity = {
+        grainyBilly: props.boxQuantity[0],
+        crispyCarrie: props.boxQuantity[1],
+        grainySue: props.boxQuantity[2],
+        fitFiona: props.boxQuantity[3],
+        richArnold: props.boxQuantity[4],
+        speedyTom: props.boxQuantity[5]
+    };
+
     const [billingInformation, setBillingInformation] = React.useState(location.buyerInformation);
     const [deliveryInformation, setDeliveryInformation] = React.useState({
         firstName: "-",
@@ -128,7 +137,7 @@ const CheckBuyerInformation = (props) => {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-                boxContent: props.boxQuantity,
+                boxContent: boxQuantity,
                 secondBoxContent: props.productsSecondQuantity,
                 totalBoxQuantity: props.totalBoxQuantity,
                 price: parseFloat(props.totalPrice.replace(/,/g, "")),
