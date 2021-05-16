@@ -5,7 +5,7 @@ import { CHECKOUT, CHECKOUT_CASH } from "../../../config/endpoints";
 const URL_CHECKOUT = CHECKOUT;
 const URL_CHECKOUT_CASH = CHECKOUT_CASH;
 
-const CheckBuyerInformation = () => {
+const CheckBuyerInformation = (props) => {
 
     let location = useLocation();
     let history = useHistory();
@@ -75,12 +75,7 @@ const CheckBuyerInformation = () => {
     }
 
     const handleConfirmCheckout = async () => {
-        if (deliveryFirstNameInput.current.value.length == 0 ||
-            deliveryLastNameInput.current.value.length == 0 ||
-            deliveryAddressInput.current.value.length == 0 ||
-            deliveryCityInput.current.value.length == 0 ||
-            deliveryZipCodeInput.current.value.length == 0 
-        ) {
+        if (location.shippingMethod !== "courier") {
             setDeliveryInformation(() => {
                 let newDeliveryInformation = deliveryInformation;
     
@@ -109,10 +104,10 @@ const CheckBuyerInformation = () => {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-                boxContent: location.boxContent,
-                secondBoxContent: location.secondBoxContent,
-                totalBoxQuantity: location.totalBoxQuantity,
-                price: parseFloat(location.price.replace(/,/g, "")),
+                boxContent: props.boxQuantity,
+                secondBoxContent: props.productsSecondQuantity,
+                totalBoxQuantity: props.totalBoxQuantity,
+                price: parseFloat(props.totalPrice.replace(/,/g, "")),
                 billingInfo: billingInformation,
                 deliveryInfo: deliveryInformation,
                 paymentMethod: location.paymentMethod,
@@ -133,10 +128,10 @@ const CheckBuyerInformation = () => {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-                boxContent: location.boxContent,
-                secondBoxContent: location.secondBoxContent,
-                totalBoxQuantity: location.totalBoxQuantity,
-                price: parseFloat(location.price.replace(/,/g, "")),
+                boxContent: props.boxQuantity,
+                secondBoxContent: props.productsSecondQuantity,
+                totalBoxQuantity: props.totalBoxQuantity,
+                price: parseFloat(props.totalPrice.replace(/,/g, "")),
                 billingInfo: billingInformation,
                 deliveryInfo: deliveryInformation,
                 paymentMethod: location.paymentMethod,
@@ -169,7 +164,7 @@ const CheckBuyerInformation = () => {
     </>
     : null;
 
-    if (location.buyerInformation && location.boxContent && location.totalBoxQuantity || location.secondBoxContent) 
+    if (location.buyerInformation && props.boxQuantity && props.totalBoxQuantity || props.productsSecondQuantity) 
     return (
         <div className="check-buyer-info">
             <h1>Máme správne údaje?</h1>

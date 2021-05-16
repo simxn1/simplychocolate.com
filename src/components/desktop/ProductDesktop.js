@@ -5,20 +5,16 @@ import Typical from "react-typical";
 import CartDesktop from './CartDesktop';
 import OpenProductNutrition from '../mutual/OpenProductNutrition';
 import ProductNutritionDesktop from './ProductNutritionDesktop';
+import products from '../../constantData/products';
 
 const ProductDesktop = (props) => {
 
     let history = useHistory();
+    
+    const boxQuantity = props.boxQuantity;
+    const setBoxQuantity = props.setBoxQuantity;
 
     const [cartDisplay, setCartDisplay] = React.useState('none');
-    const [boxContent, setBoxContent] = React.useState([{
-        grainyBilly: 0,
-        crispyCarrie: 0,
-        grainySue: 0,
-        fitFiona: 0,
-        richArnold: 0,
-        speedyTom: 0
-    }, 'unselected']);
     const [boxSize, setBoxSize] = React.useState("unset");
     const [hintDisplay, setHintDisplay] = React.useState("none");
     const [nutritionDisplay, setNutritionDisplay] = React.useState("none");
@@ -47,55 +43,43 @@ const ProductDesktop = (props) => {
         }
     }
 
-    const productNameToObjectKey = (name) => {
-        let firstName = name.split(" ")[0];
-        let secondName = name.split(" ")[1];
-        let secondNameCapitalized = secondName.charAt(0).toUpperCase() + secondName.slice(1);
-        let objectKey = firstName + secondNameCapitalized;
+    const newBoxQuantity = (productsCount) => {
+        let newBoxQuantity = [...boxQuantity.fill(0)];
+        const thisProductIndex = products.indexOf(products.find(product => product.name === props.name));
 
-        return objectKey
+        newBoxQuantity[thisProductIndex] = productsCount;
+        props.setTotalBoxQuantity(newBoxQuantity.reduce((a, b) => a + b, 0));
+
+        return newBoxQuantity;
     }
 
-    const setNewBoxContent = (productsCount) => {
-        let newBoxContent = boxContent;
-        newBoxContent[0][productNameToObjectKey(props.name)] = productsCount;
-        newBoxContent[1] = productsCount;
-
-        return newBoxContent;
-    }
-
-    const setQuantity = (event) => {
+    const handleSetThisProductQuantity = (event) => {
         let boxSizeSelected = event.target.children.item(0) ? event.target.children.item(0).textContent.trim() : event.target.textContent.trim();
+        setBoxSize(boxSizeSelected);
 
         switch (boxSizeSelected) {
             case "S":
-                setBoxSize("S");
-                setBoxContent(setNewBoxContent(6));
+                setBoxQuantity(newBoxQuantity(6));
                 break;
             case "M":
-                setBoxSize("M");
-                setBoxContent(setNewBoxContent(12));
+                setBoxQuantity(newBoxQuantity(12));
                 break;
             case "L":
-                setBoxSize("L");
-                setBoxContent(setNewBoxContent(24));
+                setBoxQuantity(newBoxQuantity(24));
                 break;
             case "XL":
-                setBoxSize("XL");
-                setBoxContent(setNewBoxContent(30));
+                setBoxQuantity(newBoxQuantity(30));
                 break;
         }
     }
 
     const handleThisFlavour = () => {
-        if (boxContent[1] === "unselected") {
+        if (boxSize === "unset") {
             setHintDisplay("inline");
         }
         else {
             history.push({
                 pathname: '/cart-check',
-                boxContent: boxContent[0],
-                totalBoxQuantity: boxContent[1],
                 from: "/#products"
             });
         }
@@ -106,7 +90,7 @@ const ProductDesktop = (props) => {
             pathname: '/mixed-box',
             boxSize: boxSize,
             from: "/#products",
-        })
+        });
     }
 
 
@@ -172,7 +156,7 @@ const ProductDesktop = (props) => {
             <CartDesktop 
                 cartDisplay={cartDisplay} 
                 toggleCartDisplay={toggleCartDisplay} 
-                setQuantity={setQuantity}
+                handleSetThisProductQuantity={handleSetThisProductQuantity}
                 hintDisplay={hintDisplay}
                 handleThisFlavour={handleThisFlavour}
                 handleMixOwn={handleMixOwn}

@@ -6,19 +6,24 @@ import Products from './mobile/Products';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import ProductsSecond from './mutual/ProductsSecond';
 
-const Mobile = () => {
-
-
+const Mobile = (props) => {
 
     return (
         <div className="mobile-components-container">
             <Intro />
             <About />
             <div id="products-second">
-                <ProductsSecond />
+                <ProductsSecond 
+                    productsSecondQuantity={props.productsSecondQuantity} 
+                    setProductsSecondQuantity={props.setProductsSecondQuantity} 
+                />
             </div>
             <div id="products">
-                <Products />
+                <Products 
+                    boxQuantity={props.boxQuantity} 
+                    setBoxQuantity={props.setBoxQuantity}
+                    setTotalBoxQuantity={props.setTotalBoxQuantity}
+                />
             </div>
             <div id="contact">
                 <Contact />

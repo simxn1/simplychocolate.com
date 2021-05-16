@@ -3,29 +3,16 @@ import { useForm } from 'react-hook-form';
 import { Redirect, useHistory, useLocation, Link } from 'react-router-dom';
 
 
-const BuyerInformation = () => {
+const BuyerInformation = (props) => {
 
     const { register, handleSubmit } = useForm();
-
-    let location = useLocation();
+    
     let history = useHistory();
-
-    const [boxContent, setBoxContent] = React.useState();
-    const [totalBoxQuantity, setTotalBoxQuantity] = React.useState();
-
-    React.useEffect(() => {
-        setBoxContent(location.boxContent ? location.boxContent : { grainyBilly: 0, crispyCarrie: 0, grainySue: 0, fitFiona: 0, richArnold: 0, speedyTom: 0 });
-        setTotalBoxQuantity(location.totalBoxQuantity ? location.totalBoxQuantity : 0);
-    }, [])
 
     const validateAndContinue = (formData) => {
         history.push({
             pathname: "/shipping-and-payment-method",
-            boxContent: boxContent,
-            secondBoxContent: location.secondBoxContent ? location.secondBoxContent : [0, 0],
-            totalBoxQuantity: totalBoxQuantity ? totalBoxQuantity : 0,
             buyerInformation: formData,
-            price: location.price
         })
     }
 
@@ -33,7 +20,7 @@ const BuyerInformation = () => {
         history.goBack();
     }
 
-    if (location.boxContent && location.totalBoxQuantity || location.secondBoxContent) 
+    if (props.totalBoxQuantity || props.productsSecondQuantity[0] || props.productsSecondQuantity[1]) 
     return (
         <div className="buyer-info">
             <span onClick={handleGoBack} className="back">

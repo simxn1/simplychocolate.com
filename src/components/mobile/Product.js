@@ -4,21 +4,14 @@ import Typical from "react-typical";
 import OpenProductNutrition from '../mutual/OpenProductNutrition';
 import Cart from "./Cart";
 import ProductNutrition from "./ProductNutrition";
+import products from "../../constantData/products";
 
 const Product = (props) => {
 
     let history = useHistory();
 
     const [cartDisplay, setCartDisplay] = React.useState("none");
-    const [boxContent, setBoxContent] = React.useState([{
-        grainyBilly: 0,
-        crispyCarrie: 0,
-        grainySue: 0,
-        fitFiona: 0,
-        richArnold: 0,
-        speedyTom: 0
-    }, "unselected"]);
-    const [boxSize, setBoxSize] = React.useState("unsets");
+    const [boxSize, setBoxSize] = React.useState("unset");
     const [hintDisplay, setHintDisplay] = React.useState("none");
     const [nutritionDisplay, setNutritionDisplay] = React.useState("none");
 
@@ -49,12 +42,14 @@ const Product = (props) => {
         return objectKey
     }
 
-    const setNewBoxContent = (productsCount) => {
-        let newBoxContent = boxContent;
-        newBoxContent[0][productNameToObjectKey(props.name)] = productsCount;
-        newBoxContent[1] = productsCount;
+    const newBoxQuantity = (productsCount) => {
+        let newBoxQuantity = [...props.boxQuantity.fill(0)];
+        const thisProductIndex = products.indexOf(products.find(product => product.name === props.name));
 
-        return newBoxContent;
+        newBoxQuantity[thisProductIndex] = productsCount;
+        props.setTotalBoxQuantity(newBoxQuantity.reduce((a, b) => a + b, 0));
+
+        return newBoxQuantity;
     }
 
     const setQuantity = (event) => {
@@ -63,19 +58,19 @@ const Product = (props) => {
         switch (boxSizeSelected) {
             case "S":
                 setBoxSize("S");
-                setBoxContent(setNewBoxContent(6));
+                props.setNewBoxQuantity(newBoxQuantity(6));
                 break;
             case "M":
                 setBoxSize("M");
-                setBoxContent(setNewBoxContent(12));
+                props.setNewBoxQuantity(newBoxQuantity(12));
                 break;
             case "L":
                 setBoxSize("L");
-                setBoxContent(setNewBoxContent(24));
+                props.setNewBoxQuantity(newBoxQuantity(24));
                 break;
             case "XL":
                 setBoxSize("XL");
-                setBoxContent(setNewBoxContent(30));
+                props.setNewBoxQuantity(newBoxQuantity(30));
                 break;
         }
 
@@ -88,14 +83,12 @@ const Product = (props) => {
     }
 
     const handleThisFlavour = () => {
-        if (boxContent[1] === "unselected") {
+        if (boxSize === "unset") {
             setHintDisplay("block");
         }
         else {
             history.push({
                 pathname: '/cart-check',
-                boxContent: boxContent[0],
-                totalBoxQuantity: boxContent[1],
                 from: "/#products"
             });
         }

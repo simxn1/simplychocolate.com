@@ -5,15 +5,13 @@ import 'whatwg-fetch';
 import { CHECK_SELECTED_PLACE, DISCOUNT_CODES } from '../../../config/endpoints';
 
 
-const ShippingAndPaymentMethod = () => {
+const ShippingAndPaymentMethod = (props) => {
 
     let location = useLocation();
     let history = useHistory();
 
-    const [boxContent, setBoxContent] = React.useState();
-    const [totalBoxQuantity, setTotalBoxQuantity] = React.useState();
-    const [price, setPrice] = React.useState();
-    const [buyerInformation, setBuyerInformation] = React.useState();
+    const [price, setPrice] = React.useState((props.totalPrice / 100).toFixed(2).toString().replace(".", ","));
+    const [buyerInformation, setBuyerInformation] = React.useState(location.buyerInformation);
     const [discountCodeName, setDiscountCodeName] = React.useState("-");
     const [afterDiscount, setAfterDiscount] = React.useState(false);
     const [afterDiscountDisplay, setAfterDiscountDisplay] = React.useState("none");
@@ -26,14 +24,6 @@ const ShippingAndPaymentMethod = () => {
     const [selectDeliveryPointDisplay, setSelectDeliveryPointDisplay] = React.useState("none");
 
     const discountCodeInput = React.useRef();
-
-    React.useEffect(async () => {
-        setBoxContent(location.boxContent ? location.boxContent : { grainyBilly: 0, crispyCarrie: 0, grainySue: 0, fitFiona: 0, richArnold: 0, speedyTom: 0 });
-        setTotalBoxQuantity(location.totalBoxQuantity ? location.totalBoxQuantity : 0);
-        setPrice(location.price);
-        setBuyerInformation(location.buyerInformation);
-    }, [])
-
 
     const formatToNumber = (string, typeOfString) => {
         if (typeOfString === 'price') {
@@ -186,12 +176,10 @@ const ShippingAndPaymentMethod = () => {
             const isPlaceSelected = await selectedPlaceForDeliveryPoint();
 
             if (isPlaceSelected) {
+                props.setTotalPrice(price);
+
                 history.push({
                     pathname: "/buyer-info-check",
-                    boxContent: boxContent,
-                    secondBoxContent: location.secondBoxContent,
-                    totalBoxQuantity: totalBoxQuantity,
-                    price: price,
                     buyerInformation: buyerInformation,
                     paymentMethod: paymentMethod,
                     shippingMethod: shippingMethod,
@@ -204,7 +192,7 @@ const ShippingAndPaymentMethod = () => {
         }
     }
 
-    if (location.price && location.buyerInformation)
+    if (location.buyerInformation && props.totalPrice)
         return (
             <div className="shipping-and-payment-method">
                 <h1>Táto čokoláda stojí za to <strong>{price}&nbsp;€</strong></h1>
@@ -284,9 +272,9 @@ const ShippingAndPaymentMethod = () => {
                 </div>
             </div>
         )
-    // else return (
-    //     <Redirect to="/" />
-    // )
+    else return (
+        <Redirect to="/" />
+    )
 
 }
 

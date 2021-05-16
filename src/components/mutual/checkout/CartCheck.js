@@ -1,95 +1,48 @@
 import React from 'react';
 import { Redirect, useHistory, useLocation } from 'react-router-dom';
 import CartCheckProduct from './CartCheckProduct';
+import products from '../../../constantData/products';
+import productsSecond from '../../../constantData/productsSecond';
 
-const CartCheck = () => {
+const CartCheck = (props) => {
 
-    let location = useLocation();
     let history = useHistory();
 
-    const [boxContent, setBoxContent] = React.useState({
-        grainyBilly: 0,
-        crispyCarrie: 0,
-        grainySue: 0,
-        fitFiona: 0,
-        richArnold: 0,
-        speedyTom: 0
-    });
-    const [totalBoxQuantity, setTotalBoxQuantity] = React.useState(0);
-    const [price, setPrice] = React.useState();
-
-    let secondBoxProducts = [];
-    if (location.secondBoxContent && (location.secondBoxContent[0] || location.secondBoxContent[1])) {
-        secondBoxProducts = [
-            { name: "yesYouCanBuyLove", quantity: location.secondBoxContent[0] },
-            { name: "insteadOfFlowers", quantity: location.secondBoxContent[1] }
-        ]
-    }
-
-    React.useEffect(() => {
-        setBoxContent(location.boxContent ? location.boxContent : boxContent);
-        setTotalBoxQuantity(location.totalBoxQuantity ? location.totalBoxQuantity : totalBoxQuantity);
-
-        let totalPrice = 0;
-        switch (location.totalBoxQuantity) {
-            case 6:
-                totalPrice += 13.50;
-                break;
-            case 12:
-                totalPrice += 24.50;
-                break;
-            case 24:
-                totalPrice += 47.50;
-                break;
-            case 30:
-                totalPrice += 56.50;
-                break;
-        }
-
-        if (location.secondBoxContent) {
-            totalPrice += location.secondBoxContent[0] * 20.00;
-            totalPrice += location.secondBoxContent[1] * 12.00;
-        }
-
-        setPrice(totalPrice.toFixed(2).toString().replace(".", ","));
-    }, [])
+    const price = (props.totalPrice / 100).toFixed(2).toString().replace(".", ",");
 
     const handleContinue = () => {
         history.push({
             pathname: "/buyer-info",
-            boxContent: boxContent,
-            secondBoxContent: location.secondBoxContent,
-            totalBoxQuantity: totalBoxQuantity,
-            price: price,
         })
     }
 
     const handleBack = () => {
-        history.push({ boxContent: boxContent, totalBoxQuantity: totalBoxQuantity });
         history.goBack();
     }
 
-    if (location.boxContent && location.totalBoxQuantity || location.secondBoxContent) return (
+    if (props.totalBoxQuantity || props.productsSecondQuantity[0] || props.productsSecondQuantity[1]) return (
         <div className="cart-check">
             <h1>Lásku si za peniaze nekúpiš,<br />čokoládu ÁNO!</h1>
             <h2>Už skoro u teba doma...</h2>
             <ul className="products-to-purchase">
                 {
-                    Object.keys(boxContent).map((product) =>
-                        boxContent[product] ? 
+                    props.boxQuantity.map((quantity, productIndex) =>
+                        quantity ? 
                         <CartCheckProduct
-                            name={product}
-                            quantity={boxContent[product]}
+                            name={products[productIndex].name}
+                            quantity={quantity}
+                            key={productIndex}
                         />
                         : null
                     )
                 }
                 {
-                    secondBoxProducts.map((product) =>
-                        product.quantity ?
+                    props.productsSecondQuantity.map((quantity, productIndex) =>
+                        quantity ?
                         <CartCheckProduct
-                            name={product.name}
-                            quantity={product.quantity}
+                            name={productsSecond[productIndex].firstLine + productsSecond[productIndex].secondLine}
+                            quantity={quantity}
+                            key={productIndex}
                         />
                         : null
                     )

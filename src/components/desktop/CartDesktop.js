@@ -29,7 +29,7 @@ const CartDesktop = (props) => {
                 {
                     boxSizes.map(boxSize => 
                         <li>
-                            <button style={{ cursor: 'pointer' }} onClick={props.setQuantity}>
+                            <button style={{ cursor: 'pointer' }} onClick={props.handleSetThisProductQuantity}>
                                 <div><strong>{boxSize.size} </strong></div>- {boxSize.productCount}ks - {boxSize.price}€
                             </button>
                         </li>

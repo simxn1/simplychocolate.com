@@ -147,8 +147,13 @@
 }
 
 .mixed-box .continue {
-    margin: 4vh auto;
-    display: block;
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.mixed-box .continue button {
+    margin-right: 2em;
     color: #fff;
     border: 3px solid #000;
     background-color: #000;
@@ -159,7 +164,7 @@
     transition: all .15s ease-in-out;
 }
 
-.mixed-box .continue:hover {
+.mixed-box .continue button:hover {
     color: #000;
     background-color: #fff;
     cursor: pointer;

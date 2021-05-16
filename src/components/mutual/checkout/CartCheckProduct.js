@@ -6,7 +6,7 @@ const CartCheckProduct = (props) => {
     
     return (
         <li>
-            <img src={`/img/mutual/${props.name.replace(" ", "").toLowerCase()}-bar.png`} />{name}
+            <img src={`/img/mutual/${props.name.replaceAll(" ", "").toLowerCase()}-bar.png`} />{name}
             <strong>{props.quantity}ks</strong>
         </li>
     )

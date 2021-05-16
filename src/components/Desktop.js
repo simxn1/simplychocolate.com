@@ -6,9 +6,7 @@ import ProductsDesktop from './desktop/ProductsDesktop';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import ProductsSecond from './mutual/ProductsSecond';
 
-const Desktop = () => {
-
-
+const Desktop = (props) => {
 
     return (
         <div className="desktop-components-container">
@@ -17,10 +15,17 @@ const Desktop = () => {
                 <AboutDesktop />
             </div>
             <div id="products-second">
-                <ProductsSecond />
+                <ProductsSecond 
+                    productsSecondQuantity={props.productsSecondQuantity} 
+                    setProductsSecondQuantity={props.setProductsSecondQuantity} 
+                />
             </div>
             <div id="products">
-                <ProductsDesktop />
+                <ProductsDesktop 
+                    boxQuantity={props.boxQuantity} 
+                    setBoxQuantity={props.setBoxQuantity}
+                    setTotalBoxQuantity={props.setTotalBoxQuantity}
+                />
             </div>
             <div id="contact">
                 <ContactDesktop />

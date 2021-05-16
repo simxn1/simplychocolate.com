@@ -2,50 +2,44 @@ import React from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
 import MixedBoxProduct from './MixedBoxProduct';
 import MixedBoxBoxSize from './MixedBoxBoxSize';
+import products from '../../constantData/products';
+import boxSizes from '../../constantData/boxSizes';
 
-const BuyerInformationForm = (props) => {
+const MixedBox = (props) => {
 
     const history = useHistory();
     const location = useLocation();
 
     const [boxSize, setBoxSize] = React.useState('unselected');
-    const [boxContent, setBoxContent] = React.useState([0, 0, 0, 0, 0, 0]);
-    const [currentBoxQuantity, setCurrentBoxQuantity] = React.useState(0);
-    const [totalBoxQuantity, setTotalBoxQuantity] = React.useState(0);
+    const [currentTotalBoxQuantity, setCurrentTotalBoxQuantity] = React.useState(0);
     const [boxInfoDisplay, setBoxInfoDisplay] = React.useState('none');
-    const [boxInfoNumberColor, setBoxInfoNumberColor] = React.useState('#000');
     const [price, setPrice] = React.useState('0');
     const [reminderDisplay, setReminderDisplay] = React.useState('none');
+    const [reminderSecondDisplay, setReminderSecondDisplay] = React.useState("none");
 
     const boxSizesList = React.useRef();
-    const preselectedBoxSize = location.boxSize;
-
-    const products = [
-        "Grainy Billy",
-        "Crispy Carrie",
-        "Grainy Sue",
-        "Fit Fiona",
-        "Rich Arnold",
-        "Speedy Tom"
-    ];
-
-    const boxSizes = [
-        "S",
-        "M",
-        "L",
-        "XL"
-    ];
+    const preselectedBoxSize = location.boxSize
+    ? location.boxSize 
+    : boxSizes.find(boxSizeToFind => boxSizeToFind.productCount === props.totalBoxQuantity) 
+    ? boxSizes.find(boxSizeToFind => boxSizeToFind.productCount === props.totalBoxQuantity).size
+    : null;
 
     React.useEffect(() => {
-        if (preselectedBoxSize) {
-            const thisBoxSizeIndex = boxSizes.indexOf(preselectedBoxSize);
+        if (preselectedBoxSize && preselectedBoxSize !== "unset") {
+            const thisBoxSizeIndex = boxSizes.indexOf(boxSizes.find(boxSizeToFind => boxSizeToFind.size === preselectedBoxSize));
             const boxSizesElements = boxSizesList.current.children;
 
+            setBoxSize(preselectedBoxSize);
             changeTotalBoxQuantityAndPrice(preselectedBoxSize);
             setBoxSizeBtnColor(boxSizesElements, boxSizesElements.item(thisBoxSizeIndex).children.item(0));
             showBoxInfo();
         }
     }, [])
+
+    React.useEffect(() => {
+        const newCurrentTotalBoxQuantity = props.boxQuantity.reduce((a, b) => a + b, 0);
+        setCurrentTotalBoxQuantity(newCurrentTotalBoxQuantity);
+    }, [props.boxQuantity])
 
     const setBoxSizeBtnColor = (boxSizesBtns, newBoxSizeBtn) => {
         for (const boxSizeBtn of boxSizesBtns) {
@@ -67,32 +61,21 @@ const BuyerInformationForm = (props) => {
         setBoxSize(boxSizeClicked);
         changeTotalBoxQuantityAndPrice(boxSizeClicked);
         showBoxInfo();
-        setBoxInfoNumberColor(() => {
-            if (totalBoxQuantity == currentBoxQuantity) return "#089348";
-            else if (totalBoxQuantity - currentBoxQuantity > 0) return "#000000";
-            else if (totalBoxQuantity - currentBoxQuantity < 0) return "#f00";
-        })
     }
 
     const changeTotalBoxQuantityAndPrice = (sizeClicked) => {
-        switch (sizeClicked) {
-            case 'S':
-                setTotalBoxQuantity(6);
-                setPrice('13,50');
-                break;
-            case 'M':
-                setTotalBoxQuantity(12);
-                setPrice('24,50');
-                break;
-            case 'L':
-                setTotalBoxQuantity(24);
-                setPrice('47,50');
-                break;
-            case 'XL':
-                setTotalBoxQuantity(30);
-                setPrice('56,50');
-                break;
+        const prevSize = boxSizes.find(boxSizeToFind => boxSizeToFind.size === boxSize)
+        const newSize = boxSizes.find(boxSizeToFind => boxSizeToFind.size === sizeClicked)
+
+        if (prevSize && prevSize.productCount > newSize.productCount) {
+            props.setBoxQuantity(() => {
+                let newBoxQuantity = [...props.boxQuantity].fill(0);
+                return newBoxQuantity;
+            })
         }
+
+        props.setTotalBoxQuantity(newSize.productCount);
+        setPrice((newSize.price / 100).toFixed(2).toString().replace(".", ","));
     }
 
     const showBoxInfo = () => {
@@ -101,39 +84,25 @@ const BuyerInformationForm = (props) => {
         }
     }
 
-    const determineInfoNumberColor = (newBoxQuantity) => {
-        if (totalBoxQuantity == newBoxQuantity) setBoxInfoNumberColor("#089348");
-        else if (totalBoxQuantity - newBoxQuantity > 0) setBoxInfoNumberColor("#000000");
-        else if (totalBoxQuantity - newBoxQuantity < 0) setBoxInfoNumberColor("#f00");
-    }
-
-    const changeBoxQuantity = (amountToChangeBy) => {
-        setCurrentBoxQuantity(() => {
-            const newBoxQuantity = currentBoxQuantity + amountToChangeBy;
-
-            determineInfoNumberColor(newBoxQuantity);
-            return newBoxQuantity;
-        });
-    }
-
     const validateAndContinue = () => {
-        if (currentBoxQuantity !== totalBoxQuantity) {
+        if (currentTotalBoxQuantity !== props.totalBoxQuantity) {
             setReminderDisplay('block');
         }
         else {
             history.push({
                 pathname: '/cart-check',
-                boxContent: {
-                    grainyBilly: boxContent[0],
-                    crispyCarrie: boxContent[1],
-                    grainySue: boxContent[2],
-                    fitFiona: boxContent[3],
-                    richArnold: boxContent[4],
-                    speedyTom: boxContent[5],
-                },
-                secondBoxContent: location.secondBoxContent ? location.secondBoxContent : [0, 0],
-                totalBoxQuantity: totalBoxQuantity ? totalBoxQuantity : 0,
                 from: "/mixed-box"
+            });
+        }
+    }
+
+    const handleChocolateBox = () => {
+        if (currentTotalBoxQuantity !== props.totalBoxQuantity) {
+            setReminderDisplay('block');
+        }
+        else {
+            history.push({
+                pathname: '/chocolate-box'
             });
         }
     }
@@ -145,14 +114,21 @@ const BuyerInformationForm = (props) => {
         const isIncrement = event.target.textContent.trim() == "+" ? true : false;
         const amountToChangeBy = isIncrement ? 1 : -1;
 
-        setBoxContent(() => {
-            let newBoxContent = [...boxContent];
-            if (newBoxContent[thisProductIndex] != 0 || isIncrement) {
-                newBoxContent[thisProductIndex] = newBoxContent[thisProductIndex] + amountToChangeBy;
-                changeBoxQuantity(amountToChangeBy);
-            }
-            return newBoxContent;
-        });
+        if (boxSize === "unselected") {
+            setReminderSecondDisplay("block");
+        }
+        else if (props.totalBoxQuantity >= currentTotalBoxQuantity + amountToChangeBy) {
+            setReminderDisplay("none");
+            setReminderSecondDisplay("none");
+            props.setBoxQuantity(() => {
+                let newBoxQuantity = [...props.boxQuantity];
+    
+                if (newBoxQuantity[thisProductIndex] != 0 || isIncrement) {
+                    newBoxQuantity[thisProductIndex] = newBoxQuantity[thisProductIndex] + amountToChangeBy;
+                }
+                return newBoxQuantity;
+            });
+        }
 
         showBoxInfo();
     }
@@ -172,7 +148,7 @@ const BuyerInformationForm = (props) => {
                 {
                     boxSizes.map(boxSize => 
                         <MixedBoxBoxSize 
-                            boxSize={boxSize}
+                            boxSize={boxSize.size}
                             toggleBoxSize={toggleBoxSize}
                         />
                     )
@@ -183,17 +159,17 @@ const BuyerInformationForm = (props) => {
                 {
                     products.map((product, index) =>
                         <MixedBoxProduct
-                            name={product}
+                            name={product.name.replace(/\b\w/g, l => l.toUpperCase())}
                             changeQuantityOfThisProduct={changeQuantityOfThisProduct}
-                            quantity={boxContent[index]}
+                            quantity={props.boxQuantity[index]}
                         />
                     )
                 }
             </ul>
             <h3 style={{ display: boxInfoDisplay }}>
                 Zostávajúci počet tyčiniek v boxe:
-                <strong style={{ color: boxInfoNumberColor }}>
-                    {totalBoxQuantity - currentBoxQuantity}
+                <strong>
+                    {props.totalBoxQuantity - currentTotalBoxQuantity}
                 </strong>
             </h3>
             <h4 style={{ display: boxInfoDisplay }}>Cena za box: <strong>{price}€</strong></h4>
@@ -207,9 +183,22 @@ const BuyerInformationForm = (props) => {
             >
                 Uveďte správny počet tyčiniek podľa veľkosti boxu.
             </span>
-            <button onClick={validateAndContinue} style={{ display: boxInfoDisplay }} className="continue">Mám vybraté!</button>
+            <span style={{
+                color: 'red',
+                display: reminderSecondDisplay,
+                textAlign: 'center',
+                fontFamily: 'Open Sans Bold',
+                marginTop: '2vh'
+            }}
+            >
+                Vyberte si veľkosť boxu.
+            </span>
+            <div className="continue">
+                <button onClick={handleChocolateBox} style={{ display: boxInfoDisplay }}>Mám chuť aj na bonboniéru!</button>
+                <button onClick={validateAndContinue} style={{ display: boxInfoDisplay }}>Chcem platiť!</button>
+            </div>
         </div>
     )
 }
 
-export default BuyerInformationForm
+export default MixedBox
