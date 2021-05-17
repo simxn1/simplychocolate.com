@@ -113,7 +113,7 @@ const CheckBuyerInformation = (props) => {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-                boxContent: props.boxQuantity,
+                boxContent: boxQuantity,
                 secondBoxContent: props.productsSecondQuantity,
                 totalBoxQuantity: props.totalBoxQuantity,
                 price: parseFloat(props.totalPrice.replace(/,/g, "")),
