@@ -222,20 +222,20 @@ const ShippingAndPaymentMethod = (props) => {
                 </div>
                 <div className="shipping-method">
                     <h2>Ako chceš box doručiť?</h2>
-                    <div>
+                    {/* <div>
                         <label>
                             <input onClick={handleSetShipping} value="courier" name="shipping-method" type="radio" />
-                        Kuriérom k tebe domov - Slovensko
-                    </label>
+                            Kuriérom k tebe domov - Slovensko
+                        </label>
                         <p>+ 3,50 €</p>
                     </div>
                     <div>
                         <label>
                             <input onClick={handleSetShipping} value="czechRepublic" name="shipping-method" type="radio" />
                             Doručenie do Českej republiky
-                    </label>
+                        </label>
                         <p>+ 4,00 €</p>
-                    </div>
+                    </div> */}
                     <div>
                         <label>
                             <input onClick={handleSetShipping} value="pickUpAtStore" name="shipping-method" type="radio" />
