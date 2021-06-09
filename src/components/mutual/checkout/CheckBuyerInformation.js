@@ -28,7 +28,8 @@ const CheckBuyerInformation = (props) => {
         zipCode: "-"
     });
     const [secondFormDisplay, setSecondFormDisplay] = React.useState("none");
-    const [buttonMarginTop, setButtonMarginTop] = React.useState("10vh");
+    const [termsAgreed, setTermsAgreed] = React.useState(true);
+    const [buttonMarginTop, setButtonMarginTop] = React.useState("5vh");
 
     const firstNameInput = React.useRef();
     const lastNameInput = React.useRef();
@@ -81,6 +82,10 @@ const CheckBuyerInformation = (props) => {
             setSecondFormDisplay("none");
             setButtonMarginTop("10vh");
         }
+    }
+
+    const toggleTermsAgreed = () => {
+        setTermsAgreed(!termsAgreed);
     }
 
     const handleConfirmCheckout = async () => {
@@ -158,6 +163,12 @@ const CheckBuyerInformation = (props) => {
         });
     };
 
+    const handleContinue = () => {
+        if (termsAgreed) {
+            return location.paymentMethod === "cash" ? handleConfirmCashCheckout() : handleConfirmCheckout() 
+        }
+    }
+
     const differentDeliveryElement = location.shippingMethod === "courier" ? 
     <>
         <label><input onChange={handleCheckboxChange} type="checkbox" />Na doručenie použiť odlišnú adresu</label>
@@ -200,8 +211,12 @@ const CheckBuyerInformation = (props) => {
             </div>
             {differentDeliveryElement && differentDeliveryElement}
             <div className="flex">
+                <label className="terms-agree">
+                    <input type="checkbox" checked={termsAgreed} onClick={toggleTermsAgreed} />
+                    Súhlasím s<a href="/obchodne-podmienky" target="_blank">&nbsp;obchodnými podmienkami</a>
+                </label>
                 <button 
-                    onClick={ location.paymentMethod === "cash" ? handleConfirmCashCheckout : handleConfirmCheckout } 
+                    onClick={handleContinue} 
                     style={{ marginTop: buttonMarginTop }} 
                     className="confirm"
                 >
