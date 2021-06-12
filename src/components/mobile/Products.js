@@ -31,6 +31,9 @@ const Products = (props) => {
                         nutritionDesc={product.nutritionDesc}
                         nutrition={product.nutrition}
                         color={product.color}
+                        boxQuantity={props.boxQuantity}
+                        setBoxQuantity={props.setBoxQuantity}
+                        setTotalBoxQuantity={props.setTotalBoxQuantity}
                         onOpenCart={turnOffAutoPlay}
                     />
                 )

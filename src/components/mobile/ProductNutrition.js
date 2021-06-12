@@ -15,7 +15,7 @@ const ProductNutrition = (props) => {
     let tableRows = [];
     for (let i = 0; i < nutritionLabels.length; i++) {
         tableRows.push(
-            <tr>
+            <tr key={i}>
                 <th>{nutritionLabels[i]}</th><td>{props.nutrition[i]}</td>
             </tr>
         )

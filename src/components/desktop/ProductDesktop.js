@@ -13,6 +13,7 @@ const ProductDesktop = (props) => {
     
     const boxQuantity = props.boxQuantity;
     const setBoxQuantity = props.setBoxQuantity;
+    const setTotalBoxQuantity = props.setTotalBoxQuantity;
 
     const [cartDisplay, setCartDisplay] = React.useState('none');
     const [boxSize, setBoxSize] = React.useState("unset");
@@ -48,7 +49,7 @@ const ProductDesktop = (props) => {
         const thisProductIndex = products.indexOf(products.find(product => product.name === props.name));
 
         newBoxQuantity[thisProductIndex] = productsCount;
-        props.setTotalBoxQuantity(newBoxQuantity.reduce((a, b) => a + b, 0));
+        setTotalBoxQuantity(newBoxQuantity.reduce((a, b) => a + b, 0));
 
         return newBoxQuantity;
     }

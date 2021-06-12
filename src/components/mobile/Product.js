@@ -10,6 +10,10 @@ const Product = (props) => {
 
     let history = useHistory();
 
+    const boxQuantity = props.boxQuantity;
+    const setBoxQuantity = props.setBoxQuantity;
+    const setTotalBoxQuantity = props.setTotalBoxQuantity;
+
     const [cartDisplay, setCartDisplay] = React.useState("none");
     const [boxSize, setBoxSize] = React.useState("unset");
     const [hintDisplay, setHintDisplay] = React.useState("none");
@@ -33,53 +37,46 @@ const Product = (props) => {
         }
     }
 
-    const productNameToObjectKey = (name) => {
-        let firstName = name.split(" ")[0];
-        let secondName = name.split(" ")[1];
-        let secondNameCapitalized = secondName.charAt(0).toUpperCase() + secondName.slice(1);
-        let objectKey = firstName + secondNameCapitalized;
-
-        return objectKey
-    }
-
     const newBoxQuantity = (productsCount) => {
-        let newBoxQuantity = [...props.boxQuantity.fill(0)];
+        let newBoxQuantity = [...boxQuantity.fill(0)];
         const thisProductIndex = products.indexOf(products.find(product => product.name === props.name));
 
         newBoxQuantity[thisProductIndex] = productsCount;
-        props.setTotalBoxQuantity(newBoxQuantity.reduce((a, b) => a + b, 0));
+        setTotalBoxQuantity(newBoxQuantity.reduce((a, b) => a + b, 0));
 
         return newBoxQuantity;
     }
 
-    const setQuantity = (event) => {
-        let boxSizeSelected = event.target.children.item(0) ? event.target.children.item(0).textContent.trim() : event.target.textContent.trim();
-
-        switch (boxSizeSelected) {
-            case "S":
-                setBoxSize("S");
-                props.setNewBoxQuantity(newBoxQuantity(6));
-                break;
-            case "M":
-                setBoxSize("M");
-                props.setNewBoxQuantity(newBoxQuantity(12));
-                break;
-            case "L":
-                setBoxSize("L");
-                props.setNewBoxQuantity(newBoxQuantity(24));
-                break;
-            case "XL":
-                setBoxSize("XL");
-                props.setNewBoxQuantity(newBoxQuantity(30));
-                break;
-        }
-
-        const boxSizes = event.target.parentElement.parentElement.children;
+    const addBorderToSelectedSize = (clickedSizeElement) => {
+        const boxSizes = clickedSizeElement.parentElement.parentElement.children;
         for (let item of boxSizes) {
             item.children[0].classList.remove("active");
         }
 
-        event.target.classList.add("active");
+        clickedSizeElement.classList.add("active");
+    }
+
+    const handleSetThisProductQuantity = (event) => {
+        const clickedSizeElement = event.target;
+        let boxSizeSelected = clickedSizeElement.children.item(0) ? clickedSizeElement.children.item(0).textContent.trim() : clickedSizeElement.textContent.trim();
+        setBoxSize(boxSizeSelected);
+
+        switch (boxSizeSelected) {
+            case "S":
+                setBoxQuantity(newBoxQuantity(6));
+                break;
+            case "M":
+                setBoxQuantity(newBoxQuantity(12));
+                break;
+            case "L":
+                setBoxQuantity(newBoxQuantity(24));
+                break;
+            case "XL":
+                setBoxQuantity(newBoxQuantity(30));
+                break;
+        }
+
+        addBorderToSelectedSize(clickedSizeElement);
     }
 
     const handleThisFlavour = () => {
@@ -97,8 +94,8 @@ const Product = (props) => {
     const handleMixOwn = () => {
         history.push({
             pathname: '/mixed-box',
-            boxSize: boxSize,
-            from: "/#products"
+            from: "/#products",
+            boxSize: boxSize
         })
     }
 
@@ -132,7 +129,6 @@ const Product = (props) => {
             <img
                 src={`/img/mobile/${props.name.replace(" ", "")}-bar.webp`}
                 className="product"
-                data-aos="fade-right"
             >
             </img>
             <div onClick={openCart} className="open-cart">
@@ -145,12 +141,12 @@ const Product = (props) => {
             </p>
             <img className="product-icons" src={`/img/mobile/mobile-${props.icons}-icons.webp`} />
             <Cart
-                cartDisplay={cartDisplay}
+                cartDisplay={cartDisplay} 
                 closeCart={closeCart}
+                handleSetThisProductQuantity={handleSetThisProductQuantity}
                 hintDisplay={hintDisplay}
                 handleThisFlavour={handleThisFlavour}
                 handleMixOwn={handleMixOwn}
-                setQuantity={setQuantity}
             />
             <ProductNutrition 
                 nutritionDisplay={nutritionDisplay}

@@ -13,7 +13,7 @@ const Cart = (props) => {
         <div style={{ display: props.cartDisplay }} className="cart">
             <i
                 class="fas fa-times"
-                onClick={props.cartDisplay == "block" ? props.closeCart : undefined}
+                onClick={props.cartDisplay == "block" ? props.closeCart : null}
             >
             </i>
             <h2>
@@ -27,9 +27,9 @@ const Cart = (props) => {
                 </h2>
             <ul className="box-sizes">
                 {
-                    boxSizes.map(boxSize => 
-                        <li>
-                            <button onClick={props.setQuantity}>
+                    boxSizes.map((boxSize, index) => 
+                        <li key={index}>
+                            <button onClick={props.handleSetThisProductQuantity}>
                                 {boxSize.productCount}ks - <strong>{boxSize.size}</strong> - {boxSize.price}€
                             </button>
                         </li>
