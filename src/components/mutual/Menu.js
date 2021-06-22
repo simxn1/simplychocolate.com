@@ -27,7 +27,7 @@ const Menu = (props) => {
             />
             <Social style={{ display: isMobile ? "flex" : "none" }}/>
             <div>
-                <img src="/img/desktop/logo.png"></img>
+                <img src="/img/desktop/logo.png" alt=""></img>
             </div>
             <ul>
                 <li><a onClick={props.toggleBurger} href="#about">Simply Story</a></li>
@@ -36,14 +36,19 @@ const Menu = (props) => {
             </ul>
             <div className="legal">
                 <a
-                    onClick={() => { history.push({ pathname: "/zasady-ochrany-osobnych-udajov" }) }}
+                    onClick={() => { history.push({ pathname: "/odstupenie-od-kupnej-zmluvy" }) }}
                 >
-                    Zásady ochrany osobných údajov
+                    Odstúpenie od kúpnej zmluvy
                 </a>
                 <a
                     onClick={() => { history.push({ pathname: "/obchodne-podmienky" }) }}
                 >
                     Všeobecné obchodné podmienky
+                </a>
+                <a
+                    onClick={() => { history.push({ pathname: "/zasady-ochrany-osobnych-udajov" }) }}
+                >
+                    Zásady ochrany osobných údajov
                 </a>
             </div>
         </div>

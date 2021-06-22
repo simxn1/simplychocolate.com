@@ -18,6 +18,7 @@ import Desktop from "./components/Desktop";
 import Mobile from "./components/Mobile";
 import ObchodnePodmienky from "./components/mutual/ObchodnePodmienky";
 import ZasadyOchranyOsobnychUdajov from "./components/mutual/ZasadyOchranyOsobnychUdajov";
+import OdstupenieOdKupnejZmluvy from "./components/mutual/OdstupenieOdKupnejZmluvy";
 import BuyerInformation from "./components/mutual/checkout/BuyerInformation";
 import MixedBox from "./components/mutual/MixedBox";
 import ChocolateBox from "./components/mutual/ChocolateBox";
@@ -128,6 +129,7 @@ const App = () => {
       } />
       <Route path="/obchodne-podmienky" component={ObchodnePodmienky} />
       <Route path="/zasady-ochrany-osobnych-udajov" component={ZasadyOchranyOsobnychUdajov} />
+      <Route path="/odstupenie-od-kupnej-zmluvy" component={OdstupenieOdKupnejZmluvy} />
       <Route path="/paid" component={AfterPayment} />
       {
         isMobile
